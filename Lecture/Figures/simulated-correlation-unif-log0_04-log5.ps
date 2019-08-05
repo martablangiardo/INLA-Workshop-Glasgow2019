@@ -1,0 +1,1973 @@
+%!PS-Adobe-3.0
+%%Title: (S-PLUS Graphics)
+%%Creator: S-PLUS
+%%For: (noname)
+%%CreationDate: Wed Sep 29 16:17:05 2004
+%%BoundingBox: 90 180 523 613
+%%Pages: (atend)
+%%DocumentData: Clean7Bit
+%%DocumentNeededResources: (atend)
+%%EndComments
+%%BeginProlog
+150 dict begin gsave
+/bd{bind def}def
+/PVer 3200 def
+% drawing commands
+/I{Coord SetPage 1 setlinecap 1 setlinejoin
+    LineTypes{RastersPerPoint ScaleArray}forall
+    /Helvetica findfont
+    PointSize RastersPerPoint mul Cex mul scalefont setfont
+    /Colors GColors def
+}bd
+/BWOp{
+    bw{currentrgbcolor add add 2.9 gt{1}{0}ifelse setgray}if
+    exec
+    bw{CurSc Sc}if
+}bd
+/IBu{}def
+/B{newpath}bd
+/E{{stroke}BWOp}bd
+/C{currentpoint Penup{newpath}{E}ifelse moveto}bd
+/F{closepath eofill}bd
+/M{moveto}bd
+/L{lineto}bd
+/Pu{load /XEQ exch def /Penup true def}bd
+/Pd{/XEQ{}def /Penup false def}bd
+/Px{currentdict /XEQ known{XEQ}if}bd
+/h{Penup{rmoveto Px}{rlineto}ifelse}bd
+/j{neg Penup{rmoveto Px}{rlineto}ifelse}bd
+/k{exch neg exch Penup{rmoveto Px}{rlineto}ifelse}bd
+/l{neg exch neg exch Penup{rmoveto Px}{rlineto}ifelse}bd
+/m{moveto Penup{Px}if}bd
+/x{0 Penup{rmoveto Px}{rlineto}ifelse}bd
+/y{0 exch Penup{rmoveto Px}{rlineto}ifelse}bd
+/w{neg x}bd
+/z{neg y}bd
+/a{B M dup y exch x neg y closepath}bd
+/b{a eofill}bd
+/c{a E}bd
+/A{PageBegin BackCol 0 ge
+    {CurSc gsave 0 SC Page aload pop
+    exch 4 -1 roll dup 5 1 roll sub 3 1 roll exch dup 4 1 roll sub 4 2 roll b
+    grestore SC}if
+}bd
+/Ph{gsave Pch-x Pch-y rmoveto Show grestore}bd
+/Pc{Pch Ph}bd
+/T{/Adjust exch def gsave translate StringRot rotate 0 0 moveto
+    dup stringwidth pop neg Adjust mul 0 rmoveto
+    currentpoint translate TextShow grestore}bd
+/X{erasepage InPage{PageEnd}if}bd
+/Z{gsave showpage grestore PageEnd}bd
+/W{grestore end}bd
+% parameter setting commands
+/saveAt{Attr begin
+    /Atlinewidth currentlinewidth def
+    /Atfont currentfont def
+    /Atdash currentdash 2 array astore def
+    /AtSc CurSc def
+end}bd
+/restAt{Attr begin
+    Atlinewidth Atfont Atdash AtSc
+    end
+    SC aload pop setdash setfont setlinewidth
+}bd
+/SC{dup dup 0 eq
+    {pop BackIdx
+        {BackCol dup 0 lt {pop 1 setgray} {Sc}ifelse}
+        {/Colors BColor def 1 Sc}ifelse}
+    {/Colors GColors def Sc}ifelse
+    /CurSc exch def
+}bd
+/St{1 sub LineTypes dup 3 1 roll length Rem floor get 0 setdash}bd
+/Sw{abs 2 div RastersPerPoint mul setlinewidth SetClip}bd
+/Sp{dup 42 eq{pop IBu}{Pch exch 0 exch put SetPchSize}ifelse}bd
+/Sx{dup Cex div /Ratio exch def
+     /Cex exch def
+     currentfont Ratio scalefont setfont
+     /Pch-x Pch-x Ratio mul def
+     /Pch-y Pch-y Ratio mul def
+     /Text-y Text-y Ratio mul def}bd
+/So{4 1 roll exch 4 -1 roll Plot astore pop SetClip}bd
+/Sg{4 1 roll exch 4 -1 roll Figure astore pop SetClip}bd
+/Sr{/StringRot exch def}bd
+/Sh{/CharRot exch def}bd
+/Sd{0 eq /ClipToPlot exch def SetClip}bd
+/Iv{/InPage false def/Clip 4 array def/Page 4 array def
+    /Figure [0 0 1 1] def/Plot [0 0 1 1] def/ClipToPlot true def
+    /Cex 1 def/Outline false def
+    /Pch 1 string def/Pch-x 0 def/Pch-y 0 def/Text-y 0 def
+    /LineTypes [ % in default units
+        [] [1 2] [4 4] [8 4] [13 3] [16 2 2 2] [8 2 2 2] [1 13] [6 5] [12 4]
+    ] def
+    /Attr 5 dict def/CurSc 1 def/Penup false def/XEQ{}def
+}bd
+/Rem{2 copy div floor mul sub floor cvi}bd
+/RastersPerPoint{RastersPerInch 72 div}bd
+/ScaleArray{/Factor exch def /Array exch def
+    0 1 Array length 1 sub
+    {dup Array exch get Factor mul Array 3 1 roll put}for}bd
+/Coord{Region aload pop /uy exch def /ux exch def /ly exch def /lx exch def
+    uy ly sub ux lx sub Landscape{exch}if /Width exch def /Height exch def
+    lx ly translate Landscape{90 rotate 0 Height neg translate}if
+    1 RastersPerPoint div dup scale}bd
+/SetPchSize{gsave
+    newpath 0 0 moveto Pch false charpath flattenpath pathbbox
+    exch 3 1 roll
+    add 2 div neg /Pch-y exch def
+    add 2 div neg /Pch-x exch def
+    grestore}bd
+/Show{Outline{false charpath E}{{show}BWOp}ifelse}bd
+/SimpleShow{0 Text-y 2 div neg rmoveto Show}bd
+/FancyShow{
+    /RotDiff exch def
+    /Cos RotDiff cos abs def
+    /Sin RotDiff sin abs def
+    {
+        ( ) dup 0 4 -1 roll put
+        dup stringwidth pop /CharWidth exch def
+        Cos 0 eq{
+            Text-y Sin div
+        }{
+            Sin 0 eq{
+                CharWidth Cos div
+            }{
+                Text-y Sin div dup
+                CharWidth Cos div dup
+                4 1 roll lt{exch pop}{pop}ifelse
+            }ifelse
+        }ifelse 2 div /CharDist exch def
+        CharDist 0 translate 0 0 moveto
+        gsave
+            RotDiff rotate
+            CharWidth 2 div neg Text-y 2 div neg rmoveto
+            Show
+        grestore
+        CharDist 0 translate 0 0 moveto
+    }forall
+}bd
+/TextShow{
+    CharRot StringRot sub dup 0 eq{pop SimpleShow}{FancyShow}ifelse
+}bd
+/BoxClip{/CLW currentlinewidth def
+    2{CLW add 4 1 roll}repeat
+    2{CLW sub 4 1 roll}repeat
+    % initclip
+    saveAt grestore gsave restAt
+    newpath 2 index exch 2 index exch dup 6 index exch
+    moveto 3{lineto}repeat closepath clip newpath}bd
+/Subregion{
+    7 dict begin/A exch def/Uy exch def/Ux exch def/Ly exch def/Lx exch def
+    Ux Lx sub A 0 get mul Lx add
+    Uy Ly sub A 1 get mul Ly add
+    Ux Lx sub A 2 get mul Lx add
+    Uy Ly sub A 3 get mul Ly add end}bd
+/SetFigure{Page aload pop Figure Subregion}bd
+/SetPlot{SetFigure Plot Subregion}bd
+/SetClip{ClipToPlot{SetPlot}{SetFigure}ifelse BoxClip}bd
+/SetPage{0 0 Width Height Page astore RastersPerPoint ScaleArray}bd
+/PageBegin{save /PageContext exch def /InPage true def gsave}bd
+/PageEnd{grestore PageContext restore /InPage false def}bd
+/SImage{
+    dup /Bits exch def 8 exch idiv /PerByte exch def
+    /Ht exch def /Wid exch def
+    1 Wid div 1 Ht div scale
+    /saveSc CurSc def /Colors IColors def
+    /curstr Wid PerByte add 1 sub PerByte idiv string def
+    /MaskByte 16#ff Bits 8 sub bitshift def
+    1 1 Ht{
+        currentfile curstr readhexstring pop pop
+        /CurPos 0 def
+        /Left PerByte def
+        1 1 Wid{
+            Left PerByte eq{
+                /CurByte curstr CurPos get def
+                /MaskMove -8 Bits add def
+                /CurPos CurPos 1 add def
+            }if
+            CurByte MaskMove bitshift MaskByte and
+            dup 0 gt{
+                Sc
+                exch dup 3 1 roll B M 1 z 1 w 1 y F
+            }{pop pop}ifelse
+            Left 1 sub dup /Left exch def 0 le
+            {/Left PerByte def}
+            {/MaskMove MaskMove Bits add def}ifelse
+        }for
+        pop
+    }for
+    /Colors GColors def saveSc Sc
+}bd
+/SImageUneven{
+    /YCorners exch def
+    /XCorners exch def
+    dup /Bits exch def 8 exch idiv /PerByte exch def
+    /Ht exch def /Wid exch def
+    1 Wid div 1 Ht div scale
+    /saveSc CurSc def /Colors IColors def
+    /curstr Wid PerByte add 1 sub PerByte idiv string def
+    /MaskByte 16#ff Bits 8 sub bitshift def
+    1 1 Ht{
+        dup 1 sub /CellBottom YCorners 3 -1 roll get def
+        dup /CellTop YCorners 3 -1 roll get def
+        currentfile curstr readhexstring pop pop
+        /CurPos 0 def
+        /Left PerByte def
+        1 1 Wid{
+            dup 1 sub /CellLeft XCorners 3 -1 roll get def
+            dup /CellRight XCorners 3 -1 roll get def
+            Left PerByte eq{
+                /CurByte curstr CurPos get def
+                /MaskMove -8 Bits add def
+                /CurPos CurPos 1 add def
+            }if
+            CurByte MaskMove bitshift MaskByte and
+            dup 0 gt{
+                Sc
+                CellLeft CellBottom B M CellRight CellBottom L CellRight CellTop L CellLeft CellTop L CellLeft CellBottom L F
+            }{pop}ifelse
+            pop
+            Left 1 sub dup /Left exch def 0 le
+            {/Left PerByte def}
+            {/MaskMove MaskMove Bits add def}ifelse
+        }for
+        pop
+    }for
+    /Colors GColors def saveSc Sc
+}bd
+/Ic {} bd
+/Sc {
+    dup dup 1 lt exch 0 ge and
+    {1 exch sub setgray}  % explicit gray level [0,1)
+    {1 sub Colors dup 3 1 roll length Rem floor get
+     dup type /arraytype eq {aload pop setrgbcolor} {setgray} ifelse
+    } ifelse
+} bd
+/If {} bd
+/Sf {dup 0 lt /Outline exch def abs
+     1 sub Fonts dup 3 1 roll length Rem floor get
+     findfont PointSize Cex mul RastersPerPoint mul scalefont dup setfont
+     dup /FontMatrix get /Matrix exch def /FontBBox get aload pop
+     Matrix transform 4 2 roll Matrix transform
+     exch pop add /Text-y exch def pop SetPchSize} bd
+%%EndProlog
+%%BeginSetup
+% fixed controlling parameters
+/Landscape true def
+/Region [90 180 522 612] def
+/bw statusdict begin /processcolors where
+{pop processcolors} {1} ifelse end 1 eq
+ def
+/RastersPerInch 300 def
+/PointSize 14 def
+/Fonts [
+	/Helvetica
+	/Courier
+	/Times-Roman
+	/Helvetica-Oblique
+	/Helvetica-Bold
+	/Helvetica-BoldOblique
+	/Courier-Oblique
+	/Courier-Bold
+	/Courier-BoldOblique
+	/Times-Italic
+	/Times-Bold
+	/Times-BoldItalic
+	/Symbol
+	/AvantGarde-Book
+	/AvantGarde-BookOblique
+	/AvantGarde-Demi
+	/AvantGarde-DemiOblique
+	/Bookman-Demi
+	/Bookman-DemiItalic
+	/Bookman-Light
+	/Bookman-LightItalic
+	/Helvetica-Narrow
+	/Helvetica-Narrow-Bold
+	/Helvetica-Narrow-BoldOblique
+	/Helvetica-Narrow-Oblique
+	/NewCenturySchlbk-Roman
+	/NewCenturySchlbk-Bold
+	/NewCenturySchlbk-Italic
+	/NewCenturySchlbk-BoldItalic
+	/Palatino-Roman
+	/Palatino-Bold
+	/Palatino-Italic
+	/Palatino-BoldItalic
+	/ZapfChancery-MediumItalic
+	/ZapfDingbats
+] def
+/GColors [
+	0
+	0.6
+	0.3
+	0.9
+	0.4
+	0.7
+	0.1
+	0.5
+	0.8
+	0.2
+] def
+/BackIdx true def
+/BackCol -1 def
+/IColors [
+	0.933333
+	0.866667
+	0.8
+	0.733333
+	0.666667
+	0.6
+	0.533333
+	0.466667
+	0.4
+	0.333333
+	0.266667
+	0.2
+	0.133333
+	0.0666667
+	0
+] def
+/Colors GColors def
+/IBu {Pch 0 8#267 put SetPchSize} def
+/Bu {Pc} def
+
+% all initialization action here
+Iv I
+currentdict /Ic known {Ic} if
+currentdict /If known {If} if
+
+
+%%EndSetup
+
+
+%%Page: 1 1
+%%PageOrientation: Landscape
+A
+1 St
+1 Sw
+1 SC
+0 Sr
+42 Sp
+1.2 Sx
+0.233333 0.961111 0.233333 0.805556 So
+0 1 0 1 Sg
+0 Sh
+1 Sd
+%%IncludeResource: font Helvetica
+1 Sf
+(Distance \(km\)) 1075 168 0.5 T
+90 Sr
+90 Sh
+(Correlation) 168 935 0.5 T
+0 Sr
+0 Sh
+462 420 m
+21 z
+767 420 m
+21 z
+1072 420 m
+21 z
+1377 420 m
+21 z
+1681 420 m
+21 z
+E
+462 420 m
+1219 x
+E
+(0) 462 308 0.5 T
+(5) 767 308 0.5 T
+(10) 1072 308 0.5 T
+(15) 1377 308 0.5 T
+(20) 1681 308 0.5 T
+90 Sr
+90 Sh
+420 458 m
+21 w
+420 649 m
+21 w
+420 840 m
+21 w
+420 1030 m
+21 w
+420 1221 m
+21 w
+420 1412 m
+21 w
+E
+420 458 m
+954 y
+E
+(0.0) 308 458 0.5 T
+(0.2) 308 649 0.5 T
+(0.4) 308 840 0.5 T
+(0.6) 308 1030 0.5 T
+(0.8) 308 1221 0.5 T
+(1.0) 308 1412 0.5 T
+0 Sr
+0 1 0 1 So
+0 Sh
+0 Sd
+1310 1030 420 420 c
+1 Sx
+0.233333 0.961111 0.233333 0.805556 So
+B
+469 1038 m
+6 227 j
+6 138 j
+6 84 j
+6 51 j
+30 73 j
+31 6 j
+30 1 j
+31 x
+30 x
+31 x
+30 x
+31 x
+30 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+60 x
+E
+B
+469 1408 m
+6 5 j
+6 4 j
+6 4 j
+6 4 j
+30 21 j
+31 20 j
+30 20 j
+31 19 j
+30 19 j
+31 18 j
+30 18 j
+31 18 j
+30 17 j
+61 33 j
+61 32 j
+61 31 j
+61 29 j
+61 27 j
+61 27 j
+61 26 j
+61 24 j
+61 23 j
+61 23 j
+61 21 j
+61 20 j
+61 20 j
+61 18 j
+60 18 j
+E
+B
+469 1301 m
+6 98 j
+6 87 j
+6 76 j
+6 68 j
+30 237 j
+31 127 j
+30 69 j
+31 37 j
+30 20 j
+31 11 j
+30 6 j
+31 3 j
+30 2 j
+61 1 j
+61 1 j
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+60 x
+E
+B
+469 1397 m
+6 15 j
+6 15 j
+6 14 j
+6 15 j
+30 68 j
+31 62 j
+30 58 j
+31 53 j
+30 50 j
+31 45 j
+30 42 j
+31 39 j
+30 35 j
+61 64 j
+61 54 j
+61 46 j
+61 39 j
+61 33 j
+61 29 j
+61 24 j
+61 20 j
+61 18 j
+61 15 j
+61 13 j
+61 11 j
+61 9 j
+61 8 j
+60 6 j
+E
+B
+469 1404 m
+6 9 j
+6 8 j
+6 8 j
+6 8 j
+30 39 j
+31 38 j
+30 35 j
+31 35 j
+30 33 j
+31 31 j
+30 30 j
+31 29 j
+30 27 j
+61 52 j
+61 47 j
+61 44 j
+61 39 j
+61 37 j
+61 33 j
+61 31 j
+61 28 j
+61 25 j
+61 24 j
+61 21 j
+61 20 j
+61 18 j
+61 16 j
+60 16 j
+E
+B
+469 1374 m
+6 37 j
+6 35 j
+6 33 j
+6 33 j
+30 143 j
+31 116 j
+30 96 j
+31 78 j
+30 63 j
+31 52 j
+30 42 j
+31 35 j
+30 28 j
+61 42 j
+61 27 j
+61 19 j
+61 12 j
+61 8 j
+61 6 j
+61 4 j
+61 2 j
+61 2 j
+61 1 j
+61 x
+61 1 j
+61 x
+61 x
+60 1 j
+E
+B
+469 1399 m
+6 13 j
+6 13 j
+6 13 j
+6 12 j
+30 60 j
+31 56 j
+30 52 j
+31 48 j
+30 46 j
+31 42 j
+30 39 j
+31 37 j
+30 34 j
+61 62 j
+61 54 j
+61 47 j
+61 40 j
+61 36 j
+61 31 j
+61 26 j
+61 24 j
+61 20 j
+61 18 j
+61 15 j
+61 13 j
+61 12 j
+61 10 j
+60 9 j
+E
+B
+469 1311 m
+6 91 j
+6 81 j
+6 72 j
+6 65 j
+30 234 j
+31 133 j
+30 76 j
+31 43 j
+30 25 j
+31 14 j
+30 8 j
+31 5 j
+30 2 j
+61 3 j
+61 x
+61 1 j
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+60 x
+E
+B
+469 1379 m
+6 31 j
+6 30 j
+6 29 j
+6 29 j
+30 127 j
+31 107 j
+30 90 j
+31 76 j
+30 64 j
+31 54 j
+30 45 j
+31 38 j
+30 32 j
+61 49 j
+61 35 j
+61 25 j
+61 17 j
+61 13 j
+61 9 j
+61 6 j
+61 4 j
+61 3 j
+61 3 j
+61 1 j
+61 1 j
+61 1 j
+61 1 j
+60 x
+E
+B
+469 1402 m
+6 10 j
+6 10 j
+6 10 j
+6 10 j
+30 47 j
+31 45 j
+30 42 j
+31 40 j
+30 38 j
+31 37 j
+30 34 j
+31 32 j
+30 31 j
+61 57 j
+61 51 j
+61 45 j
+61 41 j
+61 37 j
+61 34 j
+61 29 j
+61 27 j
+61 24 j
+61 22 j
+61 19 j
+61 18 j
+61 15 j
+61 14 j
+60 13 j
+E
+B
+469 1229 m
+6 148 j
+6 119 j
+6 97 j
+6 78 j
+30 215 j
+31 75 j
+30 25 j
+31 9 j
+30 3 j
+31 1 j
+30 1 j
+31 x
+30 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+60 x
+E
+B
+469 1299 m
+6 99 j
+6 88 j
+6 77 j
+6 69 j
+30 237 j
+31 126 j
+30 68 j
+31 36 j
+30 19 j
+31 10 j
+30 6 j
+31 3 j
+30 1 j
+61 1 j
+61 1 j
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+60 x
+E
+B
+469 1387 m
+6 25 j
+6 24 j
+6 23 j
+6 23 j
+30 105 j
+31 92 j
+30 80 j
+31 70 j
+30 61 j
+31 54 j
+30 47 j
+31 41 j
+30 36 j
+61 58 j
+61 45 j
+61 34 j
+61 26 j
+61 20 j
+61 15 j
+61 12 j
+61 9 j
+61 7 j
+61 5 j
+61 4 j
+61 3 j
+61 2 j
+61 2 j
+60 1 j
+E
+B
+469 1392 m
+6 19 j
+6 20 j
+6 18 j
+6 18 j
+30 86 j
+31 77 j
+30 70 j
+31 62 j
+30 57 j
+31 50 j
+30 46 j
+31 41 j
+30 37 j
+61 63 j
+61 51 j
+61 42 j
+61 33 j
+61 28 j
+61 22 j
+61 18 j
+61 14 j
+61 12 j
+61 9 j
+61 8 j
+61 6 j
+61 5 j
+61 4 j
+60 4 j
+E
+B
+469 1360 m
+6 48 j
+6 46 j
+6 44 j
+6 41 j
+30 175 j
+31 133 j
+30 100 j
+31 76 j
+30 58 j
+31 44 j
+30 33 j
+31 25 j
+30 19 j
+61 26 j
+61 14 j
+61 9 j
+61 4 j
+61 3 j
+61 2 j
+61 1 j
+61 x
+61 x
+61 1 j
+61 x
+61 x
+61 x
+61 x
+60 x
+E
+B
+469 1107 m
+6 207 j
+6 141 j
+6 96 j
+6 66 j
+30 119 j
+31 17 j
+30 2 j
+31 1 j
+30 x
+31 x
+30 x
+31 x
+30 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+60 x
+E
+B
+469 1405 m
+6 7 j
+6 7 j
+6 7 j
+6 7 j
+30 33 j
+31 32 j
+30 31 j
+31 30 j
+30 28 j
+31 28 j
+30 27 j
+31 25 j
+30 25 j
+61 47 j
+61 43 j
+61 41 j
+61 37 j
+61 35 j
+61 33 j
+61 30 j
+61 28 j
+61 26 j
+61 24 j
+61 22 j
+61 21 j
+61 20 j
+61 18 j
+60 16 j
+E
+B
+469 1403 m
+6 9 j
+6 8 j
+6 9 j
+6 9 j
+30 41 j
+31 39 j
+30 38 j
+31 36 j
+30 34 j
+31 33 j
+30 32 j
+31 29 j
+30 29 j
+61 53 j
+61 49 j
+61 44 j
+61 40 j
+61 37 j
+61 33 j
+61 31 j
+61 27 j
+61 26 j
+61 23 j
+61 21 j
+61 19 j
+61 17 j
+61 16 j
+60 15 j
+E
+B
+469 1329 m
+6 77 j
+6 69 j
+6 63 j
+6 58 j
+30 222 j
+31 140 j
+30 89 j
+31 56 j
+30 35 j
+31 23 j
+30 14 j
+31 9 j
+30 6 j
+61 6 j
+61 2 j
+61 1 j
+61 1 j
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+60 x
+E
+B
+469 1303 m
+6 97 j
+6 86 j
+6 76 j
+6 67 j
+30 236 j
+31 129 j
+30 70 j
+31 38 j
+30 21 j
+31 11 j
+30 7 j
+31 3 j
+30 2 j
+61 1 j
+61 1 j
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+60 x
+E
+B
+469 1296 m
+6 101 j
+6 89 j
+6 79 j
+6 68 j
+30 238 j
+31 125 j
+30 66 j
+31 34 j
+30 18 j
+31 9 j
+30 5 j
+31 3 j
+30 1 j
+61 1 j
+61 1 j
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+60 x
+E
+B
+469 1322 m
+6 82 j
+6 74 j
+6 67 j
+6 60 j
+30 228 j
+31 138 j
+30 84 j
+31 51 j
+30 31 j
+31 19 j
+30 12 j
+31 7 j
+30 4 j
+61 4 j
+61 2 j
+61 1 j
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+60 x
+E
+B
+469 1262 m
+6 127 j
+6 107 j
+6 89 j
+6 76 j
+30 233 j
+31 99 j
+30 42 j
+31 18 j
+30 7 j
+31 3 j
+30 2 j
+31 x
+30 1 j
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+60 x
+E
+B
+469 1393 m
+6 19 j
+6 18 j
+6 18 j
+6 18 j
+30 83 j
+31 75 j
+30 68 j
+31 61 j
+30 55 j
+31 50 j
+30 46 j
+31 41 j
+30 36 j
+61 64 j
+61 52 j
+61 42 j
+61 35 j
+61 28 j
+61 23 j
+61 19 j
+61 15 j
+61 13 j
+61 10 j
+61 9 j
+61 6 j
+61 6 j
+61 5 j
+60 3 j
+E
+B
+469 1407 m
+6 6 j
+6 5 j
+6 5 j
+6 6 j
+30 25 j
+31 25 j
+30 25 j
+31 23 j
+30 23 j
+31 23 j
+30 21 j
+31 21 j
+30 21 j
+61 39 j
+61 37 j
+61 36 j
+61 33 j
+61 31 j
+61 30 j
+61 28 j
+61 27 j
+61 25 j
+61 24 j
+61 22 j
+61 21 j
+61 20 j
+61 19 j
+60 18 j
+E
+B
+469 1404 m
+6 8 j
+6 8 j
+6 7 j
+6 8 j
+30 37 j
+31 36 j
+30 34 j
+31 32 j
+30 32 j
+31 30 j
+30 29 j
+31 28 j
+30 26 j
+61 50 j
+61 47 j
+61 42 j
+61 39 j
+61 36 j
+61 33 j
+61 31 j
+61 28 j
+61 26 j
+61 23 j
+61 22 j
+61 20 j
+61 19 j
+61 17 j
+60 16 j
+E
+B
+469 1397 m
+6 14 j
+6 15 j
+6 14 j
+6 13 j
+30 66 j
+31 61 j
+30 57 j
+31 52 j
+30 48 j
+31 45 j
+30 41 j
+31 39 j
+30 35 j
+61 63 j
+61 54 j
+61 46 j
+61 40 j
+61 34 j
+61 29 j
+61 25 j
+61 21 j
+61 18 j
+61 16 j
+61 13 j
+61 12 j
+61 10 j
+61 8 j
+60 7 j
+E
+B
+469 1170 m
+6 180 j
+6 135 j
+6 100 j
+6 76 j
+30 169 j
+31 40 j
+30 9 j
+31 2 j
+30 1 j
+31 x
+30 x
+31 x
+30 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+60 x
+E
+B
+469 1400 m
+6 12 j
+6 12 j
+6 11 j
+6 12 j
+30 55 j
+31 52 j
+30 48 j
+31 45 j
+30 43 j
+31 40 j
+30 38 j
+31 35 j
+30 33 j
+61 61 j
+61 53 j
+61 46 j
+61 42 j
+61 36 j
+61 32 j
+61 28 j
+61 25 j
+61 22 j
+61 19 j
+61 17 j
+61 15 j
+61 13 j
+61 11 j
+60 11 j
+E
+B
+469 1341 m
+6 66 j
+6 62 j
+6 56 j
+6 52 j
+30 209 j
+31 141 j
+30 95 j
+31 65 j
+30 44 j
+31 30 j
+30 20 j
+31 14 j
+30 9 j
+61 11 j
+61 5 j
+61 2 j
+61 1 j
+61 x
+61 1 j
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+60 x
+E
+B
+469 1408 m
+6 4 j
+6 4 j
+6 4 j
+6 4 j
+30 19 j
+31 19 j
+30 18 j
+31 18 j
+30 18 j
+31 17 j
+30 17 j
+31 17 j
+30 16 j
+61 32 j
+61 30 j
+61 29 j
+61 28 j
+61 26 j
+61 26 j
+61 25 j
+61 23 j
+61 23 j
+61 21 j
+61 21 j
+61 20 j
+61 19 j
+61 19 j
+60 17 j
+E
+B
+469 1204 m
+6 162 j
+6 127 j
+6 100 j
+6 77 j
+30 198 j
+31 58 j
+30 17 j
+31 5 j
+30 1 j
+31 1 j
+30 x
+31 x
+30 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+60 x
+E
+B
+469 1329 m
+6 75 j
+6 69 j
+6 63 j
+6 57 j
+30 221 j
+31 140 j
+30 90 j
+31 57 j
+30 36 j
+31 23 j
+30 14 j
+31 10 j
+30 6 j
+61 6 j
+61 2 j
+61 1 j
+61 1 j
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+60 x
+E
+B
+469 1391 m
+6 20 j
+6 20 j
+6 20 j
+6 19 j
+30 89 j
+31 80 j
+30 72 j
+31 64 j
+30 58 j
+31 51 j
+30 46 j
+31 41 j
+30 37 j
+61 63 j
+61 50 j
+61 40 j
+61 32 j
+61 26 j
+61 21 j
+61 17 j
+61 13 j
+61 11 j
+61 8 j
+61 7 j
+61 6 j
+61 4 j
+61 4 j
+60 2 j
+E
+B
+469 1363 m
+6 46 j
+6 44 j
+6 41 j
+6 40 j
+30 169 j
+31 130 j
+30 100 j
+31 77 j
+30 59 j
+31 46 j
+30 35 j
+31 27 j
+30 21 j
+61 29 j
+61 16 j
+61 10 j
+61 6 j
+61 4 j
+61 2 j
+61 1 j
+61 1 j
+61 x
+61 x
+61 1 j
+61 x
+61 x
+61 x
+60 x
+E
+B
+469 1379 m
+6 33 j
+6 30 j
+6 30 j
+6 29 j
+30 130 j
+31 109 j
+30 91 j
+31 76 j
+30 64 j
+31 54 j
+30 44 j
+31 38 j
+30 31 j
+61 48 j
+61 34 j
+61 24 j
+61 17 j
+61 11 j
+61 9 j
+61 5 j
+61 4 j
+61 3 j
+61 2 j
+61 2 j
+61 1 j
+61 x
+61 1 j
+60 x
+E
+B
+469 1320 m
+6 83 j
+6 74 j
+6 68 j
+6 61 j
+30 228 j
+31 138 j
+30 83 j
+31 50 j
+30 31 j
+31 18 j
+30 11 j
+31 7 j
+30 4 j
+61 4 j
+61 1 j
+61 1 j
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+60 x
+E
+B
+469 1385 m
+6 26 j
+6 25 j
+6 25 j
+6 24 j
+30 110 j
+31 95 j
+30 83 j
+31 72 j
+30 62 j
+31 54 j
+30 47 j
+31 40 j
+30 35 j
+61 57 j
+61 43 j
+61 32 j
+61 24 j
+61 18 j
+61 14 j
+61 10 j
+61 8 j
+61 5 j
+61 5 j
+61 3 j
+61 2 j
+61 2 j
+61 2 j
+60 1 j
+E
+B
+469 1400 m
+6 12 j
+6 11 j
+6 12 j
+6 11 j
+30 54 j
+31 51 j
+30 48 j
+31 45 j
+30 43 j
+31 40 j
+30 37 j
+31 35 j
+30 33 j
+61 60 j
+61 53 j
+61 47 j
+61 41 j
+61 36 j
+61 32 j
+61 29 j
+61 25 j
+61 22 j
+61 19 j
+61 17 j
+61 15 j
+61 14 j
+61 12 j
+60 10 j
+E
+B
+469 1371 m
+6 40 j
+6 37 j
+6 37 j
+6 34 j
+30 151 j
+31 122 j
+30 97 j
+31 79 j
+30 62 j
+31 50 j
+30 41 j
+31 32 j
+30 26 j
+61 37 j
+61 24 j
+61 16 j
+61 10 j
+61 6 j
+61 4 j
+61 3 j
+61 2 j
+61 1 j
+61 1 j
+61 x
+61 x
+61 1 j
+61 x
+60 x
+E
+B
+469 1233 m
+6 146 j
+6 118 j
+6 96 j
+6 78 j
+30 218 j
+31 77 j
+30 27 j
+31 10 j
+30 3 j
+31 1 j
+30 1 j
+31 x
+30 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+60 x
+E
+B
+469 1401 m
+6 11 j
+6 10 j
+6 11 j
+6 10 j
+30 50 j
+31 47 j
+30 45 j
+31 42 j
+30 40 j
+31 37 j
+30 36 j
+31 33 j
+30 32 j
+61 58 j
+61 52 j
+61 46 j
+61 41 j
+61 37 j
+61 33 j
+61 29 j
+61 26 j
+61 24 j
+61 21 j
+61 18 j
+61 17 j
+61 15 j
+61 13 j
+60 11 j
+E
+B
+469 1396 m
+6 15 j
+6 15 j
+6 15 j
+6 15 j
+30 69 j
+31 64 j
+30 59 j
+31 55 j
+30 50 j
+31 46 j
+30 42 j
+31 39 j
+30 36 j
+61 64 j
+61 54 j
+61 45 j
+61 39 j
+61 33 j
+61 28 j
+61 23 j
+61 20 j
+61 17 j
+61 15 j
+61 12 j
+61 10 j
+61 9 j
+61 7 j
+60 7 j
+E
+B
+469 1394 m
+6 17 j
+6 17 j
+6 16 j
+6 17 j
+30 77 j
+31 70 j
+30 64 j
+31 58 j
+30 53 j
+31 49 j
+30 44 j
+31 40 j
+30 37 j
+61 64 j
+61 53 j
+61 44 j
+61 36 j
+61 31 j
+61 25 j
+61 21 j
+61 17 j
+61 15 j
+61 12 j
+61 10 j
+61 8 j
+61 7 j
+61 6 j
+60 5 j
+E
+B
+469 1190 m
+6 171 j
+6 131 j
+6 100 j
+6 77 j
+30 186 j
+31 49 j
+30 13 j
+31 4 j
+30 1 j
+31 x
+30 x
+31 x
+30 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+60 x
+E
+B
+469 1405 m
+6 6 j
+6 7 j
+6 6 j
+6 7 j
+30 31 j
+31 30 j
+30 29 j
+31 29 j
+30 27 j
+31 26 j
+30 26 j
+31 24 j
+30 24 j
+61 45 j
+61 42 j
+61 39 j
+61 37 j
+61 34 j
+61 32 j
+61 30 j
+61 28 j
+61 26 j
+61 24 j
+61 22 j
+61 21 j
+61 20 j
+61 18 j
+60 18 j
+E
+B
+469 1066 m
+6 221 j
+6 140 j
+6 90 j
+6 57 j
+30 89 j
+31 10 j
+30 1 j
+31 x
+30 x
+31 x
+30 x
+31 x
+30 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+60 x
+E
+B
+469 1396 m
+6 15 j
+6 15 j
+6 15 j
+6 15 j
+30 70 j
+31 64 j
+30 59 j
+31 54 j
+30 50 j
+31 46 j
+30 43 j
+31 39 j
+30 36 j
+61 64 j
+61 53 j
+61 46 j
+61 39 j
+61 33 j
+61 27 j
+61 24 j
+61 20 j
+61 17 j
+61 14 j
+61 12 j
+61 11 j
+61 8 j
+61 8 j
+60 6 j
+E
+B
+469 1039 m
+6 227 j
+6 138 j
+6 84 j
+6 52 j
+30 73 j
+31 6 j
+30 1 j
+31 x
+30 x
+31 x
+30 x
+31 x
+30 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+60 x
+E
+B
+469 1248 m
+6 136 j
+6 112 j
+6 93 j
+6 78 j
+30 226 j
+31 89 j
+30 34 j
+31 13 j
+30 6 j
+31 2 j
+30 x
+31 1 j
+30 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+61 x
+60 x
+E
+1.5 Sx
+1 Sd
+(Simulations from the prior ) 1075 1643 0.5 T
+(for the correlation function) 1075 1538 0.5 T
+Z
+%%Trailer
+%%Pages: 1
+%%DocumentNeededResources: font Helvetica
+W
+%%EOF

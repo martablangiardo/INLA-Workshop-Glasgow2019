@@ -1,0 +1,2389 @@
+%!PS-Adobe-3.0
+%%Title: (S-PLUS Graphics)
+%%Creator: S-PLUS
+%%For: (Marshall, Dr Clare)
+%%CreationDate: Mon Nov 20 17:59:58 2000
+%%BoundingBox: 72 72 541 721
+%%Pages: (atend)
+%%DocumentData: Clean7Bit
+%%DocumentNeededResources: (atend)
+%%EndComments
+%%BeginProlog
+150 dict begin gsave
+/bd{bind def}def
+/PVer 3200 def
+% drawing commands
+/I{Coord SetPage 1 setlinecap 1 setlinejoin
+	LineTypes{RastersPerPoint ScaleArray}forall
+	/Helvetica findfont
+	PointSize RastersPerPoint mul Cex mul scalefont setfont
+	/Colors GColors def
+}bd
+/BWOp{
+	bw{currentrgbcolor add add 2.9 gt{1}{0}ifelse setgray}if
+	exec
+	bw{CurSc Sc}if
+}bd
+/IBu{}def
+/B{newpath}bd
+/E{{stroke}BWOp}bd
+/C{currentpoint Penup{newpath}{E}ifelse moveto}bd
+/F{closepath eofill}bd
+/M{moveto}bd
+/L{lineto}bd
+/Pu{load /XEQ exch def /Penup true def}bd
+/Pd{/XEQ{}def /Penup false def}bd
+/Px{currentdict /XEQ known{XEQ}if}bd
+/h{Penup{rmoveto Px}{rlineto}ifelse}bd
+/j{neg Penup{rmoveto Px}{rlineto}ifelse}bd
+/k{exch neg exch Penup{rmoveto Px}{rlineto}ifelse}bd
+/l{neg exch neg exch Penup{rmoveto Px}{rlineto}ifelse}bd
+/m{moveto Penup{Px}if}bd
+/x{0 Penup{rmoveto Px}{rlineto}ifelse}bd
+/y{0 exch Penup{rmoveto Px}{rlineto}ifelse}bd
+/w{neg x}bd
+/z{neg y}bd
+/a{B M dup y exch x neg y closepath}bd
+/b{a eofill}bd
+/c{a E}bd
+/A{PageBegin BackCol 0 ge
+	{CurSc gsave 0 SC Page aload pop
+	exch 4 -1 roll dup 5 1 roll sub 3 1 roll exch dup 4 1 roll sub 4 2 roll b
+	grestore SC}if
+}bd
+/Ph{gsave Pch-x Pch-y rmoveto Show grestore}bd
+/Pc{Pch Ph}bd
+/T{/Adjust exch def gsave translate StringRot rotate 0 0 moveto
+	dup stringwidth pop neg Adjust mul 0 rmoveto
+	currentpoint translate TextShow grestore}bd
+/X{erasepage InPage{PageEnd}if}bd
+/Z{gsave showpage grestore PageEnd}bd
+/W{grestore end}bd
+% parameter setting commands
+/saveAt{Attr begin
+	/Atlinewidth currentlinewidth def
+	/Atfont currentfont def
+	/Atdash currentdash 2 array astore def
+	/AtSc CurSc def
+end}bd
+/restAt{Attr begin
+	Atlinewidth Atfont Atdash AtSc
+	end
+	SC aload pop setdash setfont setlinewidth
+}bd
+/SC{dup dup 0 eq
+	{pop BackIdx
+		{BackCol dup 0 lt {pop 1 setgray} {Sc}ifelse}
+		{/Colors BColor def 1 Sc}ifelse}
+	{/Colors GColors def Sc}ifelse
+	/CurSc exch def
+}bd
+/St{1 sub LineTypes dup 3 1 roll length Rem floor get 0 setdash}bd
+/Sw{abs 2 div RastersPerPoint mul setlinewidth SetClip}bd
+/Sp{dup 42 eq{pop IBu}{Pch exch 0 exch put SetPchSize}ifelse}bd
+/Sx{dup Cex div /Ratio exch def
+	 /Cex exch def
+	 currentfont Ratio scalefont setfont
+	 /Pch-x Pch-x Ratio mul def
+	 /Pch-y Pch-y Ratio mul def
+	 /Text-y Text-y Ratio mul def}bd
+/So{4 1 roll exch 4 -1 roll Plot astore pop SetClip}bd
+/Sg{4 1 roll exch 4 -1 roll Figure astore pop SetClip}bd
+/Sr{/StringRot exch def}bd
+/Sh{/CharRot exch def}bd
+/Sd{0 eq /ClipToPlot exch def SetClip}bd
+/Iv{/InPage false def/Clip 4 array def/Page 4 array def
+	/Figure [0 0 1 1] def/Plot [0 0 1 1] def/ClipToPlot true def
+	/Cex 1 def/Outline false def
+	/Pch 1 string def/Pch-x 0 def/Pch-y 0 def/Text-y 0 def
+	/LineTypes [ % in default units
+		[] [1 2] [4 4] [8 4] [13 3] [16 2 2 2] [8 2 2 2] [1 13] [6 5] [12 4]
+	] def
+	/Attr 5 dict def/CurSc 1 def/Penup false def/XEQ{}def
+}bd
+/Rem{2 copy div floor mul sub floor cvi}bd
+/RastersPerPoint{RastersPerInch 72 div}bd
+/ScaleArray{/Factor exch def /Array exch def
+	0 1 Array length 1 sub
+	{dup Array exch get Factor mul Array 3 1 roll put}for}bd
+/Coord{Region aload pop /uy exch def /ux exch def /ly exch def /lx exch def
+	uy ly sub ux lx sub Landscape{exch}if /Width exch def /Height exch def
+	lx ly translate Landscape{90 rotate 0 Height neg translate}if
+	1 RastersPerPoint div dup scale}bd
+/SetPchSize{gsave
+	newpath 0 0 moveto Pch false charpath flattenpath pathbbox
+	exch 3 1 roll
+	add 2 div neg /Pch-y exch def
+	add 2 div neg /Pch-x exch def
+	grestore}bd
+/Show{Outline{false charpath E}{{show}BWOp}ifelse}bd
+/SimpleShow{0 Text-y 2 div neg rmoveto Show}bd
+/FancyShow{
+	/RotDiff exch def
+	/Cos RotDiff cos abs def
+	/Sin RotDiff sin abs def
+	{
+		( ) dup 0 4 -1 roll put
+		dup stringwidth pop /CharWidth exch def
+		Cos 0 eq{
+			Text-y Sin div
+		}{
+			Sin 0 eq{
+				CharWidth Cos div
+			}{
+				Text-y Sin div dup
+				CharWidth Cos div dup
+				4 1 roll lt{exch pop}{pop}ifelse
+			}ifelse
+		}ifelse 2 div /CharDist exch def
+		CharDist 0 translate 0 0 moveto
+		gsave
+			RotDiff rotate
+			CharWidth 2 div neg Text-y 2 div neg rmoveto
+			Show
+		grestore
+		CharDist 0 translate 0 0 moveto
+	}forall
+}bd
+/TextShow{
+	CharRot StringRot sub dup 0 eq{pop SimpleShow}{FancyShow}ifelse
+}bd
+/BoxClip{/CLW currentlinewidth def
+	2{CLW add 4 1 roll}repeat
+	2{CLW sub 4 1 roll}repeat
+	% initclip
+	saveAt grestore gsave restAt
+	newpath 2 index exch 2 index exch dup 6 index exch
+	moveto 3{lineto}repeat closepath clip newpath}bd
+/Subregion{
+	7 dict begin/A exch def/Uy exch def/Ux exch def/Ly exch def/Lx exch def
+	Ux Lx sub A 0 get mul Lx add
+	Uy Ly sub A 1 get mul Ly add
+	Ux Lx sub A 2 get mul Lx add
+	Uy Ly sub A 3 get mul Ly add end}bd
+/SetFigure{Page aload pop Figure Subregion}bd
+/SetPlot{SetFigure Plot Subregion}bd
+/SetClip{ClipToPlot{SetPlot}{SetFigure}ifelse BoxClip}bd
+/SetPage{0 0 Width Height Page astore RastersPerPoint ScaleArray}bd
+/PageBegin{save /PageContext exch def /InPage true def gsave}bd
+/PageEnd{grestore PageContext restore /InPage false def}bd
+/SImage{
+	dup /Bits exch def 8 exch idiv /PerByte exch def
+	/Ht exch def /Wid exch def
+	1 Wid div 1 Ht div scale
+	/saveSc CurSc def /Colors IColors def
+	/curstr Wid PerByte add 1 sub PerByte idiv string def
+	/MaskByte 16#ff Bits 8 sub bitshift def
+	1 1 Ht{
+		currentfile curstr readhexstring pop pop
+		/CurPos 0 def
+		/Left PerByte def
+		1 1 Wid{
+			Left PerByte eq{
+				/CurByte curstr CurPos get def
+				/MaskMove -8 Bits add def
+				/CurPos CurPos 1 add def
+			}if
+			CurByte MaskMove bitshift MaskByte and
+			dup 0 gt{
+				Sc
+				exch dup 3 1 roll B M 1 z 1 w 1 y F
+			}{pop pop}ifelse
+			Left 1 sub dup /Left exch def 0 le
+			{/Left PerByte def}
+			{/MaskMove MaskMove Bits add def}ifelse
+		}for
+		pop
+	}for
+	/Colors GColors def saveSc Sc
+}bd
+/Ic {} bd
+/Sc {
+    dup dup 1 lt exch 0 ge and
+    {1 exch sub setgray}  % explicit gray level [0,1)
+    {1 sub Colors dup 3 1 roll length Rem floor get
+     dup type /arraytype eq {aload pop setrgbcolor} {setgray} ifelse
+    } ifelse
+} bd
+/If {} bd
+/Sf {dup 0 lt /Outline exch def abs
+     1 sub Fonts dup 3 1 roll length Rem floor get
+     findfont PointSize Cex mul RastersPerPoint mul scalefont dup setfont
+     dup /FontMatrix get /Matrix exch def /FontBBox get aload pop
+     Matrix transform 4 2 roll Matrix transform
+     exch pop add /Text-y exch def pop SetPchSize} bd
+%%EndProlog
+%%BeginSetup
+% fixed controlling parameters
+/Landscape false def
+/Region [72 72 540 720] def
+/bw statusdict begin /processcolors where
+{pop processcolors} {1} ifelse end 1 eq
+ def
+/RastersPerInch 300 def
+/PointSize 10 def
+/Fonts [
+	/Helvetica
+	/Courier
+	/Times-Roman
+	/Helvetica-Oblique
+	/Helvetica-Bold
+	/Helvetica-BoldOblique
+	/Courier-Oblique
+	/Courier-Bold
+	/Courier-BoldOblique
+	/Times-Italic
+	/Times-Bold
+	/Times-BoldItalic
+	/Symbol
+	/AvantGarde-Book
+	/AvantGarde-BookOblique
+	/AvantGarde-Demi
+	/AvantGarde-DemiOblique
+	/Bookman-Demi
+	/Bookman-DemiItalic
+	/Bookman-Light
+	/Bookman-LightItalic
+	/Helvetica-Narrow
+	/Helvetica-Narrow-Bold
+	/Helvetica-Narrow-BoldOblique
+	/Helvetica-Narrow-Oblique
+	/NewCenturySchlbk-Roman
+	/NewCenturySchlbk-Bold
+	/NewCenturySchlbk-Italic
+	/NewCenturySchlbk-BoldItalic
+	/Palatino-Roman
+	/Palatino-Bold
+	/Palatino-Italic
+	/Palatino-BoldItalic
+	/ZapfChancery-MediumItalic
+	/ZapfDingbats
+] def
+/GColors [
+	0
+	0.6
+	0.3
+	0.9
+	0.4
+	0.7
+	0.1
+	0.5
+	0.8
+	0.2
+] def
+/BackIdx true def
+/BackCol -1 def
+/IColors [
+	0.933333
+	0.866667
+	0.8
+	0.733333
+	0.666667
+	0.6
+	0.533333
+	0.466667
+	0.4
+	0.333333
+	0.266667
+	0.2
+	0.133333
+	0.0666667
+	0
+] def
+/Colors GColors def
+/IBu {Pch 0 8#267 put SetPchSize} def
+/Bu {Pc} def
+
+% all initialization action here
+Iv I
+currentdict /Ic known {Ic} if
+currentdict /If known {If} if
+
+
+%%EndSetup
+
+
+%%Page: 1 1
+%%PageOrientation: Portrait
+A
+1 St
+1 Sw
+1 SC
+0 Sr
+42 Sp
+1 Sx
+0.128205 0.948718 0.0925926 0.925926 So
+0 1 0 1 Sg
+0 Sh
+0 Sd
+%%IncludeResource: font Helvetica
+1 Sf
+/Bu Pu B
+971 1425 m
+284 182 h
+142 157 l
+75 178 l
+145 299 l
+221 773 h
+92 436 l
+238 414 h
+8 114 k
+225 655 l
+90 367 l
+146 882 h
+47 313 j
+36 356 h
+57 555 l
+73 747 h
+57 860 l
+32 327 k
+49 127 k
+89 30 j
+44 325 l
+21 34 k
+163 3 l
+460 733 h
+387 1100 l
+224 280 h
+185 86 l
+3 818 k
+26 252 j
+14 63 l
+29 393 j
+47 499 k
+303 183 j
+190 735 l
+60 483 k
+74 71 l
+90 360 h
+158 344 h
+413 553 l
+122 74 j
+3 251 h
+178 310 l
+320 433 h
+16 443 j
+19 290 k
+65 36 h
+7 114 h
+233 395 l
+180 334 h
+97 498 l
+10 1055 h
+63 1031 l
+219 256 h
+161 1 l
+47 63 l
+143 67 h
+47 75 j
+25 271 h
+64 525 l
+82 260 k
+105 430 l
+195 879 h
+171 323 l
+184 80 h
+68 153 l
+84 71 h
+146 32 l
+10 12 k
+134 48 j
+37 345 h
+107 185 h
+465 1069 l
+444 880 h
+163 471 l
+63 195 j
+17 322 k
+63 46 l
+113 343 h
+17 376 j
+131 120 k
+165 46 h
+146 601 l
+29 606 k
+16 178 h
+28 85 h
+109 577 j
+160 121 l
+318 719 h
+280 493 l
+30 388 k
+21 212 j
+107 216 h
+182 371 l
+117 72 h
+75 181 l
+28 667 h
+64 985 l
+162 655 h
+214 618 l
+90 545 h
+200 88 j
+283 340 l
+13 289 k
+14 30 h
+189 429 h
+115 295 l
+115 101 h
+232 194 l
+430 485 h
+284 415 l
+7 6 h
+15 311 j
+76 42 j
+89 297 k
+17 222 j
+152 747 h
+249 872 l
+30 440 k
+105 81 h
+223 332 h
+85 792 l
+250 90 k
+60 106 k
+122 11 h
+278 317 h
+233 481 l
+150 436 h
+59 551 l
+25 517 h
+60 36 l
+91 192 l
+130 342 h
+48 104 k
+11 12 j
+89 346 j
+170 236 l
+40 456 k
+214 156 h
+106 111 l
+126 556 j
+84 613 h
+224 389 l
+6 715 k
+53 775 l
+33 374 h
+161 416 j
+336 30 k
+184 141 h
+39 53 h
+205 432 l
+173 443 h
+108 354 j
+198 241 k
+8 44 l
+90 418 h
+110 59 l
+82 29 l
+247 86 h
+31 292 j
+93 400 h
+104 493 l
+47 149 k
+103 51 j
+277 516 l
+108 432 k
+255 68 h
+113 40 k
+171 419 j
+121 818 h
+336 609 l
+85 376 l
+128 797 h
+196 111 j
+4 65 l
+100 397 l
+217 131 l
+329 706 h
+134 790 l
+29 508 h
+76 18 h
+73 96 l
+117 68 j
+92 33 l
+109 235 k
+10 285 j
+3 3 l
+160 228 h
+249 93 l
+255 425 h
+185 661 l
+37 581 h
+123 585 l
+146 554 h
+50 425 l
+136 324 h
+36 69 l
+7 363 j
+9 681 h
+46 61 l
+37 391 j
+227 352 h
+310 502 l
+14 421 k
+12 490 j
+60 355 k
+14 90 h
+225 202 h
+117 772 l
+230 826 h
+392 848 l
+273 520 h
+58 170 l
+6 219 h
+24 55 h
+59 27 k
+29 207 l
+61 312 h
+89 258 j
+83 482 l
+9 840 h
+116 410 j
+220 520 l
+87 862 h
+5 99 h
+26 504 l
+173 529 h
+337 1272 l
+170 1002 h
+52 212 l
+43 128 h
+139 391 h
+376 1054 l
+309 587 h
+113 23 k
+87 252 l
+4 562 h
+127 487 j
+20 530 k
+185 15 j
+140 633 l
+111 158 k
+109 408 h
+67 245 l
+58 84 j
+81 15 l
+246 201 h
+99 189 l
+155 36 k
+203 149 l
+1 105 j
+272 559 h
+11 265 j
+75 461 l
+101 502 h
+33 3 j
+45 219 h
+241 275 l
+83 115 j
+5 245 k
+52 297 j
+256 42 k
+271 424 h
+90 504 l
+265 36 l
+157 163 h
+384 144 h
+237 400 l
+77 370 k
+38 113 j
+93 147 j
+109 233 h
+182 639 l
+22 581 h
+103 438 l
+132 420 h
+161 216 h
+239 33 k
+44 153 l
+117 437 l
+267 946 h
+127 737 l
+22 341 h
+17 41 l
+237 213 h
+240 793 l
+58 315 h
+50 86 j
+202 376 k
+92 23 h
+209 22 h
+264 547 l
+415 1033 h
+261 996 l
+152 50 l
+133 580 h
+105 140 h
+87 494 l
+31 291 k
+81 336 j
+13 z
+31 96 k
+85 285 k
+8 243 l
+104 279 k
+154 883 l
+394 735 h
+194 134 l
+95 146 h
+88 159 h
+157 243 l
+188 338 h
+22 483 l
+143 163 l
+194 485 h
+348 547 l
+174 653 h
+75 287 l
+375 304 h
+296 845 l
+5 590 k
+161 100 j
+220 267 l
+55 222 k
+223 59 j
+3 113 h
+9 139 k
+53 490 j
+226 286 l
+165 973 h
+20 294 j
+348 336 l
+429 679 h
+361 400 l
+323 297 h
+376 z
+100 135 l
+86 3 k
+110 83 h
+72 116 l
+12 153 h
+76 105 j
+88 114 h
+145 43 l
+88 27 h
+89 51 k
+173 461 k
+205 386 j
+69 245 h
+141 223 l
+128 2 h
+13 246 k
+80 638 l
+81 812 h
+162 1168 l
+161 1111 h
+204 545 l
+164 669 h
+40 205 j
+31 30 k
+118 428 l
+3 56 l
+101 427 h
+224 194 l
+209 176 h
+142 369 l
+105 251 h
+111 462 h
+58 768 l
+140 449 h
+235 950 l
+143 567 h
+92 94 h
+332 176 l
+141 285 h
+149 54 h
+231 106 l
+104 144 j
+7 223 h
+34 96 l
+222 9 l
+339 41 h
+166 23 k
+329 503 h
+185 887 l
+140 70 k
+27 117 l
+193 676 h
+19 180 j
+309 619 l
+180 1247 h
+149 590 l
+246 24 h
+24 118 j
+105 165 l
+150 165 l
+174 214 h
+38 98 k
+6 429 l
+210 528 h
+176 399 l
+10 786 h
+54 462 j
+48 85 l
+48 83 h
+110 578 l
+126 499 h
+180 220 l
+31 263 h
+329 286 l
+186 346 h
+244 56 j
+114 253 l
+89 553 h
+60 379 j
+46 46 j
+54 10 l
+1 97 j
+137 378 h
+23 227 j
+297 183 l
+220 585 h
+137 557 l
+66 432 k
+97 681 l
+101 117 k
+141 279 h
+114 146 h
+40 126 k
+30 652 l
+151 563 h
+311 354 l
+103 439 h
+189 437 j
+33 14 k
+220 89 l
+159 591 h
+17 373 l
+66 273 h
+218 413 l
+227 299 h
+42 82 l
+26 48 j
+97 181 h
+99 140 l
+95 351 l
+30 94 h
+43 181 k
+103 99 h
+31 141 j
+16 277 k
+161 122 h
+277 878 l
+191 1114 h
+178 946 l
+17 458 k
+221 10 j
+212 389 l
+245 282 h
+286 625 l
+147 858 h
+10 566 l
+328 1222 h
+559 1472 l
+162 843 h
+49 85 j
+6 223 l
+42 270 k
+55 314 j
+44 71 k
+49 111 h
+186 125 l
+190 132 h
+22 480 l
+117 528 h
+120 508 l
+85 743 h
+59 343 j
+71 z
+78 254 l
+172 314 h
+200 330 l
+216 216 k
+124 28 h
+63 67 h
+109 178 h
+162 143 l
+163 482 h
+50 196 j
+143 113 k
+49 362 l
+6 124 l
+107 155 h
+37 11 h
+133 300 l
+106 534 k
+39 637 l
+232 137 h
+68 224 h
+9 285 l
+51 114 l
+52 312 k
+92 247 k
+61 206 j
+8 217 h
+80 22 l
+170 68 h
+169 105 l
+267 12 h
+68 127 k
+83 442 l
+65 75 j
+180 271 k
+14 526 j
+109 491 h
+70 315 l
+217 347 h
+174 298 l
+27 516 k
+113 291 j
+192 649 l
+55 841 h
+114 108 l
+177 541 h
+8 679 j
+174 17 l
+302 570 h
+76 118 l
+200 979 l
+54 515 h
+30 87 h
+72 60 j
+136 484 h
+89 878 l
+98 88 k
+130 827 h
+314 664 l
+116 357 h
+77 178 l
+264 589 h
+108 172 j
+122 421 l
+176 630 l
+142 780 h
+149 320 l
+160 431 h
+20 137 h
+42 779 j
+85 243 k
+60 84 l
+228 639 h
+205 614 l
+53 96 h
+107 466 k
+61 236 j
+98 82 h
+116 562 l
+14 802 k
+146 196 j
+7 507 j
+108 264 k
+152 194 h
+47 679 l
+96 513 k
+111 170 l
+62 633 h
+27 329 l
+109 31 h
+111 179 k
+165 425 l
+272 767 h
+20 572 j
+71 613 l
+60 342 h
+15 179 h
+222 106 l
+6 23 l
+145 573 h
+7 328 l
+152 148 l
+122 17 h
+75 250 h
+131 572 l
+45 258 h
+76 235 l
+126 354 h
+227 51 h
+112 307 l
+28 488 h
+248 1035 l
+36 787 h
+179 397 h
+256 517 l
+140 409 h
+97 258 l
+195 30 h
+82 266 h
+70 161 l
+36 137 l
+86 552 l
+149 758 h
+226 454 l
+82 520 h
+403 738 l
+405 745 h
+78 116 j
+89 58 l
+137 189 h
+148 715 l
+39 219 k
+196 202 k
+158 176 h
+257 69 h
+15 493 j
+177 108 k
+8 89 j
+5 303 k
+35 262 l
+4 359 h
+91 567 j
+113 60 k
+47 600 k
+170 329 j
+10 38 h
+149 214 l
+184 246 h
+144 155 l
+40 409 h
+245 281 l
+199 577 h
+200 705 j
+115 369 l
+109 501 k
+90 238 h
+90 519 l
+10 153 h
+239 248 h
+200 700 l
+77 507 h
+125 202 l
+140 166 h
+109 325 l
+56 225 h
+132 336 k
+308 185 h
+264 626 l
+162 553 h
+60 267 j
+2 443 k
+23 728 l
+143 115 k
+41 618 h
+16 288 l
+131 401 l
+31 175 h
+248 236 l
+411 444 h
+21 264 k
+81 556 l
+50 44 j
+11 509 h
+63 419 j
+149 333 h
+349 89 l
+254 336 h
+26 461 j
+68 47 l
+128 538 k
+15 822 l
+30 257 h
+157 107 h
+53 105 k
+157 114 l
+14 550 j
+16 831 h
+114 290 j
+192 81 k
+253 54 j
+93 102 k
+187 407 j
+290 246 l
+65 544 h
+121 175 h
+167 52 k
+87 545 l
+223 542 h
+33 358 l
+69 65 l
+2 57 h
+48 296 l
+63 450 h
+245 157 k
+199 117 j
+150 365 h
+186 982 l
+107 423 h
+13 361 h
+65 444 l
+83 562 h
+19 452 l
+164 378 l
+149 644 h
+58 188 l
+15 440 k
+11 291 j
+122 36 h
+270 846 l
+315 1249 h
+113 628 l
+31 304 j
+90 685 h
+101 737 l
+132 523 k
+86 198 h
+69 315 l
+132 406 h
+147 327 j
+263 667 l
+110 738 k
+290 107 j
+242 328 l
+154 736 h
+37 708 l
+207 57 l
+254 244 h
+75 167 h
+92 543 l
+28 615 k
+8 61 l
+130 76 j
+214 372 l
+65 524 k
+89 304 j
+3 323 k
+105 161 l
+482 700 h
+187 1221 l
+125 567 k
+74 251 l
+54 200 l
+53 456 h
+32 427 h
+61 446 l
+312 348 h
+160 1046 l
+83 767 k
+11 366 l
+18 592 k
+178 243 j
+227 122 l
+215 20 j
+10 37 k
+215 260 l
+20 326 h
+57 98 k
+22 345 j
+264 647 h
+242 1080 l
+157 735 h
+171 586 l
+291 734 h
+99 1064 l
+49 878 h
+285 649 l
+93 398 h
+104 16 h
+102 z
+104 588 h
+47 216 l
+100 43 k
+171 116 k
+227 37 j
+278 337 l
+305 242 h
+87 478 l
+91 366 h
+60 256 h
+279 688 l
+66 z
+105 296 h
+39 554 h
+40 970 l
+126 903 h
+31 517 l
+50 134 l
+10 361 h
+137 718 h
+63 800 j
+256 162 k
+96 195 h
+30 781 l
+26 65 l
+123 761 h
+23 570 j
+116 540 h
+250 49 k
+2 280 l
+52 32 l
+84 205 j
+38 356 h
+138 407 l
+93 174 h
+54 371 h
+36 125 j
+106 83 k
+13 85 j
+105 63 j
+42 751 j
+36 727 h
+6 73 h
+219 615 l
+22 418 k
+106 202 l
+56 463 h
+90 94 h
+65 241 l
+78 8 j
+16 157 k
+2 627 l
+49 180 h
+84 111 k
+52 138 k
+106 145 h
+30 214 h
+133 642 l
+13 256 h
+53 68 j
+158 502 h
+254 785 l
+71 486 k
+90 133 j
+10 17 k
+233 126 j
+63 414 k
+140 139 l
+57 68 k
+289 314 j
+114 146 l
+151 153 k
+132 559 h
+11 510 j
+16 303 h
+264 693 l
+168 497 h
+208 3 h
+325 311 l
+225 532 h
+79 479 l
+4 586 h
+97 428 j
+33 412 k
+8 12 h
+34 69 h
+17 141 l
+26 91 l
+266 766 l
+6 248 h
+71 211 h
+116 155 j
+144 532 h
+300 327 l
+159 223 l
+298 539 h
+28 383 l
+165 123 h
+32 106 l
+14 301 k
+156 441 l
+123 444 h
+142 67 h
+129 200 l
+42 487 l
+103 216 k
+230 741 h
+329 882 l
+167 443 h
+153 358 h
+216 445 l
+177 241 h
+313 779 l
+20 803 h
+155 355 j
+187 587 h
+141 735 l
+67 100 k
+105 156 h
+104 4 j
+19 342 l
+68 318 k
+29 99 k
+208 229 j
+299 378 k
+229 41 j
+53 27 j
+20 210 l
+105 157 k
+46 390 l
+70 129 h
+410 325 l
+144 770 h
+138 293 h
+163 970 j
+102 770 k
+218 1076 l
+210 657 h
+137 189 h
+259 z
+41 37 k
+165 428 l
+201 1191 h
+163 582 l
+56 181 k
+116 94 h
+191 657 l
+162 352 h
+68 150 j
+182 450 l
+95 487 h
+5 159 l
+177 452 h
+202 830 l
+86 613 h
+104 32 k
+39 173 j
+97 435 l
+251 797 h
+219 694 l
+195 764 h
+277 490 l
+197 78 h
+80 231 h
+107 10 h
+301 817 l
+273 898 h
+240 508 l
+48 146 k
+33 523 k
+74 315 j
+57 161 j
+110 241 h
+204 780 l
+114 397 h
+84 350 k
+85 166 h
+117 454 l
+163 599 h
+28 456 j
+49 432 h
+71 427 l
+37 4 h
+16 9 h
+50 256 k
+57 171 j
+133 284 l
+12 26 h
+124 277 k
+80 138 j
+136 23 h
+171 72 k
+172 53 j
+171 425 l
+258 89 k
+129 429 h
+199 430 h
+1 186 j
+127 719 j
+134 336 k
+35 298 h
+325 361 l
+171 27 h
+4 78 k
+55 18 j
+25 233 h
+59 193 l
+106 26 h
+116 143 j
+280 111 l
+204 520 h
+149 190 j
+236 60 k
+30 284 l
+97 190 h
+182 248 l
+118 314 k
+278 133 h
+159 601 j
+222 228 l
+244 103 k
+485 905 h
+7 514 l
+64 30 h
+305 366 l
+7 50 h
+142 192 h
+26 111 k
+18 67 k
+65 304 l
+16 367 k
+149 99 j
+71 388 h
+372 1148 l
+210 1114 h
+45 400 j
+7 174 h
+170 968 l
+57 824 h
+66 130 h
+37 59 l
+39 406 j
+93 601 h
+38 592 j
+248 242 l
+89 625 h
+105 208 l
+111 457 k
+229 169 h
+62 570 l
+24 110 h
+110 416 l
+206 581 h
+29 96 h
+2 340 l
+23 338 k
+384 657 l
+260 499 h
+204 73 h
+187 439 l
+4 741 k
+65 122 j
+163 854 l
+257 722 h
+37 462 l
+89 173 l
+10 81 k
+19 292 h
+14 298 k
+57 81 j
+32 288 j
+173 390 l
+226 1050 h
+169 154 l
+132 616 j
+170 753 k
+186 351 j
+182 401 l
+177 280 h
+93 304 h
+139 980 l
+159 821 k
+129 120 j
+133 218 j
+339 550 l
+303 906 h
+158 698 l
+94 762 h
+9 229 j
+337 475 l
+223 942 h
+123 350 j
+121 199 l
+80 98 l
+319 325 h
+248 478 l
+62 85 h
+202 549 h
+277 245 l
+11 346 j
+177 617 h
+5 488 j
+58 248 h
+209 484 l
+37 750 h
+75 488 l
+89 222 l
+190 837 h
+100 584 j
+163 34 k
+194 203 j
+270 224 l
+60 613 h
+83 485 j
+123 461 k
+61 51 j
+64 289 j
+59 592 k
+38 43 h
+144 702 l
+11 138 h
+67 405 h
+21 537 j
+12 382 k
+245 160 h
+160 461 l
+54 166 l
+66 458 k
+70 193 h
+82 457 l
+96 48 j
+221 516 h
+384 867 l
+80 664 h
+13 78 l
+26 123 k
+108 96 j
+78 312 j
+5 351 h
+120 241 l
+44 288 h
+121 129 k
+46 59 j
+272 265 j
+185 228 l
+10 18 j
+124 57 j
+574 y
+257 524 l
+40 484 k
+135 484 h
+49 1167 l
+167 1315 h
+159 967 l
+119 108 h
+174 189 k
+177 444 l
+193 393 h
+40 225 l
+182 169 h
+298 505 l
+306 307 h
+287 426 k
+51 423 j
+147 539 h
+19 642 l
+162 690 h
+84 406 j
+218 458 l
+30 731 k
+190 36 j
+108 832 l
+46 630 h
+41 74 h
+113 10 l
+79 85 j
+265 695 l
+197 975 h
+41 508 j
+88 208 h
+242 538 l
+232 543 h
+320 420 l
+1 527 k
+1 323 j
+266 236 h
+58 253 j
+149 582 k
+27 284 j
+55 330 l
+34 66 h
+140 486 h
+166 891 l
+230 822 h
+206 549 l
+88 46 j
+31 124 k
+237 72 l
+169 491 h
+69 101 j
+57 37 k
+84 215 h
+179 284 l
+8 228 j
+158 176 h
+114 30 l
+50 218 k
+44 260 j
+113 223 h
+96 201 l
+177 124 k
+214 115 h
+10 43 j
+141 117 l
+140 267 l
+235 197 h
+124 217 h
+324 648 l
+247 562 h
+30 488 l
+35 55 k
+67 466 h
+84 396 l
+20 545 h
+11 468 l
+208 337 h
+235 769 l
+170 417 h
+147 259 l
+50 204 h
+15 499 k
+79 130 j
+65 170 h
+195 461 l
+78 299 h
+9 42 k
+326 456 l
+357 512 h
+160 436 l
+251 879 h
+97 119 j
+220 892 l
+54 952 h
+55 709 j
+262 79 l
+189 396 h
+41 432 l
+34 477 h
+160 24 h
+310 726 l
+100 783 h
+31 671 l
+136 384 k
+96 123 h
+72 284 j
+15 81 j
+187 89 h
+66 209 k
+66 170 l
+140 264 l
+13 662 k
+139 169 j
+234 555 l
+140 756 h
+38 333 j
+111 139 l
+67 91 h
+15 121 l
+52 308 h
+27 113 l
+96 39 k
+22 199 j
+77 220 k
+330 67 j
+56 140 l
+106 119 k
+122 257 h
+64 132 l
+229 700 l
+315 1059 h
+24 744 j
+314 704 l
+20 457 h
+168 851 h
+194 135 j
+68 669 l
+305 141 k
+274 280 h
+64 137 l
+45 147 j
+229 157 k
+121 397 h
+142 51 k
+205 666 j
+32 438 h
+15 125 j
+63 49 l
+24 253 h
+3 174 l
+29 345 h
+187 51 j
+126 374 l
+160 326 h
+587 987 l
+494 1319 h
+360 853 l
+176 348 h
+89 36 j
+121 421 l
+100 504 h
+62 44 k
+150 11 l
+177 53 h
+79 240 l
+24 129 h
+85 286 h
+196 1066 l
+118 709 h
+43 247 l
+88 533 h
+129 546 j
+306 113 k
+234 368 h
+264 867 l
+411 826 h
+140 238 l
+121 168 l
+75 589 h
+5 533 l
+291 44 l
+349 429 h
+132 191 l
+117 163 j
+38 354 h
+355 451 l
+222 207 j
+53 506 k
+6 29 k
+76 366 j
+200 115 k
+149 84 h
+6 189 k
+93 109 j
+77 35 l
+26 123 l
+267 132 l
+254 475 h
+74 190 j
+21 192 k
+1 205 l
+137 687 l
+100 749 h
+142 412 l
+165 935 h
+85 319 j
+138 344 l
+289 146 j
+217 227 l
+6 499 k
+153 250 l
+160 479 h
+234 21 h
+113 278 l
+155 50 l
+124 69 k
+79 4 h
+202 209 h
+81 676 l
+103 468 h
+256 600 l
+138 753 h
+62 245 l
+87 43 l
+114 245 h
+36 51 k
+112 88 j
+217 440 l
+99 351 h
+111 130 j
+79 197 k
+40 169 l
+64 276 h
+8 70 l
+1 47 h
+11 63 l
+10 363 j
+68 176 k
+56 41 k
+275 221 h
+240 155 k
+21 511 l
+43 358 h
+87 822 l
+56 811 h
+136 119 j
+145 88 l
+165 396 h
+168 412 l
+210 23 h
+115 394 h
+237 409 l
+45 59 k
+123 228 j
+14 248 k
+36 255 l
+43 128 h
+83 3 l
+269 419 l
+429 1118 h
+106 324 j
+155 719 l
+62 71 k
+77 715 h
+143 3 j
+118 392 l
+85 291 k
+41 89 j
+137 697 l
+38 606 k
+243 299 h
+36 516 l
+151 92 l
+87 248 k
+338 743 h
+65 833 l
+350 407 l
+72 448 h
+170 131 j
+213 28 l
+109 90 l
+218 366 h
+40 360 k
+109 452 j
+29 95 l
+152 117 h
+141 169 l
+29 108 h
+106 87 h
+116 117 h
+197 406 l
+194 339 h
+421 455 l
+172 329 h
+18 633 j
+58 763 h
+105 289 l
+71 416 h
+105 574 j
+139 196 k
+170 219 k
+163 153 h
+64 8 j
+66 273 l
+53 197 h
+38 184 l
+129 69 h
+4 286 k
+103 877 l
+66 356 k
+47 152 l
+55 485 h
+22 382 l
+123 297 k
+249 406 h
+44 572 l
+113 319 k
+26 158 l
+156 201 j
+199 350 h
+464 927 l
+306 1288 h
+89 881 l
+78 111 k
+65 737 h
+95 437 j
+5 14 h
+186 286 l
+99 575 h
+44 1028 l
+74 717 h
+47 400 k
+40 222 j
+208 439 j
+260 186 l
+60 596 h
+C % limitcheck avoid max=1450
+62 475 l
+168 593 h
+82 480 l
+114 134 l
+139 479 h
+2 112 h
+39 63 h
+186 599 l
+68 74 k
+269 583 h
+240 304 l
+21 877 j
+172 1090 h
+59 277 j
+278 194 l
+242 357 h
+230 550 l
+9 355 h
+40 233 h
+24 525 l
+338 669 h
+125 542 l
+79 29 h
+293 452 l
+244 862 h
+89 607 l
+348 497 k
+347 200 j
+106 72 k
+88 192 h
+249 591 l
+381 742 h
+112 743 l
+199 351 k
+196 137 h
+295 391 l
+329 499 h
+221 903 l
+185 578 h
+1 11 k
+162 526 h
+228 392 l
+167 347 l
+244 297 h
+98 385 k
+123 203 j
+197 435 l
+17 508 h
+201 127 j
+55 13 j
+214 157 l
+97 112 h
+100 267 j
+23 116 k
+167 81 l
+65 111 j
+62 486 h
+70 197 j
+263 63 l
+196 246 h
+66 307 j
+256 146 k
+189 14 j
+20 394 l
+153 459 k
+104 140 j
+87 15 j
+99 105 k
+75 285 h
+113 332 l
+141 35 h
+88 118 k
+16 189 j
+51 11 k
+29 549 h
+6 749 l
+142 492 h
+10 414 l
+122 44 l
+14 397 k
+175 56 j
+286 88 l
+159 204 h
+36 102 h
+98 442 l
+134 181 h
+2 12 k
+40 71 l
+179 134 k
+229 189 j
+295 105 l
+284 112 h
+78 398 l
+43 107 k
+15 551 k
+131 922 l
+155 1446 h
+17 992 j
+30 162 k
+13 45 k
+232 605 h
+188 750 l
+3 331 h
+21 231 j
+7 306 l
+95 759 h
+36 67 j
+206 894 l
+120 333 h
+150 199 k
+28 230 l
+39 269 h
+67 17 h
+211 351 h
+223 289 l
+124 157 h
+156 229 h
+174 795 l
+197 272 l
+183 887 h
+41 670 l
+65 181 k
+65 378 h
+123 641 l
+91 543 h
+76 140 h
+34 470 j
+77 588 k
+135 868 l
+148 304 h
+175 24 k
+12 424 k
+18 359 j
+190 556 h
+82 1028 l
+40 874 h
+18 549 l
+21 187 h
+192 16 l
+315 427 h
+22 29 j
+28 479 l
+241 99 k
+203 158 h
+125 292 j
+26 216 k
+430 233 l
+243 369 h
+133 327 l
+196 494 h
+453 486 l
+458 869 h
+78 706 l
+107 438 l
+169 435 h
+156 412 h
+111 313 l
+58 605 l
+30 895 h
+17 19 j
+17 406 l
+137 86 l
+1 44 j
+82 244 h
+19 1012 j
+153 545 k
+151 308 h
+9 349 k
+127 183 l
+153 330 j
+218 345 l
+288 795 h
+124 135 l
+132 199 l
+63 752 h
+119 414 j
+112 124 l
+36 289 j
+78 88 h
+38 253 k
+216 60 l
+81 152 j
+91 898 h
+32 1075 l
+22 327 l
+55 385 k
+218 431 h
+235 455 l
+115 5 j
+38 247 h
+7 60 k
+2 315 l
+30 214 h
+277 433 l
+213 1108 h
+6 824 l
+52 251 h
+80 77 h
+113 321 l
+24 256 k
+180 120 l
+335 245 h
+91 416 l
+208 224 k
+261 440 j
+260 369 k
+323 29 h
+1 85 l
+108 129 l
+126 226 h
+246 587 l
+20 835 h
+227 168 j
+43 398 l
+223 226 k
+169 235 h
+182 39 l
+191 265 j
+18 300 h
+60 330 l
+109 357 k
+21 181 l
+197 173 h
+207 347 l
+107 20 h
+164 117 h
+177 391 l
+212 446 h
+132 56 k
+139 82 k
+30 97 j
+147 479 l
+233 862 h
+108 443 l
+31 76 l
+35 94 j
+59 285 k
+72 312 j
+142 544 h
+110 464 l
+108 362 k
+33 57 j
+85 263 h
+9 369 j
+171 46 k
+106 48 j
+48 53 l
+155 534 h
+27 865 l
+73 87 h
+165 47 l
+101 371 k
+228 97 j
+50 270 l
+17 599 h
+73 558 j
+35 56 k
+135 17 l
+329 646 h
+53 859 l
+162 402 k
+136 58 l
+22 219 l
+45 546 h
+195 291 h
+218 1330 l
+88 974 h
+209 9 j
+295 690 l
+154 115 k
+144 491 h
+65 203 h
+47 682 l
+62 247 k
+47 303 h
+75 12 k
+195 307 j
+35 116 l
+106 545 h
+143 397 l
+77 250 j
+40 316 k
+29 353 j
+207 129 l
+88 485 h
+269 383 l
+410 358 h
+203 92 k
+10 96 k
+312 206 h
+21 744 l
+199 195 k
+17 162 l
+30 338 h
+191 442 h
+144 314 l
+47 161 l
+11 97 k
+138 151 j
+89 356 k
+132 207 j
+218 614 l
+304 914 h
+293 618 l
+198 211 h
+23 10 k
+10 164 l
+29 19 j
+222 121 k
+241 313 h
+27 293 j
+73 637 h
+306 849 l
+224 429 h
+226 613 l
+57 524 k
+52 300 l
+236 715 h
+95 166 h
+29 619 l
+18 455 l
+94 829 k
+8 162 l
+112 328 j
+34 240 h
+52 271 h
+3 604 l
+46 237 k
+147 407 l
+142 709 k
+154 6 j
+78 439 j
+192 559 h
+371 455 l
+44 306 h
+98 138 j
+21 516 l
+35 37 k
+86 581 h
+177 67 l
+280 242 j
+284 27 k
+9 175 l
+46 488 h
+68 252 j
+13 253 j
+174 591 h
+110 513 l
+9 104 h
+47 476 h
+57 602 l
+119 8 k
+121 465 h
+204 258 l
+181 100 j
+11 29 k
+172 242 h
+166 677 l
+179 256 k
+173 399 h
+123 479 j
+44 483 h
+112 136 l
+28 89 j
+80 431 l
+86 415 k
+94 61 h
+114 297 l
+6 468 k
+101 142 j
+178 255 k
+123 306 l
+419 588 h
+345 1212 l
+169 1211 h
+84 773 j
+108 160 h
+247 157 l
+226 409 h
+382 689 l
+452 1270 h
+311 1005 l
+65 176 h
+74 233 h
+134 515 l
+26 49 h
+69 419 h
+68 386 l
+84 181 h
+79 9 k
+96 92 j
+119 201 k
+75 18 j
+89 459 h
+110 523 l
+141 593 h
+67 838 l
+34 234 k
+179 471 l
+109 723 h
+86 395 j
+32 284 h
+17 187 j
+42 9 l
+52 422 k
+15 326 j
+34 57 j
+176 77 j
+153 37 k
+24 266 h
+91 210 j
+4 454 k
+286 900 l
+22 938 k
+145 545 j
+15 198 l
+189 344 l
+152 591 h
+4 211 j
+37 420 k
+142 127 h
+63 47 j
+16 409 j
+315 27 k
+28 396 h
+74 619 j
+90 178 h
+34 358 h
+292 710 l
+421 1292 h
+68 1244 l
+38 670 k
+33 160 j
+186 91 k
+235 106 h
+24 411 j
+120 413 k
+234 416 l
+282 778 h
+351 932 l
+51 843 h
+158 290 j
+81 377 j
+57 509 h
+349 706 l
+177 10 j
+14 407 k
+50 8 h
+134 165 j
+29 294 h
+84 273 l
+148 467 k
+199 288 j
+104 307 l
+3 185 h
+225 587 l
+94 557 h
+138 369 h
+30 208 h
+42 555 j
+132 533 l
+105 802 h
+13 304 l
+332 417 l
+305 844 h
+125 203 j
+205 667 l
+121 587 h
+90 y
+149 443 l
+107 302 h
+15 31 h
+63 290 j
+73 121 k
+41 404 j
+51 657 k
+40 210 l
+145 226 h
+383 524 l
+428 728 h
+229 488 l
+210 469 h
+88 500 l
+99 75 k
+151 340 h
+140 165 l
+213 272 j
+104 79 k
+51 165 h
+46 245 l
+31 336 h
+67 100 l
+169 308 h
+94 765 l
+66 147 k
+70 207 h
+79 150 l
+112 81 k
+5 89 k
+39 90 k
+72 61 j
+74 417 l
+318 959 h
+118 1036 l
+54 855 k
+71 438 l
+47 448 j
+34 704 h
+94 749 j
+185 634 k
+240 187 h
+210 225 l
+133 147 h
+4 281 j
+12 27 h
+95 84 h
+363 313 l
+234 530 h
+100 504 l
+84 404 h
+115 284 l
+145 267 h
+74 206 l
+113 104 j
+3 10 h
+146 84 j
+459 363 l
+106 529 h
+30 232 l
+100 841 h
+100 843 l
+103 286 h
+126 496 h
+156 274 l
+105 364 j
+11 6 j
+97 734 k
+105 1110 l
+40 969 k
+297 381 j
+75 91 l
+32 21 l
+46 162 k
+30 100 h
+56 247 l
+64 638 h
+116 216 l
+149 247 j
+110 422 l
+123 259 h
+Pd
+E
+1 Sd
+309 250 m
+32 z
+680 250 m
+32 z
+1050 250 m
+32 z
+1420 250 m
+32 z
+1791 250 m
+32 z
+E
+309 250 m
+1482 x
+E
+(-20) 309 175 0.5 T
+(-10) 680 175 0.5 T
+(0) 1050 175 0.5 T
+(10) 1420 175 0.5 T
+(20) 1791 175 0.5 T
+90 Sr
+90 Sh
+250 333 m
+32 w
+250 854 m
+32 w
+250 1375 m
+32 w
+250 1896 m
+32 w
+250 2417 m
+32 w
+E
+250 333 m
+2084 y
+E
+(-20) 175 333 0.5 T
+(-10) 175 854 0.5 T
+(0) 175 1375 0.5 T
+(10) 175 1896 0.5 T
+(20) 175 2417 0.5 T
+0 Sr
+0 Sh
+0 Sd
+1600 2250 250 250 c
+2 Sx
+1 Sd
+(Observed discrepancy) 1050 50 0.5 T
+90 Sr
+90 Sh
+(Predicted discrepancy) 50 1375 0.5 T
+0 Sr
+1 Sx
+0 Sh
+0 Sd
+309 333 m
+1482 2084 h
+E
+Z
+%%Trailer
+%%Pages: 1
+%%DocumentNeededResources: font Helvetica
+W
+%%EOF

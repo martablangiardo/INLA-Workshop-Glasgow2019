@@ -1,0 +1,87 @@
+\begin{thebibliography}{}
+
+\bibitem[Besag, 1974]{besag:1974}
+Besag, J. (1974).
+\newblock Spatial interaction and the statistical analysis of lattice systems.
+\newblock {\em Journal of the Royal Statistical Society: Series B
+  (Methodological)}, 36(2):192--225.
+
+\bibitem[Besag et~al., 1991]{Besag:1991}
+Besag, J., York, J., and Molli\'e, A. (1991).
+\newblock {Bayesian Image Restoration with Two Applications in Spatial
+  Statistics}.
+\newblock {\em The Annals of the Institute of Statistics and Mathematics},
+  43(1):1--59.
+
+\bibitem[Blangiardo and Cameletti, 2015]{Blangiardo:2015}
+Blangiardo, M. and Cameletti, M. (2015).
+\newblock {\em {Spatial and Spatio-temporal Bayesian Models with
+  \texttt{R-INLA}}}.
+\newblock Wiley.
+
+\bibitem[Clayton and Bernardinelli, 1996]{Clayton1992}
+Clayton, D. and Bernardinelli, L. (1996).
+\newblock Bayesian methods for mapping disease risk.
+\newblock In P.~Elliott, J.~Cuzick, D.~E. and Stern, R., editors, {\em
+  Geographical and Environmental Epidemiology: Methods for Small Area Studies}.
+  Oxford University Press.
+
+\bibitem[Gelman et~al., 2014]{Gelman:2014}
+Gelman, A., Carlin, J., Stern, H., and Rubin, D. (2014).
+\newblock {\em {Bayesian Data Analysis, Third Edition}}.
+\newblock Chapman and Hall/CRC.
+
+\bibitem[Goicoa et~al., 2016]{goicoa2016age}
+Goicoa, T., Ugarte, M., Etxeberria, J., and Militino, A. (2016).
+\newblock Age--space--time car models in bayesian disease mapping.
+\newblock {\em Statistics in medicine}, 35(14):2391--2405.
+
+\bibitem[G{\'o}mez-Rubio et~al., 2019]{gomez2019bayesian}
+G{\'o}mez-Rubio, V., Palm{\'\i}-Perales, F., L{\'o}pez-Abente, G.,
+  Ramis-Prieto, R., and Fern{\'a}ndez-Navarro, P. (2019).
+\newblock Bayesian joint spatio-temporal analysis of multiple diseases.
+\newblock {\em SORT-Statistics and Operations Research Transactions},
+  1(1):51--74.
+
+\bibitem[Hoff, 2009]{Hoff:2009}
+Hoff, P. (2009).
+\newblock {\em {A First Course in Bayesian Statistical Methods}}.
+\newblock Springer.
+
+\bibitem[Leroux et~al., 2000]{leroux2000estimation}
+Leroux, B.~G., Lei, X., and Breslow, N. (2000).
+\newblock Estimation of disease rates in small areas: a new mixed model for
+  spatial dependence.
+\newblock In {\em Statistical models in epidemiology, the environment, and
+  clinical trials}, pages 179--191. Springer.
+
+\bibitem[Martins et~al., 2013]{Martinsetal:2012}
+Martins, T.~G., Simpson, D., Lindgren, F., and Rue, H. (2013).
+\newblock {Bayesian computing with INLA: New features}.
+\newblock {\em Computational Statistics \& Data Analysis}, 67:68--83.
+
+\bibitem[Richardson et~al., 2004]{richardson2004interpreting}
+Richardson, S., Thomson, A., Best, N., and Elliott, P. (2004).
+\newblock Interpreting posterior relative risk estimates in disease-mapping
+  studies.
+\newblock {\em Environmental health perspectives}, 112(9):1016--1025.
+
+\bibitem[Rue and Held, 2005]{GMRF:2005}
+Rue, H. and Held, L. (2005).
+\newblock {\em Gaussian {M}arkov {R}andom {F}ields. Theory and {A}pplications}.
+\newblock Chapman \& Hall.
+
+\bibitem[Rue et~al., 2009]{Rue:2009}
+Rue, H., Martino, S., and Chopin, N. (2009).
+\newblock {Approximate Bayesian inference for latent Gaussian models by using
+  integrated nested Laplace approximations}.
+\newblock {\em {Journal of the Royal Statistical Society: Series B}},
+  2(71):1--35.
+
+\bibitem[Rue et~al., 2017]{INLAreview:2017}
+Rue, H., Riebler, A., S., S.~H., Illian, J.~B., Simpson, D.~P., and Lindgren,
+  F.~K. (2017).
+\newblock Bayesian computing with inla: A review.
+\newblock {\em Annual Review of Statistics and Its Application}, 4(1):395--421.
+
+\end{thebibliography}

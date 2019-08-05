@@ -1,0 +1,2202 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Title: (S-PLUS Graphics)
+%%Creator: S-PLUS
+%%For: (Nicola Best)
+%%CreationDate: Mon Jul  3 09:28:10 1995
+%%BoundingBox: 90 72 523 721
+%%Pages: (atend)
+%%DocumentData: Clean7Bit
+%%DocumentNeededResources: (atend)
+%%EndComments
+%%BeginProlog
+150 dict begin gsave
+/bd{bind def}def
+/PVer 3200 def
+% drawing commands
+/I{Coord SetPage 1 setlinecap 1 setlinejoin
+	LineTypes{RastersPerPoint ScaleArray}forall
+	/Helvetica findfont
+	PointSize RastersPerPoint mul Cex mul scalefont setfont
+	/Colors GColors def
+}bd
+/BWOp{
+	bw{currentrgbcolor add add 2.9 gt{1}{0}ifelse setgray}if
+	exec
+	bw{CurSc Sc}if
+}bd
+/IBu{}def
+/B{newpath}bd
+/E{{stroke}BWOp}bd
+/C{currentpoint Penup{newpath}{E}ifelse moveto}bd
+/F{closepath eofill}bd
+/M{moveto}bd
+/L{lineto}bd
+/Pu{load /XEQ exch def /Penup true def}bd
+/Pd{/XEQ{}def /Penup false def}bd
+/Px{currentdict /XEQ known{XEQ}if}bd
+/h{Penup{rmoveto Px}{rlineto}ifelse}bd
+/j{neg Penup{rmoveto Px}{rlineto}ifelse}bd
+/k{exch neg exch Penup{rmoveto Px}{rlineto}ifelse}bd
+/l{neg exch neg exch Penup{rmoveto Px}{rlineto}ifelse}bd
+/m{moveto Penup{Px}if}bd
+/x{0 Penup{rmoveto Px}{rlineto}ifelse}bd
+/y{0 exch Penup{rmoveto Px}{rlineto}ifelse}bd
+/w{neg x}bd
+/z{neg y}bd
+/a{B M dup y exch x neg y closepath}bd
+/b{a eofill}bd
+/c{a E}bd
+/A{PageBegin BackCol 0 ge
+	{CurSc gsave 0 SC Page aload pop
+	exch 4 -1 roll dup 5 1 roll sub 3 1 roll exch dup 4 1 roll sub 4 2 roll b
+	grestore SC}if
+}bd
+/Ph{gsave Pch-x Pch-y rmoveto Show grestore}bd
+/Pc{Pch Ph}bd
+/T{/Adjust exch def gsave translate StringRot rotate 0 0 moveto
+	dup stringwidth pop neg Adjust mul 0 rmoveto
+	currentpoint translate TextShow grestore}bd
+/X{erasepage InPage{PageEnd}if}bd
+/Z{gsave showpage grestore PageEnd}bd
+/W{grestore end}bd
+% parameter setting commands
+/saveAt{Attr begin
+	/Atlinewidth currentlinewidth def
+	/Atfont currentfont def
+	/Atdash currentdash 2 array astore def
+	/AtSc CurSc def
+end}bd
+/restAt{Attr begin
+	Atlinewidth Atfont Atdash AtSc
+	end
+	SC aload pop setdash setfont setlinewidth
+}bd
+/SC{dup dup 0 eq
+	{pop BackIdx
+		{BackCol dup 0 lt {pop 1 setgray} {Sc}ifelse}
+		{/Colors BColor def 1 Sc}ifelse}
+	{/Colors GColors def Sc}ifelse
+	/CurSc exch def
+}bd
+/St{1 sub LineTypes dup 3 1 roll length Rem floor get 0 setdash}bd
+/Sw{abs 2 div RastersPerPoint mul setlinewidth SetClip}bd
+/Sp{dup 42 eq{pop IBu}{Pch exch 0 exch put SetPchSize}ifelse}bd
+/Sx{dup Cex div /Ratio exch def
+	 /Cex exch def
+	 currentfont Ratio scalefont setfont
+	 /Pch-x Pch-x Ratio mul def
+	 /Pch-y Pch-y Ratio mul def
+	 /Text-y Text-y Ratio mul def}bd
+/So{4 1 roll exch 4 -1 roll Plot astore pop SetClip}bd
+/Sg{4 1 roll exch 4 -1 roll Figure astore pop SetClip}bd
+/Sr{/StringRot exch def}bd
+/Sh{/CharRot exch def}bd
+/Sd{0 eq /ClipToPlot exch def SetClip}bd
+/Iv{/InPage false def/Clip 4 array def/Page 4 array def
+	/Figure [0 0 1 1] def/Plot [0 0 1 1] def/ClipToPlot true def
+	/Cex 1 def/Outline false def
+	/Pch 1 string def/Pch-x 0 def/Pch-y 0 def/Text-y 0 def
+	/LineTypes [ % in default units
+		[] [1 2] [4 4] [8 4] [13 3] [16 2 2 2] [8 2 2 2] [1 13] [6 5] [12 4]
+	] def
+	/Attr 5 dict def/CurSc 1 def/Penup false def/XEQ{}def
+}bd
+/Rem{2 copy div floor mul sub floor cvi}bd
+/RastersPerPoint{RastersPerInch 72 div}bd
+/ScaleArray{/Factor exch def /Array exch def
+	0 1 Array length 1 sub
+	{dup Array exch get Factor mul Array 3 1 roll put}for}bd
+/Coord{Region aload pop /uy exch def /ux exch def /ly exch def /lx exch def
+	uy ly sub ux lx sub Landscape{exch}if /Width exch def /Height exch def
+	lx ly translate Landscape{90 rotate 0 Height neg translate}if
+	1 RastersPerPoint div dup scale}bd
+/SetPchSize{gsave
+	newpath 0 0 moveto Pch false charpath flattenpath pathbbox
+	exch 3 1 roll
+	add 2 div neg /Pch-y exch def
+	add 2 div neg /Pch-x exch def
+	grestore}bd
+/Show{Outline{false charpath E}{{show}BWOp}ifelse}bd
+/SimpleShow{0 Text-y 2 div neg rmoveto Show}bd
+/FancyShow{
+	/RotDiff exch def
+	/Cos RotDiff cos abs def
+	/Sin RotDiff sin abs def
+	{
+		( ) dup 0 4 -1 roll put
+		dup stringwidth pop /CharWidth exch def
+		Cos 0 eq{
+			Text-y Sin div
+		}{
+			Sin 0 eq{
+				CharWidth Cos div
+			}{
+				Text-y Sin div dup
+				CharWidth Cos div dup
+				4 1 roll lt{exch pop}{pop}ifelse
+			}ifelse
+		}ifelse 2 div /CharDist exch def
+		CharDist 0 translate 0 0 moveto
+		gsave
+			RotDiff rotate
+			CharWidth 2 div neg Text-y 2 div neg rmoveto
+			Show
+		grestore
+		CharDist 0 translate 0 0 moveto
+	}forall
+}bd
+/TextShow{
+	CharRot StringRot sub dup 0 eq{pop SimpleShow}{FancyShow}ifelse
+}bd
+/BoxClip{/CLW currentlinewidth def
+	2{CLW add 4 1 roll}repeat
+	2{CLW sub 4 1 roll}repeat
+	% initclip
+	saveAt grestore gsave restAt
+	newpath 2 index exch 2 index exch dup 6 index exch
+	moveto 3{lineto}repeat closepath clip newpath}bd
+/Subregion{
+	7 dict begin/A exch def/Uy exch def/Ux exch def/Ly exch def/Lx exch def
+	Ux Lx sub A 0 get mul Lx add
+	Uy Ly sub A 1 get mul Ly add
+	Ux Lx sub A 2 get mul Lx add
+	Uy Ly sub A 3 get mul Ly add end}bd
+/SetFigure{Page aload pop Figure Subregion}bd
+/SetPlot{SetFigure Plot Subregion}bd
+/SetClip{ClipToPlot{SetPlot}{SetFigure}ifelse BoxClip}bd
+/SetPage{0 0 Width Height Page astore RastersPerPoint ScaleArray}bd
+/PageBegin{save /PageContext exch def /InPage true def gsave}bd
+/PageEnd{grestore PageContext restore /InPage false def}bd
+/SImage{
+	dup /Bits exch def 8 exch idiv /PerByte exch def
+	/Ht exch def /Wid exch def
+	1 Wid div 1 Ht div scale
+	/saveSc CurSc def /Colors IColors def
+	/curstr Wid PerByte add 1 sub PerByte idiv string def
+	/MaskByte 16#ff Bits 8 sub bitshift def
+	1 1 Ht{
+		currentfile curstr readhexstring pop pop
+		/CurPos 0 def
+		/Left PerByte def
+		1 1 Wid{
+			Left PerByte eq{
+				/CurByte curstr CurPos get def
+				/MaskMove -8 Bits add def
+				/CurPos CurPos 1 add def
+			}if
+			CurByte MaskMove bitshift MaskByte and
+			dup 0 gt{
+				Sc
+				exch dup 3 1 roll B M 1 z 1 w 1 y F
+			}{pop pop}ifelse
+			Left 1 sub dup /Left exch def 0 le
+			{/Left PerByte def}
+			{/MaskMove MaskMove Bits add def}ifelse
+		}for
+		pop
+	}for
+	/Colors GColors def saveSc Sc
+}bd
+/Ic {} bd
+/Sc {
+    dup dup 1 lt exch 0 ge and
+    {1 exch sub setgray}  % explicit gray level [0,1)
+    {1 sub Colors dup 3 1 roll length Rem floor get
+     dup type /arraytype eq {aload pop setrgbcolor} {setgray} ifelse
+    } ifelse
+} bd
+/If {} bd
+/Sf {dup 0 lt /Outline exch def abs
+     1 sub Fonts dup 3 1 roll length Rem floor get
+     findfont PointSize Cex mul RastersPerPoint mul scalefont dup setfont
+     dup /FontMatrix get /Matrix exch def /FontBBox get aload pop
+     Matrix transform 4 2 roll Matrix transform
+     exch pop add /Text-y exch def pop SetPchSize} bd
+%%EndProlog
+%%BeginSetup
+% fixed controlling parameters
+/Landscape false def
+/Region [90 72 522 720] def
+/bw statusdict begin /processcolors where
+{pop processcolors} {1} ifelse end 1 eq
+ def
+/RastersPerInch 300 def
+/PointSize 14 def
+/Fonts [
+	/Helvetica
+	/Courier
+	/Times-Roman
+	/Helvetica-Oblique
+	/Helvetica-Bold
+	/Helvetica-BoldOblique
+	/Courier-Oblique
+	/Courier-Bold
+	/Courier-BoldOblique
+	/Times-Italic
+	/Times-Bold
+	/Times-BoldItalic
+	/Symbol
+	/AvantGarde-Book
+	/AvantGarde-BookOblique
+	/AvantGarde-Demi
+	/AvantGarde-DemiOblique
+	/Bookman-Demi
+	/Bookman-DemiItalic
+	/Bookman-Light
+	/Bookman-LightItalic
+	/Helvetica-Narrow
+	/Helvetica-Narrow-Bold
+	/Helvetica-Narrow-BoldOblique
+	/Helvetica-Narrow-Oblique
+	/NewCenturySchlbk-Roman
+	/NewCenturySchlbk-Bold
+	/NewCenturySchlbk-Italic
+	/NewCenturySchlbk-BoldItalic
+	/Palatino-Roman
+	/Palatino-Bold
+	/Palatino-Italic
+	/Palatino-BoldItalic
+	/ZapfChancery-MediumItalic
+	/ZapfDingbats
+] def
+/GColors [
+	0
+	0.6
+	0.3
+	0.9
+	0.4
+	0.7
+	0.1
+	0.5
+	0.8
+	0.2
+] def
+/BackIdx true def
+/BackCol -1 def
+/IColors [
+	0.933333
+	0.866667
+	0.8
+	0.733333
+	0.666667
+	0.6
+	0.533333
+	0.466667
+	0.4
+	0.333333
+	0.266667
+	0.2
+	0.133333
+	0.0666667
+	0
+] def
+/Colors GColors def
+/IBu {Pch 0 8#267 put SetPchSize} def
+/Bu {Pc} def
+
+% all initialization action here
+Iv I
+currentdict /Ic known {Ic} if
+currentdict /If known {If} if
+
+
+%%EndSetup
+
+
+%%Page: 1 1
+%%PageOrientation: Portrait
+A
+1 St
+1 Sw
+1 SC
+0 Sr
+4 Sp
+0.8 Sx
+0.2275 0.8915 0.303159 0.746539 So
+0 0.5 0.470095 0.915823 Sg
+0 Sh
+0 Sd
+%%IncludeResource: font Helvetica
+1 Sf
+B
+222 1888 m
+10 19 j
+E
+B
+222 1869 m
+10 19 h
+E
+B
+233 1880 m
+10 20 j
+E
+B
+233 1860 m
+10 20 h
+E
+B
+244 1906 m
+10 20 j
+E
+B
+244 1886 m
+10 20 h
+E
+B
+255 1891 m
+10 19 j
+E
+B
+255 1872 m
+10 19 h
+E
+B
+266 1915 m
+10 19 j
+E
+B
+266 1896 m
+10 19 h
+E
+B
+277 1882 m
+10 19 j
+E
+B
+277 1863 m
+10 19 h
+E
+B
+288 1864 m
+10 19 j
+E
+B
+288 1845 m
+10 19 h
+E
+B
+299 1831 m
+10 19 j
+E
+B
+299 1812 m
+10 19 h
+E
+B
+310 1854 m
+10 19 j
+E
+B
+310 1835 m
+10 19 h
+E
+B
+321 1843 m
+11 19 j
+E
+B
+321 1824 m
+11 19 h
+E
+B
+333 1886 m
+10 19 j
+E
+B
+333 1867 m
+10 19 h
+E
+B
+344 1874 m
+10 19 j
+E
+B
+344 1855 m
+10 19 h
+E
+B
+355 1907 m
+10 19 j
+E
+B
+355 1888 m
+10 19 h
+E
+B
+366 1882 m
+10 19 j
+E
+B
+366 1863 m
+10 19 h
+E
+B
+377 1888 m
+10 19 j
+E
+B
+377 1869 m
+10 19 h
+E
+B
+388 1886 m
+10 20 j
+E
+B
+388 1866 m
+10 20 h
+E
+B
+399 1859 m
+10 19 j
+E
+B
+399 1840 m
+10 19 h
+E
+B
+410 1847 m
+10 20 j
+E
+B
+410 1827 m
+10 20 h
+E
+B
+421 1839 m
+10 19 j
+E
+B
+421 1820 m
+10 19 h
+E
+B
+432 1880 m
+10 19 j
+E
+B
+432 1861 m
+10 19 h
+E
+B
+443 1948 m
+10 19 j
+E
+B
+443 1929 m
+10 19 h
+E
+B
+454 1940 m
+10 19 j
+E
+B
+454 1921 m
+10 19 h
+E
+B
+465 1896 m
+10 19 j
+E
+B
+465 1877 m
+10 19 h
+E
+B
+476 1902 m
+10 19 j
+E
+B
+476 1883 m
+10 19 h
+E
+B
+487 1876 m
+11 19 j
+E
+B
+487 1857 m
+11 19 h
+E
+B
+499 1821 m
+10 19 j
+E
+B
+499 1802 m
+10 19 h
+E
+B
+510 1785 m
+10 19 j
+E
+B
+510 1766 m
+10 19 h
+E
+B
+521 1789 m
+10 20 j
+E
+B
+521 1769 m
+10 20 h
+E
+B
+532 1941 m
+10 19 j
+E
+B
+532 1922 m
+10 19 h
+E
+B
+543 1832 m
+10 19 j
+E
+B
+543 1813 m
+10 19 h
+E
+B
+554 1838 m
+10 19 j
+E
+B
+554 1819 m
+10 19 h
+E
+B
+565 1863 m
+10 19 j
+E
+B
+565 1844 m
+10 19 h
+E
+B
+576 1856 m
+10 19 j
+E
+B
+576 1837 m
+10 19 h
+E
+B
+587 1797 m
+10 19 j
+E
+B
+587 1778 m
+10 19 h
+E
+B
+598 1795 m
+10 19 j
+E
+B
+598 1776 m
+10 19 h
+E
+B
+609 1822 m
+10 20 j
+E
+B
+609 1802 m
+10 20 h
+E
+B
+620 1871 m
+10 19 j
+E
+B
+620 1852 m
+10 19 h
+E
+B
+631 1955 m
+10 19 j
+E
+B
+631 1936 m
+10 19 h
+E
+B
+642 1886 m
+10 19 j
+E
+B
+642 1867 m
+10 19 h
+E
+B
+653 1886 m
+11 19 j
+E
+B
+653 1867 m
+11 19 h
+E
+B
+665 1964 m
+10 19 j
+E
+B
+665 1945 m
+10 19 h
+E
+B
+676 1890 m
+10 19 j
+E
+B
+676 1871 m
+10 19 h
+E
+B
+687 1894 m
+10 19 j
+E
+B
+687 1875 m
+10 19 h
+E
+B
+698 1853 m
+10 19 j
+E
+B
+698 1834 m
+10 19 h
+E
+B
+709 1989 m
+10 19 j
+E
+B
+709 1970 m
+10 19 h
+E
+B
+720 1912 m
+10 19 j
+E
+B
+720 1893 m
+10 19 h
+E
+B
+731 1914 m
+10 19 j
+E
+B
+731 1895 m
+10 19 h
+E
+B
+742 1830 m
+10 19 j
+E
+B
+742 1811 m
+10 19 h
+E
+B
+753 2019 m
+10 19 j
+E
+B
+753 2000 m
+10 19 h
+E
+B
+764 1719 m
+10 19 j
+E
+B
+764 1700 m
+10 19 h
+E
+B
+775 1883 m
+10 19 j
+E
+B
+775 1864 m
+10 19 h
+E
+1 Sd
+(First iteration in segment) 504 1377 0.5 T
+90 Sr
+90 Sh
+(Z-score) 69 1901 0.5 T
+0 Sr
+42 Sp
+0 Sh
+285 1634 m
+5 z
+401 1634 m
+5 z
+518 1634 m
+5 z
+634 1634 m
+5 z
+751 1634 m
+5 z
+E
+205 1634 m
+597 x
+E
+( 600) 285 1556 0.5 T
+( 800) 401 1556 0.5 T
+(1000) 518 1556 0.5 T
+(1200) 634 1556 0.5 T
+(1400) 751 1556 0.5 T
+90 Sr
+90 Sh
+205 1689 m
+3 w
+205 1866 m
+3 w
+205 2042 m
+3 w
+E
+205 1689 m
+479 y
+E
+(-5) 164 1689 0.5 T
+( 0) 164 1866 0.5 T
+( 5) 164 2042 0.5 T
+0 Sr
+1 Sx
+0 Sh
+0 Sd
+597 534 205 1634 c
+2 St
+205 1935 m
+597 x
+E
+205 1796 m
+597 x
+E
+1 St
+1.05 Sx
+1 Sd
+(mu) 504 2283 0.5 T
+4 Sp
+0.8 Sx
+0.5 1 0.470095 0.915823 Sg
+0 Sd
+B
+1122 1896 m
+10 19 j
+E
+B
+1122 1877 m
+10 19 h
+E
+B
+1133 1883 m
+10 20 j
+E
+B
+1133 1863 m
+10 20 h
+E
+B
+1144 1894 m
+10 19 j
+E
+B
+1144 1875 m
+10 19 h
+E
+B
+1155 1892 m
+10 19 j
+E
+B
+1155 1873 m
+10 19 h
+E
+B
+1166 1881 m
+10 19 j
+E
+B
+1166 1862 m
+10 19 h
+E
+B
+1177 1855 m
+10 19 j
+E
+B
+1177 1836 m
+10 19 h
+E
+B
+1188 1884 m
+10 19 j
+E
+B
+1188 1865 m
+10 19 h
+E
+B
+1199 1876 m
+10 19 j
+E
+B
+1199 1857 m
+10 19 h
+E
+B
+1210 1915 m
+10 19 j
+E
+B
+1210 1896 m
+10 19 h
+E
+B
+1221 1930 m
+11 20 j
+E
+B
+1221 1910 m
+11 20 h
+E
+B
+1233 1949 m
+10 19 j
+E
+B
+1233 1930 m
+10 19 h
+E
+B
+1244 1884 m
+10 19 j
+E
+B
+1244 1865 m
+10 19 h
+E
+B
+1255 1889 m
+10 19 j
+E
+B
+1255 1870 m
+10 19 h
+E
+B
+1266 1832 m
+10 19 j
+E
+B
+1266 1813 m
+10 19 h
+E
+B
+1277 1824 m
+10 20 j
+E
+B
+1277 1804 m
+10 20 h
+E
+B
+1288 1864 m
+10 19 j
+E
+B
+1288 1845 m
+10 19 h
+E
+B
+1299 1835 m
+10 19 j
+E
+B
+1299 1816 m
+10 19 h
+E
+B
+1310 1823 m
+10 19 j
+E
+B
+1310 1804 m
+10 19 h
+E
+B
+1321 1834 m
+10 19 j
+E
+B
+1321 1815 m
+10 19 h
+E
+B
+1332 1804 m
+10 19 j
+E
+B
+1332 1785 m
+10 19 h
+E
+B
+1343 1832 m
+10 19 j
+E
+B
+1343 1813 m
+10 19 h
+E
+B
+1354 1782 m
+10 19 j
+E
+B
+1354 1763 m
+10 19 h
+E
+B
+1365 1771 m
+10 19 j
+E
+B
+1365 1752 m
+10 19 h
+E
+B
+1376 1807 m
+10 19 j
+E
+B
+1376 1788 m
+10 19 h
+E
+B
+1387 1837 m
+11 19 j
+E
+B
+1387 1818 m
+11 19 h
+E
+B
+1399 1734 m
+10 19 j
+E
+B
+1399 1715 m
+10 19 h
+E
+B
+1410 1716 m
+10 20 j
+E
+B
+1410 1696 m
+10 20 h
+E
+B
+1421 1763 m
+10 19 j
+E
+B
+1421 1744 m
+10 19 h
+E
+B
+1432 1940 m
+10 19 j
+E
+B
+1432 1921 m
+10 19 h
+E
+B
+1443 1850 m
+10 19 j
+E
+B
+1443 1831 m
+10 19 h
+E
+B
+1454 1828 m
+10 19 j
+E
+B
+1454 1809 m
+10 19 h
+E
+B
+1465 1865 m
+10 19 j
+E
+B
+1465 1846 m
+10 19 h
+E
+B
+1476 1868 m
+10 19 j
+E
+B
+1476 1849 m
+10 19 h
+E
+B
+1487 1783 m
+10 19 j
+E
+B
+1487 1764 m
+10 19 h
+E
+B
+1498 1717 m
+10 19 j
+E
+B
+1498 1698 m
+10 19 h
+E
+B
+1509 1705 m
+10 19 j
+E
+B
+1509 1686 m
+10 19 h
+E
+B
+1520 1735 m
+10 19 j
+E
+B
+1520 1716 m
+10 19 h
+E
+B
+1531 1733 m
+10 19 j
+E
+B
+1531 1714 m
+10 19 h
+E
+B
+1542 1719 m
+10 19 j
+E
+B
+1542 1700 m
+10 19 h
+E
+B
+1553 1810 m
+11 19 j
+E
+B
+1553 1791 m
+11 19 h
+E
+B
+1565 1973 m
+10 20 j
+E
+B
+1565 1953 m
+10 20 h
+E
+B
+1576 1892 m
+10 19 j
+E
+B
+1576 1873 m
+10 19 h
+E
+B
+1587 1803 m
+10 19 j
+E
+B
+1587 1784 m
+10 19 h
+E
+B
+1598 1776 m
+10 19 j
+E
+B
+1598 1757 m
+10 19 h
+E
+B
+1609 1932 m
+10 19 j
+E
+B
+1609 1913 m
+10 19 h
+E
+B
+1620 1929 m
+10 19 j
+E
+B
+1620 1910 m
+10 19 h
+E
+B
+1631 1862 m
+10 19 j
+E
+B
+1631 1843 m
+10 19 h
+E
+B
+1642 1814 m
+10 19 j
+E
+B
+1642 1795 m
+10 19 h
+E
+B
+1653 1983 m
+10 19 j
+E
+B
+1653 1964 m
+10 19 h
+E
+B
+1664 1766 m
+10 19 j
+E
+B
+1664 1747 m
+10 19 h
+E
+B
+1675 1833 m
+10 19 j
+E
+B
+1675 1814 m
+10 19 h
+E
+1 Sd
+(First iteration in segment) 1404 1377 0.5 T
+90 Sr
+90 Sh
+(Z-score) 969 1901 0.5 T
+0 Sr
+42 Sp
+0 Sh
+1185 1634 m
+5 z
+1301 1634 m
+5 z
+1418 1634 m
+5 z
+1534 1634 m
+5 z
+1651 1634 m
+5 z
+E
+1105 1634 m
+597 x
+E
+( 600) 1185 1556 0.5 T
+( 800) 1301 1556 0.5 T
+(1000) 1418 1556 0.5 T
+(1200) 1534 1556 0.5 T
+(1400) 1651 1556 0.5 T
+90 Sr
+90 Sh
+1105 1819 m
+3 w
+1105 2024 m
+3 w
+E
+1105 1634 m
+534 y
+E
+( 0) 1064 1819 0.5 T
+( 5) 1064 2024 0.5 T
+0 Sr
+1 Sx
+0 Sh
+0 Sd
+597 534 1105 1634 c
+2 St
+1105 1899 m
+597 x
+E
+1105 1738 m
+597 x
+E
+1 St
+1.05 Sx
+1 Sd
+(p[1]) 1404 2283 0.5 T
+4 Sp
+0.8 Sx
+0 0.5 0.0243671 0.470095 Sg
+0 Sd
+B
+222 520 m
+10 19 j
+E
+B
+222 501 m
+10 19 h
+E
+B
+233 526 m
+10 20 j
+E
+B
+233 506 m
+10 20 h
+E
+B
+244 578 m
+10 19 j
+E
+B
+244 559 m
+10 19 h
+E
+B
+255 552 m
+10 19 j
+E
+B
+255 533 m
+10 19 h
+E
+B
+266 602 m
+10 19 j
+E
+B
+266 583 m
+10 19 h
+E
+B
+277 586 m
+10 20 j
+E
+B
+277 566 m
+10 20 h
+E
+B
+288 587 m
+10 19 j
+E
+B
+288 568 m
+10 19 h
+E
+B
+299 556 m
+10 19 j
+E
+B
+299 537 m
+10 19 h
+E
+B
+310 535 m
+10 19 j
+E
+B
+310 516 m
+10 19 h
+E
+B
+321 478 m
+11 19 j
+E
+B
+321 459 m
+11 19 h
+E
+B
+333 541 m
+10 19 j
+E
+B
+333 522 m
+10 19 h
+E
+B
+344 569 m
+10 19 j
+E
+B
+344 550 m
+10 19 h
+E
+B
+355 568 m
+10 19 j
+E
+B
+355 549 m
+10 19 h
+E
+B
+366 653 m
+10 19 j
+E
+B
+366 634 m
+10 19 h
+E
+B
+377 709 m
+10 19 j
+E
+B
+377 690 m
+10 19 h
+E
+B
+388 641 m
+10 19 j
+E
+B
+388 622 m
+10 19 h
+E
+B
+399 633 m
+10 19 j
+E
+B
+399 614 m
+10 19 h
+E
+B
+410 562 m
+10 19 j
+E
+B
+410 543 m
+10 19 h
+E
+B
+421 536 m
+10 19 j
+E
+B
+421 517 m
+10 19 h
+E
+B
+432 613 m
+10 19 j
+E
+B
+432 594 m
+10 19 h
+E
+B
+443 679 m
+10 19 j
+E
+B
+443 660 m
+10 19 h
+E
+B
+454 720 m
+10 19 j
+E
+B
+454 701 m
+10 19 h
+E
+B
+465 691 m
+10 19 j
+E
+B
+465 672 m
+10 19 h
+E
+B
+476 639 m
+10 19 j
+E
+B
+476 620 m
+10 19 h
+E
+B
+487 593 m
+11 19 j
+E
+B
+487 574 m
+11 19 h
+E
+B
+499 601 m
+10 19 j
+E
+B
+499 582 m
+10 19 h
+E
+B
+510 615 m
+10 19 j
+E
+B
+510 596 m
+10 19 h
+E
+B
+521 601 m
+10 19 j
+E
+B
+521 582 m
+10 19 h
+E
+B
+532 492 m
+10 19 j
+E
+B
+532 473 m
+10 19 h
+E
+B
+543 500 m
+10 19 j
+E
+B
+543 481 m
+10 19 h
+E
+B
+554 523 m
+10 19 j
+E
+B
+554 504 m
+10 19 h
+E
+B
+565 491 m
+10 20 j
+E
+B
+565 471 m
+10 20 h
+E
+B
+576 577 m
+10 19 j
+E
+B
+576 558 m
+10 19 h
+E
+B
+587 611 m
+10 19 j
+E
+B
+587 592 m
+10 19 h
+E
+B
+598 590 m
+10 19 j
+E
+B
+598 571 m
+10 19 h
+E
+B
+609 637 m
+10 19 j
+E
+B
+609 618 m
+10 19 h
+E
+B
+620 689 m
+10 19 j
+E
+B
+620 670 m
+10 19 h
+E
+B
+631 603 m
+10 20 j
+E
+B
+631 583 m
+10 20 h
+E
+B
+642 637 m
+10 19 j
+E
+B
+642 618 m
+10 19 h
+E
+B
+653 632 m
+11 19 j
+E
+B
+653 613 m
+11 19 h
+E
+B
+665 513 m
+10 19 j
+E
+B
+665 494 m
+10 19 h
+E
+B
+676 559 m
+10 20 j
+E
+B
+676 539 m
+10 20 h
+E
+B
+687 671 m
+10 19 j
+E
+B
+687 652 m
+10 19 h
+E
+B
+698 586 m
+10 19 j
+E
+B
+698 567 m
+10 19 h
+E
+B
+709 622 m
+10 19 j
+E
+B
+709 603 m
+10 19 h
+E
+B
+720 609 m
+10 19 j
+E
+B
+720 590 m
+10 19 h
+E
+B
+731 635 m
+10 19 j
+E
+B
+731 616 m
+10 19 h
+E
+B
+742 606 m
+10 19 j
+E
+B
+742 587 m
+10 19 h
+E
+B
+753 570 m
+10 20 j
+E
+B
+753 550 m
+10 20 h
+E
+B
+764 507 m
+10 19 j
+E
+B
+764 488 m
+10 19 h
+E
+B
+775 813 m
+10 19 j
+E
+B
+775 794 m
+10 19 h
+E
+1 Sd
+(First iteration in segment) 504 173 0.5 T
+90 Sr
+90 Sh
+(Z-score) 69 697 0.5 T
+0 Sr
+42 Sp
+0 Sh
+285 431 m
+6 z
+401 431 m
+6 z
+518 431 m
+6 z
+634 431 m
+6 z
+751 431 m
+6 z
+E
+205 431 m
+597 x
+E
+( 600) 285 353 0.5 T
+( 800) 401 353 0.5 T
+(1000) 518 353 0.5 T
+(1200) 634 353 0.5 T
+(1400) 751 353 0.5 T
+90 Sr
+90 Sh
+205 615 m
+3 w
+205 821 m
+3 w
+E
+205 431 m
+533 y
+E
+( 0) 164 615 0.5 T
+( 5) 164 821 0.5 T
+0 Sr
+1 Sx
+0 Sh
+0 Sd
+597 533 205 431 c
+2 St
+205 696 m
+597 x
+E
+205 534 m
+597 x
+E
+1 St
+1.05 Sx
+1 Sd
+(p[2]) 504 1079 0.5 T
+4 Sp
+0.8 Sx
+0.5 1 0.0243671 0.470095 Sg
+0 Sd
+B
+1122 631 m
+10 19 j
+E
+B
+1122 612 m
+10 19 h
+E
+B
+1133 648 m
+10 19 j
+E
+B
+1133 629 m
+10 19 h
+E
+B
+1144 655 m
+10 19 j
+E
+B
+1144 636 m
+10 19 h
+E
+B
+1155 619 m
+10 19 j
+E
+B
+1155 600 m
+10 19 h
+E
+B
+1166 621 m
+10 20 j
+E
+B
+1166 601 m
+10 20 h
+E
+B
+1177 601 m
+10 19 j
+E
+B
+1177 582 m
+10 19 h
+E
+B
+1188 561 m
+10 19 j
+E
+B
+1188 542 m
+10 19 h
+E
+B
+1199 552 m
+10 19 j
+E
+B
+1199 533 m
+10 19 h
+E
+B
+1210 550 m
+10 19 j
+E
+B
+1210 531 m
+10 19 h
+E
+B
+1221 518 m
+11 19 j
+E
+B
+1221 499 m
+11 19 h
+E
+B
+1233 560 m
+10 19 j
+E
+B
+1233 541 m
+10 19 h
+E
+B
+1244 625 m
+10 19 j
+E
+B
+1244 606 m
+10 19 h
+E
+B
+1255 611 m
+10 19 j
+E
+B
+1255 592 m
+10 19 h
+E
+B
+1266 665 m
+10 19 j
+E
+B
+1266 646 m
+10 19 h
+E
+B
+1277 710 m
+10 19 j
+E
+B
+1277 691 m
+10 19 h
+E
+B
+1288 644 m
+10 19 j
+E
+B
+1288 625 m
+10 19 h
+E
+B
+1299 649 m
+10 19 j
+E
+B
+1299 630 m
+10 19 h
+E
+B
+1310 643 m
+10 19 j
+E
+B
+1310 624 m
+10 19 h
+E
+B
+1321 624 m
+10 19 j
+E
+B
+1321 605 m
+10 19 h
+E
+B
+1332 690 m
+10 19 j
+E
+B
+1332 671 m
+10 19 h
+E
+B
+1343 696 m
+10 19 j
+E
+B
+1343 677 m
+10 19 h
+E
+B
+1354 765 m
+10 19 j
+E
+B
+1354 746 m
+10 19 h
+E
+B
+1365 774 m
+10 19 j
+E
+B
+1365 755 m
+10 19 h
+E
+B
+1376 719 m
+10 19 j
+E
+B
+1376 700 m
+10 19 h
+E
+B
+1387 666 m
+11 19 j
+E
+B
+1387 647 m
+11 19 h
+E
+B
+1399 712 m
+10 19 j
+E
+B
+1399 693 m
+10 19 h
+E
+B
+1410 699 m
+10 19 j
+E
+B
+1410 680 m
+10 19 h
+E
+B
+1421 672 m
+10 19 j
+E
+B
+1421 653 m
+10 19 h
+E
+B
+1432 512 m
+10 19 j
+E
+B
+1432 493 m
+10 19 h
+E
+B
+1443 603 m
+10 19 j
+E
+B
+1443 584 m
+10 19 h
+E
+B
+1454 622 m
+10 19 j
+E
+B
+1454 603 m
+10 19 h
+E
+B
+1465 621 m
+10 19 j
+E
+B
+1465 602 m
+10 19 h
+E
+B
+1476 642 m
+10 20 j
+E
+B
+1476 622 m
+10 20 h
+E
+B
+1487 695 m
+10 19 j
+E
+B
+1487 676 m
+10 19 h
+E
+B
+1498 711 m
+10 19 j
+E
+B
+1498 692 m
+10 19 h
+E
+B
+1509 778 m
+10 19 j
+E
+B
+1509 759 m
+10 19 h
+E
+B
+1520 786 m
+10 19 j
+E
+B
+1520 767 m
+10 19 h
+E
+B
+1531 735 m
+10 19 j
+E
+B
+1531 716 m
+10 19 h
+E
+B
+1542 740 m
+10 19 j
+E
+B
+1542 721 m
+10 19 h
+E
+B
+1553 669 m
+11 19 j
+E
+B
+1553 650 m
+11 19 h
+E
+B
+1565 511 m
+10 19 j
+E
+B
+1565 492 m
+10 19 h
+E
+B
+1576 612 m
+10 19 j
+E
+B
+1576 593 m
+10 19 h
+E
+B
+1587 708 m
+10 20 j
+E
+B
+1587 688 m
+10 20 h
+E
+B
+1598 710 m
+10 19 j
+E
+B
+1598 691 m
+10 19 h
+E
+B
+1609 637 m
+10 19 j
+E
+B
+1609 618 m
+10 19 h
+E
+B
+1620 653 m
+10 19 j
+E
+B
+1620 634 m
+10 19 h
+E
+B
+1631 751 m
+10 19 j
+E
+B
+1631 732 m
+10 19 h
+E
+B
+1642 673 m
+10 19 j
+E
+B
+1642 654 m
+10 19 h
+E
+B
+1653 571 m
+10 20 j
+E
+B
+1653 551 m
+10 20 h
+E
+B
+1664 695 m
+10 19 j
+E
+B
+1664 676 m
+10 19 h
+E
+B
+1675 755 m
+10 19 j
+E
+B
+1675 736 m
+10 19 h
+E
+1 Sd
+(First iteration in segment) 1404 173 0.5 T
+90 Sr
+90 Sh
+(Z-score) 969 697 0.5 T
+0 Sr
+42 Sp
+0 Sh
+1185 431 m
+6 z
+1301 431 m
+6 z
+1418 431 m
+6 z
+1534 431 m
+6 z
+1651 431 m
+6 z
+E
+1105 431 m
+597 x
+E
+( 600) 1185 353 0.5 T
+( 800) 1301 353 0.5 T
+(1000) 1418 353 0.5 T
+(1200) 1534 353 0.5 T
+(1400) 1651 353 0.5 T
+90 Sr
+90 Sh
+1105 486 m
+3 w
+1105 662 m
+3 w
+1105 839 m
+3 w
+E
+1105 486 m
+478 y
+E
+(-5) 1064 486 0.5 T
+( 0) 1064 662 0.5 T
+( 5) 1064 839 0.5 T
+0 Sr
+1 Sx
+0 Sh
+0 Sd
+597 533 1105 431 c
+2 St
+1105 731 m
+597 x
+E
+1105 593 m
+597 x
+E
+1 St
+1.05 Sx
+1 Sd
+(sigma) 1404 1079 0.5 T
+1.1 Sx
+0 1 0.0243671 0.915823 So
+0 1 0 1 Sg
+(Example 1: Surgical failures) 900 2586 0.5 T
+0.85 Sx
+(Geweke's Convergence Diagnostic) 900 2477 0.5 T
+Z
+%%Trailer
+%%Pages: 1
+%%DocumentNeededResources: font Helvetica
+W
+%%EOF

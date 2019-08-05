@@ -1,0 +1,352 @@
+---
+title: "R-INLA Practical: spatial and spatio-temporal disease mapping"
+subtitle: "GEOMED 2019 Conference"
+author: "Marta Blangiardo and Michela Cameletti"
+date: "8/27/2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# 1. Introduction
+
+In this practical you will extend what already seen in the tutorial and estimate spatial and spatio-temporal disease mapping models. You will study salmonellosis disease in cattles in $n=199$ swiss regions for the years 1991-2008 ($T=18$). The data are included in the workspace \texttt{data\_salmonellosis} which can be loaded in \texttt{R} via 
+
+```{r cars}
+load("data_salmonellosis.RData")
+```
+
+Typing 
+```{r}
+ls()
+```
+
+you will see several objects: \texttt{data.salm}, \texttt{data.Y}, \texttt{data.offset}, \texttt{map} (this is a `SpatialPolygonsDataFrame` object and will be used for mapping). 
+
+The main data file is  \texttt{data.salm} and typing
+```{r}
+str(data.salm)
+```
+
+you can see that the dataset is a \texttt{data.frame} with $199\times 18 = 3582$ rows and five columns:
+
+- \texttt{Y}: the number of salmonellosis cases for a combination of area/year
+- \texttt{offset}: the number of herds in the region
+- \texttt{region\_id}: the area identifier
+- \texttt{time\_id}: the year identifier 
+- \texttt{BEZIRKSNR}: another region ID which matches the one included in the  \texttt{map} (which you will need for mapping). 
+
+Note that this dataset is in **long** format, i.e. each region is repeated 18 times (as there are have 18 years); use `View(data.salm)` if you want to explore the data.
+
+The workspace also contains \texttt{data.Y} and \texttt{data.offset} which are the cases and the offset in a \texttt{data.frame} format: 
+```{r}
+dim(data.Y)
+dim(data.offset)
+colnames(data.Y)
+colnames(data.offset)
+
+n = nrow(data.Y) #n. of areas
+T = ncol(data.Y) - 1 #n. of years
+```
+Note that here the number of rows is given by the regions and the number of columns is given by the years (18) plus a column for the region \texttt{BEZIRKSNR} identifier.
+
+DISCLAIMER: the code provided is one of the many ways to get the results. For advanced `R` users: feel free to ignore it and run your own code up to the INLA model.
+
+# 2. Data preparation and exploration 
+
+Create a new \texttt{data.frame} which includes the region \texttt{BEZIRKSNR} identifier and the risk (probability) of salmonellosis given by Y/offset:
+```{r}
+prob.salm = data.frame(BEZIRKSNR=data.Y$BEZIRKSNR, 
+                        p=data.Y[,1:T]/data.offset[,1:T]) #exclude the BEZIRKSNR col
+```
+
+Then transform the risk variables in categorical variables by using the `cut` functions and the following cutoffs: 0, 0.01, 0.5 and 1. Define a new `data.frame`:
+```{r}
+prob.salm.cat = data.frame(lapply(prob.salm[,2:(T+1)],
+                          function(x) (cut(x, c(0,0.01,0.5,1), include.lowest=TRUE)))
+                          )
+#Include area identifier in the dataframe 
+prob.salm.cat$BEZIRKSNR = prob.salm$BEZIRKSNR 
+colnames(prob.salm.cat)
+```
+
+Finally, plot the probabilities for three years (1991, 2000 and 2008):
+```{r}
+#Merge prob.salm and the Switzerland shapefile 
+map.swiss = map
+map.swiss@data = merge(map.swiss@data,
+                        prob.salm.cat, by="BEZIRKSNR")
+head(map.swiss@data)
+
+spplot(map.swiss,
+       c("p.1991","p.2000","p.2008"),
+       col.regions= terrain.colors(3),
+       as.table=TRUE, 
+       main = "Risk of salmonellosis (Y/offset)")
+```
+
+
+#3. Purely spatial disease mapping model
+Now, focussing on year 1991, specify a BYM model as the one described in slide 40 of the lecture and Section 4 of the tutorial. 
+
+The adjacency matrix in the inla format is already available through the object `switzerland.graph` saved in your directory (note that for this case study it is not possible to create the adjacency matrix from the `map.swiss` object - as shown in the tutorial - because there is a problem in the geographic structure of the polygons). 
+
+```{r}
+swiss.adj.path = "switzerland.graph"
+```
+
+Then define the `formula` and run INLA (use a logGamma(1,0.1) prior for both the precisions):
+```{r}
+library(INLA)
+
+formula = Y ~ 1 + f(region_id,
+                    model="bym",
+                    graph=swiss.adj.path,
+                    hyper=list(prec.unstruct=list(prior="loggamma",param=c(1,0.1)), 
+                               prec.spatial=list(prior="loggamma",param=c(1,0.1))))
+
+output1 = inla(formula,
+                family = "poisson",
+                data = data.salm[data.salm$time_id==1,], #select just the data of the first year
+                offset = log(offset),
+                control.compute=list(dic=TRUE))
+summary(output1)
+```
+
+
+Now you want to map the spatial random effects. To do this you first bring back $z_i=u_i$ + $v_i$ to the natural scale (from the logarithmic one), compute the posterior mean of $z_i$ and create the corresponding categorical variable:
+```{r}
+names(output1$marginals.random)
+length(output1$marginals.random$region_id)
+#Remember that the first n rows include information on z=u+v
+
+#Go back to the natural scale
+exp.z = unlist(lapply(output1$marginals.random$region_id[1:n], 
+                 function(x) inla.emarginal(exp,x)))
+range(exp.z)
+#Create a new dataframe 
+data.exp.z = data.frame(BEZIRKSNR=data.Y$BEZIRKSNR, 
+                            exp.z=exp.z)
+#Add also the categorical variable
+data.exp.z$exp.z.cat = cut(data.exp.z$exp.z,
+                           c(0.88,0.99,1.01,1.2,7.8),
+                           include.lowest=T)
+head(data.exp.z)
+```
+
+Then merge the new dataframe `data.exp.z.c` with the data from the shapefile and finally plot the categorical variable:
+```{r}
+map.swiss@data =  merge(map.swiss@data,
+                        data.exp.z,
+                        by="BEZIRKSNR")
+spplot(obj=map.swiss, 
+       zcol="exp.z.cat",
+       col.regions=terrain.colors(4),
+       as.table=TRUE)
+```
+
+It is also possible to compute the probability $p(z_i>1\mid \mathbf y)$ (or equivalently $p(u_i+v_i>0\mid \mathbf y)$) using the built-in function `inla.pmarginal`:
+```{r}
+#Compute the probabilities
+threshold = 0
+prob.z = unlist(lapply(output1$marginals.random$region_id[1:n],
+                        function(x) 1-inla.pmarginal(threshold,x)))
+#Create a new dataframe
+data.prob.z = data.frame(BEZIRKSNR=data.Y$BEZIRKSNR, 
+                         prob.z=prob.z)
+head(data.prob.z)
+```
+
+Then you merge the new dataframe `data.prob.z.cat1` with the data from the shapefile and finally plot the categorical variable with the probabilities:
+```{r}
+prob.cutoff = c(0,0.2,0.8,1)
+map.swiss@data =  merge(map.swiss@data,
+                        data.prob.z,
+                        by="BEZIRKSNR")
+spplot(obj=map.swiss,
+       zcol="prob.z",
+       col.regions=c("green","white","red"),
+       at=prob.cutoff,
+       as.table=TRUE,
+       main="BYM model - exp(z)")
+```
+
+Note the same purely spatial model could be estimated indipendently for all the available years.
+
+
+# 3. Spatio-temporal disease mapping
+Now specify a spatio-temporal dynamic model for the salmonellosis data. The model you want to use is the following (see page 62 of the lecture slides):
+\begin{eqnarray*}
+y_{it} &\sim& \text{Poisson}(\phi_{it}E_{it})\\ 
+\log(\phi_{it}) &=& \beta_0 + u_i + v_i + \lambda_t + \gamma_t\\ 
+v_i &\sim& \text{Normal}(0,\sigma^2_v)\\
+\mathbf{u} &\sim& \text{ICAR}(\mathbf{W},\sigma^2_u)\\
+\gamma_t &\sim& \text{Normal}(0,\sigma^2_{\gamma})\\
+\lambda_t &\sim& \text{RW1}(\sigma^2_\lambda) 
+\end{eqnarray*}
+
+The model includes, besides the BYM components, two temporal effects (unstructured (`model=iid`) and structured (`model=rw1`)). A logGamma(1,0.1) prior is specified for the four precisions.
+
+To estimate this model you have to create a new temporal identifier as you need to define two time specific components in the model and INLA does not allow to assign more than one $\texttt{f()}$ to any identifier:   
+
+```{r}
+data.salm$time_id2 = data.salm$time_id
+formula.ST1 = Y ~  1+ f(region_id,
+                        model="bym",
+                        graph=swiss.adj.path,
+                        hyper=list(prec.unstruct=list(prior="loggamma",param=c(1,0.1)), 
+                               prec.spatial=list(prior="loggamma",param=c(1,0.1)))) +
+                        f(time_id, model="iid",
+                          hyper=list(prec=list(prior="loggamma",param=c(1,0.1)))) +
+                        f(time_id2, model="rw1",
+                          hyper=list(prec=list(prior="loggamma",param=c(1,0.1))))
+```
+
+Then run the model
+```{r}
+output2 = inla(formula.ST1,
+                family="poisson",
+                data=data.salm,
+                offset=log(offset),
+                control.compute=list(dic=TRUE))
+summary(output2)
+```
+
+It is possible to plot the posterior mean of the two temporal effects:
+```{r}
+par(mfrow=c(1,2))
+plot(1991:2008,
+     output2$summary.random$time_id$mean,
+     type="l", main="IID_time",ylab="Posterior mean",xlab="Year")
+plot(1991:2008,
+     output2$summary.random$time_id2$mean, 
+     type="l", main="RW1_time",ylab="Posterior mean",xlab="Year")
+par(mfrow=c(1,1))
+```
+
+It would be also possible to compute the **sum** of the two temporal effect as the total temporal trend $\gamma_t+\lambda_t$. To do this you need to use `inla.make.lincombs` function (see for example Section 7.1.1 of the INLA book) to create a linear combination of two random effects.
+
+As done in the previous Section 2., it is also possible to plot for this model the residual spatial random effects ($z_i=u_i+v_i$).
+
+# 4. Spatio-temporal disease mapping with space-time interaction
+You will now run a spatio-temporal model with a type I interaction (see page 63-64 of the lecture slides).  
+
+\begin{eqnarray*}
+y_{it} &\sim& \text{Poisson}(\phi_{it}E_{it})\\ 
+\log(\phi_{it}) &=& \beta_0 + u_i + v_i + \lambda_t + \gamma_t\\ 
+v_i &\sim& \text{Normal}(0,\sigma^2_v)\\
+\mathbf{u} &\sim& \text{ICAR}(\mathbf{W},\sigma^2_u)\\
+\gamma_t &\sim& \text{Normal}(0,\sigma^2_{\gamma})\\
+\lambda_t &\sim& \text{RW1}(\sigma^2_\lambda) \\
+\delta_{it} &\sim& N(0,\sigma^2_{\delta})
+\end{eqnarray*}
+
+A logGamma(1,0.1) prior is specified for the five precisions. To run this model you need to specify another identifier for the interaction, going from 1 to the total number of rows in `data.salm`:
+```{r}
+#ID
+region_time_id = seq(1,nrow(data.salm))
+
+#Formula
+formula.intI = Y ~  1+ f(region_id,
+                        model="bym",
+                        graph=swiss.adj.path,
+                        hyper=list(prec.unstruct=list(prior="loggamma",param=c(1,0.1)), 
+                               prec.spatial=list(prior="loggamma",param=c(1,0.1)))) +
+                        f(time_id, model="iid",
+                          hyper=list(prec=list(prior="loggamma",param=c(1,0.1)))) +
+                        f(time_id2, model="rw1",
+                          hyper=list(prec=list(prior="loggamma",param=c(1,0.1)))) +
+                        f(region_time_id, model="iid",
+                          hyper=list(prec=list(prior="loggamma",param=c(1,0.1))))
+#Run INLA
+output3 = inla(formula.intI,
+              family="poisson",
+              data=data.salm,
+              offset=log(offset),
+              control.compute=list(dic=TRUE))
+summary(output3)
+```
+
+It is possible to map the **posterior mean** of the interaction $\delta_{it}$ where $i=1,\dots,n$ and $t=1,\ldots,T$:
+```{r}
+#Extract the posterior mean (log scale) and create a new data frame
+delta.intI = data.frame(delta=output3$summary.random$region_time_id$mean,
+                        year=data.salm$time_id,
+                        ID.area=data.salm$region_id)
+dim(delta.intI)
+head(delta.intI)
+#Transform into categories
+delta.intI$delta.cat = cut(delta.intI$delta,
+                           c(-0.75,-0.05,0.05,3.1),
+                           include.lowest=T)
+
+#Reshape the dataframe so that the dimension is 199 (n) X 18 (T)
+delta.intI.wide = reshape(delta.intI,direction="wide",
+                          timevar = "year",
+                          idvar = "ID.area",
+                          drop = "delta")
+dim(delta.intI.wide)
+#Remove the first column twith the station ID
+delta.intI.wide = delta.intI.wide[,-1]
+#Change the column names
+colnames(delta.intI.wide) = paste("delta.",seq(1991,2008),sep="")
+#Add the BEZIRKSNR identifier
+delta.intI.wide$BEZIRKSNR = data.Y$BEZIRKSNR
+```
+
+For mapping it is necessary to merge the shapefile datatable with the new dataframe `delta.intI.wide`:
+```{r}
+map.swiss@data = merge(map.swiss@data,
+                       delta.intI.wide,
+                       by="BEZIRKSNR")
+spplot(obj=map.swiss,
+       zcol=c("delta.1991","delta.2000","delta.2008"),
+       col.regions= terrain.colors(3), 
+       main="Type I interaction",
+       as.table=TRUE)
+```
+
+The same approach could be adopted to map for each available year the posterior probability that $\delta$ exceeds the threshold 0:
+```{r}
+#Extract the probability
+prob.delta.vec = unlist(lapply(output3$marginals.random$region_time_id, 
+                        function(x){1 - inla.pmarginal(threshold, x)}))
+
+#Create a new dataframe
+prob.delta.intI = data.frame(prob.delta=prob.delta.vec,
+                        year=data.salm$time_id,
+                        ID.area=data.salm$region_id)
+
+#Reshape the dataframe so that the dimension is 199 (n) X 18 (T)
+prob.delta.intI.wide = reshape(prob.delta.intI,direction="wide",
+                          timevar = "year",
+                          idvar = "ID.area")
+
+#Remove the first column twith the station ID
+prob.delta.intI.wide = prob.delta.intI.wide[,-1]
+#Change the column names
+colnames(prob.delta.intI.wide) = paste("deltaprob.",seq(1991,2008),sep="")
+#Add the BEZIRKSNR identifier
+prob.delta.intI.wide$BEZIRKSNR = data.Y$BEZIRKSNR
+
+#Merge before mapping
+map.swiss@data = merge(map.swiss@data, prob.delta.intI.wide, by="BEZIRKSNR")
+spplot(obj=map.swiss,
+       zcol=c("deltaprob.1991","deltaprob.2000","deltaprob.2008"),
+       col.regions=c("green","white", "red"), 
+       at=prob.cutoff,
+       main="Type I interaction - probability",
+       as.table=TRUE)
+```
+
+
+Finally we compare the dic of the two spatio-temporal models (output2: spatio-temporal model with bym + 2 temporal effects, output3: spatio-temporal model with bym and space-time type I interaction)
+```{r}
+output2$dic$dic
+output3$dic$dic
+```
+It seems that the model with the interaction is preferable.
+
+

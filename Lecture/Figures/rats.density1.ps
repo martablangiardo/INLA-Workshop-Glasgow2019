@@ -1,0 +1,4997 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Title: (S-PLUS Graphics)
+%%Creator: S-PLUS
+%%For: (Nicola Best)
+%%CreationDate: Thu Mar  7 13:44:57 1996
+%%BoundingBox: 90 72 523 721
+%%Pages: (atend)
+%%DocumentData: Clean7Bit
+%%DocumentNeededResources: (atend)
+%%EndComments
+%%BeginProlog
+150 dict begin gsave
+/bd {bind def} def
+/PVer 3100 def % version
+% drawing commands
+/I {Coord SetPage 1 setlinecap 1 setlinejoin
+    LineTypes {RastersPerPoint ScaleArray} forall
+    /Helvetica findfont
+    PointSize RastersPerPoint mul Cex mul scalefont setfont
+    /Colors GColors def
+} bd
+/IBu {} def
+/B {newpath} bd
+/C {currentpoint Penup {newpath} {stroke} ifelse moveto} bd
+/E {stroke} bd
+/F {closepath fill} bd
+/M {moveto} bd
+/L {lineto} bd
+/Pu {load /XEQ exch def /Penup true def} bd
+/Pd {/XEQ {} def /Penup false def} bd
+/Px {currentdict /XEQ known {XEQ} if} bd
+/h {Penup {rmoveto Px} {rlineto} ifelse} bd
+/j {neg Penup {rmoveto Px} {rlineto} ifelse} bd
+/k {exch neg exch Penup {rmoveto Px} {rlineto} ifelse} bd
+/l {neg exch neg exch Penup {rmoveto Px} {rlineto} ifelse} bd
+/m {moveto Penup {Px} if} bd
+/x {0 Penup {rmoveto Px} {rlineto} ifelse} bd
+/y {0 exch Penup {rmoveto Px} {rlineto} ifelse} bd
+/w {neg x} bd
+/z {neg y} bd
+/a {B M dup y exch x neg y closepath} bd
+/b {a fill} bd
+/c {a stroke} bd
+/A {PageBegin BackCol dup 0 gt {
+    gsave Sc Page aload pop
+    exch 4 -1 roll dup 5 1 roll sub 3 1 roll exch dup 4 1 roll sub 4 2 roll b
+    grestore} {pop} ifelse
+} bd
+/Ph {gsave Pch-x Pch-y rmoveto Show grestore} bd
+/Pc {Pch Ph} bd
+/T {/Adjust exch def gsave translate StringRot rotate 0 0 moveto
+    dup stringwidth pop neg Adjust mul 0 rmoveto
+    currentpoint translate TextShow grestore} bd
+/X {erasepage InPage {PageEnd} if} bd
+/Z {gsave showpage grestore PageEnd} bd
+/W {grestore end} bd
+% parameter setting commands
+/saveAt {Attr begin
+    /Atlinewidth currentlinewidth def
+    /Atfont currentfont def
+    /Atdash currentdash 2 array astore def
+    /AtSc CurSc def
+end} bd
+/restAt {Attr begin
+    Atlinewidth Atfont Atdash AtSc
+    end
+    Sc
+    aload pop setdash
+    setfont
+    setlinewidth
+} bd
+/St {1 sub LineTypes dup 3 1 roll length Rem floor get 0 setdash} bd
+/Sw {abs 2 div RastersPerPoint mul setlinewidth SetClip} bd
+/Sp {dup 42 eq {pop IBu} {Pch exch 0 exch put SetPchSize} ifelse}bd
+/Sx {dup Cex div /Ratio exch def
+     /Cex exch def
+     currentfont Ratio scalefont setfont
+     /Pch-x Pch-x Ratio mul def
+     /Pch-y Pch-y Ratio mul def
+     /Text-y Text-y Ratio mul def} bd
+/So {4 1 roll exch 4 -1 roll Plot astore pop SetClip} bd
+/Sg {4 1 roll exch 4 -1 roll Figure astore pop SetClip} bd
+/Sr {/StringRot exch def} bd
+/Sh {/CharRot exch def} bd
+/Sd {0 eq /ClipToPlot exch def SetClip} bd
+% other variable definitions
+/Iv {
+    /InPage false def
+    /Clip 4 array def
+    /Page 4 array def
+    /Figure [0 0 1 1] def
+    /Plot [0 0 1 1] def
+    /ClipToPlot true def
+    /Cex 1 def
+    /Outline false def
+    /Pch 1 string def
+    /Pch-x 0 def
+    /Pch-y 0 def
+    /Text-y 0 def
+    /LineTypes [ % in default units
+	[] [1 2] [4 4] [8 4] [13 3] [16 2 2 2] [8 2 2 2] [1 13] [6 5] [12 4]
+    ] def
+    /Attr 5 dict def
+    /CurSc 1 def
+    /Penup false def
+    /XEQ {} def
+} bd
+% other procedure definitions
+/Rem {2 copy div floor mul sub floor cvi} bd
+/RastersPerPoint {RastersPerInch 72 div} bd
+/ScaleArray {/Factor exch def /Array exch def
+    0 1 Array length 1 sub
+    {dup Array exch get Factor mul Array 3 1 roll put} for} bd
+/Coord {Region aload pop /uy exch def /ux exch def /ly exch def /lx exch def
+    uy ly sub ux lx sub Landscape {exch} if /Width exch def /Height exch def
+    lx ly translate Landscape {90 rotate 0 Height neg translate} if
+    1 RastersPerPoint div dup scale} bd
+/SetPchSize {gsave
+    newpath 0 0 moveto Pch false charpath flattenpath pathbbox
+    exch 3 1 roll
+    add 2 div neg /Pch-y exch def
+    add 2 div neg /Pch-x exch def
+    grestore} bd
+/TextShow {
+    CharRot StringRot sub dup 0 eq {pop SimpleShow} {FancyShow} ifelse
+} bd
+/SimpleShow {0 Text-y 2 div neg rmoveto Show} bd
+/FancyShow {
+    /RotDiff exch def
+    /Cos RotDiff cos abs def
+    /Sin RotDiff sin abs def
+    {
+	( ) dup 0 4 -1 roll put
+	dup stringwidth pop /CharWidth exch def
+	Cos 0 eq {
+	    Text-y Sin div
+	} {
+	    Sin 0 eq {
+		CharWidth Cos div
+	    } {
+		Text-y Sin div dup
+		CharWidth Cos div dup
+		4 1 roll lt {exch pop} {pop} ifelse
+	    } ifelse
+	} ifelse 2 div /CharDist exch def
+	CharDist 0 translate 0 0 moveto
+	gsave
+	    RotDiff rotate
+	    CharWidth 2 div neg Text-y 2 div neg rmoveto
+	    Outline {false charpath stroke} {show} ifelse
+	grestore
+	CharDist 0 translate 0 0 moveto
+    } forall
+} bd
+/Show {Outline {false charpath stroke} {show} ifelse} bd
+/BoxClip {/CLW currentlinewidth def
+    2 {CLW add 4 1 roll} repeat
+    2 {CLW sub 4 1 roll} repeat
+    % initclip
+    saveAt grestore gsave restAt
+    newpath 2 index exch 2 index exch dup 6 index exch
+    moveto 3 {lineto} repeat closepath clip newpath} bd
+/Subregion {7 dict begin /A exch def /Uy exch def /Ux exch def /Ly exch def /Lx exch def
+    Ux Lx sub A 0 get mul Lx add
+    Uy Ly sub A 1 get mul Ly add
+    Ux Lx sub A 2 get mul Lx add
+    Uy Ly sub A 3 get mul Ly add end} bd
+/SetFigure {Page aload pop Figure Subregion} bd
+/SetPlot {SetFigure Plot Subregion} bd
+/SetClip {ClipToPlot {SetPlot} {SetFigure} ifelse BoxClip} bd
+/SetPage {0 0 Width Height Page astore RastersPerPoint ScaleArray} bd
+/PageBegin {save /PageContext exch def /InPage true def gsave} bd
+/PageEnd {grestore PageContext restore /InPage false def} bd
+/SImage {
+    dup /Bits exch def 8 exch idiv /PerByte exch def
+    /Ht exch def /Wid exch def
+    1 Wid div 1 Ht div scale
+    /saveSc CurSc def /Colors IColors def
+    /curstr Wid PerByte add 1 sub PerByte idiv string def
+    /MaskByte 16#ff Bits 8 sub bitshift def
+    1 1 Ht {
+	currentfile curstr readhexstring pop pop
+	/CurPos 0 def
+	/Left PerByte def
+	1 1 Wid {
+	    Left PerByte eq {
+		/CurByte curstr CurPos get def
+		/MaskMove -8 Bits add def
+		/CurPos CurPos 1 add def
+	    } if
+	    CurByte MaskMove bitshift MaskByte and
+	    dup 0 gt {
+		Sc
+		exch dup 3 1 roll B M 1 z 1 w 1 y F
+	    } {pop pop} ifelse
+	    Left 1 sub dup /Left exch def 0 le
+	    {/Left PerByte def}
+	    {/MaskMove MaskMove Bits add def} ifelse
+	} for
+	pop
+    } for
+    /Colors GColors def saveSc Sc
+} bd
+/Ic {} bd
+/Sc {
+    dup /CurSc exch def
+    dup dup 1 lt exch 0 ge and
+    {1 exch sub setgray}  % explicit gray level [0,1)
+    {1 sub Colors dup 3 1 roll length Rem floor get
+     dup type /arraytype eq {aload pop setrgbcolor} {setgray} ifelse
+    } ifelse
+} bd
+/If {} bd
+/Sf {dup 0 lt /Outline exch def abs
+     1 sub Fonts dup 3 1 roll length Rem floor get
+     findfont PointSize Cex mul RastersPerPoint mul scalefont dup setfont
+     dup /FontMatrix get /Matrix exch def /FontBBox get aload pop
+     Matrix transform 4 2 roll Matrix transform
+     exch pop add /Text-y exch def pop SetPchSize} bd
+%%EndProlog
+%%BeginSetup
+% fixed controlling parameters
+/Landscape false def
+/Region [90 72 522 720] def
+/RastersPerInch 300 def
+/PointSize 14 def
+/Fonts [
+	/Helvetica
+	/Courier
+	/Times-Roman
+	/Helvetica-Oblique
+	/Helvetica-Bold
+	/Helvetica-BoldOblique
+	/Courier-Oblique
+	/Courier-Bold
+	/Courier-BoldOblique
+	/Times-Italic
+	/Times-Bold
+	/Times-BoldItalic
+	/Symbol
+	/AvantGarde-Book
+	/AvantGarde-BookOblique
+	/AvantGarde-Demi
+	/AvantGarde-DemiOblique
+	/Bookman-Demi
+	/Bookman-DemiItalic
+	/Bookman-Light
+	/Bookman-LightItalic
+	/Helvetica-Narrow
+	/Helvetica-Narrow-Bold
+	/Helvetica-Narrow-BoldOblique
+	/Helvetica-Narrow-Oblique
+	/NewCenturySchlbk-Roman
+	/NewCenturySchlbk-Bold
+	/NewCenturySchlbk-Italic
+	/NewCenturySchlbk-BoldItalic
+	/Palatino-Roman
+	/Palatino-Bold
+	/Palatino-Italic
+	/Palatino-BoldItalic
+	/ZapfChancery-MediumItalic
+	/ZapfDingbats
+] def
+/GColors [
+	0
+	0.6
+	0.3
+	0.9
+	0.4
+	0.7
+	0.1
+	0.5
+	0.8
+	0.2
+] def
+/BackCol -1 def
+/IColors [
+	0.933333
+	0.866667
+	0.8
+	0.733333
+	0.666667
+	0.6
+	0.533333
+	0.466667
+	0.4
+	0.333333
+	0.266667
+	0.2
+	0.133333
+	0.0666667
+	0
+] def
+/Colors GColors def
+/IBu {Pch 0 8#267 put SetPchSize} def
+/Bu {Pc} def
+
+% all initialization action here
+Iv I
+currentdict /Ic known {Ic} if
+currentdict /If known {If} if
+
+%%EndSetup
+
+
+%%Page: 1 1
+%%PageOrientation: Portrait
+A
+1 St
+1 Sw
+1 Sc
+0 Sr
+42 Sp
+0.8 Sx
+0.2275 0.8915 0.303159 0.746539 So
+0 0.5 0.470095 0.915823 Sg
+0 Sh
+0 Sd
+%%IncludeResource: font Helvetica
+1 Sf
+B
+227 1654 m
+2 x
+2 x
+2 x
+2 x
+2 x
+2 x
+2 x
+2 x
+2 x
+2 1 h
+1 x
+2 x
+2 x
+2 1 h
+2 x
+2 1 h
+2 x
+2 1 h
+2 1 h
+2 1 h
+2 1 h
+2 1 h
+2 1 h
+2 1 h
+2 2 h
+2 1 h
+2 2 h
+2 2 h
+2 2 h
+2 2 h
+2 3 h
+2 2 h
+2 3 h
+2 3 h
+2 4 h
+2 3 h
+2 4 h
+1 4 h
+2 5 h
+2 5 h
+2 5 h
+2 5 h
+2 6 h
+2 6 h
+2 6 h
+2 6 h
+2 7 h
+2 7 h
+2 7 h
+2 8 h
+2 7 h
+2 9 h
+2 8 h
+2 9 h
+2 9 h
+2 10 h
+2 10 h
+2 11 h
+2 11 h
+2 11 h
+2 12 h
+2 13 h
+2 13 h
+2 13 h
+2 14 h
+1 14 h
+2 15 h
+2 14 h
+2 15 h
+2 15 h
+2 14 h
+2 15 h
+2 14 h
+2 13 h
+2 13 h
+2 12 h
+2 11 h
+2 11 h
+2 9 h
+2 8 h
+2 7 h
+2 5 h
+2 4 h
+2 3 h
+2 2 h
+2 x
+2 1 j
+2 2 j
+2 3 j
+2 4 j
+2 5 j
+2 5 j
+1 7 j
+2 6 j
+2 7 j
+2 8 j
+2 8 j
+2 8 j
+2 9 j
+2 9 j
+2 9 j
+2 9 j
+2 10 j
+2 10 j
+2 10 j
+2 11 j
+2 12 j
+2 11 j
+2 12 j
+2 13 j
+2 12 j
+2 13 j
+2 13 j
+2 13 j
+2 14 j
+2 13 j
+2 13 j
+2 13 j
+2 13 j
+2 12 j
+1 12 j
+2 12 j
+2 11 j
+2 10 j
+2 10 j
+2 10 j
+2 9 j
+2 8 j
+2 8 j
+2 7 j
+2 7 j
+2 6 j
+2 5 j
+2 5 j
+2 5 j
+2 4 j
+2 4 j
+2 3 j
+2 3 j
+2 3 j
+2 3 j
+2 2 j
+2 2 j
+2 2 j
+2 2 j
+2 2 j
+2 2 j
+1 1 j
+2 2 j
+2 1 j
+2 1 j
+2 1 j
+2 1 j
+2 1 j
+2 1 j
+2 1 j
+2 1 j
+2 1 j
+2 x
+2 1 j
+2 x
+2 1 j
+2 x
+2 x
+2 1 j
+2 x
+2 x
+2 1 j
+2 x
+2 x
+2 x
+2 x
+2 1 j
+2 x
+2 x
+1 x
+2 x
+2 1 j
+2 x
+2 x
+2 x
+2 x
+2 x
+2 1 j
+2 x
+2 x
+2 x
+2 x
+2 x
+2 x
+2 x
+2 x
+2 x
+2 x
+2 x
+2 x
+2 x
+2 x
+2 x
+E
+1 Sd
+(beta.c) 504 1377 0.5 T
+330 1634 m
+5 z
+520 1634 m
+5 z
+711 1634 m
+5 z
+E
+205 1634 m
+597 x
+E
+(6  ) 330 1556 0.5 T
+(6.5) 520 1556 0.5 T
+(7  ) 711 1556 0.5 T
+90 Sr
+90 Sh
+205 1654 m
+3 w
+205 1939 m
+3 w
+E
+205 1654 m
+514 y
+E
+(0) 164 1654 0.5 T
+(2) 164 1939 0.5 T
+0 Sr
+1 Sx
+0 Sh
+0 Sd
+597 534 205 1634 c
+0.91 Sx
+1 Sd
+(Kernel density from rats.full) 504 2344 0.5 T
+(\(1000 values\)) 504 2234 0.5 T
+1 Sx
+0 Sd
+/Bu Pu B
+437 1654 m
+4 w
+82 w
+35 x
+30 x
+33 x
+15 w
+74 w
+12 x
+7 w
+60 x
+14 x
+26 w
+50 x
+67 w
+41 x
+54 w
+17 w
+68 x
+73 w
+14 w
+155 x
+87 w
+2 w
+9 w
+32 w
+36 x
+52 x
+87 w
+25 w
+36 x
+16 x
+6 w
+11 x
+31 w
+3 x
+51 w
+96 x
+24 w
+25 x
+25 w
+8 w
+10 w
+48 x
+50 w
+5 x
+67 x
+10 w
+16 x
+50 w
+70 x
+91 w
+7 w
+40 w
+21 x
+22 x
+15 w
+1 x
+21 w
+56 x
+10 x
+28 w
+10 x
+33 x
+43 x
+73 w
+6 x
+18 w
+1 w
+5 x
+15 x
+56 w
+38 w
+122 x
+75 w
+68 x
+25 x
+13 x
+12 w
+18 w
+6 x
+16 w
+48 w
+4 x
+7 w
+61 x
+54 w
+10 x
+8 w
+22 x
+8 w
+53 x
+46 x
+135 w
+7 x
+26 x
+68 w
+142 x
+40 w
+29 w
+49 x
+20 w
+72 w
+33 x
+28 x
+26 w
+21 x
+10 w
+54 w
+11 w
+94 x
+7 x
+53 w
+9 x
+34 w
+23 x
+31 w
+32 x
+15 w
+73 x
+28 w
+42 x
+55 w
+13 w
+42 x
+20 x
+37 w
+3 x
+4 w
+24 w
+27 x
+67 w
+68 x
+14 w
+31 x
+62 w
+48 w
+88 x
+12 x
+1 x
+88 x
+85 w
+40 x
+66 w
+25 w
+29 x
+58 w
+39 x
+22 w
+65 x
+40 w
+22 x
+10 x
+45 x
+73 w
+21 w
+12 x
+9 x
+10 x
+5 x
+81 w
+65 x
+8 w
+17 x
+63 x
+4 x
+6 w
+25 x
+36 w
+50 x
+76 w
+13 x
+13 w
+64 w
+25 x
+4 x
+3 x
+31 w
+14 x
+17 w
+40 w
+112 x
+8 x
+130 w
+32 x
+32 w
+71 x
+42 w
+67 x
+52 w
+34 w
+53 x
+11 w
+38 x
+44 x
+50 w
+16 w
+24 w
+71 x
+28 x
+54 w
+65 x
+87 w
+6 x
+13 w
+25 x
+30 x
+41 w
+1 x
+25 x
+82 w
+10 x
+115 x
+80 w
+50 x
+17 w
+85 w
+8 x
+75 x
+57 w
+69 x
+30 w
+50 w
+73 x
+31 w
+47 x
+18 w
+33 x
+3 w
+73 w
+109 x
+57 w
+28 w
+32 x
+46 w
+8 x
+32 x
+1 x
+22 w
+26 w
+38 x
+35 w
+11 w
+17 x
+6 w
+12 x
+22 w
+64 x
+35 w
+4 w
+5 x
+20 w
+13 x
+17 x
+3 x
+5 w
+88 x
+69 w
+23 x
+8 w
+25 w
+49 w
+3 w
+37 x
+22 w
+27 x
+3 w
+6 w
+19 x
+22 w
+37 w
+23 x
+47 w
+93 x
+31 w
+5 w
+30 x
+27 x
+41 x
+26 w
+41 w
+67 w
+38 x
+33 w
+92 x
+83 x
+118 w
+52 w
+19 x
+52 x
+8 x
+45 w
+39 x
+65 w
+36 x
+1 w
+3 x
+10 w
+35 x
+92 w
+75 x
+35 w
+83 w
+67 x
+23 x
+50 x
+1 x
+8 w
+22 w
+14 w
+44 w
+56 x
+28 x
+53 w
+20 x
+3 x
+9 w
+52 x
+16 w
+6 w
+23 x
+59 w
+33 x
+32 w
+55 w
+8 x
+6 w
+40 x
+55 x
+11 w
+30 w
+59 x
+29 w
+42 x
+110 x
+127 w
+86 w
+68 x
+15 x
+26 w
+30 x
+10 w
+94 x
+178 w
+66 x
+51 w
+33 w
+124 x
+1 w
+48 w
+17 w
+45 w
+27 x
+126 x
+28 w
+54 w
+12 w
+1 w
+33 w
+77 x
+33 w
+22 w
+2 x
+30 w
+27 x
+6 w
+25 x
+43 x
+41 w
+37 x
+37 x
+33 w
+24 x
+3 x
+66 w
+7 w
+22 x
+7 x
+19 x
+66 w
+128 x
+54 w
+12 w
+87 w
+50 x
+10 w
+36 x
+35 w
+44 w
+45 x
+4 w
+12 x
+30 x
+110 x
+173 w
+12 x
+10 w
+75 x
+43 x
+93 w
+24 w
+54 x
+23 x
+30 w
+43 w
+8 x
+52 w
+55 x
+62 x
+21 x
+112 w
+35 x
+8 w
+22 w
+32 x
+3 x
+53 x
+59 w
+10 x
+42 w
+20 x
+41 x
+75 x
+23 w
+89 w
+24 x
+50 w
+19 w
+37 x
+1 x
+45 x
+34 w
+66 w
+32 x
+5 x
+17 w
+54 x
+62 x
+73 w
+64 w
+82 x
+36 x
+19 w
+72 w
+10 w
+84 x
+13 w
+29 x
+69 w
+5 x
+4 w
+15 w
+54 x
+6 x
+77 w
+20 x
+2 w
+9 x
+11 x
+33 w
+86 x
+18 w
+7 w
+18 w
+12 x
+51 w
+53 x
+29 w
+65 x
+34 x
+102 w
+13 w
+76 x
+20 w
+2 w
+19 x
+20 x
+41 w
+11 x
+19 w
+5 w
+27 w
+32 w
+80 x
+25 w
+22 w
+13 x
+36 x
+68 w
+6 w
+54 x
+30 x
+73 x
+76 w
+56 w
+18 x
+14 x
+53 w
+2 w
+36 x
+69 w
+61 x
+41 x
+31 x
+11 x
+1 w
+47 w
+52 w
+20 x
+30 x
+22 w
+12 w
+93 w
+60 x
+131 x
+63 w
+113 w
+145 x
+47 w
+27 x
+10 w
+25 x
+138 w
+158 x
+21 w
+4 w
+14 w
+41 w
+8 x
+20 w
+7 w
+32 x
+8 x
+30 w
+33 w
+60 x
+23 x
+61 w
+24 x
+10 w
+9 x
+11 x
+15 w
+23 w
+3 w
+37 x
+9 x
+71 x
+58 w
+18 x
+110 x
+46 w
+58 w
+32 w
+51 x
+22 w
+46 w
+14 w
+4 x
+28 x
+5 w
+74 w
+133 x
+7 w
+13 w
+41 w
+64 x
+7 w
+13 w
+14 w
+31 x
+36 w
+24 x
+3 x
+14 x
+111 w
+40 x
+17 x
+94 w
+70 x
+18 x
+11 w
+32 x
+35 w
+12 x
+15 x
+10 x
+17 x
+36 w
+24 x
+5 x
+3 w
+16 w
+50 x
+53 w
+52 w
+24 x
+41 w
+69 x
+38 w
+18 x
+12 w
+91 w
+84 x
+55 w
+3 x
+52 x
+17 x
+19 w
+76 x
+53 w
+63 w
+63 x
+11 w
+15 x
+13 x
+23 w
+19 w
+19 x
+10 w
+31 x
+11 w
+29 w
+46 x
+9 x
+36 w
+23 w
+27 x
+5 x
+11 x
+25 x
+15 w
+25 w
+49 w
+42 x
+9 x
+65 x
+160 w
+66 x
+14 x
+7 w
+69 x
+99 w
+118 x
+144 w
+4 x
+11 x
+14 w
+55 x
+27 x
+21 w
+39 x
+75 w
+50 x
+3 w
+66 x
+41 w
+16 x
+64 w
+34 x
+3 w
+32 x
+22 x
+25 x
+144 w
+174 x
+61 w
+65 w
+77 x
+115 w
+21 x
+78 x
+88 w
+47 x
+31 x
+2 x
+61 w
+18 x
+10 x
+31 w
+8 x
+50 x
+9 x
+11 x
+17 w
+36 w
+51 x
+4 w
+37 w
+46 w
+15 x
+16 x
+30 w
+45 x
+4 x
+34 x
+47 w
+18 w
+27 x
+31 x
+12 w
+34 w
+38 x
+49 x
+73 w
+81 w
+115 x
+51 w
+48 w
+67 x
+20 x
+23 x
+79 w
+42 x
+25 x
+38 w
+16 w
+22 w
+23 w
+64 x
+23 w
+39 x
+89 w
+72 x
+39 w
+32 x
+35 w
+71 x
+75 w
+34 w
+121 x
+1 x
+53 w
+54 w
+24 x
+11 x
+22 x
+82 w
+44 x
+4 w
+26 x
+52 x
+3 w
+31 x
+65 w
+29 w
+1 w
+1 w
+61 x
+27 w
+2 w
+C % limitcheck avoid max=750
+38 x
+94 w
+111 x
+56 w
+3 w
+52 x
+72 w
+131 x
+223 w
+8 x
+92 x
+23 w
+56 x
+93 w
+62 x
+27 w
+11 x
+40 x
+22 w
+42 x
+27 x
+99 w
+124 x
+65 w
+4 x
+46 x
+16 w
+21 w
+4 w
+21 x
+30 w
+11 w
+26 x
+55 w
+12 x
+15 w
+16 x
+36 x
+1 w
+51 w
+34 w
+19 w
+65 x
+26 w
+41 x
+3 x
+70 w
+79 x
+27 w
+22 w
+41 x
+12 w
+12 x
+37 x
+55 w
+48 x
+19 w
+42 w
+74 x
+46 x
+64 w
+15 w
+69 x
+125 w
+86 x
+23 w
+23 w
+2 x
+8 w
+49 w
+83 x
+22 w
+42 w
+52 x
+5 x
+28 w
+53 x
+38 w
+15 x
+133 w
+89 x
+54 x
+51 w
+10 w
+27 x
+9 w
+12 x
+41 x
+6 w
+47 w
+12 w
+13 w
+1 w
+28 x
+11 x
+109 w
+87 x
+38 x
+112 w
+66 x
+24 w
+39 x
+29 x
+15 w
+33 x
+7 w
+40 w
+44 w
+82 x
+35 x
+74 w
+9 x
+11 w
+9 x
+57 x
+30 w
+9 x
+4 x
+1 w
+60 w
+34 w
+101 x
+56 x
+82 w
+20 w
+5 x
+1 w
+1 w
+15 x
+6 x
+2 w
+42 w
+11 w
+15 x
+68 x
+28 w
+10 x
+4 w
+25 x
+69 w
+56 w
+177 x
+161 w
+93 x
+15 x
+102 w
+89 x
+3 w
+19 x
+59 w
+14 x
+8 x
+52 x
+28 w
+48 w
+28 w
+94 x
+15 w
+90 w
+15 w
+121 x
+23 w
+19 x
+43 w
+11 w
+57 x
+81 w
+73 x
+19 x
+89 w
+25 x
+17 x
+21 w
+92 x
+21 w
+36 w
+19 w
+2 x
+48 w
+74 x
+125 w
+17 x
+69 x
+66 x
+28 w
+122 w
+102 x
+59 x
+88 w
+13 w
+61 x
+76 w
+1 x
+60 x
+61 w
+75 x
+91 w
+5 x
+85 x
+24 x
+14 x
+11 w
+69 w
+3 x
+16 x
+12 w
+36 w
+13 x
+50 x
+90 w
+16 x
+167 x
+138 w
+48 w
+105 x
+52 w
+4 x
+23 w
+89 x
+23 x
+48 w
+114 w
+13 w
+25 x
+24 w
+58 x
+64 x
+19 w
+20 w
+49 x
+62 w
+50 w
+132 x
+9 x
+10 w
+13 w
+117 w
+108 x
+15 x
+Pd
+E
+0.8 Sx
+0.5 1 0.470095 0.915823 Sg
+B
+1182 1654 m
+3 x
+2 x
+3 x
+2 x
+3 x
+2 x
+3 x
+2 x
+3 x
+2 x
+3 x
+2 x
+3 x
+2 x
+3 x
+2 x
+3 1 h
+2 x
+3 x
+2 x
+3 x
+2 x
+3 1 h
+2 x
+3 x
+2 x
+3 x
+2 1 h
+3 x
+2 x
+3 1 h
+2 x
+3 1 h
+2 x
+3 1 h
+2 x
+3 1 h
+2 1 h
+3 1 h
+2 1 h
+3 1 h
+2 2 h
+3 1 h
+2 2 h
+3 2 h
+2 2 h
+3 2 h
+2 2 h
+3 3 h
+2 3 h
+3 3 h
+2 3 h
+3 4 h
+2 4 h
+3 4 h
+2 4 h
+3 5 h
+2 5 h
+3 6 h
+2 6 h
+3 6 h
+2 7 h
+3 7 h
+2 8 h
+3 9 h
+2 9 h
+3 9 h
+2 10 h
+3 10 h
+2 10 h
+3 11 h
+2 11 h
+3 11 h
+2 10 h
+3 11 h
+2 11 h
+3 11 h
+2 10 h
+3 9 h
+2 10 h
+3 9 h
+2 9 h
+3 8 h
+2 8 h
+3 8 h
+2 7 h
+3 7 h
+2 7 h
+3 6 h
+2 5 h
+3 6 h
+2 4 h
+3 5 h
+2 3 h
+3 3 h
+2 3 h
+3 2 h
+2 1 h
+3 1 h
+2 x
+3 1 j
+2 1 j
+3 2 j
+2 2 j
+3 3 j
+2 4 j
+3 4 j
+2 5 j
+3 5 j
+2 6 j
+3 6 j
+2 6 j
+3 7 j
+2 7 j
+3 7 j
+2 8 j
+3 8 j
+2 8 j
+3 8 j
+2 9 j
+3 8 j
+2 8 j
+3 9 j
+2 9 j
+3 8 j
+2 9 j
+3 8 j
+2 9 j
+3 9 j
+2 8 j
+3 9 j
+2 9 j
+3 8 j
+3 9 j
+2 8 j
+3 8 j
+2 8 j
+3 8 j
+2 8 j
+3 7 j
+2 7 j
+3 6 j
+2 7 j
+3 6 j
+2 5 j
+3 5 j
+2 5 j
+3 5 j
+2 4 j
+3 4 j
+2 3 j
+3 3 j
+2 3 j
+3 3 j
+2 2 j
+3 2 j
+2 2 j
+3 2 j
+2 1 j
+3 2 j
+2 1 j
+3 1 j
+2 1 j
+3 1 j
+2 1 j
+3 1 j
+2 1 j
+3 1 j
+2 x
+3 1 j
+2 1 j
+3 x
+2 1 j
+3 x
+2 1 j
+3 x
+2 1 j
+3 x
+2 x
+3 1 j
+2 x
+3 x
+2 x
+3 x
+2 x
+3 1 j
+2 x
+3 x
+2 x
+3 x
+2 x
+3 x
+2 x
+3 x
+2 x
+3 x
+2 x
+3 x
+2 x
+E
+1 Sd
+(beta.c) 1404 1377 0.5 T
+1230 1634 m
+5 z
+1420 1634 m
+5 z
+1611 1634 m
+5 z
+E
+1105 1634 m
+597 x
+E
+(6  ) 1230 1556 0.5 T
+(6.5) 1420 1556 0.5 T
+(7  ) 1611 1556 0.5 T
+90 Sr
+90 Sh
+1105 1654 m
+3 w
+1105 1939 m
+3 w
+E
+1105 1654 m
+514 y
+E
+(0) 1064 1654 0.5 T
+(2) 1064 1939 0.5 T
+0 Sr
+1 Sx
+0 Sh
+0 Sd
+597 534 1105 1634 c
+0.91 Sx
+1 Sd
+(Kernel density from rats.miss) 1404 2344 0.5 T
+(\(1000 values\)) 1404 2234 0.5 T
+1 Sx
+0 Sd
+/Bu Pu B
+1387 1654 m
+62 w
+18 x
+2 x
+35 w
+29 w
+97 x
+32 x
+2 w
+16 w
+61 x
+31 w
+11 w
+31 w
+25 x
+47 x
+16 w
+3 x
+29 w
+49 w
+49 x
+1 w
+64 x
+55 w
+8 x
+31 x
+82 w
+42 x
+75 w
+90 x
+29 w
+63 x
+41 x
+16 w
+24 w
+36 w
+98 x
+90 w
+81 x
+60 w
+48 x
+27 w
+14 w
+5 w
+34 x
+19 x
+26 x
+40 w
+80 w
+40 x
+19 x
+14 x
+49 w
+73 x
+54 w
+19 x
+102 w
+1 w
+39 x
+40 w
+54 w
+55 x
+34 x
+8 w
+9 w
+49 x
+3 x
+36 w
+22 w
+8 x
+24 x
+17 x
+9 w
+54 x
+5 x
+48 x
+51 w
+53 x
+104 w
+11 w
+3 x
+136 w
+78 x
+57 x
+3 x
+28 x
+53 x
+1 x
+28 w
+52 w
+23 w
+45 x
+37 x
+76 w
+53 w
+112 w
+294 x
+111 w
+81 x
+96 w
+33 x
+17 w
+23 x
+30 w
+21 x
+16 w
+46 x
+23 w
+38 w
+5 x
+41 w
+32 x
+24 w
+9 w
+77 x
+51 w
+54 x
+92 w
+2 x
+38 x
+62 w
+80 x
+3 x
+20 w
+3 w
+16 w
+160 x
+47 w
+21 x
+17 x
+4 x
+46 w
+41 w
+13 x
+8 x
+24 w
+31 x
+55 w
+12 w
+64 x
+50 x
+106 w
+81 x
+93 w
+25 w
+16 x
+7 x
+41 w
+89 x
+43 w
+56 x
+33 x
+4 w
+77 w
+59 x
+13 x
+21 w
+15 w
+18 w
+8 w
+87 w
+156 x
+95 w
+21 x
+25 x
+15 w
+5 w
+51 x
+8 x
+19 w
+68 w
+97 x
+26 w
+3 w
+4 w
+9 w
+28 w
+20 x
+74 w
+11 x
+49 x
+31 w
+82 x
+89 w
+26 x
+26 w
+39 w
+8 x
+27 x
+62 x
+16 w
+3 x
+31 w
+30 w
+7 x
+10 w
+4 w
+7 w
+24 w
+23 x
+30 x
+28 w
+46 x
+6 x
+81 x
+17 w
+51 w
+3 x
+19 x
+22 x
+62 w
+16 w
+74 x
+56 w
+18 w
+30 x
+8 x
+28 x
+10 w
+58 w
+82 x
+196 w
+223 x
+74 w
+28 x
+140 w
+59 x
+47 x
+58 w
+32 x
+30 x
+41 x
+93 w
+47 x
+29 x
+3 w
+19 w
+17 x
+62 w
+28 w
+34 x
+45 w
+35 w
+43 x
+23 x
+16 w
+9 x
+3 w
+50 w
+1 x
+42 x
+26 x
+13 w
+3 x
+5 w
+35 x
+56 w
+5 x
+22 w
+117 x
+6 x
+72 w
+47 x
+13 x
+131 x
+92 w
+81 w
+2 w
+97 x
+23 x
+13 w
+93 w
+27 w
+11 w
+36 x
+36 w
+10 w
+48 x
+45 x
+41 w
+3 x
+21 w
+99 x
+45 x
+89 w
+41 w
+24 w
+70 x
+33 w
+68 x
+120 w
+49 x
+24 x
+31 w
+30 x
+45 w
+10 w
+71 x
+52 w
+19 x
+25 w
+16 x
+25 x
+6 w
+57 x
+40 w
+68 x
+22 w
+17 x
+65 w
+66 w
+93 x
+28 w
+13 x
+7 w
+29 x
+107 x
+143 w
+7 x
+145 w
+47 x
+30 x
+18 x
+51 x
+13 w
+60 w
+88 x
+14 w
+41 w
+36 x
+32 w
+93 x
+21 w
+4 x
+1 x
+49 w
+67 x
+34 w
+41 w
+38 x
+48 w
+70 w
+1 x
+7 w
+99 x
+28 w
+1 x
+3 x
+11 x
+37 w
+32 x
+44 w
+27 w
+11 x
+16 x
+38 w
+16 x
+37 w
+45 x
+15 x
+58 x
+15 w
+55 w
+58 x
+11 w
+4 w
+15 x
+76 w
+68 x
+46 x
+11 x
+71 w
+108 x
+111 w
+113 x
+168 w
+15 w
+6 x
+59 w
+63 x
+55 x
+6 x
+35 w
+100 x
+101 w
+28 x
+67 x
+1 x
+42 w
+20 x
+27 w
+13 w
+12 x
+26 w
+19 w
+25 x
+43 w
+3 x
+7 x
+38 x
+71 x
+39 w
+11 x
+6 x
+12 w
+12 x
+7 x
+11 x
+48 x
+109 w
+11 x
+22 x
+27 x
+16 x
+71 w
+22 x
+7 w
+56 w
+37 x
+76 x
+13 x
+68 w
+25 w
+64 x
+32 w
+47 x
+47 w
+7 x
+45 w
+35 w
+1 w
+25 x
+2 x
+19 w
+65 x
+1 x
+15 w
+68 w
+49 x
+97 w
+44 x
+47 x
+108 x
+40 w
+96 w
+66 x
+32 x
+63 w
+23 x
+76 w
+46 w
+129 x
+10 w
+21 w
+27 x
+39 x
+10 x
+92 w
+12 w
+5 x
+28 w
+53 x
+76 w
+55 x
+9 x
+19 w
+70 x
+8 x
+4 x
+48 w
+54 x
+119 w
+41 x
+53 w
+115 x
+9 w
+48 w
+15 w
+14 w
+31 x
+24 w
+24 x
+22 w
+26 w
+45 x
+18 x
+48 w
+5 w
+9 x
+51 x
+10 x
+9 w
+70 x
+39 w
+67 x
+50 x
+30 x
+126 w
+99 w
+78 x
+16 w
+37 w
+7 x
+46 x
+42 w
+20 w
+135 x
+165 w
+17 x
+122 w
+91 x
+81 x
+75 x
+129 w
+48 x
+51 x
+56 x
+109 w
+78 x
+32 w
+21 x
+31 w
+18 w
+53 x
+21 x
+16 w
+4 x
+74 w
+55 x
+76 w
+38 x
+16 w
+49 x
+48 w
+48 w
+28 w
+14 x
+9 w
+62 w
+34 x
+7 w
+32 x
+30 x
+20 x
+19 w
+36 x
+14 w
+12 x
+18 x
+69 w
+33 w
+60 x
+2 x
+21 x
+45 w
+23 w
+13 w
+54 x
+5 w
+27 w
+20 x
+31 x
+76 w
+63 x
+87 x
+23 w
+4 w
+34 x
+37 w
+4 w
+27 x
+56 w
+20 x
+29 w
+16 w
+6 x
+25 x
+124 x
+148 w
+14 x
+85 w
+51 x
+29 x
+10 w
+67 w
+9 w
+29 x
+9 x
+14 w
+26 x
+43 x
+8 x
+32 w
+44 x
+46 w
+108 x
+38 w
+96 w
+15 x
+17 w
+41 x
+74 x
+28 w
+58 x
+22 w
+4 w
+49 w
+14 x
+27 x
+100 w
+8 w
+18 w
+33 w
+20 x
+14 w
+17 x
+21 w
+15 x
+21 x
+53 x
+36 x
+6 x
+29 w
+35 x
+36 x
+46 w
+10 w
+3 x
+1 x
+1 w
+76 w
+7 x
+91 x
+36 w
+105 w
+5 w
+101 x
+79 w
+61 x
+11 x
+10 x
+10 w
+12 x
+24 w
+16 x
+52 w
+52 x
+13 x
+49 x
+34 w
+89 w
+73 x
+82 x
+17 w
+8 x
+95 w
+4 x
+30 w
+14 x
+28 w
+30 x
+12 x
+53 w
+94 x
+135 w
+29 x
+61 x
+29 x
+13 x
+28 w
+52 w
+73 x
+111 w
+6 w
+40 x
+54 x
+14 x
+130 x
+90 w
+79 w
+92 x
+50 w
+9 x
+40 w
+3 x
+120 x
+5 w
+12 w
+34 x
+92 w
+42 x
+73 w
+56 w
+68 x
+36 w
+4 x
+16 w
+20 x
+12 x
+6 x
+9 x
+21 w
+58 w
+27 x
+46 x
+44 w
+84 x
+10 w
+16 x
+7 x
+23 w
+29 x
+67 w
+64 w
+164 x
+35 w
+37 w
+80 w
+11 x
+34 x
+15 w
+2 w
+37 x
+69 w
+96 x
+44 w
+56 x
+30 x
+40 w
+88 w
+24 x
+61 x
+1 w
+4 w
+17 w
+33 w
+170 x
+6 w
+58 w
+8 w
+33 w
+20 w
+143 w
+63 x
+22 x
+24 x
+45 x
+64 w
+17 w
+1 w
+5 w
+C % limitcheck avoid max=750
+106 x
+33 w
+17 w
+28 w
+40 w
+97 x
+2 x
+55 w
+56 x
+81 w
+126 x
+75 w
+16 x
+72 w
+33 x
+30 x
+26 x
+47 x
+2 w
+14 w
+67 w
+27 x
+59 x
+122 w
+18 x
+22 x
+27 w
+7 x
+37 w
+26 x
+75 x
+52 w
+61 x
+34 w
+6 w
+53 x
+71 w
+33 w
+83 x
+71 w
+83 x
+7 x
+48 w
+16 w
+19 x
+55 w
+4 x
+106 x
+92 w
+40 x
+51 w
+8 w
+15 w
+4 w
+26 w
+25 x
+13 w
+24 w
+26 x
+37 x
+38 w
+108 x
+21 w
+35 x
+4 w
+71 w
+72 x
+18 x
+34 x
+66 w
+34 x
+79 w
+72 x
+33 w
+22 w
+38 w
+25 x
+4 x
+1 w
+6 x
+39 w
+4 w
+85 w
+60 x
+21 x
+4 w
+41 x
+35 x
+81 w
+15 w
+70 x
+11 w
+22 w
+27 x
+9 x
+24 x
+18 x
+4 w
+16 w
+46 x
+31 w
+40 x
+51 w
+63 x
+28 w
+31 w
+21 x
+50 x
+29 w
+77 w
+30 x
+43 w
+17 x
+41 w
+22 x
+26 w
+108 x
+121 w
+39 x
+4 w
+24 w
+27 x
+12 x
+39 x
+24 w
+46 x
+6 w
+18 w
+21 x
+94 x
+56 w
+67 w
+34 w
+30 x
+22 x
+44 w
+50 w
+88 x
+30 w
+10 w
+56 w
+47 x
+14 x
+3 w
+13 x
+25 w
+38 w
+57 w
+67 x
+79 x
+23 w
+21 x
+67 w
+11 w
+65 x
+86 w
+13 w
+30 x
+73 w
+62 x
+9 w
+1 w
+18 x
+17 w
+26 x
+18 x
+3 w
+12 x
+21 x
+17 x
+11 w
+8 w
+70 x
+23 w
+2 x
+25 x
+56 w
+51 w
+36 x
+3 x
+10 x
+73 x
+55 x
+19 w
+80 w
+14 x
+4 w
+26 x
+27 w
+105 w
+48 x
+1 w
+2 x
+33 x
+41 w
+87 x
+156 w
+104 x
+14 x
+7 w
+24 x
+88 w
+19 x
+33 x
+64 w
+67 x
+5 x
+61 x
+9 x
+7 x
+49 w
+58 x
+4 x
+120 w
+21 w
+7 w
+14 x
+63 w
+15 x
+9 x
+74 w
+66 x
+44 w
+7 x
+115 x
+38 w
+93 x
+13 w
+26 w
+4 w
+2 w
+4 x
+43 w
+15 x
+29 w
+33 w
+66 w
+78 x
+29 w
+81 x
+79 w
+14 w
+Pd
+E
+0.8 Sx
+0 0.5 0.0243671 0.470095 Sg
+B
+292 450 m
+8 1 h
+8 1 h
+8 2 h
+7 3 h
+8 7 h
+8 11 h
+8 16 h
+7 23 h
+8 32 h
+8 41 h
+8 53 h
+7 63 h
+8 68 h
+8 67 h
+8 56 h
+7 36 h
+8 14 h
+8 5 j
+8 21 j
+7 30 j
+8 36 j
+8 40 j
+8 43 j
+7 42 j
+8 43 j
+8 41 j
+7 39 j
+8 35 j
+8 31 j
+8 25 j
+7 18 j
+8 13 j
+8 9 j
+8 5 j
+7 4 j
+8 3 j
+8 3 j
+8 2 j
+7 2 j
+8 1 j
+8 x
+8 x
+7 x
+8 1 j
+8 x
+8 1 j
+7 x
+8 x
+8 1 j
+8 x
+E
+1 Sd
+(sigma) 504 173 0.5 T
+256 431 m
+6 z
+429 431 m
+6 z
+602 431 m
+6 z
+775 431 m
+6 z
+E
+205 431 m
+597 x
+E
+( 4) 256 353 0.5 T
+( 6) 429 353 0.5 T
+( 8) 602 353 0.5 T
+(10) 775 353 0.5 T
+90 Sr
+90 Sh
+205 450 m
+3 w
+205 751 m
+3 w
+E
+205 450 m
+514 y
+E
+(0  ) 164 450 0.5 T
+(0.5) 164 751 0.5 T
+0 Sr
+1 Sx
+0 Sh
+0 Sd
+597 533 205 431 c
+0.91 Sx
+1 Sd
+(Kernel density from rats.full) 504 1141 0.5 T
+(\(1000 values\)) 504 1030 0.5 T
+1 Sx
+0 Sd
+/Bu Pu B
+462 450 m
+46 w
+33 x
+30 x
+2 x
+30 x
+86 w
+31 x
+2 x
+28 x
+42 w
+46 w
+19 x
+1 x
+5 w
+7 x
+24 w
+27 x
+84 w
+38 x
+50 x
+19 x
+68 x
+13 w
+47 w
+2 w
+5 w
+37 x
+128 w
+33 x
+25 x
+28 x
+48 x
+41 w
+57 w
+42 x
+2 w
+6 x
+3 x
+66 x
+58 w
+4 x
+71 w
+32 x
+25 w
+68 x
+32 w
+72 x
+43 w
+7 w
+23 w
+15 w
+8 x
+29 w
+35 x
+46 w
+89 x
+18 w
+8 w
+30 x
+23 w
+32 w
+55 x
+26 w
+78 w
+27 x
+45 x
+42 x
+27 w
+31 w
+20 x
+28 w
+65 w
+64 x
+14 x
+63 w
+59 x
+5 w
+62 x
+22 w
+49 x
+102 w
+49 w
+85 x
+4 x
+23 w
+9 w
+58 x
+10 x
+74 w
+16 x
+13 w
+15 w
+31 w
+92 x
+30 w
+11 x
+23 x
+52 w
+10 x
+23 x
+8 w
+25 w
+50 x
+41 w
+24 w
+99 x
+21 w
+38 w
+21 x
+18 x
+28 w
+18 x
+7 w
+9 x
+49 w
+28 w
+10 x
+16 w
+116 x
+49 w
+21 x
+36 w
+6 w
+10 x
+13 w
+56 x
+2 w
+38 w
+58 x
+69 x
+21 x
+88 w
+87 w
+2 x
+10 w
+31 w
+98 x
+30 x
+69 x
+33 w
+75 w
+13 w
+29 w
+6 w
+27 x
+80 x
+53 w
+8 w
+43 w
+12 x
+5 w
+51 x
+34 x
+46 w
+4 x
+26 w
+114 x
+71 w
+15 w
+57 w
+18 x
+29 w
+2 w
+51 x
+2 x
+36 x
+54 w
+68 x
+14 w
+100 w
+11 x
+130 x
+11 w
+67 w
+18 x
+58 w
+40 x
+7 w
+28 w
+11 x
+21 x
+1 x
+28 w
+28 x
+67 w
+18 x
+36 w
+39 x
+65 x
+31 w
+48 x
+5 w
+43 w
+84 x
+49 w
+1 x
+16 w
+41 w
+35 x
+28 w
+28 x
+1 x
+81 x
+35 w
+18 w
+59 w
+21 w
+38 x
+1 w
+43 w
+86 x
+32 w
+43 w
+13 x
+69 x
+81 w
+78 x
+41 w
+26 x
+59 x
+93 w
+47 x
+17 w
+13 w
+3 x
+38 x
+83 w
+24 x
+3 w
+2 w
+36 w
+107 x
+125 x
+114 w
+1 x
+118 w
+8 w
+34 x
+20 w
+23 x
+37 x
+25 x
+23 w
+6 x
+30 w
+6 w
+19 w
+8 w
+7 x
+10 w
+78 x
+54 x
+9 x
+41 w
+40 w
+97 w
+30 x
+31 x
+83 x
+7 x
+25 w
+38 x
+42 w
+10 x
+72 w
+1 x
+42 x
+38 w
+2 x
+19 w
+4 w
+28 x
+61 x
+81 w
+72 x
+50 w
+36 x
+3 w
+2 w
+2 w
+7 w
+10 w
+18 w
+27 w
+4 w
+41 w
+52 x
+31 x
+46 w
+52 x
+20 x
+29 x
+54 w
+8 x
+81 w
+52 x
+4 w
+23 w
+9 w
+9 w
+32 x
+69 x
+89 w
+17 x
+14 w
+59 x
+1 x
+27 x
+22 w
+35 x
+104 w
+37 x
+45 x
+7 w
+14 x
+31 w
+28 x
+94 w
+19 w
+13 w
+63 x
+18 x
+6 w
+35 x
+53 w
+22 x
+24 w
+8 x
+82 x
+51 w
+64 w
+26 x
+19 x
+13 w
+42 x
+7 x
+18 w
+33 w
+20 x
+47 w
+2 x
+50 x
+8 x
+13 w
+13 x
+51 x
+37 w
+26 w
+88 x
+90 w
+38 w
+51 x
+36 w
+41 x
+51 x
+7 w
+2 w
+4 x
+8 x
+119 x
+128 w
+14 x
+1 w
+13 w
+43 w
+35 w
+17 w
+12 x
+79 x
+74 w
+18 x
+45 x
+108 w
+26 x
+14 x
+15 x
+50 w
+36 x
+19 x
+18 w
+10 x
+6 x
+36 w
+6 x
+62 x
+13 w
+37 x
+20 w
+2 w
+1 x
+58 w
+47 x
+78 w
+38 x
+8 x
+62 w
+60 x
+5 w
+12 x
+12 w
+14 w
+34 x
+4 w
+13 x
+33 w
+18 x
+8 w
+11 x
+10 x
+42 w
+60 x
+100 x
+48 w
+64 w
+59 w
+23 x
+6 x
+6 w
+62 x
+5 x
+7 w
+91 w
+69 x
+6 x
+27 x
+31 w
+55 x
+91 w
+43 x
+21 w
+43 w
+23 x
+42 x
+26 w
+25 x
+19 w
+23 w
+34 x
+38 x
+46 w
+11 w
+15 w
+54 x
+30 w
+2 w
+49 w
+47 x
+20 w
+24 x
+29 x
+33 x
+62 w
+46 w
+23 x
+16 x
+12 x
+37 w
+1 x
+39 x
+10 x
+10 w
+61 w
+4 w
+22 x
+22 x
+54 x
+76 w
+106 x
+20 w
+28 w
+11 x
+24 x
+10 w
+5 x
+59 x
+72 w
+16 x
+9 w
+46 w
+34 x
+5 x
+75 w
+73 x
+46 w
+57 x
+46 w
+2 w
+38 x
+97 w
+55 x
+47 x
+60 w
+42 w
+64 x
+1 w
+21 x
+10 w
+34 w
+7 x
+2 w
+6 x
+38 w
+55 x
+19 w
+30 w
+30 x
+23 x
+37 w
+43 x
+8 w
+18 w
+22 x
+30 x
+76 w
+8 x
+22 w
+50 x
+44 w
+21 x
+12 x
+30 x
+12 x
+18 w
+46 w
+4 w
+6 w
+22 w
+33 x
+6 x
+89 x
+81 w
+13 x
+44 x
+68 w
+7 x
+15 w
+25 w
+85 x
+71 w
+93 x
+18 w
+1 w
+46 w
+22 w
+46 x
+57 w
+9 x
+3 w
+14 x
+4 x
+14 w
+54 x
+9 x
+10 x
+28 w
+21 w
+24 x
+6 w
+33 w
+64 x
+63 w
+112 x
+78 w
+33 x
+3 w
+40 w
+29 w
+95 x
+63 w
+66 x
+95 w
+11 w
+14 x
+25 w
+8 w
+59 x
+25 w
+7 w
+8 w
+7 x
+46 x
+34 w
+61 x
+42 w
+28 w
+7 x
+7 x
+23 w
+51 x
+19 x
+88 w
+17 x
+48 w
+66 x
+5 w
+13 x
+11 w
+57 x
+7 w
+44 x
+19 w
+65 w
+58 x
+40 x
+21 w
+37 w
+45 w
+3 x
+42 x
+37 w
+21 w
+10 x
+35 w
+19 x
+34 x
+12 w
+35 w
+50 x
+1 w
+27 w
+11 x
+36 w
+2 x
+76 x
+14 w
+4 w
+9 w
+16 x
+56 x
+76 w
+61 x
+77 w
+3 w
+17 w
+1 x
+5 x
+42 w
+73 x
+18 x
+16 w
+12 w
+29 w
+13 w
+113 x
+1 w
+117 w
+42 x
+36 w
+32 x
+15 x
+6 x
+13 x
+53 w
+23 x
+28 w
+22 x
+42 w
+24 x
+66 x
+62 w
+31 w
+17 x
+41 x
+20 w
+26 w
+33 x
+101 x
+45 w
+8 w
+36 x
+39 w
+79 w
+31 x
+34 x
+1 w
+15 x
+13 x
+12 w
+32 x
+84 w
+24 x
+47 x
+5 w
+10 w
+11 w
+68 w
+33 x
+19 w
+48 w
+39 x
+19 x
+38 x
+14 w
+138 x
+140 w
+23 w
+44 x
+23 w
+36 x
+44 w
+51 x
+39 w
+22 w
+10 x
+3 x
+23 w
+11 x
+22 x
+34 w
+25 x
+57 w
+92 x
+26 w
+2 w
+65 x
+5 x
+68 w
+2 w
+8 x
+49 w
+41 x
+44 x
+33 x
+52 w
+40 w
+8 w
+26 w
+24 x
+68 x
+25 x
+27 w
+51 x
+64 w
+54 w
+12 w
+99 x
+22 w
+2 w
+41 w
+35 w
+48 x
+21 w
+44 x
+55 w
+28 x
+11 w
+32 x
+12 w
+27 w
+72 x
+C % limitcheck avoid max=750
+44 w
+86 w
+98 x
+50 x
+65 w
+41 w
+14 x
+112 x
+90 w
+1 w
+18 w
+1 w
+36 x
+31 w
+17 x
+21 w
+18 w
+56 w
+63 x
+12 x
+41 x
+88 w
+39 x
+53 x
+10 x
+39 x
+38 x
+21 x
+136 w
+12 x
+14 x
+42 x
+30 w
+54 w
+50 x
+49 w
+33 w
+2 w
+52 x
+18 w
+30 x
+12 x
+14 x
+62 x
+60 w
+17 w
+81 w
+42 x
+30 w
+1 x
+45 x
+66 w
+29 x
+32 x
+21 x
+29 w
+2 x
+16 x
+9 w
+23 x
+69 w
+53 x
+37 w
+18 x
+9 w
+6 w
+28 x
+7 w
+28 w
+30 x
+32 w
+14 x
+58 w
+54 x
+33 w
+6 x
+97 x
+30 w
+35 w
+76 x
+4 w
+46 w
+14 x
+41 w
+27 x
+34 x
+8 w
+58 w
+19 x
+42 x
+60 w
+69 x
+43 w
+7 x
+7 w
+27 x
+31 x
+28 x
+58 w
+16 w
+38 x
+86 w
+29 x
+81 x
+44 w
+2 w
+25 x
+39 w
+8 w
+15 w
+17 x
+15 w
+43 w
+43 w
+54 x
+27 x
+32 w
+17 x
+5 x
+4 w
+31 x
+5 w
+17 x
+11 w
+43 x
+41 x
+3 x
+31 x
+69 w
+76 w
+6 x
+1 w
+22 x
+52 w
+24 x
+4 x
+21 x
+25 w
+45 w
+28 x
+10 x
+7 x
+42 w
+38 x
+44 x
+29 x
+26 x
+78 w
+36 w
+29 w
+38 x
+25 x
+63 w
+21 x
+75 x
+41 w
+63 w
+70 x
+24 w
+1 x
+26 x
+16 w
+31 x
+25 x
+29 w
+26 x
+58 w
+4 w
+61 x
+8 x
+44 w
+15 w
+13 x
+55 x
+74 w
+13 x
+49 w
+19 x
+34 x
+11 w
+23 w
+94 x
+19 w
+15 x
+38 w
+23 w
+28 x
+5 x
+53 w
+1 w
+4 x
+28 w
+33 x
+46 x
+36 w
+4 x
+10 x
+60 w
+50 x
+33 x
+11 w
+53 w
+12 w
+37 x
+13 x
+32 x
+46 w
+51 x
+87 w
+22 x
+5 x
+43 x
+15 w
+26 w
+34 x
+24 w
+2 x
+59 w
+114 x
+26 w
+14 w
+17 x
+26 w
+26 x
+19 x
+36 x
+50 w
+33 w
+1 w
+68 x
+38 w
+75 w
+14 x
+2 w
+27 x
+14 w
+63 x
+15 w
+14 w
+43 x
+Pd
+E
+0.8 Sx
+0.5 1 0.0243671 0.470095 Sg
+B
+1129 450 m
+9 x
+8 1 h
+9 x
+9 x
+9 1 h
+8 2 h
+9 4 h
+9 4 h
+9 8 h
+8 9 h
+9 12 h
+9 14 h
+9 18 h
+8 20 h
+9 24 h
+9 25 h
+9 27 h
+8 28 h
+9 26 h
+9 26 h
+9 23 h
+8 20 h
+9 15 h
+9 10 h
+9 3 h
+8 2 j
+9 8 j
+9 14 j
+9 17 j
+8 22 j
+9 23 j
+9 26 j
+9 25 j
+8 25 j
+9 23 j
+9 20 j
+9 18 j
+8 15 j
+9 12 j
+9 11 j
+9 9 j
+8 9 j
+9 7 j
+9 7 j
+9 6 j
+8 5 j
+9 4 j
+9 4 j
+9 3 j
+8 1 j
+9 2 j
+9 x
+9 1 j
+8 x
+9 x
+9 x
+9 x
+8 x
+9 x
+9 x
+9 1 j
+8 x
+E
+1 Sd
+(sigma) 1404 173 0.5 T
+1156 431 m
+6 z
+1329 431 m
+6 z
+1502 431 m
+6 z
+1675 431 m
+6 z
+E
+1105 431 m
+597 x
+E
+( 4) 1156 353 0.5 T
+( 6) 1329 353 0.5 T
+( 8) 1502 353 0.5 T
+(10) 1675 353 0.5 T
+90 Sr
+90 Sh
+1105 450 m
+3 w
+1105 751 m
+3 w
+E
+1105 450 m
+514 y
+E
+(0  ) 1064 450 0.5 T
+(0.5) 1064 751 0.5 T
+0 Sr
+1 Sx
+0 Sh
+0 Sd
+597 533 1105 431 c
+0.91 Sx
+1 Sd
+(Kernel density from rats.miss) 1404 1141 0.5 T
+(\(1000 values\)) 1404 1030 0.5 T
+1 Sx
+0 Sd
+/Bu Pu B
+1354 450 m
+83 x
+168 x
+125 w
+5 x
+100 w
+58 w
+5 x
+71 x
+47 w
+25 w
+77 x
+2 x
+13 w
+125 w
+147 x
+16 w
+13 w
+36 x
+40 w
+50 w
+21 w
+46 w
+48 x
+13 x
+34 x
+41 x
+42 w
+60 x
+125 w
+18 x
+6 x
+79 x
+84 w
+44 w
+71 x
+14 w
+20 w
+116 x
+29 w
+27 w
+4 w
+32 x
+84 w
+4 w
+60 w
+169 x
+49 w
+48 w
+11 x
+97 w
+119 x
+69 x
+27 w
+36 w
+44 x
+148 w
+28 w
+1 x
+29 x
+28 x
+3 w
+12 w
+11 x
+77 x
+18 x
+131 x
+25 x
+42 w
+74 w
+77 w
+21 x
+1 w
+70 x
+72 w
+21 w
+17 x
+14 w
+22 x
+82 w
+40 x
+3 w
+56 w
+53 x
+12 x
+38 w
+1 x
+16 x
+133 x
+104 w
+106 x
+76 w
+8 x
+29 w
+98 w
+6 x
+53 x
+65 x
+14 w
+7 w
+10 w
+80 x
+122 w
+10 w
+89 x
+39 x
+73 w
+23 w
+74 x
+16 w
+7 x
+16 x
+102 x
+138 w
+39 w
+3 x
+53 x
+26 w
+3 w
+2 x
+69 w
+26 w
+42 x
+90 x
+41 w
+19 w
+10 x
+49 x
+10 x
+72 w
+40 x
+25 x
+44 w
+34 w
+92 x
+37 x
+81 w
+13 x
+8 x
+64 w
+31 x
+32 x
+18 w
+4 w
+128 x
+228 w
+23 x
+156 x
+63 x
+169 w
+28 x
+34 x
+61 w
+48 w
+38 x
+14 w
+55 x
+30 x
+19 x
+33 w
+44 w
+50 x
+111 w
+94 x
+56 w
+45 x
+45 w
+31 x
+56 w
+42 x
+20 w
+49 x
+18 w
+21 x
+52 w
+100 x
+24 x
+139 w
+27 x
+33 w
+14 x
+51 x
+81 x
+65 w
+66 w
+3 w
+68 x
+59 w
+20 x
+18 x
+6 x
+83 x
+58 w
+131 x
+31 w
+55 x
+77 w
+26 x
+3 x
+116 w
+26 w
+25 x
+16 x
+44 w
+41 w
+39 w
+28 x
+4 x
+115 x
+1 x
+31 w
+7 w
+69 w
+77 x
+56 w
+62 x
+92 w
+37 x
+61 w
+130 x
+25 x
+56 x
+80 w
+52 w
+56 w
+1 w
+55 x
+25 x
+7 x
+36 w
+43 w
+13 x
+36 x
+27 x
+32 x
+85 w
+12 w
+77 x
+33 w
+83 x
+97 w
+24 w
+87 x
+18 w
+16 w
+3 x
+47 w
+43 x
+50 x
+80 x
+64 w
+66 w
+24 x
+119 w
+25 x
+46 x
+56 x
+22 w
+62 w
+99 w
+150 x
+21 w
+9 x
+1 w
+41 x
+58 w
+75 x
+48 x
+92 w
+97 x
+75 w
+83 x
+47 w
+45 w
+17 w
+92 w
+13 x
+68 x
+90 w
+12 x
+27 w
+30 x
+8 x
+67 x
+75 w
+48 x
+16 w
+109 x
+22 w
+18 w
+16 w
+5 x
+67 w
+26 x
+4 w
+56 x
+75 w
+5 x
+24 w
+33 x
+13 x
+8 w
+18 x
+18 x
+26 x
+89 w
+105 x
+145 w
+5 x
+25 x
+7 w
+69 x
+44 w
+35 w
+58 x
+40 x
+25 w
+69 x
+22 x
+8 w
+9 w
+47 w
+13 x
+20 x
+71 w
+18 w
+47 x
+4 w
+33 w
+46 w
+54 x
+19 w
+95 x
+16 w
+14 w
+4 x
+37 w
+17 x
+7 x
+44 x
+28 x
+89 w
+16 w
+44 x
+17 x
+54 w
+9 w
+54 w
+115 x
+7 w
+76 x
+4 w
+19 x
+15 w
+84 w
+88 x
+20 w
+29 x
+70 w
+67 w
+36 x
+23 w
+51 w
+1 x
+16 w
+64 w
+50 x
+17 x
+57 x
+89 x
+105 w
+78 x
+9 x
+68 w
+51 w
+90 x
+98 w
+29 x
+56 x
+90 w
+62 x
+103 w
+32 x
+6 w
+24 w
+151 x
+47 w
+106 x
+74 w
+50 w
+17 x
+65 w
+20 w
+10 w
+17 x
+11 x
+143 x
+28 x
+58 w
+88 w
+2 w
+40 w
+9 w
+6 w
+107 x
+73 w
+14 x
+19 w
+2 w
+39 w
+11 w
+105 x
+43 w
+26 x
+33 x
+20 w
+21 x
+10 w
+9 x
+81 x
+74 w
+92 x
+61 x
+45 w
+50 w
+117 x
+73 w
+52 w
+2 x
+57 w
+42 x
+38 x
+51 w
+12 w
+70 w
+30 w
+64 x
+15 x
+10 w
+23 x
+16 w
+7 w
+28 w
+67 w
+31 x
+106 x
+10 x
+49 w
+10 w
+5 w
+51 w
+65 x
+10 x
+53 x
+13 w
+17 x
+99 w
+34 x
+59 w
+56 x
+69 w
+52 x
+28 x
+64 w
+17 x
+71 x
+34 w
+78 w
+151 x
+38 w
+81 w
+30 w
+42 x
+71 w
+15 x
+49 x
+47 x
+58 w
+15 w
+39 x
+15 w
+102 x
+3 w
+40 x
+18 w
+18 w
+63 w
+21 w
+16 w
+6 w
+63 x
+90 w
+36 x
+13 x
+11 w
+19 w
+14 x
+110 x
+51 w
+65 x
+52 w
+47 w
+8 w
+10 x
+100 x
+105 w
+66 x
+19 x
+150 w
+72 x
+53 w
+39 x
+38 x
+47 w
+41 w
+37 x
+59 w
+24 x
+67 x
+76 w
+37 w
+34 x
+4 w
+77 x
+39 x
+23 w
+12 w
+70 w
+35 w
+2 w
+23 w
+116 x
+21 w
+105 x
+23 x
+32 w
+55 x
+2 w
+33 x
+4 w
+38 x
+3 w
+53 w
+41 w
+13 w
+41 x
+124 w
+17 w
+107 x
+2 x
+16 w
+18 w
+59 x
+124 w
+8 x
+8 w
+57 x
+37 w
+37 x
+23 w
+74 w
+18 x
+84 x
+21 w
+14 x
+45 w
+48 w
+23 x
+66 x
+17 w
+44 x
+32 x
+6 w
+42 w
+1 w
+29 x
+9 x
+23 w
+52 w
+38 x
+72 w
+76 x
+34 x
+49 w
+38 w
+38 w
+58 x
+24 w
+15 x
+38 w
+4 x
+121 x
+52 w
+23 w
+73 w
+94 x
+12 w
+121 x
+25 w
+97 w
+31 x
+25 w
+14 w
+8 w
+68 x
+16 w
+76 w
+15 x
+22 x
+46 x
+57 w
+54 x
+14 w
+21 w
+35 w
+13 w
+22 x
+18 x
+10 w
+3 x
+36 w
+7 w
+25 x
+8 x
+11 w
+20 w
+17 w
+46 w
+132 x
+11 x
+117 x
+61 w
+20 w
+84 x
+109 w
+33 x
+23 x
+88 w
+66 x
+15 w
+49 w
+25 w
+22 x
+86 w
+53 x
+14 x
+19 w
+45 w
+5 w
+9 x
+49 x
+76 w
+13 x
+32 x
+66 x
+71 w
+17 w
+52 x
+32 w
+5 w
+46 x
+52 x
+15 w
+37 w
+65 x
+62 w
+17 w
+4 x
+8 w
+22 x
+42 x
+37 w
+19 w
+2 w
+24 x
+39 x
+118 w
+79 x
+16 x
+38 x
+28 w
+79 x
+90 w
+56 w
+6 x
+110 x
+31 x
+48 w
+82 w
+40 w
+15 x
+118 x
+43 w
+53 x
+76 w
+120 w
+175 x
+96 w
+81 w
+111 x
+9 w
+26 x
+67 x
+42 w
+77 w
+31 x
+74 w
+96 x
+76 w
+54 w
+2 w
+57 x
+67 x
+13 w
+32 w
+9 x
+84 x
+89 w
+63 x
+50 w
+30 x
+16 x
+56 w
+53 w
+34 x
+64 x
+16 w
+37 w
+70 x
+12 w
+41 w
+3 x
+15 w
+7 w
+124 x
+68 w
+114 x
+137 w
+12 w
+5 w
+89 w
+2 x
+17 x
+19 w
+155 x
+21 w
+63 w
+51 w
+58 x
+120 x
+49 w
+C % limitcheck avoid max=750
+8 w
+38 x
+33 x
+125 w
+51 x
+1 w
+28 w
+56 x
+11 w
+20 x
+9 x
+44 w
+27 w
+17 x
+8 x
+38 w
+4 x
+55 w
+13 x
+4 x
+125 x
+19 w
+43 w
+20 w
+78 x
+26 x
+54 w
+19 x
+71 w
+12 x
+120 x
+21 x
+128 w
+12 x
+21 x
+16 w
+6 w
+70 w
+121 x
+38 w
+21 x
+51 w
+51 x
+4 x
+35 x
+15 x
+81 w
+59 x
+67 x
+52 w
+17 x
+17 w
+80 x
+80 w
+122 w
+106 w
+88 x
+50 x
+105 x
+76 w
+6 x
+50 x
+6 x
+39 x
+134 w
+30 w
+54 x
+40 w
+111 x
+85 w
+3 w
+9 w
+54 w
+55 w
+35 x
+5 x
+35 x
+28 w
+28 x
+41 x
+42 w
+30 w
+31 w
+56 x
+97 x
+6 w
+69 w
+23 x
+10 x
+8 x
+65 w
+137 x
+102 w
+28 x
+8 x
+47 x
+23 x
+92 w
+24 x
+19 x
+73 w
+37 x
+41 w
+43 x
+120 w
+45 x
+77 x
+39 w
+62 w
+28 x
+109 x
+33 w
+38 x
+91 w
+13 x
+11 w
+43 x
+2 x
+12 x
+15 w
+60 w
+51 w
+51 x
+24 x
+21 w
+40 w
+48 x
+32 w
+4 w
+73 x
+10 w
+57 x
+7 x
+15 w
+33 w
+13 x
+3 x
+122 x
+15 w
+83 w
+129 x
+135 w
+29 w
+53 w
+7 w
+35 x
+22 x
+38 w
+35 x
+79 w
+47 x
+84 x
+35 w
+17 x
+26 w
+8 x
+72 x
+64 w
+72 x
+53 x
+61 w
+23 w
+14 x
+48 w
+116 x
+40 w
+100 w
+128 x
+82 w
+87 w
+98 x
+18 w
+37 w
+42 x
+72 w
+23 w
+2 w
+15 x
+41 w
+56 x
+6 x
+25 w
+91 x
+204 w
+41 x
+20 x
+28 x
+17 x
+28 x
+10 w
+27 x
+31 w
+12 w
+36 w
+21 x
+31 x
+12 w
+21 x
+75 w
+1 x
+59 x
+68 x
+69 w
+60 w
+6 x
+14 x
+9 x
+18 w
+17 x
+12 x
+8 x
+13 x
+14 w
+18 x
+46 x
+25 w
+4 w
+1 x
+32 w
+21 x
+94 x
+33 x
+48 w
+39 w
+3 w
+105 x
+174 w
+43 x
+10 w
+2 x
+10 x
+53 w
+28 w
+100 x
+54 x
+42 x
+86 w
+6 x
+70 x
+Pd
+E
+1.1 Sx
+0 1 0.0243671 0.915823 So
+0 1 0 1 Sg
+1 Sd
+(Rats data: complete and missing data) 900 2586 0.5 T
+Z
+%%Trailer
+%%Pages: 1
+%%DocumentNeededResources: font Helvetica
+W
+%%EOF
