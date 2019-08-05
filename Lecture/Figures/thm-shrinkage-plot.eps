@@ -1,0 +1,561 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%DocumentNeededResources: font Helvetica
+%%+ font Helvetica-Bold
+%%+ font Helvetica-Oblique
+%%+ font Helvetica-BoldOblique
+%%+ font Symbol
+%%Title: R Graphics Output
+%%Creator: R Software
+%%Pages: (atend)
+%%BoundingBox: 137 294 448 517
+%%EndComments
+%%BeginProlog
+/bp  { gs gs } def
+% begin .ps.prolog
+/gs  { gsave } def
+/gr  { grestore } def
+/ep  { showpage gr gr } def
+/m   { moveto } def
+/l  { rlineto } def
+/np  { newpath } def
+/cp  { closepath } def
+/f   { fill } def
+/o   { stroke } def
+/c   { newpath 0 360 arc } def
+/r   { 4 2 roll moveto 1 copy 3 -1 roll exch 0 exch rlineto 0 rlineto -1 mul 0 exch rlineto closepath } def
+/p1  { stroke } def
+/p2  { gsave bg setrgbcolor fill grestore newpath } def
+/p3  { gsave bg setrgbcolor fill grestore stroke } def
+/t   { 6 -2 roll moveto gsave rotate
+       ps mul neg 0 2 1 roll rmoveto
+       1 index stringwidth pop
+       mul neg 0 rmoveto show grestore } def
+/cl  { grestore gsave newpath 3 index 3 index moveto 1 index
+       4 -1 roll lineto  exch 1 index lineto lineto
+       closepath clip newpath } def
+/rgb { setrgbcolor } def
+/s   { scalefont setfont } def
+% end   .ps.prolog
+%%IncludeResource: font Helvetica
+/Helvetica findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding ISOLatin1Encoding def
+  currentdict
+  end
+/Font1 exch definefont pop
+%%IncludeResource: font Helvetica-Bold
+/Helvetica-Bold findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding ISOLatin1Encoding def
+  currentdict
+  end
+/Font2 exch definefont pop
+%%IncludeResource: font Helvetica-Oblique
+/Helvetica-Oblique findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding ISOLatin1Encoding def
+  currentdict
+  end
+/Font3 exch definefont pop
+%%IncludeResource: font Helvetica-BoldOblique
+/Helvetica-BoldOblique findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding ISOLatin1Encoding def
+  currentdict
+  end
+/Font4 exch definefont pop
+%%IncludeResource: font Symbol
+/Symbol findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  currentdict
+  end
+/Font5 exch definefont pop
+%%EndProlog
+%%Page: 1 1
+bp
+203.19 344.07 426.65 515.10 cl
+132.34 255.94 462.94 585.94 cl
+0 0 0 rgb
+0.75 setlinewidth
+[] 0 setdash
+1 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+203.19 370.11 m
+0 133.12 l
+o
+np
+203.19 370.11 m
+-8.64 0 l
+o
+np
+203.19 396.73 m
+-8.64 0 l
+o
+np
+203.19 423.36 m
+-8.64 0 l
+o
+np
+203.19 449.98 m
+-8.64 0 l
+o
+np
+203.19 476.61 m
+-8.64 0 l
+o
+np
+203.19 503.23 m
+-8.64 0 l
+o
+/ps 14 def /Font1 findfont 14 s
+182.45 370.11 (100) .5 0 90 t
+182.45 423.36 (120) .5 0 90 t
+182.45 476.61 (140) .5 0 90 t
+np
+203.19 344.07 m
+223.46 0 l
+0 171.03 l
+-223.46 0 l
+0 -171.03 l
+o
+132.34 255.94 462.94 585.94 cl
+/ps 14 def /Font1 findfont 14 s
+0 0 0 rgb
+147.89 429.58 (THM level) .5 0 90 t
+132.34 255.94 462.94 585.94 cl
+0 0 0 rgb
+0.75 setlinewidth
+[] 0 setdash
+1 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+211.46 344.07 m
+206.91 0 l
+o
+np
+211.46 344.07 m
+0 -8.64 l
+o
+np
+418.37 344.07 m
+0 -8.64 l
+o
+/ps 14 def /Font1 findfont 14 s
+211.46 312.97 (MLE) .5 0 0 t
+211.46 295.69 () .5 0 0 t
+418.37 312.97 (Posterior) .5 0 0 t
+418.37 295.69 (mean) .5 0 0 t
+203.19 344.07 426.65 515.10 cl
+0 0 0 rgb
+0.75 setlinewidth
+[] 0 setdash
+1 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+211.46 398.43 m
+206.91 5.76 l
+o
+211.46 398.43 3.24 c p1
+418.37 404.19 3.24 c p1
+np
+211.46 467.63 m
+206.91 -6.20 l
+o
+211.46 467.63 3.24 c p1
+418.37 461.43 3.24 c p1
+np
+211.46 424.62 m
+206.91 0.33 l
+o
+211.46 424.62 3.24 c p1
+418.37 424.95 3.24 c p1
+np
+211.46 390.34 m
+206.91 7.72 l
+o
+211.46 390.34 3.24 c p1
+418.37 398.06 3.24 c p1
+418.37 427.08 3.24 c p1
+np
+211.46 435.79 m
+206.91 -4.18 l
+o
+211.46 435.79 3.24 c p1
+418.37 431.61 3.24 c p1
+np
+211.46 416.77 m
+206.91 2.06 l
+o
+211.46 416.77 3.24 c p1
+418.37 418.83 3.24 c p1
+np
+211.46 440.77 m
+206.91 -4.90 l
+o
+211.46 440.77 3.24 c p1
+418.37 435.87 3.24 c p1
+418.37 426.55 3.24 c p1
+np
+211.46 427.60 m
+206.91 0.02 l
+o
+211.46 427.60 3.24 c p1
+418.37 427.62 3.24 c p1
+418.37 427.08 3.24 c p1
+np
+211.46 404.63 m
+206.91 7.81 l
+o
+211.46 404.63 3.24 c p1
+418.37 412.44 3.24 c p1
+np
+211.46 388.42 m
+206.91 13.10 l
+o
+211.46 388.42 3.24 c p1
+418.37 401.52 3.24 c p1
+np
+211.46 350.41 m
+206.91 39.40 l
+o
+211.46 350.41 3.24 c p1
+418.37 389.81 3.24 c p1
+np
+211.46 389.02 m
+206.91 13.04 l
+o
+211.46 389.02 3.24 c p1
+418.37 402.06 3.24 c p1
+418.37 426.82 3.24 c p1
+np
+211.46 396.05 m
+206.91 10.53 l
+o
+211.46 396.05 3.24 c p1
+418.37 406.58 3.24 c p1
+np
+211.46 404.98 m
+206.91 5.60 l
+o
+211.46 404.98 3.24 c p1
+418.37 410.58 3.24 c p1
+np
+211.46 419.66 m
+206.91 1.57 l
+o
+211.46 419.66 3.24 c p1
+418.37 421.23 3.24 c p1
+np
+211.46 401.44 m
+206.91 12.86 l
+o
+211.46 401.44 3.24 c p1
+418.37 414.30 3.24 c p1
+np
+211.46 438.72 m
+206.91 -3.12 l
+o
+211.46 438.72 3.24 c p1
+418.37 435.60 3.24 c p1
+np
+211.46 484.66 m
+206.91 -29.09 l
+o
+211.46 484.66 3.24 c p1
+418.37 455.57 3.24 c p1
+np
+211.46 455.00 m
+206.91 -9.81 l
+o
+211.46 455.00 3.24 c p1
+418.37 445.19 3.24 c p1
+np
+211.46 455.96 m
+206.91 -6.24 l
+o
+211.46 455.96 3.24 c p1
+418.37 449.72 3.24 c p1
+np
+211.46 400.04 m
+206.91 13.73 l
+o
+211.46 400.04 3.24 c p1
+418.37 413.77 3.24 c p1
+np
+211.46 422.16 m
+206.91 1.46 l
+o
+211.46 422.16 3.24 c p1
+418.37 423.62 3.24 c p1
+np
+211.46 495.26 m
+206.91 -34.89 l
+o
+211.46 495.26 3.24 c p1
+418.37 460.37 3.24 c p1
+np
+211.46 400.66 m
+206.91 5.39 l
+o
+211.46 400.66 3.24 c p1
+418.37 406.05 3.24 c p1
+np
+211.46 498.92 m
+206.91 -15.13 l
+o
+211.46 498.92 3.24 c p1
+418.37 483.79 3.24 c p1
+np
+211.46 439.32 m
+206.91 -4.25 l
+o
+211.46 439.32 3.24 c p1
+418.37 435.07 3.24 c p1
+np
+211.46 400.94 m
+206.91 9.10 l
+o
+211.46 400.94 3.24 c p1
+418.37 410.04 3.24 c p1
+np
+211.46 430.20 m
+206.91 -0.99 l
+o
+211.46 430.20 3.24 c p1
+418.37 429.21 3.24 c p1
+np
+211.46 443.37 m
+206.91 -4.30 l
+o
+211.46 443.37 3.24 c p1
+418.37 439.07 3.24 c p1
+np
+211.46 404.99 m
+206.91 5.32 l
+o
+211.46 404.99 3.24 c p1
+418.37 410.31 3.24 c p1
+np
+211.46 438.47 m
+206.91 -2.87 l
+o
+211.46 438.47 3.24 c p1
+418.37 435.60 3.24 c p1
+np
+211.46 503.59 m
+206.91 -20.33 l
+o
+211.46 503.59 3.24 c p1
+418.37 483.26 3.24 c p1
+np
+211.46 424.48 m
+206.91 0.21 l
+o
+211.46 424.48 3.24 c p1
+418.37 424.69 3.24 c p1
+np
+211.46 421.54 m
+206.91 2.35 l
+o
+211.46 421.54 3.24 c p1
+418.37 423.89 3.24 c p1
+np
+211.46 410.56 m
+206.91 3.48 l
+o
+211.46 410.56 3.24 c p1
+418.37 414.04 3.24 c p1
+np
+211.46 407.19 m
+206.91 5.25 l
+o
+211.46 407.19 3.24 c p1
+418.37 412.44 3.24 c p1
+np
+211.46 393.43 m
+206.91 11.56 l
+o
+211.46 393.43 3.24 c p1
+418.37 404.99 3.24 c p1
+np
+211.46 441.98 m
+206.91 -3.45 l
+o
+211.46 441.98 3.24 c p1
+418.37 438.53 3.24 c p1
+np
+211.46 464.19 m
+206.91 -7.82 l
+o
+211.46 464.19 3.24 c p1
+418.37 456.37 3.24 c p1
+np
+211.46 425.03 m
+206.91 0.72 l
+o
+211.46 425.03 3.24 c p1
+418.37 425.75 3.24 c p1
+np
+211.46 508.76 m
+206.91 -41.74 l
+o
+211.46 508.76 3.24 c p1
+418.37 467.02 3.24 c p1
+np
+211.46 435.73 m
+206.91 -1.46 l
+o
+211.46 435.73 3.24 c p1
+418.37 434.27 3.24 c p1
+np
+211.46 404.44 m
+206.91 5.87 l
+o
+211.46 404.44 3.24 c p1
+418.37 410.31 3.24 c p1
+np
+211.46 444.77 m
+206.91 -4.64 l
+o
+211.46 444.77 3.24 c p1
+418.37 440.13 3.24 c p1
+np
+211.46 433.83 m
+206.91 -1.69 l
+o
+211.46 433.83 3.24 c p1
+418.37 432.14 3.24 c p1
+418.37 426.55 3.24 c p1
+np
+211.46 459.59 m
+206.91 -16.80 l
+o
+211.46 459.59 3.24 c p1
+418.37 442.79 3.24 c p1
+np
+211.46 423.41 m
+206.91 0.75 l
+o
+211.46 423.41 3.24 c p1
+418.37 424.16 3.24 c p1
+np
+211.46 455.79 m
+206.91 -9.80 l
+o
+211.46 455.79 3.24 c p1
+418.37 445.99 3.24 c p1
+np
+211.46 418.20 m
+206.91 4.62 l
+o
+211.46 418.20 3.24 c p1
+418.37 422.82 3.24 c p1
+np
+211.46 411.01 m
+206.91 4.09 l
+o
+211.46 411.01 3.24 c p1
+418.37 415.10 3.24 c p1
+np
+211.46 429.06 m
+206.91 -1.18 l
+o
+211.46 429.06 3.24 c p1
+418.37 427.88 3.24 c p1
+np
+211.46 417.21 m
+206.91 2.69 l
+o
+211.46 417.21 3.24 c p1
+418.37 419.90 3.24 c p1
+np
+211.46 438.12 m
+206.91 -2.25 l
+o
+211.46 438.12 3.24 c p1
+418.37 435.87 3.24 c p1
+np
+211.46 439.60 m
+206.91 -3.46 l
+o
+211.46 439.60 3.24 c p1
+418.37 436.14 3.24 c p1
+np
+211.46 454.06 m
+206.91 -13.66 l
+o
+211.46 454.06 3.24 c p1
+418.37 440.40 3.24 c p1
+np
+211.46 450.83 m
+206.91 -7.77 l
+o
+211.46 450.83 3.24 c p1
+418.37 443.06 3.24 c p1
+np
+211.46 399.17 m
+206.91 9.28 l
+o
+211.46 399.17 3.24 c p1
+418.37 408.45 3.24 c p1
+np
+211.46 414.77 m
+206.91 4.33 l
+o
+211.46 414.77 3.24 c p1
+418.37 419.10 3.24 c p1
+np
+211.46 377.69 m
+206.91 12.92 l
+o
+211.46 377.69 3.24 c p1
+418.37 390.61 3.24 c p1
+np
+211.46 429.58 m
+206.91 -1.43 l
+o
+211.46 429.58 3.24 c p1
+418.37 428.15 3.24 c p1
+np
+211.46 462.27 m
+206.91 -7.50 l
+o
+211.46 462.27 3.24 c p1
+418.37 454.77 3.24 c p1
+np
+211.46 387.93 m
+206.91 9.60 l
+o
+211.46 387.93 3.24 c p1
+418.37 397.53 3.24 c p1
+np
+211.46 396.17 m
+206.91 8.28 l
+o
+211.46 396.17 3.24 c p1
+418.37 404.45 3.24 c p1
+np
+211.46 415.77 m
+206.91 3.06 l
+o
+211.46 415.77 3.24 c p1
+418.37 418.83 3.24 c p1
+np
+211.46 386.01 m
+206.91 20.84 l
+o
+211.46 386.01 3.24 c p1
+418.37 406.85 3.24 c p1
+ep
+%%Trailer
+%%Pages: 1
+%%EOF

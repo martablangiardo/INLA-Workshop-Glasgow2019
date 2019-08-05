@@ -1,0 +1,761 @@
+%!PS-Adobe-3.0
+%%Title: (S-PLUS Graphics)
+%%Creator: S-PLUS
+%%For: (Dr Nicky G Best)
+%%CreationDate: Sun Mar 15 16:57:08 1998
+%%BoundingBox: 90 108 523 685
+%%Pages: (atend)
+%%DocumentData: Clean7Bit
+%%DocumentNeededResources: (atend)
+%%EndComments
+%%BeginProlog
+150 dict begin gsave
+/bd{bind def}def
+/PVer 3200 def
+% drawing commands
+/I{Coord SetPage 1 setlinecap 1 setlinejoin
+    LineTypes{RastersPerPoint ScaleArray}forall
+    /Helvetica findfont
+    PointSize RastersPerPoint mul Cex mul scalefont setfont
+    /Colors GColors def
+}bd
+/BWOp{
+    bw{currentrgbcolor add add 2.9 gt{1}{0}ifelse setgray}if
+    exec
+    bw{CurSc Sc}if
+}bd
+/IBu{}def
+/B{newpath}bd
+/E{{stroke}BWOp}bd
+/C{currentpoint Penup{newpath}{E}ifelse moveto}bd
+/F{closepath eofill}bd
+/M{moveto}bd
+/L{lineto}bd
+/Pu{load /XEQ exch def /Penup true def}bd
+/Pd{/XEQ{}def /Penup false def}bd
+/Px{currentdict /XEQ known{XEQ}if}bd
+/h{Penup{rmoveto Px}{rlineto}ifelse}bd
+/j{neg Penup{rmoveto Px}{rlineto}ifelse}bd
+/k{exch neg exch Penup{rmoveto Px}{rlineto}ifelse}bd
+/l{neg exch neg exch Penup{rmoveto Px}{rlineto}ifelse}bd
+/m{moveto Penup{Px}if}bd
+/x{0 Penup{rmoveto Px}{rlineto}ifelse}bd
+/y{0 exch Penup{rmoveto Px}{rlineto}ifelse}bd
+/w{neg x}bd
+/z{neg y}bd
+/a{B M dup y exch x neg y closepath}bd
+/b{a eofill}bd
+/c{a E}bd
+/A{PageBegin BackCol 0 ge
+    {CurSc gsave 0 SC Page aload pop
+    exch 4 -1 roll dup 5 1 roll sub 3 1 roll exch dup 4 1 roll sub 4 2 roll b
+    grestore SC}if
+}bd
+/Ph{gsave Pch-x Pch-y rmoveto Show grestore}bd
+/Pc{Pch Ph}bd
+/T{/Adjust exch def gsave translate StringRot rotate 0 0 moveto
+    dup stringwidth pop neg Adjust mul 0 rmoveto
+    currentpoint translate TextShow grestore}bd
+/X{erasepage InPage{PageEnd}if}bd
+/Z{gsave showpage grestore PageEnd}bd
+/W{grestore end}bd
+% parameter setting commands
+/saveAt{Attr begin
+    /Atlinewidth currentlinewidth def
+    /Atfont currentfont def
+    /Atdash currentdash 2 array astore def
+    /AtSc CurSc def
+end}bd
+/restAt{Attr begin
+    Atlinewidth Atfont Atdash AtSc
+    end
+    SC aload pop setdash setfont setlinewidth
+}bd
+/SC{dup dup 0 eq
+    {pop BackIdx
+        {BackCol dup 0 lt {pop 1 setgray} {Sc}ifelse}
+        {/Colors BColor def 1 Sc}ifelse}
+    {/Colors GColors def Sc}ifelse
+    /CurSc exch def
+}bd
+/St{1 sub LineTypes dup 3 1 roll length Rem floor get 0 setdash}bd
+/Sw{abs 2 div RastersPerPoint mul setlinewidth SetClip}bd
+/Sp{dup 42 eq{pop IBu}{Pch exch 0 exch put SetPchSize}ifelse}bd
+/Sx{dup Cex div /Ratio exch def
+     /Cex exch def
+     currentfont Ratio scalefont setfont
+     /Pch-x Pch-x Ratio mul def
+     /Pch-y Pch-y Ratio mul def
+     /Text-y Text-y Ratio mul def}bd
+/So{4 1 roll exch 4 -1 roll Plot astore pop SetClip}bd
+/Sg{4 1 roll exch 4 -1 roll Figure astore pop SetClip}bd
+/Sr{/StringRot exch def}bd
+/Sh{/CharRot exch def}bd
+/Sd{0 eq /ClipToPlot exch def SetClip}bd
+/Iv{/InPage false def/Clip 4 array def/Page 4 array def
+    /Figure [0 0 1 1] def/Plot [0 0 1 1] def/ClipToPlot true def
+    /Cex 1 def/Outline false def
+    /Pch 1 string def/Pch-x 0 def/Pch-y 0 def/Text-y 0 def
+    /LineTypes [ % in default units
+        [] [1 2] [4 4] [8 4] [13 3] [16 2 2 2] [8 2 2 2] [1 13] [6 5] [12 4]
+    ] def
+    /Attr 5 dict def/CurSc 1 def/Penup false def/XEQ{}def
+}bd
+/Rem{2 copy div floor mul sub floor cvi}bd
+/RastersPerPoint{RastersPerInch 72 div}bd
+/ScaleArray{/Factor exch def /Array exch def
+    0 1 Array length 1 sub
+    {dup Array exch get Factor mul Array 3 1 roll put}for}bd
+/Coord{Region aload pop /uy exch def /ux exch def /ly exch def /lx exch def
+    uy ly sub ux lx sub Landscape{exch}if /Width exch def /Height exch def
+    lx ly translate Landscape{90 rotate 0 Height neg translate}if
+    1 RastersPerPoint div dup scale}bd
+/SetPchSize{gsave
+    newpath 0 0 moveto Pch false charpath flattenpath pathbbox
+    exch 3 1 roll
+    add 2 div neg /Pch-y exch def
+    add 2 div neg /Pch-x exch def
+    grestore}bd
+/Show{Outline{false charpath E}{{show}BWOp}ifelse}bd
+/SimpleShow{0 Text-y 2 div neg rmoveto Show}bd
+/FancyShow{
+    /RotDiff exch def
+    /Cos RotDiff cos abs def
+    /Sin RotDiff sin abs def
+    {
+        ( ) dup 0 4 -1 roll put
+        dup stringwidth pop /CharWidth exch def
+        Cos 0 eq{
+            Text-y Sin div
+        }{
+            Sin 0 eq{
+                CharWidth Cos div
+            }{
+                Text-y Sin div dup
+                CharWidth Cos div dup
+                4 1 roll lt{exch pop}{pop}ifelse
+            }ifelse
+        }ifelse 2 div /CharDist exch def
+        CharDist 0 translate 0 0 moveto
+        gsave
+            RotDiff rotate
+            CharWidth 2 div neg Text-y 2 div neg rmoveto
+            Show
+        grestore
+        CharDist 0 translate 0 0 moveto
+    }forall
+}bd
+/TextShow{
+    CharRot StringRot sub dup 0 eq{pop SimpleShow}{FancyShow}ifelse
+}bd
+/BoxClip{/CLW currentlinewidth def
+    2{CLW add 4 1 roll}repeat
+    2{CLW sub 4 1 roll}repeat
+    % initclip
+    saveAt grestore gsave restAt
+    newpath 2 index exch 2 index exch dup 6 index exch
+    moveto 3{lineto}repeat closepath clip newpath}bd
+/Subregion{
+    7 dict begin/A exch def/Uy exch def/Ux exch def/Ly exch def/Lx exch def
+    Ux Lx sub A 0 get mul Lx add
+    Uy Ly sub A 1 get mul Ly add
+    Ux Lx sub A 2 get mul Lx add
+    Uy Ly sub A 3 get mul Ly add end}bd
+/SetFigure{Page aload pop Figure Subregion}bd
+/SetPlot{SetFigure Plot Subregion}bd
+/SetClip{ClipToPlot{SetPlot}{SetFigure}ifelse BoxClip}bd
+/SetPage{0 0 Width Height Page astore RastersPerPoint ScaleArray}bd
+/PageBegin{save /PageContext exch def /InPage true def gsave}bd
+/PageEnd{grestore PageContext restore /InPage false def}bd
+/SImage{
+    dup /Bits exch def 8 exch idiv /PerByte exch def
+    /Ht exch def /Wid exch def
+    1 Wid div 1 Ht div scale
+    /saveSc CurSc def /Colors IColors def
+    /curstr Wid PerByte add 1 sub PerByte idiv string def
+    /MaskByte 16#ff Bits 8 sub bitshift def
+    1 1 Ht{
+        currentfile curstr readhexstring pop pop
+        /CurPos 0 def
+        /Left PerByte def
+        1 1 Wid{
+            Left PerByte eq{
+                /CurByte curstr CurPos get def
+                /MaskMove -8 Bits add def
+                /CurPos CurPos 1 add def
+            }if
+            CurByte MaskMove bitshift MaskByte and
+            dup 0 gt{
+                Sc
+                exch dup 3 1 roll B M 1 z 1 w 1 y F
+            }{pop pop}ifelse
+            Left 1 sub dup /Left exch def 0 le
+            {/Left PerByte def}
+            {/MaskMove MaskMove Bits add def}ifelse
+        }for
+        pop
+    }for
+    /Colors GColors def saveSc Sc
+}bd
+/Ic {} bd
+/Sc {
+    dup dup 1 lt exch 0 ge and
+    {1 exch sub setgray}  % explicit gray level [0,1)
+    {1 sub Colors dup 3 1 roll length Rem floor get
+     dup type /arraytype eq {aload pop setrgbcolor} {setgray} ifelse
+    } ifelse
+} bd
+/If {} bd
+/Sf {dup 0 lt /Outline exch def abs
+     1 sub Fonts dup 3 1 roll length Rem floor get
+     findfont PointSize Cex mul RastersPerPoint mul scalefont dup setfont
+     dup /FontMatrix get /Matrix exch def /FontBBox get aload pop
+     Matrix transform 4 2 roll Matrix transform
+     exch pop add /Text-y exch def pop SetPchSize} bd
+%%EndProlog
+%%BeginSetup
+% fixed controlling parameters
+/Landscape false def
+/Region [90 108 522 684] def
+/bw statusdict begin /processcolors where
+{pop processcolors} {1} ifelse end 1 eq
+ def
+/RastersPerInch 300 def
+/PointSize 14 def
+/Fonts [
+	/Helvetica
+	/Courier
+	/Times-Roman
+	/Helvetica-Oblique
+	/Helvetica-Bold
+	/Helvetica-BoldOblique
+	/Courier-Oblique
+	/Courier-Bold
+	/Courier-BoldOblique
+	/Times-Italic
+	/Times-Bold
+	/Times-BoldItalic
+	/Symbol
+	/AvantGarde-Book
+	/AvantGarde-BookOblique
+	/AvantGarde-Demi
+	/AvantGarde-DemiOblique
+	/Bookman-Demi
+	/Bookman-DemiItalic
+	/Bookman-Light
+	/Bookman-LightItalic
+	/Helvetica-Narrow
+	/Helvetica-Narrow-Bold
+	/Helvetica-Narrow-BoldOblique
+	/Helvetica-Narrow-Oblique
+	/NewCenturySchlbk-Roman
+	/NewCenturySchlbk-Bold
+	/NewCenturySchlbk-Italic
+	/NewCenturySchlbk-BoldItalic
+	/Palatino-Roman
+	/Palatino-Bold
+	/Palatino-Italic
+	/Palatino-BoldItalic
+	/ZapfChancery-MediumItalic
+	/ZapfDingbats
+] def
+/GColors [
+	0
+	0.6
+	0.3
+	0.9
+	0.4
+	0.7
+	0.1
+	0.5
+	0.8
+	0.2
+] def
+/BackIdx true def
+/BackCol -1 def
+/IColors [
+	0.933333
+	0.866667
+	0.8
+	0.733333
+	0.666667
+	0.6
+	0.533333
+	0.466667
+	0.4
+	0.333333
+	0.266667
+	0.2
+	0.133333
+	0.0666667
+	0
+] def
+/Colors GColors def
+/IBu {Pch 0 8#267 put SetPchSize} def
+/Bu {Pc} def
+
+% all initialization action here
+Iv I
+currentdict /Ic known {Ic} if
+currentdict /If known {If} if
+
+
+%%EndSetup
+
+
+%%Page: 1 1
+%%PageOrientation: Portrait
+A
+1 St
+1 Sw
+1 SC
+0 Sr
+42 Sp
+0.8 Sx
+0.233333 0.844444 0.188764 0.685393 So
+0 0.5 0.463542 0.927083 Sg
+0 Sh
+0 Sd
+%%IncludeResource: font Helvetica
+1 Sf
+/Bu Pu B
+246 1724 m
+21 37 h
+4 54 j
+6 11 k
+19 27 k
+20 8 j
+12 39 l
+24 34 h
+23 17 l
+7 22 j
+11 56 k
+11 19 j
+7 37 h
+4 30 l
+3 5 h
+13 64 l
+4 43 h
+10 71 h
+14 70 l
+13 6 l
+23 25 j
+4 59 k
+12 10 l
+23 11 h
+19 81 l
+16 44 h
+19 3 k
+13 6 h
+34 y
+7 58 l
+1 74 h
+6 52 j
+10 23 l
+24 65 h
+20 56 l
+8 3 l
+10 43 h
+6 x
+6 21 k
+3 y
+6 19 j
+6 27 l
+23 16 h
+19 29 k
+16 88 l
+16 95 h
+9 32 h
+4 105 l
+1 75 k
+9 13 k
+9 40 j
+16 44 l
+14 25 h
+3 37 l
+10 39 k
+4 39 h
+2 20 j
+14 43 j
+11 13 k
+5 17 h
+9 3 h
+8 11 l
+26 3 l
+14 13 j
+19 19 h
+1 30 j
+30 15 k
+10 16 j
+5 15 k
+11 45 h
+3 10 j
+19 39 l
+6 24 j
+18 29 h
+1 11 h
+3 30 l
+3 13 h
+4 7 l
+15 2 j
+6 39 k
+10 7 k
+2 17 j
+12 41 h
+1 13 j
+15 13 h
+33 19 l
+22 42 j
+1 41 h
+5 z
+7 19 l
+8 22 h
+38 15 l
+14 41 j
+18 67 h
+36 14 h
+1 40 h
+30 51 l
+7 32 l
+45 10 h
+71 y
+Pd
+E
+1 Sd
+(Radon concentration Bq/m3) 485 1172 0.5 T
+90 Sr
+90 Sh
+(Odds ratio for lung cancer) 60 1599 0.5 T
+0 Sr
+0 Sh
+230 1323 m
+11 z
+380 1323 m
+11 z
+530 1323 m
+11 z
+680 1323 m
+11 z
+E
+230 1323 m
+450 x
+E
+(0) 230 1242 0.5 T
+(50) 380 1242 0.5 T
+(100) 530 1242 0.5 T
+(150) 680 1242 0.5 T
+90 Sr
+90 Sh
+210 1343 m
+11 w
+210 1471 m
+11 w
+210 1599 m
+11 w
+210 1727 m
+11 w
+210 1855 m
+11 w
+E
+210 1343 m
+512 y
+E
+(0.0) 130 1343 0.5 T
+(0.5) 130 1471 0.5 T
+(1.0) 130 1599 0.5 T
+(1.5) 130 1727 0.5 T
+(2.0) 130 1855 0.5 T
+0 Sr
+0 Sh
+0 Sd
+550 553 210 1322 c
+1 Sx
+B
+210 1686 m
+550 495 h
+E
+0.75 Sx
+1 Sd
+(Individual exposure to radon ) 485 1971 0.5 T
+(v risk of lung cancer: Lancashire) 485 1919 0.5 T
+0.8 Sx
+0.5 1 0.463542 0.927083 Sg
+0 Sd
+/Bu Pu B
+1492 1533 m
+72 47 l
+110 58 h
+131 59 l
+199 47 l
+253 81 h
+25 42 h
+91 122 l
+168 159 h
+130 154 l
+28 37 k
+84 72 h
+53 44 l
+35 48 l
+46 35 l
+265 227 h
+268 230 l
+186 163 h
+14 8 h
+114 138 l
+38 3 l
+95 72 l
+160 166 h
+48 z
+49 41 l
+128 142 h
+173 153 l
+14 60 l
+168 149 h
+128 67 l
+69 19 j
+123 20 l
+5 2 j
+150 142 h
+85 81 l
+26 7 l
+83 65 l
+85 43 h
+28 16 j
+75 112 h
+67 87 l
+88 78 h
+4 21 h
+87 103 l
+86 49 l
+61 12 h
+183 208 h
+103 101 l
+46 89 l
+71 57 l
+119 176 h
+96 89 l
+49 12 j
+46 52 h
+15 24 h
+27 35 h
+23 10 l
+30 24 j
+108 39 l
+3 36 j
+31 26 h
+84 46 l
+42 17 h
+60 15 l
+168 124 h
+131 140 l
+55 63 h
+113 115 l
+18 36 l
+251 234 h
+128 102 l
+97 95 h
+116 136 l
+58 22 k
+73 37 h
+108 102 l
+303 273 h
+87 94 l
+46 39 l
+66 44 l
+15 26 h
+16 39 l
+101 65 h
+79 27 l
+59 16 h
+152 101 l
+48 38 h
+91 63 h
+65 63 l
+91 81 h
+31 22 k
+95 118 l
+77 77 h
+56 26 l
+56 44 h
+5 59 k
+12 83 j
+51 58 l
+154 137 h
+111 54 l
+Pd
+E
+1 Sd
+(Radon concentration Bq/m3) 1385 1172 0.5 T
+90 Sr
+90 Sh
+(Odds ratio for lung cancer) 960 1599 0.5 T
+0 Sr
+0 Sh
+1130 1323 m
+11 z
+1280 1323 m
+11 z
+1430 1323 m
+11 z
+1580 1323 m
+11 z
+E
+1130 1323 m
+450 x
+E
+(0) 1130 1242 0.5 T
+(50) 1280 1242 0.5 T
+(100) 1430 1242 0.5 T
+(150) 1580 1242 0.5 T
+90 Sr
+90 Sh
+1110 1343 m
+11 w
+1110 1471 m
+11 w
+1110 1599 m
+11 w
+1110 1727 m
+11 w
+1110 1855 m
+11 w
+E
+1110 1343 m
+512 y
+E
+(0.0) 1030 1343 0.5 T
+(0.5) 1030 1471 0.5 T
+(1.0) 1030 1599 0.5 T
+(1.5) 1030 1727 0.5 T
+(2.0) 1030 1855 0.5 T
+0 Sr
+0 Sh
+0 Sd
+550 553 1110 1322 c
+1 Sx
+B
+1110 1241 m
+550 429 h
+E
+0.75 Sx
+1 Sd
+(Individual exposure to radon ) 1385 1971 0.5 T
+(v risk of lung cancer: Cornwall) 1385 1919 0.5 T
+0.8 Sx
+0 0.5 0 0.463542 Sg
+0 Sd
+/Bu Pu B
+266 624 m
+274 238 j
+Pd
+E
+1 Sd
+(Radon concentration Bq/m3) 485 59 0.5 T
+90 Sr
+90 Sh
+(Odds ratio for lung cancer) 60 486 0.5 T
+0 Sr
+0 Sh
+230 210 m
+11 z
+380 210 m
+11 z
+530 210 m
+11 z
+680 210 m
+11 z
+E
+230 210 m
+450 x
+E
+(0) 230 129 0.5 T
+(50) 380 129 0.5 T
+(100) 530 129 0.5 T
+(150) 680 129 0.5 T
+90 Sr
+90 Sh
+210 230 m
+11 w
+210 358 m
+11 w
+210 486 m
+11 w
+210 614 m
+11 w
+210 742 m
+11 w
+E
+210 230 m
+512 y
+E
+(0.0) 130 230 0.5 T
+(0.5) 130 358 0.5 T
+(1.0) 130 486 0.5 T
+(1.5) 130 614 0.5 T
+(2.0) 130 742 0.5 T
+0 Sr
+0 Sh
+0 Sd
+550 552 210 210 c
+1 Sx
+B
+210 673 m
+550 478 j
+E
+0.8 Sx
+1 Sd
+(Lancashire) 266 653 0 T
+(Cornwall) 542 410 0 T
+0.75 Sx
+(Ecological relationship between ) 485 859 0.5 T
+(radon and lung cancer) 485 806 0.5 T
+2 SC
+0.8 Sx
+0.5 1 0 0.463542 Sg
+0 Sd
+195 393 1170 230 b
+195 512 1405 230 b
+1 SC
+B
+1130 230 m
+510 x
+E
+1 Sd
+(South) 1267 118 0.5 T
+(West) 1267 62 0.5 T
+(North) 1503 118 0.5 T
+(West) 1503 62 0.5 T
+90 Sr
+90 Sh
+1110 230 m
+11 w
+1110 371 m
+11 w
+1110 511 m
+11 w
+1110 651 m
+11 w
+E
+1110 230 m
+421 y
+E
+(0) 1030 230 0.5 T
+(10) 1030 371 0.5 T
+(20) 1030 511 0.5 T
+(30) 1030 651 0.5 T
+(Number of cigarettes per week) 960 486 0.5 T
+0 Sr
+0.75 Sx
+0 Sh
+(Average cigarette consumption, ) 1385 859 0.5 T
+(males > 50 years) 1385 806 0.5 T
+1.3 Sx
+0 1 0 0.927083 So
+0 1 0 1 Sg
+(Ecological bias: Hypothetical example) 900 2340 0.5 T
+Z
+%%Trailer
+%%Pages: 1
+%%DocumentNeededResources: font Helvetica
+W
+%%EOF

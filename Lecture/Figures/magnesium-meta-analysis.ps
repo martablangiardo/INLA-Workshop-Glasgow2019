@@ -1,0 +1,913 @@
+%!PS-Adobe-3.0
+%%Title: (S-PLUS Graphics)
+%%Creator: S-PLUS
+%%For: (noname)
+%%CreationDate: Sat Apr 23 15:25:16 2005
+%%BoundingBox: 72 108 541 685
+%%Pages: (atend)
+%%DocumentData: Clean7Bit
+%%DocumentNeededResources: (atend)
+%%EndComments
+%%BeginProlog
+150 dict begin gsave
+/bd{bind def}def
+/PVer 3200 def
+% drawing commands
+/I{Coord SetPage 1 setlinecap 1 setlinejoin
+    LineTypes{RastersPerPoint ScaleArray}forall
+    /Helvetica findfont
+    PointSize RastersPerPoint mul Cex mul scalefont setfont
+    /Colors GColors def
+}bd
+/BWOp{
+    bw{currentrgbcolor add add 2.9 gt{1}{0}ifelse setgray}if
+    exec
+    bw{CurSc Sc}if
+}bd
+/IBu{}def
+/B{newpath}bd
+/E{{stroke}BWOp}bd
+/C{currentpoint Penup{newpath}{E}ifelse moveto}bd
+/F{closepath eofill}bd
+/M{moveto}bd
+/L{lineto}bd
+/Pu{load /XEQ exch def /Penup true def}bd
+/Pd{/XEQ{}def /Penup false def}bd
+/Px{currentdict /XEQ known{XEQ}if}bd
+/h{Penup{rmoveto Px}{rlineto}ifelse}bd
+/j{neg Penup{rmoveto Px}{rlineto}ifelse}bd
+/k{exch neg exch Penup{rmoveto Px}{rlineto}ifelse}bd
+/l{neg exch neg exch Penup{rmoveto Px}{rlineto}ifelse}bd
+/m{moveto Penup{Px}if}bd
+/x{0 Penup{rmoveto Px}{rlineto}ifelse}bd
+/y{0 exch Penup{rmoveto Px}{rlineto}ifelse}bd
+/w{neg x}bd
+/z{neg y}bd
+/a{B M dup y exch x neg y closepath}bd
+/b{a eofill}bd
+/c{a E}bd
+/A{PageBegin BackCol 0 ge
+    {CurSc gsave 0 SC Page aload pop
+    exch 4 -1 roll dup 5 1 roll sub 3 1 roll exch dup 4 1 roll sub 4 2 roll b
+    grestore SC}if
+}bd
+/Ph{gsave Pch-x Pch-y rmoveto Show grestore}bd
+/Pc{Pch Ph}bd
+/T{/Adjust exch def gsave translate StringRot rotate 0 0 moveto
+    dup stringwidth pop neg Adjust mul 0 rmoveto
+    currentpoint translate TextShow grestore}bd
+/X{erasepage InPage{PageEnd}if}bd
+/Z{gsave showpage grestore PageEnd}bd
+/W{grestore end}bd
+% parameter setting commands
+/saveAt{Attr begin
+    /Atlinewidth currentlinewidth def
+    /Atfont currentfont def
+    /Atdash currentdash 2 array astore def
+    /AtSc CurSc def
+end}bd
+/restAt{Attr begin
+    Atlinewidth Atfont Atdash AtSc
+    end
+    SC aload pop setdash setfont setlinewidth
+}bd
+/SC{dup dup 0 eq
+    {pop BackIdx
+        {BackCol dup 0 lt {pop 1 setgray} {Sc}ifelse}
+        {/Colors BColor def 1 Sc}ifelse}
+    {/Colors GColors def Sc}ifelse
+    /CurSc exch def
+}bd
+/St{1 sub LineTypes dup 3 1 roll length Rem floor get 0 setdash}bd
+/Sw{abs 2 div RastersPerPoint mul setlinewidth SetClip}bd
+/Sp{dup 42 eq{pop IBu}{Pch exch 0 exch put SetPchSize}ifelse}bd
+/Sx{dup Cex div /Ratio exch def
+     /Cex exch def
+     currentfont Ratio scalefont setfont
+     /Pch-x Pch-x Ratio mul def
+     /Pch-y Pch-y Ratio mul def
+     /Text-y Text-y Ratio mul def}bd
+/So{4 1 roll exch 4 -1 roll Plot astore pop SetClip}bd
+/Sg{4 1 roll exch 4 -1 roll Figure astore pop SetClip}bd
+/Sr{/StringRot exch def}bd
+/Sh{/CharRot exch def}bd
+/Sd{0 eq /ClipToPlot exch def SetClip}bd
+/Iv{/InPage false def/Clip 4 array def/Page 4 array def
+    /Figure [0 0 1 1] def/Plot [0 0 1 1] def/ClipToPlot true def
+    /Cex 1 def/Outline false def
+    /Pch 1 string def/Pch-x 0 def/Pch-y 0 def/Text-y 0 def
+    /LineTypes [ % in default units
+        [] [1 2] [4 4] [8 4] [13 3] [16 2 2 2] [8 2 2 2] [1 13] [6 5] [12 4]
+    ] def
+    /Attr 5 dict def/CurSc 1 def/Penup false def/XEQ{}def
+}bd
+/Rem{2 copy div floor mul sub floor cvi}bd
+/RastersPerPoint{RastersPerInch 72 div}bd
+/ScaleArray{/Factor exch def /Array exch def
+    0 1 Array length 1 sub
+    {dup Array exch get Factor mul Array 3 1 roll put}for}bd
+/Coord{Region aload pop /uy exch def /ux exch def /ly exch def /lx exch def
+    uy ly sub ux lx sub Landscape{exch}if /Width exch def /Height exch def
+    lx ly translate Landscape{90 rotate 0 Height neg translate}if
+    1 RastersPerPoint div dup scale}bd
+/SetPchSize{gsave
+    newpath 0 0 moveto Pch false charpath flattenpath pathbbox
+    exch 3 1 roll
+    add 2 div neg /Pch-y exch def
+    add 2 div neg /Pch-x exch def
+    grestore}bd
+/Show{Outline{false charpath E}{{show}BWOp}ifelse}bd
+/SimpleShow{0 Text-y 2 div neg rmoveto Show}bd
+/FancyShow{
+    /RotDiff exch def
+    /Cos RotDiff cos abs def
+    /Sin RotDiff sin abs def
+    {
+        ( ) dup 0 4 -1 roll put
+        dup stringwidth pop /CharWidth exch def
+        Cos 0 eq{
+            Text-y Sin div
+        }{
+            Sin 0 eq{
+                CharWidth Cos div
+            }{
+                Text-y Sin div dup
+                CharWidth Cos div dup
+                4 1 roll lt{exch pop}{pop}ifelse
+            }ifelse
+        }ifelse 2 div /CharDist exch def
+        CharDist 0 translate 0 0 moveto
+        gsave
+            RotDiff rotate
+            CharWidth 2 div neg Text-y 2 div neg rmoveto
+            Show
+        grestore
+        CharDist 0 translate 0 0 moveto
+    }forall
+}bd
+/TextShow{
+    CharRot StringRot sub dup 0 eq{pop SimpleShow}{FancyShow}ifelse
+}bd
+/BoxClip{/CLW currentlinewidth def
+    2{CLW add 4 1 roll}repeat
+    2{CLW sub 4 1 roll}repeat
+    % initclip
+    saveAt grestore gsave restAt
+    newpath 2 index exch 2 index exch dup 6 index exch
+    moveto 3{lineto}repeat closepath clip newpath}bd
+/Subregion{
+    7 dict begin/A exch def/Uy exch def/Ux exch def/Ly exch def/Lx exch def
+    Ux Lx sub A 0 get mul Lx add
+    Uy Ly sub A 1 get mul Ly add
+    Ux Lx sub A 2 get mul Lx add
+    Uy Ly sub A 3 get mul Ly add end}bd
+/SetFigure{Page aload pop Figure Subregion}bd
+/SetPlot{SetFigure Plot Subregion}bd
+/SetClip{ClipToPlot{SetPlot}{SetFigure}ifelse BoxClip}bd
+/SetPage{0 0 Width Height Page astore RastersPerPoint ScaleArray}bd
+/PageBegin{save /PageContext exch def /InPage true def gsave}bd
+/PageEnd{grestore PageContext restore /InPage false def}bd
+/SImage{
+    dup /Bits exch def 8 exch idiv /PerByte exch def
+    /Ht exch def /Wid exch def
+    1 Wid div 1 Ht div scale
+    /saveSc CurSc def /Colors IColors def
+    /curstr Wid PerByte add 1 sub PerByte idiv string def
+    /MaskByte 16#ff Bits 8 sub bitshift def
+    1 1 Ht{
+        currentfile curstr readhexstring pop pop
+        /CurPos 0 def
+        /Left PerByte def
+        1 1 Wid{
+            Left PerByte eq{
+                /CurByte curstr CurPos get def
+                /MaskMove -8 Bits add def
+                /CurPos CurPos 1 add def
+            }if
+            CurByte MaskMove bitshift MaskByte and
+            dup 0 gt{
+                Sc
+                exch dup 3 1 roll B M 1 z 1 w 1 y F
+            }{pop pop}ifelse
+            Left 1 sub dup /Left exch def 0 le
+            {/Left PerByte def}
+            {/MaskMove MaskMove Bits add def}ifelse
+        }for
+        pop
+    }for
+    /Colors GColors def saveSc Sc
+}bd
+/SImageUneven{
+    /YCorners exch def
+    /XCorners exch def
+    dup /Bits exch def 8 exch idiv /PerByte exch def
+    /Ht exch def /Wid exch def
+    1 Wid div 1 Ht div scale
+    /saveSc CurSc def /Colors IColors def
+    /curstr Wid PerByte add 1 sub PerByte idiv string def
+    /MaskByte 16#ff Bits 8 sub bitshift def
+    1 1 Ht{
+        dup 1 sub /CellBottom YCorners 3 -1 roll get def
+        dup /CellTop YCorners 3 -1 roll get def
+        currentfile curstr readhexstring pop pop
+        /CurPos 0 def
+        /Left PerByte def
+        1 1 Wid{
+            dup 1 sub /CellLeft XCorners 3 -1 roll get def
+            dup /CellRight XCorners 3 -1 roll get def
+            Left PerByte eq{
+                /CurByte curstr CurPos get def
+                /MaskMove -8 Bits add def
+                /CurPos CurPos 1 add def
+            }if
+            CurByte MaskMove bitshift MaskByte and
+            dup 0 gt{
+                Sc
+                CellLeft CellBottom B M CellRight CellBottom L CellRight CellTop L CellLeft CellTop L CellLeft CellBottom L F
+            }{pop}ifelse
+            pop
+            Left 1 sub dup /Left exch def 0 le
+            {/Left PerByte def}
+            {/MaskMove MaskMove Bits add def}ifelse
+        }for
+        pop
+    }for
+    /Colors GColors def saveSc Sc
+}bd
+/Ic {} bd
+/Sc {
+    dup dup 1 lt exch 0 ge and
+    {1 exch sub setgray}  % explicit gray level [0,1)
+    {1 sub Colors dup 3 1 roll length Rem floor get
+     dup type /arraytype eq {aload pop setrgbcolor} {setgray} ifelse
+    } ifelse
+} bd
+/If {} bd
+/Sf {dup 0 lt /Outline exch def abs
+     1 sub Fonts dup 3 1 roll length Rem floor get
+     findfont PointSize Cex mul RastersPerPoint mul scalefont dup setfont
+     dup /FontMatrix get /Matrix exch def /FontBBox get aload pop
+     Matrix transform 4 2 roll Matrix transform
+     exch pop add /Text-y exch def pop SetPchSize} bd
+%%EndProlog
+%%BeginSetup
+% fixed controlling parameters
+/Landscape true def
+/Region [72 108 540 684] def
+/bw statusdict begin /processcolors where
+{pop processcolors} {1} ifelse end 1 eq
+ def
+/RastersPerInch 300 def
+/PointSize 14 def
+/Fonts [
+	/Helvetica
+	/Courier
+	/Times-Roman
+	/Helvetica-Oblique
+	/Helvetica-Bold
+	/Helvetica-BoldOblique
+	/Courier-Oblique
+	/Courier-Bold
+	/Courier-BoldOblique
+	/Times-Italic
+	/Times-Bold
+	/Times-BoldItalic
+	/Symbol
+	/AvantGarde-Book
+	/AvantGarde-BookOblique
+	/AvantGarde-Demi
+	/AvantGarde-DemiOblique
+	/Bookman-Demi
+	/Bookman-DemiItalic
+	/Bookman-Light
+	/Bookman-LightItalic
+	/Helvetica-Narrow
+	/Helvetica-Narrow-Bold
+	/Helvetica-Narrow-BoldOblique
+	/Helvetica-Narrow-Oblique
+	/NewCenturySchlbk-Roman
+	/NewCenturySchlbk-Bold
+	/NewCenturySchlbk-Italic
+	/NewCenturySchlbk-BoldItalic
+	/Palatino-Roman
+	/Palatino-Bold
+	/Palatino-Italic
+	/Palatino-BoldItalic
+	/ZapfChancery-MediumItalic
+	/ZapfDingbats
+] def
+/GColors [
+	0
+	0.6
+	0.3
+	0.9
+	0.4
+	0.7
+	0.1
+	0.5
+	0.8
+	0.2
+] def
+/BackIdx true def
+/BackCol -1 def
+/IColors [
+	0.933333
+	0.866667
+	0.8
+	0.733333
+	0.666667
+	0.6
+	0.533333
+	0.466667
+	0.4
+	0.333333
+	0.266667
+	0.2
+	0.133333
+	0.0666667
+	0
+] def
+/Colors GColors def
+/IBu {Pch 0 8#267 put SetPchSize} def
+/Bu {Pc} def
+
+% all initialization action here
+Iv I
+currentdict /Ic known {Ic} if
+currentdict /If known {If} if
+
+
+%%EndSetup
+
+
+%%Page: 1 1
+%%PageOrientation: Landscape
+A
+1 St
+1 Sw
+1 SC
+0 Sr
+42 Sp
+1 Sx
+0.233333 0.970833 0.179487 0.928205 So
+0 1 0 1 Sg
+0 Sh
+1 Sd
+%%IncludeResource: font Helvetica
+1 Sf
+(Mortality OR) 1445 105 0.5 T
+0 1 0 1 So
+0 Sd
+1770 1460 560 350 c
+0.233333 0.970833 0.179487 0.928205 So
+1 Sd
+739 350 m
+29 z
+1206 350 m
+29 z
+1559 350 m
+29 z
+1765 350 m
+29 z
+1912 350 m
+29 z
+2118 350 m
+29 z
+2264 350 m
+29 z
+E
+560 350 m
+1704 x
+E
+(0.10) 739 245 0.5 T
+(0.25) 1206 245 0.5 T
+(0.50) 1559 245 0.5 T
+(0.75) 1765 245 0.5 T
+(1.50) 2118 245 0.5 T
+560 639 m
+29 w
+560 874 m
+29 w
+560 992 m
+29 w
+560 1109 m
+29 w
+560 1227 m
+29 w
+560 1344 m
+29 w
+560 1462 m
+29 w
+560 1580 m
+29 w
+560 1697 m
+29 w
+E
+560 350 m
+1460 y
+E
+(Overall) 490 639 1 T
+(Morton) 490 874 1 T
+(Rasmussen) 490 992 1 T
+(Smith) 490 1109 1 T
+(Abraham) 490 1227 1 T
+(Feldstedt) 490 1344 1 T
+(Shecter) 490 1462 1 T
+(Ceremuz.) 490 1580 1 T
+(LIMIT-2) 490 1697 1 T
+4 St
+0 Sd
+1912 350 m
+1460 y
+E
+1 St
+1 Sp
+B
+1574 859 m
+14 x
+7 7 j
+14 z
+7 7 l
+14 w
+7 7 k
+14 y
+7 7 h
+E
+16 Sp
+B
+1623 888 m
+14 x
+7 7 j
+14 z
+7 7 l
+14 w
+7 7 k
+14 y
+F
+18 Sp
+B
+1639 918 m
+14 14 j
+14 14 l
+14 14 k
+F
+4 St
+42 Sp
+B
+523 845 m
+2115 x
+E
+2 St
+2 Sw
+B
+1351 874 m
+556 x
+E
+1 St
+1 Sw
+B
+1166 904 m
+845 x
+E
+1 Sp
+B
+1385 976 m
+14 x
+7 7 j
+14 z
+7 7 l
+14 w
+7 7 k
+14 y
+7 7 h
+E
+16 Sp
+B
+1546 1006 m
+14 x
+7 7 j
+14 z
+7 7 l
+14 w
+7 7 k
+14 y
+F
+18 Sp
+B
+1576 1035 m
+14 14 j
+14 14 l
+14 14 k
+F
+4 St
+42 Sp
+B
+983 962 m
+818 x
+E
+2 St
+2 Sw
+B
+1320 992 m
+467 x
+E
+1 St
+1 Sw
+B
+1195 1021 m
+628 x
+E
+1 Sp
+B
+1334 1094 m
+14 x
+7 7 j
+14 z
+7 7 l
+14 w
+7 7 k
+14 y
+7 7 h
+E
+16 Sp
+B
+1588 1123 m
+14 x
+7 7 j
+14 z
+7 7 l
+14 w
+7 7 k
+14 y
+F
+18 Sp
+B
+1598 1153 m
+14 14 j
+14 14 l
+14 14 k
+F
+4 St
+42 Sp
+B
+603 1080 m
+1477 x
+E
+2 St
+2 Sw
+B
+1320 1109 m
+545 x
+E
+1 St
+1 Sw
+B
+1112 1139 m
+790 x
+E
+1 Sp
+B
+1884 1212 m
+14 x
+7 7 j
+14 z
+7 7 l
+14 w
+7 7 k
+14 y
+7 7 h
+E
+16 Sp
+B
+1641 1241 m
+14 x
+7 7 j
+14 z
+7 7 l
+14 w
+7 7 k
+14 y
+F
+18 Sp
+B
+1668 1270 m
+14 14 j
+14 14 l
+14 14 k
+F
+4 St
+42 Sp
+B
+724 1198 m
+2335 x
+E
+2 St
+2 Sw
+B
+1369 1227 m
+559 x
+E
+1 St
+1 Sw
+B
+1231 1256 m
+875 x
+E
+1 Sp
+B
+2011 1329 m
+14 x
+7 7 j
+14 z
+7 7 l
+14 w
+7 7 k
+14 y
+7 7 h
+E
+16 Sp
+B
+1728 1358 m
+14 x
+7 7 j
+14 z
+7 7 l
+14 w
+7 7 k
+14 y
+F
+18 Sp
+B
+1752 1388 m
+14 14 j
+14 14 l
+14 14 k
+F
+4 St
+42 Sp
+B
+1539 1315 m
+958 x
+E
+2 St
+2 Sw
+B
+1488 1344 m
+493 x
+E
+1 St
+1 Sw
+B
+1487 1374 m
+669 x
+E
+1 Sp
+B
+861 1447 m
+14 x
+7 7 j
+14 z
+7 7 l
+14 w
+7 7 k
+14 y
+7 7 h
+E
+16 Sp
+B
+1554 1476 m
+14 x
+7 7 j
+14 z
+7 7 l
+14 w
+7 7 k
+14 y
+F
+18 Sp
+B
+1545 1505 m
+14 14 j
+14 14 l
+14 14 k
+F
+4 St
+42 Sp
+B
+-29 1433 m
+1795 x
+E
+2 St
+2 Sw
+B
+1289 1462 m
+550 x
+E
+1 St
+1 Sw
+B
+910 1491 m
+951 x
+E
+1 Sp
+B
+1380 1564 m
+14 x
+7 7 j
+14 z
+7 7 l
+14 w
+7 7 k
+14 y
+7 7 h
+E
+16 Sp
+B
+1608 1594 m
+14 x
+7 7 j
+14 z
+7 7 l
+14 w
+7 7 k
+14 y
+F
+18 Sp
+B
+1616 1623 m
+14 14 j
+14 14 l
+14 14 k
+F
+4 St
+42 Sp
+B
+369 1550 m
+2036 x
+E
+2 St
+2 Sw
+B
+1341 1580 m
+554 x
+E
+1 St
+1 Sw
+B
+1112 1609 m
+857 x
+E
+1 Sp
+B
+1752 1682 m
+14 x
+7 7 j
+14 z
+7 7 l
+14 w
+7 7 k
+14 y
+7 7 h
+E
+16 Sp
+B
+1725 1711 m
+14 x
+7 7 j
+14 z
+7 7 l
+14 w
+7 7 k
+14 y
+F
+18 Sp
+B
+1724 1741 m
+14 14 j
+14 14 l
+14 14 k
+F
+4 St
+42 Sp
+B
+1609 1668 m
+299 x
+E
+2 St
+2 Sw
+B
+1601 1697 m
+266 x
+E
+1 St
+1 Sw
+B
+1587 1727 m
+283 x
+E
+1 Sp
+B
+1697 624 m
+14 x
+7 7 j
+14 z
+7 7 l
+14 w
+7 7 k
+14 y
+7 7 h
+E
+16 Sp
+B
+1627 653 m
+14 x
+7 7 j
+14 z
+7 7 l
+14 w
+7 7 k
+14 y
+F
+18 Sp
+B
+1639 683 m
+14 14 j
+14 14 l
+14 14 k
+F
+4 St
+42 Sp
+B
+1579 610 m
+256 x
+E
+2 St
+2 Sw
+B
+1419 639 m
+433 x
+E
+1 St
+1 Sw
+B
+1347 669 m
+505 x
+E
+18 Sp
+B
+739 565 m
+14 14 j
+14 14 l
+14 14 k
+F
+16 Sp
+B
+732 506 m
+14 x
+7 7 j
+14 z
+7 7 l
+14 w
+7 7 k
+14 y
+F
+1 Sp
+B
+732 447 m
+14 x
+7 7 j
+14 z
+7 7 l
+14 w
+7 7 k
+14 y
+7 7 h
+E
+42 Sp
+B
+639 551 m
+203 x
+E
+2 St
+2 Sw
+B
+639 492 m
+203 x
+E
+4 St
+1 Sw
+B
+639 433 m
+203 x
+E
+1 St
+1 Sd
+(Full Bayes) 893 551 0 T
+(Empirical Bayes) 893 492 0 T
+(Independent) 893 433 0 T
+Z
+%%Trailer
+%%Pages: 1
+%%DocumentNeededResources: font Helvetica
+W
+%%EOF

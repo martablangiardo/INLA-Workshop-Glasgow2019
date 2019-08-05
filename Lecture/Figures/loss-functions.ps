@@ -1,0 +1,1116 @@
+%!PS-Adobe-2.0 EPSF-2.0
+%%Title: S graphics
+%%Creator: DOS386
+%%CreationDate: Tue Jan 28 20:14:36 2003
+%%Pages: (atend)
+%%BoundingBox: 89 180 522 613
+%%EndComments
+% beginning of preamble
+100 dict begin
+/bd {bind def} def
+% drawing commands
+/I {Coord SetPage 1 setlinecap 1 setlinejoin
+    LineTypes {RastersPerPoint ScaleArray} forall
+    /Helvetica findfont
+    PointSize RastersPerPoint mul Cex mul scalefont setfont} bd
+/A {PageBegin} bd
+/B {newpath} bd
+/C {currentpoint stroke moveto} bd
+/E {stroke} bd
+/M {moveto} bd
+/L {lineto} bd
+/S {moveto lineto stroke} bd
+/F {closepath fill} bd
+/P {gsave moveto Pch-x Pch-y rmoveto Pch Show grestore} bd
+/T {/Adjust exch def gsave translate StringRot rotate 0 0 moveto
+    dup stringwidth pop neg Adjust mul 0 rmoveto
+    currentpoint translate TextShow grestore} bd
+/X {erasepage InPage {PageEnd} if} bd
+/Z {gsave showpage grestore PageEnd} bd
+/W {end} bd
+
+% parameter setting commands
+/St {1 sub LineTypes dup 3 1 roll length Rem floor get 0 setdash} bd
+/Sw {abs 2 div RastersPerPoint mul setlinewidth SetClip} bd
+/Sc {dup dup 1 lt exch 0 ge and
+     {1 exch sub setgray}
+     {1 sub Colors dup 3 1 roll length Rem floor get
+	dup type /arraytype eq {aload pop sethsbcolor} {setgray} ifelse} ifelse} bd
+/Sp {Pch exch 0 exch put SetPchSize} bd
+/Sx {dup Cex div /Ratio exch def
+     /Cex exch def
+     currentfont Ratio scalefont setfont
+     /Pch-x Pch-x Ratio mul def
+     /Pch-y Pch-y Ratio mul def
+     /Text-y Text-y Ratio mul def} bd
+/So {4 1 roll exch 4 -1 roll Plot astore pop SetClip} bd
+/Sg {4 1 roll exch 4 -1 roll Figure astore pop SetClip} bd
+/Sr {/StringRot exch def} bd
+/Sh {/CharRot exch def} bd
+/Sd {0 eq /ClipToPlot exch def SetClip} bd
+/Sf {dup 0 lt /Outline exch def abs
+     1 sub Fonts dup 3 1 roll length Rem floor get
+     findfont PointSize Cex mul RastersPerPoint mul scalefont dup setfont
+     dup /FontMatrix get /Matrix exch def /FontBBox get aload pop
+     Matrix transform 4 2 roll Matrix transform
+     exch pop add /Text-y exch def pop SetPchSize} bd
+
+% other variable definitions
+/InPage false def
+/Clip 4 array def
+/Page 4 array def
+/Figure [0 0 1 1] def
+/Plot [0 0 1 1] def
+/ClipToPlot true def
+/Cex 1 def
+/Outline false def
+/Pch 1 string def
+/Pch-x 0 def
+/Pch-y 0 def
+/Text-y 0 def
+/LineTypes [ % in default units
+	[]		[1 2]		[4 4]		[8 4]
+	[13 3]		[16 2 2 2]	[8 2 2 2]	[1 13]
+	[6 5]		[12 4]
+] def
+
+% other procedure definitions
+/Rem {2 copy div floor mul sub floor cvi} bd
+/RastersPerPoint {RastersPerInch 72 div} bd
+/ScaleArray {/Factor exch def /Array exch def
+	     0 1 Array length 1 sub
+	     {dup Array exch get Factor mul Array 3 1 roll put} for} bd
+/Coord {Region aload pop /uy exch def /ux exch def /ly exch def /lx exch def
+	uy ly sub ux lx sub Landscape {exch} if /Width exch def /Height exch def
+	lx ly translate Landscape {90 rotate 0 Height neg translate} if
+	1 RastersPerPoint div dup scale} bd
+/SetPchSize {gsave
+	     newpath 0 0 moveto Pch false charpath flattenpath pathbbox
+	     exch 3 1 roll
+	     add 2 div neg /Pch-y exch def
+	     add 2 div neg /Pch-x exch def
+	     grestore} bd
+/TextShow {CharRot StringRot sub dup 0 eq {pop SimpleShow} {FancyShow} ifelse} bd
+/SimpleShow {0 Text-y 2 div neg rmoveto Show} bd
+/FancyShow {
+	/RotDiff exch def
+	/Cos RotDiff cos abs def
+	/Sin RotDiff sin abs def
+	{
+		( ) dup 0 4 -1 roll put
+		dup stringwidth pop /CharWidth exch def
+		Cos 0 eq {
+			Text-y Sin div
+		} {
+			Sin 0 eq {
+				CharWidth Cos div
+			} {
+				/Ht Text-y Sin div def
+				/Wd CharWidth Cos div def
+				Ht Wd lt {Ht} {Wd} ifelse
+			} ifelse
+		} ifelse 2 div /CharDist exch def
+		CharDist 0 translate 0 0 moveto
+		gsave
+			RotDiff rotate
+			CharWidth 2 div neg Text-y 2 div neg rmoveto
+			Outline {false charpath stroke} {show} ifelse
+		grestore
+		CharDist 0 translate 0 0 moveto
+	} forall
+} bd
+/Show {Outline {false charpath stroke} {show} ifelse} bd
+/BoxClip {/CLW currentlinewidth def
+	  2 {CLW add 4 1 roll} repeat
+	  2 {CLW sub 4 1 roll} repeat
+	  initclip newpath 2 index exch 2 index exch dup 6 index exch
+	  moveto 3 {lineto} repeat closepath clip newpath} bd
+/Subregion {/A exch def /Uy exch def /Ux exch def /Ly exch def /Lx exch def
+	    Ux Lx sub A 0 get mul Lx add
+	    Uy Ly sub A 1 get mul Ly add
+	    Ux Lx sub A 2 get mul Lx add
+	    Uy Ly sub A 3 get mul Ly add} bd
+/SetFigure {Page aload pop Figure Subregion} bd
+/SetPlot {SetFigure Plot Subregion} bd
+/SetClip {ClipToPlot {SetPlot} {SetFigure} ifelse BoxClip} bd
+/SetPage {0 0 Width Height Page astore RastersPerPoint ScaleArray} bd
+/PageBegin {save /PageContext exch def /InPage true def} bd
+/PageEnd {PageContext restore /InPage false def} bd
+% end of preamble
+/concatprocs
+	{ /proc2 exch cvlit def
+	/proc1 exch cvlit def
+	/newproc proc1 length proc2 length add array def
+	newproc 0 proc1 putinterval
+	newproc proc1 length proc2 putinterval
+	newproc cvx
+	} def
+
+% fixed controlling parameters
+/Landscape false def
+/Region [89.88 180.12 521.88 612.12] def
+/RastersPerInch 300 def
+/PointSize 14 def
+/Fonts [
+	/Helvetica
+	/Courier
+	/Times-Roman
+	/Helvetica-Oblique
+	/Helvetica-Bold
+	/Helvetica-BoldOblique
+	/Courier-Oblique
+	/Courier-Bold
+	/Courier-BoldOblique
+	/Times-Italic
+	/Times-Bold
+	/Times-BoldItalic
+	/Symbol
+	/AvantGarde-Book
+	/AvantGarde-BookOblique
+	/AvantGarde-Demi
+	/AvantGarde-DemiOblique
+	/Bookman-Demi
+	/Bookman-DemiItalic
+	/Bookman-Light
+	/Bookman-LightItalic
+	/Helvetica-Narrow
+	/Helvetica-Narrow-Bold
+	/Helvetica-Narrow-BoldOblique
+	/Helvetica-Narrow-Oblique
+	/NewCenturySchlbk-Roman
+	/NewCenturySchlbk-Bold
+	/NewCenturySchlbk-Italic
+	/NewCenturySchlbk-BoldItalic
+	/Palatino-Roman
+	/Palatino-Bold
+	/Palatino-Italic
+	/Palatino-BoldItalic
+	/ZapfChancery-MediumItalic
+	/ZapfDingbats
+] def
+/Colors [
+	0
+	0.6
+	0.3
+	0.9
+	0.4
+	0.7
+	0.1
+	0.5
+	0.8
+	0.2
+] def
+
+% all initialization action here
+I
+
+%%EndProlog
+
+
+%%Page: 1 1
+A
+1 St
+1 Sw
+1 Sc
+0 Sr
+111 Sp
+1.5 Sx
+0.2722222 0.9611111 0.2722222 0.9222222 So
+0 1 0 1 Sg
+0 Sh
+1 Sd
+1 Sf
+(d\(y\) - theta) 1110 227 0.5 T
+90 Sr
+90 Sh
+(loss) 227 1075 0.5 T
+4 St
+0 Sr
+0 Sh
+0 Sd
+B
+536 1617 M
+539 1606 L
+542 1595 L
+545 1584 L
+547 1574 L
+550 1563 L
+553 1553 L
+556 1542 L
+559 1532 L
+562 1521 L
+565 1511 L
+567 1501 L
+570 1491 L
+573 1480 L
+576 1470 L
+579 1460 L
+582 1450 L
+585 1440 L
+588 1430 L
+590 1421 L
+593 1411 L
+596 1401 L
+599 1391 L
+602 1382 L
+605 1372 L
+608 1363 L
+611 1353 L
+613 1344 L
+616 1335 L
+619 1325 L
+622 1316 L
+625 1307 L
+628 1298 L
+631 1289 L
+634 1280 L
+636 1271 L
+639 1262 L
+642 1253 L
+645 1244 L
+648 1235 L
+651 1227 L
+654 1218 L
+656 1209 L
+659 1201 L
+662 1192 L
+665 1184 L
+668 1176 L
+671 1167 L
+674 1159 L
+677 1151 L
+679 1143 L
+682 1135 L
+685 1127 L
+688 1119 L
+691 1111 L
+694 1103 L
+697 1095 L
+700 1087 L
+702 1079 L
+705 1072 L
+708 1064 L
+711 1057 L
+714 1049 L
+717 1042 L
+720 1034 L
+722 1027 L
+725 1020 L
+728 1012 L
+731 1005 L
+734 998 L
+737 991 L
+740 984 L
+743 977 L
+745 970 L
+748 963 L
+751 957 L
+754 950 L
+757 943 L
+760 936 L
+763 930 L
+766 923 L
+768 917 L
+771 910 L
+774 904 L
+777 898 L
+780 892 L
+783 885 L
+786 879 L
+789 873 L
+791 867 L
+794 861 L
+797 855 L
+800 849 L
+803 843 L
+806 838 L
+809 832 L
+811 826 L
+814 821 L
+817 815 L
+820 810 L
+823 804 L
+826 799 L
+829 793 L
+832 788 L
+834 783 L
+837 778 L
+840 773 L
+843 768 L
+846 763 L
+849 758 L
+852 753 L
+855 748 L
+857 743 L
+860 738 L
+863 734 L
+866 729 L
+869 724 L
+872 720 L
+875 715 L
+877 711 L
+880 707 L
+883 702 L
+886 698 L
+889 694 L
+892 690 L
+895 686 L
+898 682 L
+900 678 L
+903 674 L
+906 670 L
+909 666 L
+912 662 L
+915 659 L
+918 655 L
+921 651 L
+923 648 L
+926 644 L
+929 641 L
+932 637 L
+935 634 L
+938 631 L
+941 628 L
+944 624 L
+946 621 L
+949 618 L
+952 615 L
+955 612 L
+958 609 L
+961 607 L
+964 604 L
+966 601 L
+969 598 L
+972 596 L
+975 593 L
+978 591 L
+981 588 L
+984 586 L
+987 583 L
+989 581 L
+992 579 L
+995 577 L
+998 575 L
+1001 572 L
+1004 570 L
+1007 568 L
+1010 567 L
+1012 565 L
+1015 563 L
+1018 561 L
+1021 559 L
+1024 558 L
+1027 556 L
+1030 555 L
+1032 553 L
+1035 552 L
+1038 550 L
+1041 549 L
+1044 548 L
+1047 546 L
+1050 545 L
+1053 544 L
+1055 543 L
+1058 542 L
+1061 541 L
+1064 540 L
+1067 539 L
+1070 539 L
+1073 538 L
+1076 537 L
+1078 537 L
+1081 536 L
+1084 536 L
+1087 535 L
+1090 535 L
+1093 534 L
+1096 534 L
+1099 534 L
+1101 534 L
+1104 533 L
+1107 533 L
+1110 533 L
+1113 533 L
+1116 533 L
+1119 534 L
+1121 534 L
+1124 534 L
+1127 534 L
+1130 535 L
+1133 535 L
+1136 536 L
+1139 536 L
+1142 537 L
+1144 537 L
+1147 538 L
+1150 539 L
+1153 539 L
+1156 540 L
+1159 541 L
+1162 542 L
+1165 543 L
+1167 544 L
+1170 545 L
+1173 546 L
+1176 548 L
+1179 549 L
+1182 550 L
+1185 552 L
+1188 553 L
+1190 555 L
+1193 556 L
+1196 558 L
+1199 559 L
+1202 561 L
+1205 563 L
+1208 565 L
+1210 567 L
+1213 568 L
+1216 570 L
+1219 572 L
+1222 575 L
+1225 577 L
+1228 579 L
+1231 581 L
+1233 583 L
+1236 586 L
+1239 588 L
+1242 591 L
+1245 593 L
+1248 596 L
+1251 598 L
+1254 601 L
+1256 604 L
+1259 607 L
+1262 609 L
+1265 612 L
+1268 615 L
+1271 618 L
+1274 621 L
+1276 624 L
+1279 628 L
+1282 631 L
+1285 634 L
+1288 637 L
+1291 641 L
+1294 644 L
+1297 648 L
+1299 651 L
+1302 655 L
+1305 659 L
+1308 662 L
+1311 666 L
+1314 670 L
+1317 674 L
+1320 678 L
+1322 682 L
+1325 686 L
+1328 690 L
+1331 694 L
+1334 698 L
+1337 702 L
+1340 707 L
+1343 711 L
+1345 715 L
+1348 720 L
+1351 724 L
+1354 729 L
+1357 734 L
+1360 738 L
+1363 743 L
+1365 748 L
+1368 753 L
+1371 758 L
+1374 763 L
+1377 768 L
+1380 773 L
+1383 778 L
+1386 783 L
+1388 788 L
+1391 793 L
+1394 799 L
+1397 804 L
+1400 810 L
+1403 815 L
+1406 821 L
+1409 826 L
+1411 832 L
+1414 838 L
+1417 843 L
+1420 849 L
+1423 855 L
+1426 861 L
+1429 867 L
+1431 873 L
+1434 879 L
+1437 885 L
+1440 892 L
+1443 898 L
+1446 904 L
+1449 910 L
+1452 917 L
+1454 923 L
+1457 930 L
+1460 936 L
+1463 943 L
+1466 950 L
+1469 957 L
+1472 963 L
+1475 970 L
+1477 977 L
+1480 984 L
+1483 991 L
+1486 998 L
+1489 1005 L
+1492 1012 L
+1495 1020 L
+1498 1027 L
+1500 1034 L
+1503 1042 L
+1506 1049 L
+1509 1057 L
+1512 1064 L
+1515 1072 L
+1518 1079 L
+1520 1087 L
+1523 1095 L
+1526 1103 L
+1529 1111 L
+1532 1119 L
+1535 1127 L
+1538 1135 L
+1541 1143 L
+1543 1151 L
+1546 1159 L
+1549 1167 L
+1552 1176 L
+1555 1184 L
+1558 1192 L
+1561 1201 L
+1564 1209 L
+1566 1218 L
+1569 1227 L
+1572 1235 L
+1575 1244 L
+1578 1253 L
+1581 1262 L
+1584 1271 L
+1586 1280 L
+1589 1289 L
+1592 1298 L
+1595 1307 L
+1598 1316 L
+1601 1325 L
+1604 1335 L
+1607 1344 L
+1609 1353 L
+1612 1363 L
+1615 1372 L
+1618 1382 L
+1621 1391 L
+1624 1401 L
+1627 1411 L
+1630 1421 L
+1632 1430 L
+1635 1440 L
+1638 1450 L
+1641 1460 L
+1644 1470 L
+1647 1480 L
+1650 1491 L
+1653 1501 L
+1655 1511 L
+1658 1521 L
+1661 1532 L
+1664 1542 L
+1667 1553 L
+1670 1563 L
+1673 1574 L
+1675 1584 L
+1678 1595 L
+1681 1606 L
+1684 1617 L
+E
+2 St
+B
+536 1075 M
+539 1072 L
+542 1070 L
+545 1067 L
+547 1064 L
+550 1061 L
+553 1059 L
+556 1056 L
+559 1053 L
+562 1051 L
+565 1048 L
+567 1045 L
+570 1042 L
+573 1040 L
+576 1037 L
+579 1034 L
+582 1032 L
+585 1029 L
+588 1026 L
+590 1024 L
+593 1021 L
+596 1018 L
+599 1015 L
+602 1013 L
+605 1010 L
+608 1007 L
+611 1005 L
+613 1002 L
+616 999 L
+619 996 L
+622 994 L
+625 991 L
+628 988 L
+631 986 L
+634 983 L
+636 980 L
+639 977 L
+642 975 L
+645 972 L
+648 969 L
+651 967 L
+654 964 L
+656 961 L
+659 959 L
+662 956 L
+665 953 L
+668 950 L
+671 948 L
+674 945 L
+677 942 L
+679 940 L
+682 937 L
+685 934 L
+688 931 L
+691 929 L
+694 926 L
+697 923 L
+700 921 L
+702 918 L
+705 915 L
+708 912 L
+711 910 L
+714 907 L
+717 904 L
+720 902 L
+722 899 L
+725 896 L
+728 894 L
+731 891 L
+734 888 L
+737 885 L
+740 883 L
+743 880 L
+745 877 L
+748 875 L
+751 872 L
+754 869 L
+757 866 L
+760 864 L
+763 861 L
+766 858 L
+768 856 L
+771 853 L
+774 850 L
+777 847 L
+780 845 L
+783 842 L
+786 839 L
+789 837 L
+791 834 L
+794 831 L
+797 829 L
+800 826 L
+803 823 L
+806 820 L
+809 818 L
+811 815 L
+814 812 L
+817 810 L
+820 807 L
+823 804 L
+826 801 L
+829 799 L
+832 796 L
+834 793 L
+837 791 L
+840 788 L
+843 785 L
+846 782 L
+849 780 L
+852 777 L
+855 774 L
+857 772 L
+860 769 L
+863 766 L
+866 764 L
+869 761 L
+872 758 L
+875 755 L
+877 753 L
+880 750 L
+883 747 L
+886 745 L
+889 742 L
+892 739 L
+895 736 L
+898 734 L
+900 731 L
+903 728 L
+906 726 L
+909 723 L
+912 720 L
+915 717 L
+918 715 L
+921 712 L
+923 709 L
+926 707 L
+929 704 L
+932 701 L
+935 699 L
+938 696 L
+941 693 L
+944 690 L
+946 688 L
+949 685 L
+952 682 L
+955 680 L
+958 677 L
+961 674 L
+964 671 L
+966 669 L
+969 666 L
+972 663 L
+975 661 L
+978 658 L
+981 655 L
+984 652 L
+987 650 L
+989 647 L
+992 644 L
+995 642 L
+998 639 L
+1001 636 L
+1004 634 L
+1007 631 L
+1010 628 L
+1012 625 L
+1015 623 L
+1018 620 L
+1021 617 L
+1024 615 L
+1027 612 L
+1030 609 L
+1032 606 L
+1035 604 L
+1038 601 L
+1041 598 L
+1044 596 L
+1047 593 L
+1050 590 L
+1053 587 L
+1055 585 L
+1058 582 L
+1061 579 L
+1064 577 L
+1067 574 L
+1070 571 L
+1073 569 L
+1076 566 L
+1078 563 L
+1081 560 L
+1084 558 L
+1087 555 L
+1090 552 L
+1093 550 L
+1096 547 L
+1099 544 L
+1101 541 L
+1104 539 L
+1107 536 L
+1110 533 L
+1113 536 L
+1116 539 L
+1119 541 L
+1121 544 L
+1124 547 L
+1127 550 L
+1130 552 L
+1133 555 L
+1136 558 L
+1139 560 L
+1142 563 L
+1144 566 L
+1147 569 L
+1150 571 L
+1153 574 L
+1156 577 L
+1159 579 L
+1162 582 L
+1165 585 L
+1167 587 L
+1170 590 L
+1173 593 L
+1176 596 L
+1179 598 L
+1182 601 L
+1185 604 L
+1188 606 L
+1190 609 L
+1193 612 L
+1196 615 L
+1199 617 L
+1202 620 L
+1205 623 L
+1208 625 L
+1210 628 L
+1213 631 L
+1216 634 L
+1219 636 L
+1222 639 L
+1225 642 L
+1228 644 L
+1231 647 L
+1233 650 L
+1236 652 L
+1239 655 L
+1242 658 L
+1245 661 L
+1248 663 L
+1251 666 L
+1254 669 L
+1256 671 L
+1259 674 L
+1262 677 L
+1265 680 L
+1268 682 L
+1271 685 L
+1274 688 L
+1276 690 L
+1279 693 L
+1282 696 L
+1285 699 L
+1288 701 L
+1291 704 L
+1294 707 L
+1297 709 L
+1299 712 L
+1302 715 L
+1305 717 L
+1308 720 L
+1311 723 L
+1314 726 L
+1317 728 L
+1320 731 L
+1322 734 L
+1325 736 L
+1328 739 L
+1331 742 L
+1334 745 L
+1337 747 L
+1340 750 L
+1343 753 L
+1345 755 L
+1348 758 L
+1351 761 L
+1354 764 L
+1357 766 L
+1360 769 L
+1363 772 L
+1365 774 L
+1368 777 L
+1371 780 L
+1374 782 L
+1377 785 L
+1380 788 L
+1383 791 L
+1386 793 L
+1388 796 L
+1391 799 L
+1394 801 L
+1397 804 L
+1400 807 L
+1403 810 L
+1406 812 L
+1409 815 L
+1411 818 L
+1414 820 L
+1417 823 L
+1420 826 L
+1423 829 L
+1426 831 L
+1429 834 L
+1431 837 L
+1434 839 L
+1437 842 L
+1440 845 L
+1443 847 L
+1446 850 L
+1449 853 L
+1452 856 L
+1454 858 L
+1457 861 L
+1460 864 L
+1463 866 L
+1466 869 L
+1469 872 L
+1472 875 L
+1475 877 L
+1477 880 L
+1480 883 L
+1483 885 L
+1486 888 L
+1489 891 L
+1492 894 L
+1495 896 L
+1498 899 L
+1500 902 L
+1503 904 L
+1506 907 L
+1509 910 L
+1512 912 L
+1515 915 L
+1518 918 L
+1520 921 L
+1523 923 L
+1526 926 L
+1529 929 L
+1532 931 L
+1535 934 L
+1538 937 L
+1541 940 L
+1543 942 L
+1546 945 L
+1549 948 L
+1552 950 L
+1555 953 L
+1558 956 L
+1561 959 L
+1564 961 L
+1566 964 L
+1569 967 L
+1572 969 L
+1575 972 L
+1578 975 L
+1581 977 L
+1584 980 L
+1586 983 L
+1589 986 L
+1592 988 L
+1595 991 L
+1598 994 L
+1601 996 L
+1604 999 L
+1607 1002 L
+1609 1005 L
+1612 1007 L
+1615 1010 L
+1618 1013 L
+1621 1015 L
+1624 1018 L
+1627 1021 L
+1630 1024 L
+1632 1026 L
+1635 1029 L
+1638 1032 L
+1641 1034 L
+1644 1037 L
+1647 1040 L
+1650 1042 L
+1653 1045 L
+1655 1048 L
+1658 1051 L
+1661 1053 L
+1664 1056 L
+1667 1059 L
+1670 1061 L
+1673 1064 L
+1675 1067 L
+1678 1070 L
+1681 1072 L
+1684 1075 L
+E
+1 St
+B
+536 804 M
+1096 804 L
+E
+B
+1124 804 M
+1684 804 L
+E
+1 Sp
+B
+1099 825 M
+1121 825 L
+1131 815 L
+1131 794 L
+1121 783 L
+1099 783 L
+1089 794 L
+1089 815 L
+1099 825 L
+E
+111 Sp
+B
+479 533 M
+1713 533 L
+1683 503 L
+E
+B
+1683 563 M
+1713 533 L
+E
+B
+507 506 M
+507 1644 L
+537 1614 L
+E
+B
+477 1614 M
+507 1644 L
+E
+B
+1110 533 M
+1110 506 L
+E
+1 Sd
+(0) 1110 452 0.5 T
+(0) 450 533 0.5 T
+0 Sc
+B
+823 1155 M
+823 1617 L
+1904 1617 L
+1904 1155 L
+F
+4 St
+1 Sc
+B
+937 1512 M
+1164 1512 L
+E
+1 St
+(quadratic) 1278 1512 0 T
+2 St
+B
+937 1396 M
+1164 1396 L
+E
+1 St
+(absolute) 1278 1396 0 T
+B
+937 1281 M
+1164 1281 L
+E
+(0-1) 1278 1281 0 T
+Z
+
+%%Trailer
+W
+%%Pages: 1

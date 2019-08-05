@@ -1,0 +1,4449 @@
+%!PS-Adobe-3.0
+%%Title: (S-PLUS Graphics)
+%%Creator: S-PLUS
+%%For: (Nicola Best)
+%%CreationDate: Fri May  6 10:00:25 1994
+%%BoundingBox: 90 108 523 685
+%%Pages: (atend)
+%%DocumentData: Clean7Bit
+%%DocumentNeededResources: (atend)
+%%EndComments
+%%BeginProlog
+150 dict begin
+/bd {bind def} def
+/PVer 3100 def % version
+% drawing commands
+/I {Coord SetPage 1 setlinecap 1 setlinejoin
+    LineTypes {RastersPerPoint ScaleArray} forall
+    /Helvetica findfont
+    PointSize RastersPerPoint mul Cex mul scalefont setfont
+    /Colors GColors def
+} bd
+/IBu {} def
+/B {newpath} bd
+/C {currentpoint Penup {newpath} {stroke} ifelse moveto} bd
+/E {stroke} bd
+/F {closepath fill} bd
+/M {moveto} bd
+/L {lineto} bd
+/Pu {load /XEQ exch def /Penup true def} bd
+/Pd {/XEQ {} def /Penup false def} bd
+/Px {currentdict /XEQ known {XEQ} if} bd
+/h {Penup {rmoveto Px} {rlineto} ifelse} bd
+/j {neg Penup {rmoveto Px} {rlineto} ifelse} bd
+/k {exch neg exch Penup {rmoveto Px} {rlineto} ifelse} bd
+/l {neg exch neg exch Penup {rmoveto Px} {rlineto} ifelse} bd
+/m {moveto Penup {Px} if} bd
+/x {0 Penup {rmoveto Px} {rlineto} ifelse} bd
+/y {0 exch Penup {rmoveto Px} {rlineto} ifelse} bd
+/w {neg x} bd
+/z {neg y} bd
+/a {B M dup y exch x neg y closepath} bd
+/b {a fill} bd
+/c {a stroke} bd
+/A {PageBegin BackCol dup 0 gt {
+    gsave Sc Page aload pop
+    exch 4 -1 roll dup 5 1 roll sub 3 1 roll exch dup 4 1 roll sub 4 2 roll b
+    grestore} {pop} ifelse
+} bd
+/Ph {gsave Pch-x Pch-y rmoveto Show grestore} bd
+/Pc {Pch Ph} bd
+/T {/Adjust exch def gsave translate StringRot rotate 0 0 moveto
+    dup stringwidth pop neg Adjust mul 0 rmoveto
+    currentpoint translate TextShow grestore} bd
+/X {erasepage InPage {PageEnd} if} bd
+/Z {gsave showpage grestore PageEnd} bd
+/W {end} bd
+% parameter setting commands
+/saveAt {Attr begin
+    /Atlinewidth currentlinewidth def
+    /Atfont currentfont def
+    /Atdash currentdash 2 array astore def
+    /AtSc CurSc def
+end} bd
+/restAt {Attr begin
+    Atlinewidth Atfont Atdash AtSc
+    end
+    Sc
+    aload pop setdash
+    setfont
+    setlinewidth
+} bd
+/St {1 sub LineTypes dup 3 1 roll length Rem floor get 0 setdash} bd
+/Sw {abs 2 div RastersPerPoint mul setlinewidth SetClip} bd
+/Sp {dup 42 eq {pop IBu} {Pch exch 0 exch put SetPchSize} ifelse}bd
+/Sx {dup Cex div /Ratio exch def
+     /Cex exch def
+     currentfont Ratio scalefont setfont
+     /Pch-x Pch-x Ratio mul def
+     /Pch-y Pch-y Ratio mul def
+     /Text-y Text-y Ratio mul def} bd
+/So {4 1 roll exch 4 -1 roll Plot astore pop SetClip} bd
+/Sg {4 1 roll exch 4 -1 roll Figure astore pop SetClip} bd
+/Sr {/StringRot exch def} bd
+/Sh {/CharRot exch def} bd
+/Sd {0 eq /ClipToPlot exch def SetClip} bd
+% other variable definitions
+/Iv {
+    /InPage false def
+    /Clip 4 array def
+    /Page 4 array def
+    /Figure [0 0 1 1] def
+    /Plot [0 0 1 1] def
+    /ClipToPlot true def
+    /Cex 1 def
+    /Outline false def
+    /Pch 1 string def
+    /Pch-x 0 def
+    /Pch-y 0 def
+    /Text-y 0 def
+    /LineTypes [ % in default units
+	[] [1 2] [4 4] [8 4] [13 3] [16 2 2 2] [8 2 2 2] [1 13] [6 5] [12 4]
+    ] def
+    /Attr 5 dict def
+    /CurSc 1 def
+    /Penup false def
+    /XEQ {} def
+} bd
+% other procedure definitions
+/Rem {2 copy div floor mul sub floor cvi} bd
+/RastersPerPoint {RastersPerInch 72 div} bd
+/ScaleArray {/Factor exch def /Array exch def
+    0 1 Array length 1 sub
+    {dup Array exch get Factor mul Array 3 1 roll put} for} bd
+/Coord {Region aload pop /uy exch def /ux exch def /ly exch def /lx exch def
+    uy ly sub ux lx sub Landscape {exch} if /Width exch def /Height exch def
+    lx ly translate Landscape {90 rotate 0 Height neg translate} if
+    1 RastersPerPoint div dup scale} bd
+/SetPchSize {gsave
+    newpath 0 0 moveto Pch false charpath flattenpath pathbbox
+    exch 3 1 roll
+    add 2 div neg /Pch-y exch def
+    add 2 div neg /Pch-x exch def
+    grestore} bd
+/TextShow {
+    CharRot StringRot sub dup 0 eq {pop SimpleShow} {FancyShow} ifelse
+} bd
+/SimpleShow {0 Text-y 2 div neg rmoveto Show} bd
+/FancyShow {
+    /RotDiff exch def
+    /Cos RotDiff cos abs def
+    /Sin RotDiff sin abs def
+    {
+	( ) dup 0 4 -1 roll put
+	dup stringwidth pop /CharWidth exch def
+	Cos 0 eq {
+	    Text-y Sin div
+	} {
+	    Sin 0 eq {
+		CharWidth Cos div
+	    } {
+		Text-y Sin div dup
+		CharWidth Cos div dup
+		4 1 roll lt {exch pop} {pop} ifelse
+	    } ifelse
+	} ifelse 2 div /CharDist exch def
+	CharDist 0 translate 0 0 moveto
+	gsave
+	    RotDiff rotate
+	    CharWidth 2 div neg Text-y 2 div neg rmoveto
+	    Outline {false charpath stroke} {show} ifelse
+	grestore
+	CharDist 0 translate 0 0 moveto
+    } forall
+} bd
+/Show {Outline {false charpath stroke} {show} ifelse} bd
+/BoxClip {/CLW currentlinewidth def
+    2 {CLW add 4 1 roll} repeat
+    2 {CLW sub 4 1 roll} repeat
+    % initclip
+    saveAt grestore gsave restAt
+    newpath 2 index exch 2 index exch dup 6 index exch
+    moveto 3 {lineto} repeat closepath clip newpath} bd
+/Subregion {7 dict begin /A exch def /Uy exch def /Ux exch def /Ly exch def /Lx exch def
+    Ux Lx sub A 0 get mul Lx add
+    Uy Ly sub A 1 get mul Ly add
+    Ux Lx sub A 2 get mul Lx add
+    Uy Ly sub A 3 get mul Ly add end} bd
+/SetFigure {Page aload pop Figure Subregion} bd
+/SetPlot {SetFigure Plot Subregion} bd
+/SetClip {ClipToPlot {SetPlot} {SetFigure} ifelse BoxClip} bd
+/SetPage {0 0 Width Height Page astore RastersPerPoint ScaleArray} bd
+/PageBegin {save /PageContext exch def /InPage true def gsave} bd
+/PageEnd {grestore PageContext restore /InPage false def} bd
+/SImage {
+    dup /Bits exch def 8 exch idiv /PerByte exch def
+    /Ht exch def /Wid exch def
+    1 Wid div 1 Ht div scale
+    /saveSc CurSc def /Colors IColors def
+    /curstr Wid PerByte add 1 sub PerByte idiv string def
+    /MaskByte 16#ff Bits 8 sub bitshift def
+    1 1 Ht {
+	currentfile curstr readhexstring pop pop
+	/CurPos 0 def
+	/Left PerByte def
+	1 1 Wid {
+	    Left PerByte eq {
+		/CurByte curstr CurPos get def
+		/MaskMove -8 Bits add def
+		/CurPos CurPos 1 add def
+	    } if
+	    CurByte MaskMove bitshift MaskByte and
+	    dup 0 gt {
+		Sc
+		exch dup 3 1 roll B M 1 z 1 w 1 y F
+	    } {pop pop} ifelse
+	    Left 1 sub dup /Left exch def 0 le
+	    {/Left PerByte def}
+	    {/MaskMove MaskMove Bits add def} ifelse
+	} for
+	pop
+    } for
+    /Colors GColors def saveSc Sc
+} bd
+/Ic {} bd
+/Sc {
+    dup /CurSc exch def
+    dup dup 1 lt exch 0 ge and
+    {1 exch sub setgray}  % explicit gray level [0,1)
+    {1 sub Colors dup 3 1 roll length Rem floor get
+     dup type /arraytype eq {aload pop setrgbcolor} {setgray} ifelse
+    } ifelse
+} bd
+/If {} bd
+/Sf {dup 0 lt /Outline exch def abs
+     1 sub Fonts dup 3 1 roll length Rem floor get
+     findfont PointSize Cex mul RastersPerPoint mul scalefont dup setfont
+     dup /FontMatrix get /Matrix exch def /FontBBox get aload pop
+     Matrix transform 4 2 roll Matrix transform
+     exch pop add /Text-y exch def pop SetPchSize} bd
+%%EndProlog
+%%BeginSetup
+% fixed controlling parameters
+/Landscape false def
+/Region [90 108 522 684] def
+/RastersPerInch 300 def
+/PointSize 8 def
+/Fonts [
+	/Helvetica
+	/Courier
+	/Times-Roman
+	/Helvetica-Oblique
+	/Helvetica-Bold
+	/Helvetica-BoldOblique
+	/Courier-Oblique
+	/Courier-Bold
+	/Courier-BoldOblique
+	/Times-Italic
+	/Times-Bold
+	/Times-BoldItalic
+	/Symbol
+	/AvantGarde-Book
+	/AvantGarde-BookOblique
+	/AvantGarde-Demi
+	/AvantGarde-DemiOblique
+	/Bookman-Demi
+	/Bookman-DemiItalic
+	/Bookman-Light
+	/Bookman-LightItalic
+	/Helvetica-Narrow
+	/Helvetica-Narrow-Bold
+	/Helvetica-Narrow-BoldOblique
+	/Helvetica-Narrow-Oblique
+	/NewCenturySchlbk-Roman
+	/NewCenturySchlbk-Bold
+	/NewCenturySchlbk-Italic
+	/NewCenturySchlbk-BoldItalic
+	/Palatino-Roman
+	/Palatino-Bold
+	/Palatino-Italic
+	/Palatino-BoldItalic
+	/ZapfChancery-MediumItalic
+	/ZapfDingbats
+] def
+/GColors [
+	0
+	0.6
+	0.3
+	0.9
+	0.4
+	0.7
+	0.1
+	0.5
+	0.8
+	0.2
+] def
+/BackCol -1 def
+/IColors [
+	0.933333
+	0.866667
+	0.8
+	0.733333
+	0.666667
+	0.6
+	0.533333
+	0.466667
+	0.4
+	0.333333
+	0.266667
+	0.2
+	0.133333
+	0.0666667
+	0
+] def
+/Colors GColors def
+/IBu {Pch 0 8#267 put SetPchSize} def
+/Bu {Pc} def
+
+% all initialization action here
+Iv I
+currentdict /Ic known {Ic} if
+currentdict /If known {If} if
+
+%%EndSetup
+
+
+%%Page: 1 1
+%%PageOrientation: Portrait
+A
+1 St
+1 Sw
+1 Sc
+0 Sr
+42 Sp
+1.1 Sx
+0.166667 0.933333 0.15 0.875 So
+0 0.333333 0.666667 1 Sg
+0 Sh
+0 Sd
+%%IncludeResource: font Helvetica
+1 Sf
+B
+117 2279 m
+3 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+1 z
+2 z
+2 z
+2 z
+2 z
+2 z
+1 z
+2 z
+2 z
+2 z
+1 z
+2 z
+2 z
+2 z
+1 z
+2 z
+2 z
+1 z
+2 z
+1 z
+2 z
+2 z
+1 z
+2 z
+1 z
+2 z
+2 z
+1 z
+2 z
+1 z
+2 z
+1 z
+2 z
+1 z
+2 z
+1 z
+1 z
+2 z
+1 z
+2 z
+1 z
+2 z
+1 z
+1 z
+2 z
+1 z
+1 z
+2 z
+1 z
+2 z
+1 z
+1 z
+1 z
+2 z
+1 z
+1 z
+2 z
+1 z
+1 z
+1 z
+2 z
+1 z
+1 z
+1 z
+2 z
+1 z
+1 z
+1 z
+1 z
+2 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+2 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+2 z
+1 z
+1 z
+1 z
+1 z
+1 1 j
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 1 j
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 x
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 12 j
+11 z
+1 8 j
+8 z
+6 z
+1 6 j
+5 z
+1 4 j
+4 z
+1 3 j
+4 z
+3 z
+1 2 j
+3 z
+1 2 j
+2 z
+2 z
+1 2 j
+1 z
+1 2 j
+1 z
+1 2 j
+1 z
+1 z
+1 1 j
+1 z
+1 1 j
+1 z
+1 1 j
+1 z
+1 z
+1 1 j
+1 1 j
+1 z
+1 1 j
+1 z
+1 x
+1 z
+1 x
+1 z
+1 x
+1 z
+1 1 j
+1 1 j
+1 x
+1 z
+1 x
+1 z
+1 x
+1 1 j
+1 1 j
+1 x
+1 1 j
+1 x
+1 z
+1 x
+1 x
+1 z
+1 x
+1 x
+1 1 j
+1 x
+1 x
+1 z
+1 x
+1 x
+1 x
+4 2 j
+4 1 j
+4 x
+5 1 j
+4 1 j
+4 x
+5 1 j
+4 x
+4 1 j
+4 x
+5 x
+4 1 j
+4 x
+4 x
+5 x
+4 1 j
+4 x
+5 x
+4 x
+4 x
+4 1 j
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 1 j
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 1 j
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 1 j
+4 x
+E
+1.65 Sx
+1 Sd
+(Gamma\(.001, .001\)) 330 2367 0.5 T
+1.1 Sx
+(tau) 330 1638 0.5 T
+0 Sd
+460 580 100 1720 c
+1 Sd
+117 1720 m
+9 z
+329 1720 m
+9 z
+543 1720 m
+9 z
+E
+117 1720 m
+426 x
+E
+(0.25) 117 1678 0.5 T
+(50.00) 329 1678 0.5 T
+(100.00) 543 1678 0.5 T
+0.333333 0.666667 0.666667 1 Sg
+0 Sd
+B
+717 2279 m
+3 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+1 z
+2 z
+2 z
+2 z
+2 z
+2 z
+1 z
+2 z
+2 z
+2 z
+2 z
+1 z
+2 z
+2 z
+1 z
+2 z
+2 z
+1 z
+2 z
+2 z
+1 z
+2 z
+2 z
+1 z
+2 z
+1 z
+2 z
+1 z
+2 z
+1 z
+2 z
+1 z
+2 z
+1 z
+2 z
+1 z
+2 z
+1 z
+2 z
+1 z
+2 z
+1 z
+1 z
+2 z
+1 z
+2 z
+1 z
+1 z
+2 z
+1 z
+1 z
+2 z
+1 z
+1 z
+2 z
+1 z
+1 z
+1 z
+2 z
+1 z
+1 z
+2 z
+1 z
+1 z
+1 z
+1 z
+2 z
+1 z
+1 z
+1 z
+1 z
+2 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+2 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+2 z
+1 z
+1 z
+1 z
+1 1 j
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 x
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 1 j
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 12 j
+10 z
+1 9 j
+7 z
+7 z
+1 6 j
+5 z
+1 4 j
+4 z
+1 4 j
+3 z
+3 z
+1 3 j
+2 z
+1 2 j
+2 z
+2 z
+1 2 j
+2 z
+1 1 j
+2 z
+1 1 j
+2 z
+1 z
+1 1 j
+1 z
+1 1 j
+1 z
+1 1 j
+1 z
+1 z
+1 x
+1 z
+1 1 j
+1 z
+1 x
+1 z
+1 1 j
+1 z
+1 x
+1 z
+1 x
+1 z
+1 1 j
+1 x
+1 z
+1 x
+1 z
+1 x
+1 z
+1 x
+1 1 j
+1 x
+1 z
+1 x
+1 1 j
+1 x
+1 z
+1 x
+1 x
+1 z
+1 x
+1 x
+1 1 j
+1 x
+1 x
+1 z
+1 x
+1 x
+1 x
+4 2 j
+4 1 j
+4 1 j
+5 x
+4 1 j
+4 1 j
+5 x
+4 1 j
+4 x
+4 x
+5 1 j
+4 x
+4 x
+4 x
+5 1 j
+4 x
+4 x
+5 x
+4 x
+4 1 j
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 1 j
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 1 j
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 1 j
+4 x
+E
+1.65 Sx
+1 Sd
+(Gamma\(.01, .01\)) 930 2367 0.5 T
+1.1 Sx
+(tau) 930 1638 0.5 T
+0 Sd
+460 580 700 1720 c
+1 Sd
+717 1720 m
+9 z
+929 1720 m
+9 z
+1143 1720 m
+9 z
+E
+717 1720 m
+426 x
+E
+(0.25) 717 1678 0.5 T
+(50.00) 929 1678 0.5 T
+(100.00) 1143 1678 0.5 T
+0.166667 0.933333 0.15 0.875 So
+0.666667 1 0.666667 1 Sg
+0 Sd
+B
+1317 2279 m
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+1 z
+2 z
+2 z
+2 z
+2 z
+1 z
+2 z
+2 z
+2 z
+1 z
+2 z
+2 z
+2 z
+1 z
+2 z
+2 z
+1 z
+2 z
+1 z
+2 z
+2 z
+1 z
+2 z
+1 z
+2 z
+1 z
+2 z
+1 z
+2 z
+2 z
+1 z
+1 z
+2 z
+1 z
+2 z
+1 z
+2 z
+1 z
+2 z
+1 z
+1 z
+2 z
+1 z
+2 z
+1 z
+1 z
+2 z
+1 z
+1 z
+2 z
+1 z
+1 z
+2 z
+1 z
+1 z
+1 z
+2 z
+1 z
+1 z
+1 z
+2 z
+1 z
+1 z
+1 z
+2 z
+1 z
+1 z
+1 z
+1 z
+2 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+2 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+2 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 1 j
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 x
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 x
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 14 j
+10 z
+1 10 j
+8 z
+7 z
+1 6 j
+6 z
+1 5 j
+4 z
+1 4 j
+4 z
+3 z
+1 3 j
+3 z
+1 3 j
+2 z
+2 z
+1 2 j
+2 z
+1 2 j
+2 z
+1 1 j
+2 z
+1 z
+1 1 j
+2 z
+1 1 j
+1 z
+1 1 j
+1 z
+1 z
+1 1 j
+1 z
+1 1 j
+1 1 j
+1 z
+1 z
+1 x
+1 z
+1 1 j
+1 1 j
+1 z
+1 x
+1 z
+1 x
+1 z
+1 x
+1 z
+1 x
+1 z
+1 x
+1 z
+1 x
+1 z
+1 x
+1 x
+1 z
+1 x
+1 z
+1 x
+1 x
+1 z
+1 x
+1 x
+1 z
+1 x
+1 x
+1 z
+1 x
+1 x
+1 x
+1 z
+1 x
+1 x
+4 1 j
+4 1 j
+4 1 j
+5 1 j
+4 x
+4 1 j
+5 x
+4 1 j
+4 x
+4 x
+5 x
+4 x
+4 1 j
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 1 j
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+E
+1.65 Sx
+1 Sd
+(Gamma\(.1, .1\)) 1530 2367 0.5 T
+1.1 Sx
+(tau) 1530 1638 0.5 T
+0 Sd
+460 580 1300 1720 c
+1 Sd
+1317 1720 m
+9 z
+1529 1720 m
+9 z
+1743 1720 m
+9 z
+E
+1317 1720 m
+426 x
+E
+(0.25) 1317 1678 0.5 T
+(50.00) 1529 1678 0.5 T
+(100.00) 1743 1678 0.5 T
+0.166667 0.933333 0.15 0.875 So
+0 0.333333 0.333333 0.666667 Sg
+0 Sd
+B
+117 1479 m
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 1 j
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 x
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 x
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 24 j
+22 z
+1 20 j
+17 z
+17 z
+1 14 j
+14 z
+1 12 j
+10 z
+1 10 j
+9 z
+8 z
+1 7 j
+7 z
+1 6 j
+5 z
+5 z
+1 5 j
+4 z
+1 3 j
+3 z
+1 3 j
+3 z
+3 z
+1 2 j
+2 z
+1 1 j
+2 z
+1 2 j
+1 z
+1 z
+1 1 j
+1 z
+1 1 j
+1 z
+1 1 j
+1 z
+1 x
+1 z
+1 x
+1 z
+1 x
+1 z
+1 x
+1 x
+1 z
+1 x
+1 x
+1 x
+1 z
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+4 1 j
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+E
+1.65 Sx
+1 Sd
+(Gamma\(1, 1\)) 330 1567 0.5 T
+1.1 Sx
+(tau) 330 838 0.5 T
+0 Sd
+460 580 100 920 c
+1 Sd
+117 920 m
+9 z
+329 920 m
+9 z
+543 920 m
+9 z
+E
+117 920 m
+426 x
+E
+(0.25) 117 878 0.5 T
+(50.00) 329 878 0.5 T
+(100.00) 543 878 0.5 T
+0.333333 0.666667 0.333333 0.666667 Sg
+0 Sd
+B
+717 990 m
+0 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 1 h
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 x
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 x
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 35 h
+31 y
+1 26 h
+23 y
+19 y
+1 14 h
+11 y
+1 8 h
+4 y
+1 2 h
+2 z
+3 z
+1 6 j
+8 z
+1 10 j
+10 z
+12 z
+1 14 j
+13 z
+1 15 j
+15 z
+1 15 j
+16 z
+16 z
+1 16 j
+15 z
+1 16 j
+15 z
+1 15 j
+15 z
+14 z
+1 14 j
+14 z
+1 13 j
+12 z
+1 13 j
+11 z
+11 z
+1 11 j
+10 z
+1 10 j
+10 z
+1 8 j
+9 z
+8 z
+1 7 j
+8 z
+1 6 j
+7 z
+1 6 j
+6 z
+5 z
+1 5 j
+5 z
+1 5 j
+4 z
+1 4 j
+3 z
+4 z
+1 3 j
+3 z
+1 3 j
+3 z
+1 2 j
+3 z
+2 z
+1 2 j
+2 z
+1 2 j
+1 z
+1 2 j
+1 z
+2 z
+1 1 j
+1 z
+1 1 j
+1 z
+1 1 j
+1 z
+1 z
+1 x
+1 z
+1 1 j
+1 1 j
+1 z
+1 x
+1 z
+1 x
+4 3 j
+4 1 j
+4 x
+5 x
+4 x
+4 x
+5 1 j
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+E
+1.65 Sx
+1 Sd
+(Gamma\(3, 1\)) 930 1567 0.5 T
+1.1 Sx
+(tau) 930 838 0.5 T
+0 Sd
+460 580 700 920 c
+1 Sd
+717 920 m
+9 z
+929 920 m
+9 z
+1143 920 m
+9 z
+E
+717 920 m
+426 x
+E
+(0.25) 717 878 0.5 T
+(50.00) 929 878 0.5 T
+(100.00) 1143 878 0.5 T
+0.166667 0.933333 0.15 0.875 So
+0.666667 1 0.333333 0.666667 Sg
+0 Sd
+B
+1317 1478 m
+0 y
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 z
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 z
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 z
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 z
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 z
+1 x
+1 x
+1 x
+4 x
+4 1 j
+4 x
+5 1 j
+4 x
+4 1 j
+5 1 j
+4 x
+4 1 j
+4 x
+5 1 j
+4 x
+4 1 j
+4 x
+5 1 j
+4 x
+4 1 j
+5 x
+4 1 j
+4 x
+4 1 j
+5 x
+4 1 j
+4 x
+4 1 j
+5 x
+4 1 j
+4 1 j
+4 x
+5 1 j
+4 x
+4 1 j
+5 x
+4 1 j
+4 x
+4 1 j
+5 x
+4 1 j
+4 x
+4 1 j
+5 x
+4 1 j
+4 x
+5 1 j
+4 x
+4 1 j
+4 x
+5 1 j
+4 x
+4 1 j
+4 x
+5 1 j
+4 x
+4 1 j
+5 x
+4 1 j
+4 x
+4 1 j
+5 x
+4 1 j
+4 x
+4 1 j
+5 x
+4 1 j
+4 x
+4 1 j
+5 x
+4 1 j
+4 x
+5 1 j
+4 x
+4 1 j
+4 x
+5 1 j
+4 x
+4 1 j
+4 x
+5 1 j
+4 x
+4 1 j
+5 x
+4 1 j
+4 x
+4 1 j
+5 x
+4 1 j
+4 x
+4 1 j
+5 x
+4 1 j
+E
+1.65 Sx
+1 Sd
+(Gamma\(1, .001\)) 1530 1567 0.5 T
+1.1 Sx
+(tau) 1530 838 0.5 T
+0 Sd
+460 580 1300 920 c
+1 Sd
+1317 920 m
+9 z
+1529 920 m
+9 z
+1743 920 m
+9 z
+E
+1317 920 m
+426 x
+E
+(0.25) 1317 878 0.5 T
+(50.00) 1529 878 0.5 T
+(100.00) 1743 878 0.5 T
+0.166667 0.933333 0.15 0.875 So
+0 0.333333 0 0.333333 Sg
+0 Sd
+B
+117 550 m
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 x
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 x
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 y
+1 x
+1 y
+1 y
+1 y
+1 y
+1 z
+1 1 j
+4 z
+1 5 j
+6 z
+8 z
+1 8 j
+10 z
+1 9 j
+10 z
+1 11 j
+11 z
+11 z
+1 11 j
+11 z
+1 11 j
+12 z
+11 z
+1 11 j
+11 z
+1 11 j
+10 z
+1 11 j
+10 z
+10 z
+1 10 j
+10 z
+1 9 j
+9 z
+1 10 j
+8 z
+9 z
+1 8 j
+8 z
+1 8 j
+8 z
+1 8 j
+7 z
+7 z
+1 7 j
+6 z
+1 7 j
+6 z
+1 6 j
+6 z
+5 z
+1 6 j
+5 z
+1 5 j
+5 z
+1 5 j
+5 z
+4 z
+1 4 j
+5 z
+1 4 j
+3 z
+1 4 j
+4 z
+3 z
+1 4 j
+3 z
+1 3 j
+3 z
+1 3 j
+3 z
+2 z
+1 3 j
+2 z
+1 3 j
+2 z
+1 2 j
+2 z
+3 z
+1 1 j
+2 z
+1 2 j
+2 z
+1 2 j
+1 z
+2 z
+1 1 j
+2 z
+1 1 j
+2 z
+1 1 j
+1 z
+1 z
+1 2 j
+1 z
+1 1 j
+4 8 j
+4 6 j
+4 4 j
+5 3 j
+4 1 j
+4 1 j
+5 1 j
+4 1 j
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 1 j
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+E
+1.65 Sx
+1 Sd
+(Gamma\(1.44, .45\)) 330 767 0.5 T
+1.1 Sx
+(tau) 330 38 0.5 T
+0 Sd
+460 580 100 120 c
+1 Sd
+117 120 m
+9 z
+329 120 m
+9 z
+543 120 m
+9 z
+E
+117 120 m
+426 x
+E
+(0.25) 117 78 0.5 T
+(50.00) 329 78 0.5 T
+(100.00) 543 78 0.5 T
+0.333333 0.666667 0 0.333333 Sg
+0 Sd
+B
+716 141 m
+1 538 h
+4 z
+3 z
+3 z
+3 z
+3 z
+3 z
+3 z
+3 z
+3 z
+3 z
+3 z
+3 z
+3 z
+3 z
+2 z
+3 z
+3 z
+3 z
+2 z
+3 z
+3 z
+2 z
+3 z
+2 z
+3 z
+3 z
+2 z
+3 z
+2 z
+2 z
+3 z
+2 z
+3 z
+2 z
+2 z
+3 z
+2 z
+2 z
+2 z
+3 z
+2 z
+2 z
+2 z
+2 z
+3 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+1 z
+2 z
+2 z
+2 z
+2 z
+2 z
+1 z
+2 z
+2 z
+2 z
+1 z
+2 z
+2 z
+2 z
+1 z
+2 z
+2 z
+1 z
+2 z
+1 z
+2 z
+2 z
+1 z
+2 z
+1 z
+2 z
+1 z
+2 z
+1 z
+2 z
+1 z
+2 z
+1 z
+2 z
+1 z
+2 z
+1 z
+2 z
+1 z
+1 z
+2 z
+1 z
+1 z
+2 z
+1 z
+1 z
+2 z
+1 z
+1 1 j
+2 z
+1 z
+1 z
+2 z
+1 z
+1 z
+1 z
+2 z
+1 z
+1 z
+1 z
+1 z
+2 z
+1 z
+1 z
+1 z
+1 z
+2 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+2 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 1 j
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 x
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 9 j
+7 z
+1 6 j
+5 z
+4 z
+1 3 j
+3 z
+1 3 j
+2 z
+1 2 j
+1 z
+2 z
+1 1 j
+1 z
+1 2 j
+1 z
+1 1 j
+1 z
+1 1 j
+1 1 j
+1 z
+1 x
+1 z
+1 x
+1 1 j
+1 1 j
+1 x
+1 1 j
+1 x
+1 z
+1 x
+1 x
+1 x
+1 z
+1 x
+1 x
+1 x
+1 x
+1 z
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 z
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+4 1 j
+4 x
+4 x
+5 x
+4 x
+4 x
+5 1 j
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+E
+1.65 Sx
+1 Sd
+(Pareto\(.5, .01\)) 930 767 0.5 T
+1.1 Sx
+(tau) 930 38 0.5 T
+0 Sd
+460 580 700 120 c
+1 Sd
+717 120 m
+9 z
+929 120 m
+9 z
+1143 120 m
+9 z
+E
+717 120 m
+426 x
+E
+(0.25) 717 78 0.5 T
+(50.00) 929 78 0.5 T
+(100.00) 1143 78 0.5 T
+0.166667 0.933333 0.15 0.875 So
+0.666667 1 0 0.333333 Sg
+0 Sd
+B
+1316 141 m
+1 538 h
+5 z
+4 z
+4 z
+4 z
+4 z
+4 z
+4 z
+4 z
+4 z
+4 z
+4 z
+4 z
+3 z
+4 z
+4 z
+3 z
+4 z
+3 z
+4 z
+3 z
+3 z
+4 z
+3 z
+3 z
+4 z
+3 z
+3 z
+3 z
+3 z
+3 z
+3 z
+3 z
+3 z
+3 z
+3 z
+3 z
+3 z
+3 z
+3 z
+2 z
+3 z
+3 z
+3 z
+2 z
+3 z
+2 z
+3 z
+3 z
+2 z
+3 z
+2 z
+2 z
+3 z
+2 z
+3 z
+2 z
+2 z
+3 z
+2 z
+2 z
+2 z
+3 z
+2 z
+2 z
+2 z
+2 z
+3 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+2 z
+1 z
+2 z
+2 z
+2 z
+2 z
+2 z
+1 z
+2 z
+2 z
+2 z
+1 z
+2 z
+2 z
+2 z
+1 z
+2 z
+2 z
+1 z
+2 z
+1 z
+2 z
+2 z
+1 z
+2 z
+1 z
+2 z
+1 z
+2 z
+1 z
+2 z
+1 1 j
+2 z
+1 z
+1 z
+2 z
+1 z
+2 z
+1 z
+1 z
+2 z
+1 z
+1 z
+2 z
+1 z
+1 z
+2 z
+1 z
+1 z
+1 z
+2 z
+1 z
+1 z
+1 z
+2 z
+1 z
+1 z
+1 z
+1 z
+1 z
+2 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+2 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 x
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 x
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 z
+1 6 j
+4 z
+1 4 j
+2 z
+3 z
+1 1 j
+2 z
+1 1 j
+1 z
+1 1 j
+1 z
+1 z
+1 x
+1 z
+1 x
+1 z
+1 x
+1 z
+1 x
+1 x
+1 z
+1 x
+1 x
+1 x
+1 z
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 1 j
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+1 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 1 j
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+4 x
+4 x
+5 x
+4 x
+E
+1.65 Sx
+1 Sd
+(Pareto\(1, .01\)) 1530 767 0.5 T
+1.1 Sx
+(tau) 1530 38 0.5 T
+0 Sd
+460 580 1300 120 c
+1 Sd
+1317 120 m
+9 z
+1529 120 m
+9 z
+1743 120 m
+9 z
+E
+1317 120 m
+426 x
+E
+(0.25) 1317 78 0.5 T
+(50.00) 1529 78 0.5 T
+(100.00) 1743 78 0.5 T
+Z
+%%Trailer
+%%Pages: 1
+%%DocumentNeededResources: font Helvetica
+W
+%%EOF

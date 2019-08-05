@@ -1,0 +1,16616 @@
+%!PS-Adobe-3.0
+%%Title: (S-PLUS Graphics)
+%%Creator: S-PLUS
+%%For: (noname)
+%%CreationDate: Fri Nov 05 16:26:19 2004
+%%BoundingBox: 40 230 592 555
+%%Pages: (atend)
+%%DocumentData: Clean7Bit
+%%DocumentNeededResources: (atend)
+%%EndComments
+%%BeginProlog
+150 dict begin gsave
+/bd{bind def}def
+/PVer 3200 def
+% drawing commands
+/I{Coord SetPage 1 setlinecap 1 setlinejoin
+    LineTypes{RastersPerPoint ScaleArray}forall
+    /Helvetica findfont
+    PointSize RastersPerPoint mul Cex mul scalefont setfont
+    /Colors GColors def
+}bd
+/BWOp{
+    bw{currentrgbcolor add add 2.9 gt{1}{0}ifelse setgray}if
+    exec
+    bw{CurSc Sc}if
+}bd
+/IBu{}def
+/B{newpath}bd
+/E{{stroke}BWOp}bd
+/C{currentpoint Penup{newpath}{E}ifelse moveto}bd
+/F{closepath eofill}bd
+/M{moveto}bd
+/L{lineto}bd
+/Pu{load /XEQ exch def /Penup true def}bd
+/Pd{/XEQ{}def /Penup false def}bd
+/Px{currentdict /XEQ known{XEQ}if}bd
+/h{Penup{rmoveto Px}{rlineto}ifelse}bd
+/j{neg Penup{rmoveto Px}{rlineto}ifelse}bd
+/k{exch neg exch Penup{rmoveto Px}{rlineto}ifelse}bd
+/l{neg exch neg exch Penup{rmoveto Px}{rlineto}ifelse}bd
+/m{moveto Penup{Px}if}bd
+/x{0 Penup{rmoveto Px}{rlineto}ifelse}bd
+/y{0 exch Penup{rmoveto Px}{rlineto}ifelse}bd
+/w{neg x}bd
+/z{neg y}bd
+/a{B M dup y exch x neg y closepath}bd
+/b{a eofill}bd
+/c{a E}bd
+/A{PageBegin BackCol 0 ge
+    {CurSc gsave 0 SC Page aload pop
+    exch 4 -1 roll dup 5 1 roll sub 3 1 roll exch dup 4 1 roll sub 4 2 roll b
+    grestore SC}if
+}bd
+/Ph{gsave Pch-x Pch-y rmoveto Show grestore}bd
+/Pc{Pch Ph}bd
+/T{/Adjust exch def gsave translate StringRot rotate 0 0 moveto
+    dup stringwidth pop neg Adjust mul 0 rmoveto
+    currentpoint translate TextShow grestore}bd
+/X{erasepage InPage{PageEnd}if}bd
+/Z{gsave showpage grestore PageEnd}bd
+/W{grestore end}bd
+% parameter setting commands
+/saveAt{Attr begin
+    /Atlinewidth currentlinewidth def
+    /Atfont currentfont def
+    /Atdash currentdash 2 array astore def
+    /AtSc CurSc def
+end}bd
+/restAt{Attr begin
+    Atlinewidth Atfont Atdash AtSc
+    end
+    SC aload pop setdash setfont setlinewidth
+}bd
+/SC{dup dup 0 eq
+    {pop BackIdx
+        {BackCol dup 0 lt {pop 1 setgray} {Sc}ifelse}
+        {/Colors BColor def 1 Sc}ifelse}
+    {/Colors GColors def Sc}ifelse
+    /CurSc exch def
+}bd
+/St{1 sub LineTypes dup 3 1 roll length Rem floor get 0 setdash}bd
+/Sw{abs 2 div RastersPerPoint mul setlinewidth SetClip}bd
+/Sp{dup 42 eq{pop IBu}{Pch exch 0 exch put SetPchSize}ifelse}bd
+/Sx{dup Cex div /Ratio exch def
+     /Cex exch def
+     currentfont Ratio scalefont setfont
+     /Pch-x Pch-x Ratio mul def
+     /Pch-y Pch-y Ratio mul def
+     /Text-y Text-y Ratio mul def}bd
+/So{4 1 roll exch 4 -1 roll Plot astore pop SetClip}bd
+/Sg{4 1 roll exch 4 -1 roll Figure astore pop SetClip}bd
+/Sr{/StringRot exch def}bd
+/Sh{/CharRot exch def}bd
+/Sd{0 eq /ClipToPlot exch def SetClip}bd
+/Iv{/InPage false def/Clip 4 array def/Page 4 array def
+    /Figure [0 0 1 1] def/Plot [0 0 1 1] def/ClipToPlot true def
+    /Cex 1 def/Outline false def
+    /Pch 1 string def/Pch-x 0 def/Pch-y 0 def/Text-y 0 def
+    /LineTypes [ % in default units
+        [] [1 2] [4 4] [8 4] [13 3] [16 2 2 2] [8 2 2 2] [1 13] [6 5] [12 4]
+    ] def
+    /Attr 5 dict def/CurSc 1 def/Penup false def/XEQ{}def
+}bd
+/Rem{2 copy div floor mul sub floor cvi}bd
+/RastersPerPoint{RastersPerInch 72 div}bd
+/ScaleArray{/Factor exch def /Array exch def
+    0 1 Array length 1 sub
+    {dup Array exch get Factor mul Array 3 1 roll put}for}bd
+/Coord{Region aload pop /uy exch def /ux exch def /ly exch def /lx exch def
+    uy ly sub ux lx sub Landscape{exch}if /Width exch def /Height exch def
+    lx ly translate Landscape{90 rotate 0 Height neg translate}if
+    1 RastersPerPoint div dup scale}bd
+/SetPchSize{gsave
+    newpath 0 0 moveto Pch false charpath flattenpath pathbbox
+    exch 3 1 roll
+    add 2 div neg /Pch-y exch def
+    add 2 div neg /Pch-x exch def
+    grestore}bd
+/Show{Outline{false charpath E}{{show}BWOp}ifelse}bd
+/SimpleShow{0 Text-y 2 div neg rmoveto Show}bd
+/FancyShow{
+    /RotDiff exch def
+    /Cos RotDiff cos abs def
+    /Sin RotDiff sin abs def
+    {
+        ( ) dup 0 4 -1 roll put
+        dup stringwidth pop /CharWidth exch def
+        Cos 0 eq{
+            Text-y Sin div
+        }{
+            Sin 0 eq{
+                CharWidth Cos div
+            }{
+                Text-y Sin div dup
+                CharWidth Cos div dup
+                4 1 roll lt{exch pop}{pop}ifelse
+            }ifelse
+        }ifelse 2 div /CharDist exch def
+        CharDist 0 translate 0 0 moveto
+        gsave
+            RotDiff rotate
+            CharWidth 2 div neg Text-y 2 div neg rmoveto
+            Show
+        grestore
+        CharDist 0 translate 0 0 moveto
+    }forall
+}bd
+/TextShow{
+    CharRot StringRot sub dup 0 eq{pop SimpleShow}{FancyShow}ifelse
+}bd
+/BoxClip{/CLW currentlinewidth def
+    2{CLW add 4 1 roll}repeat
+    2{CLW sub 4 1 roll}repeat
+    % initclip
+    saveAt grestore gsave restAt
+    newpath 2 index exch 2 index exch dup 6 index exch
+    moveto 3{lineto}repeat closepath clip newpath}bd
+/Subregion{
+    7 dict begin/A exch def/Uy exch def/Ux exch def/Ly exch def/Lx exch def
+    Ux Lx sub A 0 get mul Lx add
+    Uy Ly sub A 1 get mul Ly add
+    Ux Lx sub A 2 get mul Lx add
+    Uy Ly sub A 3 get mul Ly add end}bd
+/SetFigure{Page aload pop Figure Subregion}bd
+/SetPlot{SetFigure Plot Subregion}bd
+/SetClip{ClipToPlot{SetPlot}{SetFigure}ifelse BoxClip}bd
+/SetPage{0 0 Width Height Page astore RastersPerPoint ScaleArray}bd
+/PageBegin{save /PageContext exch def /InPage true def gsave}bd
+/PageEnd{grestore PageContext restore /InPage false def}bd
+/SImage{
+    dup /Bits exch def 8 exch idiv /PerByte exch def
+    /Ht exch def /Wid exch def
+    1 Wid div 1 Ht div scale
+    /saveSc CurSc def /Colors IColors def
+    /curstr Wid PerByte add 1 sub PerByte idiv string def
+    /MaskByte 16#ff Bits 8 sub bitshift def
+    1 1 Ht{
+        currentfile curstr readhexstring pop pop
+        /CurPos 0 def
+        /Left PerByte def
+        1 1 Wid{
+            Left PerByte eq{
+                /CurByte curstr CurPos get def
+                /MaskMove -8 Bits add def
+                /CurPos CurPos 1 add def
+            }if
+            CurByte MaskMove bitshift MaskByte and
+            dup 0 gt{
+                Sc
+                exch dup 3 1 roll B M 1 z 1 w 1 y F
+            }{pop pop}ifelse
+            Left 1 sub dup /Left exch def 0 le
+            {/Left PerByte def}
+            {/MaskMove MaskMove Bits add def}ifelse
+        }for
+        pop
+    }for
+    /Colors GColors def saveSc Sc
+}bd
+/SImageUneven{
+    /YCorners exch def
+    /XCorners exch def
+    dup /Bits exch def 8 exch idiv /PerByte exch def
+    /Ht exch def /Wid exch def
+    1 Wid div 1 Ht div scale
+    /saveSc CurSc def /Colors IColors def
+    /curstr Wid PerByte add 1 sub PerByte idiv string def
+    /MaskByte 16#ff Bits 8 sub bitshift def
+    1 1 Ht{
+        dup 1 sub /CellBottom YCorners 3 -1 roll get def
+        dup /CellTop YCorners 3 -1 roll get def
+        currentfile curstr readhexstring pop pop
+        /CurPos 0 def
+        /Left PerByte def
+        1 1 Wid{
+            dup 1 sub /CellLeft XCorners 3 -1 roll get def
+            dup /CellRight XCorners 3 -1 roll get def
+            Left PerByte eq{
+                /CurByte curstr CurPos get def
+                /MaskMove -8 Bits add def
+                /CurPos CurPos 1 add def
+            }if
+            CurByte MaskMove bitshift MaskByte and
+            dup 0 gt{
+                Sc
+                CellLeft CellBottom B M CellRight CellBottom L CellRight CellTop L CellLeft CellTop L CellLeft CellBottom L F
+            }{pop}ifelse
+            pop
+            Left 1 sub dup /Left exch def 0 le
+            {/Left PerByte def}
+            {/MaskMove MaskMove Bits add def}ifelse
+        }for
+        pop
+    }for
+    /Colors GColors def saveSc Sc
+}bd
+/Ic {} bd
+/Sc {
+    dup dup 1 lt exch 0 ge and
+    {1 exch sub setgray}  % explicit gray level [0,1)
+    {1 sub Colors dup 3 1 roll length Rem floor get
+     dup type /arraytype eq {aload pop setrgbcolor} {setgray} ifelse
+    } ifelse
+} bd
+/If {} bd
+/Sf {dup 0 lt /Outline exch def abs
+     1 sub Fonts dup 3 1 roll length Rem floor get
+     findfont PointSize Cex mul RastersPerPoint mul scalefont dup setfont
+     dup /FontMatrix get /Matrix exch def /FontBBox get aload pop
+     Matrix transform 4 2 roll Matrix transform
+     exch pop add /Text-y exch def pop SetPchSize} bd
+%%EndProlog
+%%BeginSetup
+% fixed controlling parameters
+/Landscape false def
+/Region [20.88 217.8 591.12 574.2] def
+/bw statusdict begin /processcolors where
+{pop processcolors} {1} ifelse end 1 eq
+ def
+/RastersPerInch 300 def
+/PointSize 14 def
+/Fonts [
+    /Helvetica
+    /Courier
+    /Times-Roman
+    /Helvetica-Oblique
+    /Helvetica-Bold
+    /Helvetica-BoldOblique
+    /Courier-Oblique
+    /Courier-Bold
+    /Courier-BoldOblique
+    /Times-Italic
+    /Times-Bold
+    /Times-BoldItalic
+    /Symbol
+    /AvantGarde-Book
+    /AvantGarde-BookOblique
+    /AvantGarde-Demi
+    /AvantGarde-DemiOblique
+    /Bookman-Demi
+    /Bookman-DemiItalic
+    /Bookman-Light
+    /Bookman-LightItalic
+    /Helvetica-Narrow
+    /Helvetica-Narrow-Bold
+    /Helvetica-Narrow-BoldOblique
+    /Helvetica-Narrow-Oblique
+    /NewCenturySchlbk-Roman
+    /NewCenturySchlbk-Bold
+    /NewCenturySchlbk-Italic
+    /NewCenturySchlbk-BoldItalic
+    /Palatino-Roman
+    /Palatino-Bold
+    /Palatino-Italic
+    /Palatino-BoldItalic
+    /ZapfChancery-MediumItalic
+    /ZapfDingbats
+] def
+/GColors [
+    0
+    0.6
+    0.3
+    0.9
+    0.4
+    0.7
+    0.1
+    0.5
+    0.8
+    0.2
+] def
+/BackIdx true def
+/BackCol -1 def
+/IColors [
+    0.933333
+    0.866667
+    0.8
+    0.733333
+    0.666667
+    0.6
+    0.533333
+    0.466667
+    0.4
+    0.333333
+    0.266667
+    0.2
+    0.133333
+    0.0666667
+    0
+] def
+/Colors GColors def
+/IBu {Pch 0 8#267 put SetPchSize} def
+/Bu {Pc} def
+
+% all initialization action here
+Iv I
+currentdict /Ic known {Ic} if
+currentdict /If known {If} if
+
+
+%%EndSetup
+
+
+%%Page: 1 1
+%%PageOrientation: Portrait
+A
+1 St
+1 Sw
+1 SC
+0 Sr
+42 Sp
+1.5 Sx
+0.309343 0.955808 0.245 0.93 So
+0 0.5 0 1 Sg
+0 Sh
+0 Sd
+%%IncludeResource: font Helvetica
+1 Sf
+B
+396 1300 m
+41 z
+1 40 j
+37 z
+36 z
+34 z
+1 33 j
+31 z
+30 z
+1 28 j
+2 221 j
+3 138 j
+3 86 j
+3 54 j
+3 33 j
+3 21 j
+2 14 j
+3 8 j
+3 5 j
+3 3 j
+3 2 j
+3 1 j
+2 1 j
+3 1 j
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+1 Sd
+(Distance \(km\)) 752 156 0.5 T
+90 Sr
+90 Sh
+(Correlation) 158 872 0.5 T
+0 Sr
+0 Sh
+396 364 m
+15 z
+538 364 m
+15 z
+680 364 m
+15 z
+822 364 m
+15 z
+965 364 m
+15 z
+1107 364 m
+15 z
+E
+396 364 m
+711 x
+E
+(0) 396 260 0.5 T
+(50) 538 260 0.5 T
+(150) 822 260 0.5 T
+(250) 1107 260 0.5 T
+90 Sr
+90 Sh
+367 402 m
+15 w
+367 590 m
+15 w
+367 778 m
+15 w
+367 967 m
+15 w
+367 1155 m
+15 w
+367 1343 m
+15 w
+E
+367 402 m
+941 y
+E
+(0.0) 262 402 0.5 T
+(0.4) 262 778 0.5 T
+(0.8) 262 1155 0.5 T
+0 Sr
+0 1 0 1 So
+0 1 0 1 Sg
+0 Sh
+0 Sd
+768 1017 368 364 c
+0.309343 0.955808 0.245 0.93 So
+0 0.5 0 1 Sg
+B
+396 1341 m
+2 z
+1 2 j
+2 z
+2 z
+2 z
+1 2 j
+2 z
+2 z
+1 2 j
+2 20 j
+3 19 j
+3 19 j
+3 18 j
+3 18 j
+3 18 j
+2 17 j
+3 17 j
+3 17 j
+3 16 j
+3 16 j
+3 16 j
+2 15 j
+3 15 j
+3 14 j
+3 15 j
+3 14 j
+3 13 j
+3 14 j
+2 13 j
+3 13 j
+3 12 j
+3 12 j
+3 12 j
+3 12 j
+2 12 j
+3 11 j
+3 11 j
+3 11 j
+3 10 j
+3 11 j
+3 10 j
+2 9 j
+3 10 j
+3 10 j
+3 9 j
+3 9 j
+3 9 j
+2 8 j
+3 9 j
+3 8 j
+3 8 j
+3 8 j
+3 8 j
+3 8 j
+2 7 j
+3 7 j
+3 8 j
+3 7 j
+28 62 j
+29 50 j
+28 40 j
+29 32 j
+28 26 j
+29 22 j
+28 16 j
+29 14 j
+28 11 j
+28 9 j
+29 7 j
+28 6 j
+29 4 j
+28 4 j
+29 3 j
+28 3 j
+29 1 j
+28 2 j
+29 1 j
+28 1 j
+E
+B
+396 1315 m
+28 z
+1 27 j
+26 z
+25 z
+25 z
+1 24 j
+23 z
+22 z
+1 22 j
+2 184 j
+3 134 j
+3 100 j
+3 72 j
+3 54 j
+3 39 j
+2 29 j
+3 21 j
+3 16 j
+3 11 j
+3 8 j
+3 6 j
+2 5 j
+3 3 j
+3 3 j
+3 2 j
+3 1 j
+3 1 j
+3 1 j
+2 x
+3 x
+3 1 j
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 949 m
+230 z
+1 133 j
+77 z
+45 z
+26 z
+1 15 j
+9 z
+5 z
+1 3 j
+2 4 j
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1130 m
+166 z
+1 127 j
+99 z
+76 z
+59 z
+1 46 j
+35 z
+28 z
+1 21 j
+2 66 j
+3 5 j
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1338 m
+5 z
+1 5 j
+5 z
+5 z
+5 z
+1 5 j
+5 z
+5 z
+1 5 j
+2 48 j
+3 45 j
+3 43 j
+3 41 j
+3 38 j
+3 36 j
+2 35 j
+3 32 j
+3 31 j
+3 29 j
+3 28 j
+3 26 j
+2 24 j
+3 24 j
+3 22 j
+3 21 j
+3 19 j
+3 19 j
+3 18 j
+2 17 j
+3 16 j
+3 15 j
+3 14 j
+3 13 j
+3 13 j
+2 12 j
+3 11 j
+3 11 j
+3 10 j
+3 10 j
+3 9 j
+3 9 j
+2 8 j
+3 8 j
+3 7 j
+3 7 j
+3 7 j
+3 6 j
+2 6 j
+3 5 j
+3 6 j
+3 5 j
+3 4 j
+3 5 j
+3 4 j
+2 4 j
+3 4 j
+3 3 j
+3 4 j
+28 25 j
+29 15 j
+28 8 j
+29 5 j
+28 3 j
+29 1 j
+28 1 j
+29 1 j
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1342 m
+2 z
+1 2 j
+1 z
+2 z
+2 z
+1 2 j
+1 z
+2 z
+1 2 j
+2 16 j
+3 17 j
+3 16 j
+3 16 j
+3 15 j
+3 16 j
+2 15 j
+3 14 j
+3 15 j
+3 14 j
+3 14 j
+3 13 j
+2 14 j
+3 13 j
+3 13 j
+3 13 j
+3 12 j
+3 13 j
+3 12 j
+2 11 j
+3 12 j
+3 11 j
+3 12 j
+3 11 j
+3 10 j
+2 11 j
+3 10 j
+3 11 j
+3 10 j
+3 9 j
+3 10 j
+3 10 j
+2 9 j
+3 9 j
+3 9 j
+3 9 j
+3 9 j
+3 8 j
+2 8 j
+3 9 j
+3 8 j
+3 8 j
+3 7 j
+3 8 j
+3 8 j
+2 7 j
+3 7 j
+3 7 j
+3 7 j
+28 63 j
+29 53 j
+28 44 j
+29 36 j
+28 31 j
+29 25 j
+28 21 j
+29 18 j
+28 14 j
+28 12 j
+29 11 j
+28 8 j
+29 7 j
+28 6 j
+29 5 j
+28 4 j
+29 3 j
+28 3 j
+29 3 j
+28 2 j
+E
+B
+396 1272 m
+66 z
+1 60 j
+57 z
+52 z
+48 z
+1 44 j
+41 z
+38 z
+1 35 j
+2 234 j
+3 106 j
+3 49 j
+3 22 j
+3 10 j
+3 5 j
+2 2 j
+3 1 j
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1342 m
+2 z
+1 1 j
+1 z
+2 z
+1 z
+1 2 j
+1 z
+2 z
+1 1 j
+2 14 j
+3 14 j
+3 14 j
+3 13 j
+3 13 j
+3 13 j
+2 13 j
+3 13 j
+3 12 j
+3 13 j
+3 12 j
+3 12 j
+2 11 j
+3 12 j
+3 11 j
+3 11 j
+3 11 j
+3 11 j
+3 11 j
+2 10 j
+3 11 j
+3 10 j
+3 10 j
+3 10 j
+3 10 j
+2 9 j
+3 10 j
+3 9 j
+3 9 j
+3 9 j
+3 9 j
+3 9 j
+2 9 j
+3 8 j
+3 9 j
+3 8 j
+3 8 j
+3 8 j
+2 8 j
+3 8 j
+3 7 j
+3 8 j
+3 7 j
+3 7 j
+3 8 j
+2 7 j
+3 7 j
+3 6 j
+3 7 j
+28 62 j
+29 54 j
+28 46 j
+29 39 j
+28 34 j
+29 28 j
+28 25 j
+29 22 j
+28 18 j
+28 16 j
+29 13 j
+28 12 j
+29 10 j
+28 8 j
+29 7 j
+28 7 j
+29 5 j
+28 5 j
+29 4 j
+28 3 j
+E
+B
+396 1222 m
+106 z
+1 93 j
+80 z
+70 z
+61 z
+1 53 j
+46 z
+41 z
+1 35 j
+2 176 j
+3 45 j
+3 11 j
+3 3 j
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1342 m
+2 z
+1 2 j
+2 z
+2 z
+2 z
+1 1 j
+2 z
+2 z
+1 2 j
+2 18 j
+3 17 j
+3 17 j
+3 17 j
+3 16 j
+3 17 j
+2 15 j
+3 16 j
+3 15 j
+3 15 j
+3 15 j
+3 14 j
+2 14 j
+3 14 j
+3 14 j
+3 13 j
+3 13 j
+3 13 j
+3 12 j
+2 13 j
+3 12 j
+3 11 j
+3 12 j
+3 11 j
+3 12 j
+2 10 j
+3 11 j
+3 11 j
+3 10 j
+3 10 j
+3 10 j
+3 10 j
+2 9 j
+3 10 j
+3 9 j
+3 9 j
+3 9 j
+3 8 j
+2 9 j
+3 8 j
+3 8 j
+3 8 j
+3 8 j
+3 8 j
+3 8 j
+2 7 j
+3 7 j
+3 7 j
+3 7 j
+28 63 j
+29 52 j
+28 43 j
+29 35 j
+28 29 j
+29 24 j
+28 19 j
+29 16 j
+28 14 j
+28 11 j
+29 9 j
+28 7 j
+29 6 j
+28 5 j
+29 4 j
+28 4 j
+29 2 j
+28 3 j
+29 2 j
+28 1 j
+E
+B
+396 1234 m
+96 z
+1 86 j
+75 z
+67 z
+59 z
+1 52 j
+46 z
+41 z
+1 36 j
+2 194 j
+3 57 j
+3 17 j
+3 5 j
+3 1 j
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1343 m
+1 z
+1 1 j
+1 z
+1 z
+1 1 j
+1 z
+1 1 j
+2 8 j
+3 7 j
+3 8 j
+3 7 j
+3 7 j
+3 8 j
+2 7 j
+3 7 j
+3 7 j
+3 7 j
+3 7 j
+3 7 j
+2 7 j
+3 7 j
+3 6 j
+3 7 j
+3 7 j
+3 6 j
+3 7 j
+2 6 j
+3 7 j
+3 6 j
+3 6 j
+3 7 j
+3 6 j
+2 6 j
+3 6 j
+3 6 j
+3 6 j
+3 6 j
+3 6 j
+3 6 j
+2 6 j
+3 6 j
+3 5 j
+3 6 j
+3 6 j
+3 5 j
+2 6 j
+3 5 j
+3 6 j
+3 5 j
+3 6 j
+3 5 j
+3 5 j
+2 6 j
+3 5 j
+3 5 j
+3 5 j
+28 49 j
+29 45 j
+28 42 j
+29 38 j
+28 35 j
+29 33 j
+28 30 j
+29 28 j
+28 25 j
+28 24 j
+29 22 j
+28 20 j
+29 18 j
+28 17 j
+29 16 j
+28 14 j
+29 14 j
+28 12 j
+29 11 j
+28 11 j
+E
+B
+396 1310 m
+32 z
+1 31 j
+29 z
+29 z
+28 z
+1 27 j
+25 z
+25 z
+1 24 j
+2 199 j
+3 138 j
+3 97 j
+3 68 j
+3 47 j
+3 33 j
+2 23 j
+3 16 j
+3 11 j
+3 8 j
+3 6 j
+3 4 j
+2 2 j
+3 2 j
+3 1 j
+3 1 j
+3 1 j
+3 x
+3 1 j
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1326 m
+17 z
+1 17 j
+16 z
+16 z
+16 z
+1 15 j
+15 z
+15 z
+1 15 j
+2 132 j
+3 110 j
+3 92 j
+3 76 j
+3 63 j
+3 52 j
+2 44 j
+3 36 j
+3 30 j
+3 25 j
+3 21 j
+3 17 j
+2 14 j
+3 12 j
+3 10 j
+3 8 j
+3 7 j
+3 6 j
+3 4 j
+2 4 j
+3 4 j
+3 2 j
+3 3 j
+3 1 j
+3 2 j
+2 1 j
+3 1 j
+3 1 j
+3 1 j
+3 x
+3 1 j
+3 x
+2 1 j
+3 x
+3 x
+3 1 j
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1321 m
+22 z
+1 21 j
+21 z
+20 z
+20 z
+1 19 j
+19 z
+18 z
+1 18 j
+2 158 j
+3 124 j
+3 98 j
+3 77 j
+3 60 j
+3 48 j
+2 37 j
+3 30 j
+3 23 j
+3 19 j
+3 14 j
+3 11 j
+2 9 j
+3 7 j
+3 6 j
+3 4 j
+3 4 j
+3 2 j
+3 3 j
+2 1 j
+3 2 j
+3 1 j
+3 x
+3 1 j
+3 1 j
+2 x
+3 x
+3 1 j
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 432 m
+30 z
+1 x
+1 x
+1 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 413 m
+11 z
+1 x
+1 x
+1 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 948 m
+229 z
+1 134 j
+77 z
+45 z
+26 z
+1 15 j
+8 z
+5 z
+1 3 j
+2 4 j
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 466 m
+60 z
+1 4 j
+1 x
+1 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1332 m
+11 z
+1 10 j
+11 z
+11 z
+10 z
+1 10 j
+11 z
+10 z
+1 10 j
+2 93 j
+3 83 j
+3 73 j
+3 66 j
+3 58 j
+3 52 j
+2 45 j
+3 41 j
+3 36 j
+3 33 j
+3 28 j
+3 26 j
+2 22 j
+3 20 j
+3 18 j
+3 16 j
+3 14 j
+3 13 j
+3 11 j
+2 10 j
+3 8 j
+3 8 j
+3 7 j
+3 6 j
+3 6 j
+2 5 j
+3 4 j
+3 4 j
+3 3 j
+3 3 j
+3 3 j
+3 2 j
+2 3 j
+3 1 j
+3 2 j
+3 2 j
+3 1 j
+3 1 j
+2 1 j
+3 1 j
+3 1 j
+3 1 j
+3 x
+3 1 j
+3 x
+2 1 j
+3 x
+3 1 j
+3 x
+28 2 j
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 740 m
+217 z
+1 78 j
+28 z
+10 z
+3 z
+1 2 j
+1 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1332 m
+11 z
+1 11 j
+10 z
+11 z
+10 z
+1 11 j
+10 z
+10 z
+1 10 j
+2 94 j
+3 83 j
+3 74 j
+3 66 j
+3 58 j
+3 52 j
+2 46 j
+3 41 j
+3 36 j
+3 32 j
+3 28 j
+3 26 j
+2 22 j
+3 20 j
+3 18 j
+3 16 j
+3 14 j
+3 12 j
+3 11 j
+2 10 j
+3 9 j
+3 7 j
+3 7 j
+3 6 j
+3 6 j
+2 5 j
+3 4 j
+3 4 j
+3 3 j
+3 3 j
+3 3 j
+3 2 j
+2 2 j
+3 2 j
+3 1 j
+3 2 j
+3 1 j
+3 1 j
+2 1 j
+3 1 j
+3 1 j
+3 1 j
+3 x
+3 1 j
+3 1 j
+2 x
+3 x
+3 1 j
+3 x
+28 2 j
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1340 m
+3 z
+1 4 j
+3 z
+4 z
+3 z
+1 3 j
+4 z
+3 z
+1 3 j
+2 33 j
+3 31 j
+3 30 j
+3 29 j
+3 28 j
+3 27 j
+2 26 j
+3 25 j
+3 25 j
+3 23 j
+3 22 j
+3 22 j
+2 21 j
+3 20 j
+3 20 j
+3 19 j
+3 18 j
+3 17 j
+3 17 j
+2 16 j
+3 16 j
+3 15 j
+3 15 j
+3 14 j
+3 13 j
+2 13 j
+3 13 j
+3 12 j
+3 12 j
+3 11 j
+3 11 j
+3 11 j
+2 10 j
+3 9 j
+3 10 j
+3 9 j
+3 9 j
+3 8 j
+2 8 j
+3 8 j
+3 8 j
+3 7 j
+3 7 j
+3 7 j
+3 6 j
+2 7 j
+3 6 j
+3 6 j
+3 5 j
+28 47 j
+29 32 j
+28 23 j
+29 16 j
+28 11 j
+29 7 j
+28 5 j
+29 4 j
+28 3 j
+28 1 j
+29 2 j
+28 1 j
+29 x
+28 1 j
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1342 m
+1 z
+1 1 j
+1 z
+1 z
+2 z
+1 1 j
+1 z
+1 z
+1 1 j
+2 12 j
+3 11 j
+3 11 j
+3 11 j
+3 11 j
+3 11 j
+2 11 j
+3 10 j
+3 11 j
+3 10 j
+3 10 j
+3 10 j
+2 10 j
+3 10 j
+3 10 j
+3 9 j
+3 9 j
+3 10 j
+3 9 j
+2 9 j
+3 9 j
+3 9 j
+3 9 j
+3 8 j
+3 9 j
+2 8 j
+3 9 j
+3 8 j
+3 8 j
+3 8 j
+3 8 j
+3 8 j
+2 7 j
+3 8 j
+3 7 j
+3 8 j
+3 7 j
+3 8 j
+2 7 j
+3 7 j
+3 7 j
+3 7 j
+3 6 j
+3 7 j
+3 7 j
+2 6 j
+3 7 j
+3 6 j
+3 7 j
+28 59 j
+29 52 j
+28 46 j
+29 41 j
+28 36 j
+29 32 j
+28 28 j
+29 24 j
+28 22 j
+28 20 j
+29 17 j
+28 15 j
+29 13 j
+28 12 j
+29 10 j
+28 9 j
+29 8 j
+28 8 j
+29 6 j
+28 5 j
+E
+B
+396 1051 m
+201 z
+1 139 j
+96 z
+66 z
+46 z
+1 31 j
+22 z
+15 z
+1 10 j
+2 23 j
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1341 m
+2 z
+1 1 j
+2 z
+2 z
+2 z
+1 2 j
+2 z
+2 z
+1 2 j
+2 19 j
+3 19 j
+3 18 j
+3 18 j
+3 17 j
+3 17 j
+2 17 j
+3 17 j
+3 16 j
+3 15 j
+3 16 j
+3 15 j
+2 15 j
+3 14 j
+3 15 j
+3 13 j
+3 14 j
+3 13 j
+3 13 j
+2 13 j
+3 13 j
+3 12 j
+3 12 j
+3 12 j
+3 11 j
+2 12 j
+3 11 j
+3 11 j
+3 10 j
+3 11 j
+3 10 j
+3 10 j
+2 10 j
+3 9 j
+3 9 j
+3 10 j
+3 9 j
+3 8 j
+2 9 j
+3 8 j
+3 9 j
+3 8 j
+3 8 j
+3 7 j
+3 8 j
+2 8 j
+3 7 j
+3 7 j
+3 7 j
+28 62 j
+29 51 j
+28 41 j
+29 34 j
+28 27 j
+29 22 j
+28 18 j
+29 15 j
+28 11 j
+28 10 j
+29 8 j
+28 6 j
+29 5 j
+28 4 j
+29 4 j
+28 3 j
+29 2 j
+28 2 j
+29 1 j
+28 1 j
+E
+B
+396 1343 m
+1 z
+1 1 j
+1 z
+1 z
+1 1 j
+1 z
+1 1 j
+2 8 j
+3 7 j
+3 7 j
+3 8 j
+3 7 j
+3 7 j
+2 7 j
+3 7 j
+3 7 j
+3 7 j
+3 7 j
+3 7 j
+2 6 j
+3 7 j
+3 7 j
+3 6 j
+3 7 j
+3 6 j
+3 7 j
+2 6 j
+3 7 j
+3 6 j
+3 6 j
+3 6 j
+3 7 j
+2 6 j
+3 6 j
+3 6 j
+3 6 j
+3 6 j
+3 5 j
+3 6 j
+2 6 j
+3 6 j
+3 5 j
+3 6 j
+3 6 j
+3 5 j
+2 6 j
+3 5 j
+3 5 j
+3 6 j
+3 5 j
+3 5 j
+3 6 j
+2 5 j
+3 5 j
+3 5 j
+3 5 j
+28 49 j
+29 45 j
+28 41 j
+29 38 j
+28 35 j
+29 33 j
+28 30 j
+29 28 j
+28 25 j
+28 24 j
+29 22 j
+28 20 j
+29 18 j
+28 18 j
+29 15 j
+28 15 j
+29 13 j
+28 13 j
+29 11 j
+28 11 j
+E
+B
+396 1211 m
+114 z
+1 98 j
+84 z
+72 z
+62 z
+1 53 j
+46 z
+40 z
+1 33 j
+2 162 j
+3 35 j
+3 8 j
+3 2 j
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1301 m
+41 z
+1 38 j
+37 z
+36 z
+33 z
+1 33 j
+30 z
+30 z
+1 28 j
+2 219 j
+3 139 j
+3 87 j
+3 55 j
+3 34 j
+3 22 j
+2 14 j
+3 9 j
+3 5 j
+3 4 j
+3 2 j
+3 1 j
+2 1 j
+3 1 j
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1340 m
+3 z
+1 3 j
+3 z
+3 z
+4 z
+1 3 j
+3 z
+3 z
+1 3 j
+2 30 j
+3 30 j
+3 28 j
+3 28 j
+3 26 j
+3 26 j
+2 25 j
+3 23 j
+3 24 j
+3 22 j
+3 22 j
+3 21 j
+2 20 j
+3 19 j
+3 19 j
+3 18 j
+3 18 j
+3 17 j
+3 17 j
+2 16 j
+3 15 j
+3 15 j
+3 14 j
+3 14 j
+3 14 j
+2 13 j
+3 12 j
+3 12 j
+3 12 j
+3 12 j
+3 10 j
+3 11 j
+2 10 j
+3 10 j
+3 10 j
+3 9 j
+3 9 j
+3 9 j
+2 8 j
+3 8 j
+3 8 j
+3 8 j
+3 7 j
+3 7 j
+3 7 j
+2 6 j
+3 7 j
+3 6 j
+3 6 j
+28 50 j
+29 35 j
+28 25 j
+29 18 j
+28 13 j
+29 9 j
+28 6 j
+29 5 j
+28 3 j
+28 3 j
+29 1 j
+28 2 j
+29 x
+28 1 j
+29 x
+28 1 j
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1237 m
+94 z
+1 83 j
+74 z
+66 z
+58 z
+1 52 j
+46 z
+41 z
+1 36 j
+2 199 j
+3 60 j
+3 19 j
+3 5 j
+3 2 j
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 738 m
+216 z
+1 78 j
+27 z
+10 z
+4 z
+1 1 j
+1 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1232 m
+98 z
+1 86 j
+76 z
+67 z
+60 z
+1 52 j
+46 z
+41 z
+1 36 j
+2 192 j
+3 55 j
+3 15 j
+3 5 j
+3 1 j
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 414 m
+12 z
+1 x
+1 x
+1 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1342 m
+2 z
+1 1 j
+2 z
+1 z
+2 z
+1 1 j
+2 z
+1 z
+1 2 j
+2 15 j
+3 15 j
+3 15 j
+3 14 j
+3 14 j
+3 14 j
+2 14 j
+3 13 j
+3 13 j
+3 13 j
+3 13 j
+3 13 j
+2 12 j
+3 12 j
+3 12 j
+3 12 j
+3 12 j
+3 11 j
+3 11 j
+2 11 j
+3 11 j
+3 11 j
+3 11 j
+3 10 j
+3 10 j
+2 10 j
+3 10 j
+3 10 j
+3 9 j
+3 9 j
+3 10 j
+3 9 j
+2 9 j
+3 8 j
+3 9 j
+3 9 j
+3 8 j
+3 8 j
+2 8 j
+3 8 j
+3 8 j
+3 8 j
+3 7 j
+3 8 j
+3 7 j
+2 7 j
+3 7 j
+3 7 j
+3 7 j
+28 63 j
+29 53 j
+28 45 j
+29 39 j
+28 32 j
+29 28 j
+28 23 j
+29 20 j
+28 17 j
+28 14 j
+29 13 j
+28 10 j
+29 9 j
+28 7 j
+29 6 j
+28 6 j
+29 4 j
+28 4 j
+29 3 j
+28 3 j
+E
+B
+396 1159 m
+148 z
+1 120 j
+96 z
+77 z
+62 z
+1 50 j
+40 z
+32 z
+1 26 j
+2 94 j
+3 11 j
+3 1 j
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 864 m
+236 z
+1 115 j
+57 z
+28 z
+13 z
+1 7 j
+3 z
+2 z
+1 1 j
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1343 m
+1 z
+1 1 j
+1 z
+1 z
+1 1 j
+1 z
+1 1 j
+2 8 j
+3 7 j
+3 7 j
+3 8 j
+3 7 j
+3 7 j
+2 7 j
+3 7 j
+3 7 j
+3 7 j
+3 7 j
+3 7 j
+2 7 j
+3 7 j
+3 6 j
+3 7 j
+3 7 j
+3 6 j
+3 7 j
+2 6 j
+3 7 j
+3 6 j
+3 6 j
+3 6 j
+3 7 j
+2 6 j
+3 6 j
+3 6 j
+3 6 j
+3 6 j
+3 6 j
+3 5 j
+2 6 j
+3 6 j
+3 6 j
+3 5 j
+3 6 j
+3 5 j
+2 6 j
+3 5 j
+3 6 j
+3 5 j
+3 6 j
+3 5 j
+3 5 j
+2 5 j
+3 6 j
+3 5 j
+3 5 j
+28 49 j
+29 44 j
+28 42 j
+29 38 j
+28 35 j
+29 33 j
+28 30 j
+29 28 j
+28 25 j
+28 24 j
+29 22 j
+28 20 j
+29 18 j
+28 18 j
+29 15 j
+28 15 j
+29 13 j
+28 13 j
+29 11 j
+28 11 j
+E
+B
+396 1337 m
+7 z
+1 6 j
+7 z
+6 z
+6 z
+1 7 j
+6 z
+6 z
+1 6 j
+2 60 j
+3 55 j
+3 52 j
+3 48 j
+3 45 j
+3 42 j
+2 39 j
+3 36 j
+3 34 j
+3 32 j
+3 29 j
+3 28 j
+2 26 j
+3 23 j
+3 23 j
+3 20 j
+3 20 j
+3 18 j
+3 17 j
+2 15 j
+3 15 j
+3 14 j
+3 12 j
+3 12 j
+3 11 j
+2 11 j
+3 9 j
+3 9 j
+3 9 j
+3 7 j
+3 8 j
+3 6 j
+2 7 j
+3 6 j
+3 5 j
+3 5 j
+3 5 j
+3 4 j
+2 4 j
+3 4 j
+3 4 j
+3 3 j
+3 3 j
+3 3 j
+3 3 j
+2 3 j
+3 2 j
+3 2 j
+3 2 j
+28 14 j
+29 8 j
+28 3 j
+29 2 j
+28 1 j
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1320 m
+24 z
+1 22 j
+22 z
+22 z
+21 z
+1 20 j
+20 z
+19 z
+1 19 j
+2 165 j
+3 127 j
+3 99 j
+3 76 j
+3 59 j
+3 46 j
+2 36 j
+3 27 j
+3 21 j
+3 17 j
+3 13 j
+3 10 j
+2 7 j
+3 6 j
+3 5 j
+3 3 j
+3 3 j
+3 2 j
+3 2 j
+2 1 j
+3 1 j
+3 1 j
+3 x
+3 1 j
+3 x
+2 1 j
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1339 m
+5 z
+1 4 j
+5 z
+4 z
+4 z
+1 5 j
+4 z
+4 z
+1 5 j
+2 42 j
+3 40 j
+3 38 j
+3 36 j
+3 35 j
+3 33 j
+2 32 j
+3 30 j
+3 28 j
+3 28 j
+3 26 j
+3 24 j
+2 24 j
+3 23 j
+3 21 j
+3 21 j
+3 19 j
+3 19 j
+3 17 j
+2 17 j
+3 16 j
+3 16 j
+3 14 j
+3 14 j
+3 14 j
+2 12 j
+3 12 j
+3 12 j
+3 11 j
+3 10 j
+3 10 j
+3 10 j
+2 9 j
+3 9 j
+3 8 j
+3 8 j
+3 7 j
+3 7 j
+2 7 j
+3 7 j
+3 6 j
+3 6 j
+3 5 j
+3 6 j
+3 5 j
+2 4 j
+3 5 j
+3 5 j
+3 4 j
+28 32 j
+29 21 j
+28 12 j
+29 8 j
+28 5 j
+29 3 j
+28 2 j
+29 1 j
+28 x
+28 1 j
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 925 m
+232 z
+1 130 j
+72 z
+40 z
+22 z
+1 12 j
+7 z
+4 z
+1 2 j
+2 2 j
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1338 m
+5 z
+1 5 j
+5 z
+5 z
+5 z
+1 5 j
+5 z
+4 z
+1 5 j
+2 47 j
+3 45 j
+3 42 j
+3 40 j
+3 38 j
+3 36 j
+2 34 j
+3 32 j
+3 31 j
+3 29 j
+3 27 j
+3 26 j
+2 25 j
+3 23 j
+3 22 j
+3 21 j
+3 20 j
+3 18 j
+3 18 j
+2 17 j
+3 16 j
+3 15 j
+3 14 j
+3 14 j
+3 12 j
+2 13 j
+3 11 j
+3 11 j
+3 10 j
+3 10 j
+3 9 j
+3 9 j
+2 8 j
+3 8 j
+3 8 j
+3 7 j
+3 6 j
+3 7 j
+2 6 j
+3 5 j
+3 6 j
+3 5 j
+3 5 j
+3 4 j
+3 5 j
+2 4 j
+3 4 j
+3 3 j
+3 4 j
+28 26 j
+29 15 j
+28 9 j
+29 5 j
+28 3 j
+29 2 j
+28 1 j
+29 1 j
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1332 m
+12 z
+1 12 j
+11 z
+11 z
+12 z
+1 11 j
+10 z
+11 z
+1 11 j
+2 99 j
+3 87 j
+3 76 j
+3 68 j
+3 59 j
+3 53 j
+2 46 j
+3 41 j
+3 35 j
+3 32 j
+3 28 j
+3 24 j
+2 22 j
+3 19 j
+3 17 j
+3 14 j
+3 13 j
+3 12 j
+3 10 j
+2 9 j
+3 8 j
+3 6 j
+3 7 j
+3 5 j
+3 5 j
+2 4 j
+3 3 j
+3 4 j
+3 2 j
+3 3 j
+3 2 j
+3 2 j
+2 2 j
+3 1 j
+3 2 j
+3 1 j
+3 1 j
+3 1 j
+2 1 j
+3 x
+3 1 j
+3 x
+3 1 j
+3 x
+3 1 j
+2 x
+3 x
+3 1 j
+3 x
+28 1 j
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1343 m
+1 z
+1 1 j
+1 z
+1 z
+1 1 j
+1 z
+1 z
+1 1 j
+2 8 j
+3 8 j
+3 8 j
+3 7 j
+3 8 j
+3 8 j
+2 7 j
+3 8 j
+3 8 j
+3 7 j
+3 7 j
+3 8 j
+2 7 j
+3 7 j
+3 7 j
+3 7 j
+3 7 j
+3 7 j
+3 7 j
+2 7 j
+3 7 j
+3 6 j
+3 7 j
+3 6 j
+3 7 j
+2 6 j
+3 7 j
+3 6 j
+3 6 j
+3 7 j
+3 6 j
+3 6 j
+2 6 j
+3 6 j
+3 6 j
+3 6 j
+3 6 j
+3 6 j
+2 6 j
+3 5 j
+3 6 j
+3 6 j
+3 5 j
+3 6 j
+3 5 j
+2 6 j
+3 5 j
+3 5 j
+3 6 j
+28 50 j
+29 47 j
+28 42 j
+29 39 j
+28 36 j
+29 33 j
+28 30 j
+29 28 j
+28 25 j
+28 23 j
+29 22 j
+28 19 j
+29 18 j
+28 17 j
+29 15 j
+28 14 j
+29 12 j
+28 12 j
+29 11 j
+28 10 j
+E
+B
+396 1341 m
+3 z
+1 2 j
+2 z
+3 z
+2 z
+1 3 j
+2 z
+2 z
+1 3 j
+2 23 j
+3 23 j
+3 23 j
+3 22 j
+3 21 j
+3 21 j
+2 20 j
+3 20 j
+3 19 j
+3 18 j
+3 19 j
+3 17 j
+2 18 j
+3 16 j
+3 17 j
+3 16 j
+3 15 j
+3 15 j
+3 15 j
+2 15 j
+3 14 j
+3 13 j
+3 14 j
+3 13 j
+3 12 j
+2 12 j
+3 12 j
+3 12 j
+3 12 j
+3 11 j
+3 10 j
+3 11 j
+2 10 j
+3 10 j
+3 10 j
+3 9 j
+3 10 j
+3 9 j
+2 8 j
+3 9 j
+3 8 j
+3 8 j
+3 8 j
+3 8 j
+3 7 j
+2 8 j
+3 7 j
+3 7 j
+3 7 j
+28 58 j
+29 46 j
+28 34 j
+29 27 j
+28 21 j
+29 16 j
+28 12 j
+29 10 j
+28 7 j
+28 6 j
+29 4 j
+28 3 j
+29 3 j
+28 2 j
+29 1 j
+28 2 j
+29 x
+28 1 j
+29 1 j
+28 x
+E
+B
+396 1265 m
+71 z
+1 66 j
+60 z
+55 z
+51 z
+1 46 j
+43 z
+39 z
+1 36 j
+2 229 j
+3 97 j
+3 41 j
+3 17 j
+3 7 j
+3 3 j
+2 2 j
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1340 m
+3 z
+1 3 j
+3 z
+3 z
+3 z
+1 3 j
+3 z
+3 z
+1 3 j
+2 29 j
+3 29 j
+3 27 j
+3 27 j
+3 26 j
+3 25 j
+2 24 j
+3 23 j
+3 23 j
+3 22 j
+3 21 j
+3 20 j
+2 20 j
+3 19 j
+3 19 j
+3 18 j
+3 17 j
+3 17 j
+3 17 j
+2 15 j
+3 16 j
+3 14 j
+3 15 j
+3 13 j
+3 14 j
+2 13 j
+3 12 j
+3 12 j
+3 12 j
+3 12 j
+3 11 j
+3 10 j
+2 11 j
+3 9 j
+3 10 j
+3 9 j
+3 9 j
+3 9 j
+2 9 j
+3 8 j
+3 8 j
+3 7 j
+3 8 j
+3 7 j
+3 7 j
+2 7 j
+3 6 j
+3 7 j
+3 6 j
+28 51 j
+29 37 j
+28 26 j
+29 19 j
+28 14 j
+29 10 j
+28 7 j
+29 5 j
+28 4 j
+28 3 j
+29 2 j
+28 1 j
+29 1 j
+28 1 j
+29 x
+28 1 j
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1341 m
+2 z
+1 2 j
+2 z
+2 z
+2 z
+1 1 j
+2 z
+2 z
+1 2 j
+2 20 j
+3 19 j
+3 18 j
+3 18 j
+3 18 j
+3 17 j
+2 17 j
+3 17 j
+3 16 j
+3 16 j
+3 16 j
+3 15 j
+2 15 j
+3 15 j
+3 14 j
+3 14 j
+3 14 j
+3 14 j
+3 13 j
+2 13 j
+3 12 j
+3 13 j
+3 12 j
+3 12 j
+3 11 j
+2 12 j
+3 11 j
+3 11 j
+3 11 j
+3 10 j
+3 10 j
+3 10 j
+2 10 j
+3 10 j
+3 9 j
+3 9 j
+3 9 j
+3 9 j
+2 9 j
+3 8 j
+3 8 j
+3 9 j
+3 8 j
+3 7 j
+3 8 j
+2 7 j
+3 8 j
+3 7 j
+3 7 j
+28 62 j
+29 51 j
+28 40 j
+29 33 j
+28 27 j
+29 22 j
+28 17 j
+29 14 j
+28 12 j
+28 9 j
+29 8 j
+28 6 j
+29 5 j
+28 4 j
+29 3 j
+28 2 j
+29 3 j
+28 1 j
+29 2 j
+28 1 j
+E
+B
+396 555 m
+128 z
+1 21 j
+4 z
+1 x
+1 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1008 m
+216 z
+1 139 j
+90 z
+57 z
+38 z
+1 23 j
+16 z
+10 z
+1 6 j
+2 11 j
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1338 m
+5 z
+1 4 j
+5 z
+5 z
+5 z
+1 5 j
+5 z
+5 z
+1 4 j
+2 46 j
+3 44 j
+3 42 j
+3 39 j
+3 37 j
+3 36 j
+2 33 j
+3 32 j
+3 30 j
+3 29 j
+3 27 j
+3 26 j
+2 24 j
+3 23 j
+3 22 j
+3 21 j
+3 20 j
+3 19 j
+3 17 j
+2 17 j
+3 16 j
+3 15 j
+3 15 j
+3 13 j
+3 13 j
+2 13 j
+3 11 j
+3 11 j
+3 11 j
+3 10 j
+3 9 j
+3 9 j
+2 8 j
+3 8 j
+3 8 j
+3 7 j
+3 7 j
+3 6 j
+2 7 j
+3 5 j
+3 6 j
+3 5 j
+3 5 j
+3 5 j
+3 4 j
+2 5 j
+3 4 j
+3 3 j
+3 4 j
+28 27 j
+29 16 j
+28 10 j
+29 6 j
+28 3 j
+29 2 j
+28 1 j
+29 1 j
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1215 m
+111 z
+1 95 j
+83 z
+72 z
+61 z
+1 53 j
+47 z
+39 z
+1 35 j
+2 167 j
+3 39 j
+3 9 j
+3 2 j
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 476 m
+69 z
+1 5 j
+1 x
+1 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1342 m
+1 z
+1 1 j
+1 z
+1 z
+1 z
+1 1 j
+2 z
+1 z
+1 1 j
+2 11 j
+3 11 j
+3 11 j
+3 10 j
+3 11 j
+3 10 j
+2 11 j
+3 10 j
+3 10 j
+3 10 j
+3 9 j
+3 10 j
+2 10 j
+3 9 j
+3 10 j
+3 9 j
+3 9 j
+3 9 j
+3 9 j
+2 9 j
+3 8 j
+3 9 j
+3 9 j
+3 8 j
+3 8 j
+2 8 j
+3 9 j
+3 8 j
+3 7 j
+3 8 j
+3 8 j
+3 8 j
+2 7 j
+3 8 j
+3 7 j
+3 7 j
+3 7 j
+3 8 j
+2 7 j
+3 7 j
+3 6 j
+3 7 j
+3 7 j
+3 6 j
+3 7 j
+2 6 j
+3 7 j
+3 6 j
+3 6 j
+28 59 j
+29 52 j
+28 46 j
+29 40 j
+28 36 j
+29 33 j
+28 28 j
+29 25 j
+28 23 j
+28 20 j
+29 17 j
+28 16 j
+29 14 j
+28 12 j
+29 11 j
+28 10 j
+29 9 j
+28 7 j
+29 7 j
+28 6 j
+E
+B
+396 1343 m
+1 z
+1 x
+1 z
+1 z
+1 1 j
+1 z
+1 1 j
+2 6 j
+3 6 j
+3 6 j
+3 6 j
+3 6 j
+3 6 j
+2 6 j
+3 5 j
+3 6 j
+3 6 j
+3 6 j
+3 5 j
+2 6 j
+3 6 j
+3 5 j
+3 6 j
+3 5 j
+3 6 j
+3 5 j
+2 6 j
+3 5 j
+3 5 j
+3 6 j
+3 5 j
+3 5 j
+2 5 j
+3 5 j
+3 5 j
+3 6 j
+3 5 j
+3 5 j
+3 5 j
+2 5 j
+3 4 j
+3 5 j
+3 5 j
+3 5 j
+3 5 j
+2 5 j
+3 4 j
+3 5 j
+3 5 j
+3 4 j
+3 5 j
+3 4 j
+2 5 j
+3 5 j
+3 4 j
+3 4 j
+28 43 j
+29 41 j
+28 38 j
+29 35 j
+28 33 j
+29 31 j
+28 29 j
+29 27 j
+28 26 j
+28 24 j
+29 22 j
+28 21 j
+29 19 j
+28 19 j
+29 17 j
+28 16 j
+29 15 j
+28 14 j
+29 14 j
+28 12 j
+E
+B
+396 1229 m
+101 z
+1 89 j
+77 z
+69 z
+60 z
+1 52 j
+46 z
+41 z
+1 36 j
+2 186 j
+3 51 j
+3 14 j
+3 4 j
+3 1 j
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 453 m
+49 z
+1 2 j
+1 x
+1 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1332 m
+11 z
+1 12 j
+11 z
+11 z
+10 z
+1 11 j
+11 z
+10 z
+1 10 j
+2 96 j
+3 85 j
+3 75 j
+3 67 j
+3 59 j
+3 52 j
+2 46 j
+3 41 j
+3 36 j
+3 32 j
+3 28 j
+3 25 j
+2 22 j
+3 20 j
+3 17 j
+3 15 j
+3 14 j
+3 12 j
+3 10 j
+2 10 j
+3 8 j
+3 7 j
+3 7 j
+3 5 j
+3 6 j
+2 4 j
+3 4 j
+3 4 j
+3 3 j
+3 2 j
+3 3 j
+3 2 j
+2 2 j
+3 2 j
+3 1 j
+3 1 j
+3 2 j
+3 1 j
+2 x
+3 1 j
+3 1 j
+3 1 j
+3 x
+3 1 j
+3 x
+2 1 j
+3 x
+3 x
+3 x
+28 2 j
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1335 m
+8 z
+1 8 j
+8 z
+8 z
+8 z
+1 8 j
+8 z
+8 z
+1 7 j
+2 73 j
+3 67 j
+3 61 j
+3 56 j
+3 51 j
+3 47 j
+2 43 j
+3 39 j
+3 36 j
+3 33 j
+3 30 j
+3 28 j
+2 25 j
+3 23 j
+3 21 j
+3 20 j
+3 17 j
+3 17 j
+3 15 j
+2 13 j
+3 13 j
+3 11 j
+3 10 j
+3 10 j
+3 9 j
+2 8 j
+3 7 j
+3 7 j
+3 6 j
+3 6 j
+3 5 j
+3 4 j
+2 5 j
+3 4 j
+3 3 j
+3 4 j
+3 3 j
+3 2 j
+2 3 j
+3 2 j
+3 2 j
+3 2 j
+3 2 j
+3 2 j
+3 1 j
+2 2 j
+3 1 j
+3 1 j
+3 1 j
+28 7 j
+29 3 j
+28 1 j
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1335 m
+8 z
+1 8 j
+8 z
+8 z
+7 z
+1 8 j
+8 z
+7 z
+1 8 j
+2 72 j
+3 66 j
+3 60 j
+3 56 j
+3 50 j
+3 47 j
+2 43 j
+3 39 j
+3 36 j
+3 32 j
+3 31 j
+3 27 j
+2 25 j
+3 24 j
+3 21 j
+3 20 j
+3 17 j
+3 17 j
+3 15 j
+2 14 j
+3 12 j
+3 12 j
+3 10 j
+3 10 j
+3 9 j
+2 8 j
+3 8 j
+3 7 j
+3 6 j
+3 6 j
+3 5 j
+3 5 j
+2 4 j
+3 5 j
+3 3 j
+3 4 j
+3 3 j
+3 3 j
+2 2 j
+3 3 j
+3 2 j
+3 2 j
+3 2 j
+3 2 j
+3 1 j
+2 2 j
+3 1 j
+3 1 j
+3 1 j
+28 7 j
+29 3 j
+28 2 j
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1340 m
+4 z
+1 4 j
+3 z
+4 z
+4 z
+1 3 j
+4 z
+3 z
+1 4 j
+2 35 j
+3 33 j
+3 33 j
+3 31 j
+3 29 j
+3 29 j
+2 28 j
+3 26 j
+3 26 j
+3 24 j
+3 24 j
+3 22 j
+2 22 j
+3 21 j
+3 20 j
+3 19 j
+3 19 j
+3 18 j
+3 17 j
+2 17 j
+3 16 j
+3 15 j
+3 15 j
+3 14 j
+3 13 j
+2 13 j
+3 13 j
+3 12 j
+3 12 j
+3 11 j
+3 10 j
+3 11 j
+2 10 j
+3 9 j
+3 9 j
+3 9 j
+3 9 j
+3 8 j
+2 8 j
+3 7 j
+3 8 j
+3 7 j
+3 6 j
+3 7 j
+3 6 j
+2 6 j
+3 6 j
+3 5 j
+3 5 j
+28 43 j
+29 29 j
+28 20 j
+29 13 j
+28 9 j
+29 6 j
+28 4 j
+29 3 j
+28 2 j
+28 1 j
+29 1 j
+28 x
+29 1 j
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1338 m
+5 z
+1 5 j
+5 z
+5 z
+6 z
+1 5 j
+5 z
+5 z
+1 5 j
+2 48 j
+3 45 j
+3 44 j
+3 40 j
+3 39 j
+3 37 j
+2 34 j
+3 33 j
+3 31 j
+3 29 j
+3 28 j
+3 26 j
+2 24 j
+3 24 j
+3 22 j
+3 21 j
+3 20 j
+3 18 j
+3 18 j
+2 17 j
+3 16 j
+3 15 j
+3 14 j
+3 13 j
+3 13 j
+2 12 j
+3 11 j
+3 11 j
+3 10 j
+3 10 j
+3 9 j
+3 8 j
+2 9 j
+3 7 j
+3 8 j
+3 6 j
+3 7 j
+3 6 j
+2 6 j
+3 5 j
+3 6 j
+3 5 j
+3 4 j
+3 5 j
+3 4 j
+2 4 j
+3 3 j
+3 4 j
+3 3 j
+28 25 j
+29 14 j
+28 9 j
+29 4 j
+28 3 j
+29 1 j
+28 1 j
+29 1 j
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1342 m
+1 z
+1 2 j
+1 z
+1 z
+2 z
+1 1 j
+1 z
+2 z
+1 1 j
+2 13 j
+3 13 j
+3 13 j
+3 12 j
+3 13 j
+3 12 j
+2 12 j
+3 12 j
+3 11 j
+3 12 j
+3 11 j
+3 12 j
+2 11 j
+3 11 j
+3 10 j
+3 11 j
+3 10 j
+3 11 j
+3 10 j
+2 10 j
+3 10 j
+3 9 j
+3 10 j
+3 9 j
+3 10 j
+2 9 j
+3 9 j
+3 9 j
+3 9 j
+3 8 j
+3 9 j
+3 8 j
+2 9 j
+3 8 j
+3 8 j
+3 8 j
+3 8 j
+3 8 j
+2 7 j
+3 8 j
+3 7 j
+3 8 j
+3 7 j
+3 7 j
+3 7 j
+2 7 j
+3 7 j
+3 6 j
+3 7 j
+28 61 j
+29 53 j
+28 47 j
+29 40 j
+28 34 j
+29 30 j
+28 27 j
+29 22 j
+28 20 j
+28 17 j
+29 15 j
+28 13 j
+29 11 j
+28 9 j
+29 9 j
+28 7 j
+29 6 j
+28 6 j
+29 4 j
+28 5 j
+E
+B
+396 1336 m
+7 z
+1 6 j
+7 z
+7 z
+7 z
+1 7 j
+6 z
+7 z
+1 6 j
+2 63 j
+3 59 j
+3 54 j
+3 50 j
+3 47 j
+3 43 j
+2 40 j
+3 37 j
+3 35 j
+3 32 j
+3 30 j
+3 28 j
+2 25 j
+3 24 j
+3 22 j
+3 21 j
+3 19 j
+3 17 j
+3 17 j
+2 15 j
+3 14 j
+3 13 j
+3 12 j
+3 12 j
+3 10 j
+2 10 j
+3 9 j
+3 8 j
+3 8 j
+3 7 j
+3 7 j
+3 6 j
+2 6 j
+3 5 j
+3 5 j
+3 5 j
+3 4 j
+3 4 j
+2 4 j
+3 3 j
+3 4 j
+3 2 j
+3 3 j
+3 3 j
+3 2 j
+2 2 j
+3 2 j
+3 2 j
+3 2 j
+28 12 j
+29 5 j
+28 3 j
+29 1 j
+28 1 j
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1340 m
+4 z
+1 3 j
+4 z
+3 z
+3 z
+1 4 j
+3 z
+4 z
+1 3 j
+2 33 j
+3 32 j
+3 31 j
+3 30 j
+3 28 j
+3 28 j
+2 27 j
+3 25 j
+3 25 j
+3 24 j
+3 22 j
+3 22 j
+2 22 j
+3 20 j
+3 20 j
+3 19 j
+3 18 j
+3 18 j
+3 17 j
+2 16 j
+3 16 j
+3 15 j
+3 15 j
+3 14 j
+3 13 j
+2 13 j
+3 13 j
+3 12 j
+3 12 j
+3 11 j
+3 11 j
+3 10 j
+2 10 j
+3 10 j
+3 9 j
+3 9 j
+3 9 j
+3 9 j
+2 8 j
+3 7 j
+3 8 j
+3 7 j
+3 7 j
+3 7 j
+3 6 j
+2 6 j
+3 6 j
+3 6 j
+3 6 j
+28 45 j
+29 31 j
+28 22 j
+29 15 j
+28 10 j
+29 7 j
+28 5 j
+29 3 j
+28 2 j
+28 2 j
+29 1 j
+28 1 j
+29 x
+28 1 j
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1342 m
+0 y
+1 1 j
+1 z
+1 z
+1 z
+1 1 j
+1 z
+1 z
+1 1 j
+2 9 j
+3 8 j
+3 9 j
+3 9 j
+3 8 j
+3 9 j
+2 8 j
+3 9 j
+3 8 j
+3 8 j
+3 8 j
+3 8 j
+2 8 j
+3 8 j
+3 8 j
+3 8 j
+3 7 j
+3 8 j
+3 7 j
+2 8 j
+3 7 j
+3 8 j
+3 7 j
+3 7 j
+3 7 j
+2 7 j
+3 7 j
+3 7 j
+3 7 j
+3 7 j
+3 6 j
+3 7 j
+2 6 j
+3 7 j
+3 6 j
+3 7 j
+3 6 j
+3 6 j
+2 7 j
+3 6 j
+3 6 j
+3 6 j
+3 6 j
+3 6 j
+3 5 j
+2 6 j
+3 6 j
+3 6 j
+3 5 j
+28 54 j
+29 48 j
+28 44 j
+29 40 j
+28 37 j
+29 33 j
+28 30 j
+29 27 j
+28 25 j
+28 22 j
+29 20 j
+28 19 j
+29 17 j
+28 15 j
+29 14 j
+28 13 j
+29 11 j
+28 10 j
+29 10 j
+28 9 j
+E
+B
+396 1328 m
+16 z
+1 15 j
+15 z
+14 z
+15 z
+1 14 j
+14 z
+14 z
+1 13 j
+2 123 j
+3 104 j
+3 88 j
+3 75 j
+3 63 j
+3 53 j
+2 45 j
+3 38 j
+3 32 j
+3 27 j
+3 23 j
+3 19 j
+2 17 j
+3 14 j
+3 11 j
+3 10 j
+3 9 j
+3 7 j
+3 6 j
+2 5 j
+3 4 j
+3 4 j
+3 3 j
+3 2 j
+3 3 j
+2 1 j
+3 2 j
+3 1 j
+3 1 j
+3 1 j
+3 1 j
+3 1 j
+2 x
+3 1 j
+3 x
+3 1 j
+3 x
+3 x
+2 x
+3 1 j
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1151 m
+153 z
+1 122 j
+97 z
+77 z
+61 z
+1 49 j
+39 z
+31 z
+1 25 j
+2 86 j
+3 9 j
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1342 m
+1 z
+1 1 j
+1 z
+2 z
+1 z
+1 1 j
+1 z
+1 z
+1 1 j
+2 12 j
+3 11 j
+3 12 j
+3 11 j
+3 11 j
+3 11 j
+2 11 j
+3 10 j
+3 11 j
+3 10 j
+3 11 j
+3 10 j
+2 10 j
+3 10 j
+3 9 j
+3 10 j
+3 9 j
+3 10 j
+3 9 j
+2 9 j
+3 9 j
+3 9 j
+3 9 j
+3 9 j
+3 8 j
+2 9 j
+3 8 j
+3 8 j
+3 9 j
+3 8 j
+3 8 j
+3 8 j
+2 7 j
+3 8 j
+3 8 j
+3 7 j
+3 7 j
+3 8 j
+2 7 j
+3 7 j
+3 7 j
+3 7 j
+3 7 j
+3 7 j
+3 6 j
+2 7 j
+3 6 j
+3 7 j
+3 6 j
+28 60 j
+29 52 j
+28 46 j
+29 41 j
+28 36 j
+29 31 j
+28 28 j
+29 25 j
+28 22 j
+28 19 j
+29 17 j
+28 14 j
+29 14 j
+28 11 j
+29 10 j
+28 9 j
+29 8 j
+28 7 j
+29 6 j
+28 6 j
+E
+B
+396 1339 m
+4 z
+1 4 j
+4 z
+4 z
+4 z
+1 4 j
+4 z
+4 z
+1 3 j
+2 39 j
+3 36 j
+3 35 j
+3 34 j
+3 32 j
+3 31 j
+2 29 j
+3 28 j
+3 27 j
+3 26 j
+3 25 j
+3 24 j
+2 22 j
+3 22 j
+3 21 j
+3 20 j
+3 19 j
+3 18 j
+3 18 j
+2 17 j
+3 16 j
+3 15 j
+3 15 j
+3 14 j
+3 13 j
+2 13 j
+3 13 j
+3 12 j
+3 11 j
+3 11 j
+3 10 j
+3 10 j
+2 10 j
+3 9 j
+3 9 j
+3 8 j
+3 8 j
+3 8 j
+2 7 j
+3 7 j
+3 7 j
+3 7 j
+3 6 j
+3 6 j
+3 6 j
+2 5 j
+3 5 j
+3 5 j
+3 5 j
+28 38 j
+29 25 j
+28 16 j
+29 10 j
+28 7 j
+29 4 j
+28 3 j
+29 2 j
+28 1 j
+28 1 j
+29 1 j
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1336 m
+7 z
+1 8 j
+7 z
+7 z
+7 z
+1 7 j
+8 z
+6 z
+1 7 j
+2 67 j
+3 61 j
+3 57 j
+3 52 j
+3 48 j
+3 45 j
+2 41 j
+3 38 j
+3 35 j
+3 33 j
+3 30 j
+3 28 j
+2 25 j
+3 24 j
+3 22 j
+3 20 j
+3 18 j
+3 18 j
+3 16 j
+2 14 j
+3 14 j
+3 12 j
+3 12 j
+3 11 j
+3 10 j
+2 9 j
+3 8 j
+3 8 j
+3 7 j
+3 7 j
+3 6 j
+3 6 j
+2 5 j
+3 5 j
+3 4 j
+3 4 j
+3 4 j
+3 4 j
+2 3 j
+3 3 j
+3 3 j
+3 2 j
+3 3 j
+3 2 j
+3 2 j
+2 2 j
+3 2 j
+3 1 j
+3 2 j
+28 9 j
+29 5 j
+28 2 j
+29 1 j
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1341 m
+2 z
+1 2 j
+2 z
+2 z
+2 z
+1 2 j
+2 z
+2 z
+1 2 j
+2 20 j
+3 19 j
+3 19 j
+3 18 j
+3 19 j
+3 17 j
+2 18 j
+3 17 j
+3 16 j
+3 17 j
+3 15 j
+3 16 j
+2 15 j
+3 15 j
+3 15 j
+3 14 j
+3 14 j
+3 14 j
+3 13 j
+2 13 j
+3 13 j
+3 13 j
+3 12 j
+3 12 j
+3 12 j
+2 11 j
+3 11 j
+3 11 j
+3 11 j
+3 11 j
+3 10 j
+3 10 j
+2 10 j
+3 10 j
+3 9 j
+3 9 j
+3 9 j
+3 9 j
+2 9 j
+3 8 j
+3 9 j
+3 8 j
+3 8 j
+3 8 j
+3 7 j
+2 8 j
+3 7 j
+3 7 j
+3 7 j
+28 62 j
+29 50 j
+28 40 j
+29 33 j
+28 26 j
+29 21 j
+28 17 j
+29 13 j
+28 11 j
+28 9 j
+29 7 j
+28 6 j
+29 5 j
+28 3 j
+29 3 j
+28 3 j
+29 2 j
+28 1 j
+29 1 j
+28 1 j
+E
+B
+396 1340 m
+4 z
+1 4 j
+3 z
+4 z
+3 z
+1 4 j
+3 z
+4 z
+1 4 j
+2 34 j
+3 33 j
+3 32 j
+3 31 j
+3 29 j
+3 29 j
+2 27 j
+3 26 j
+3 26 j
+3 24 j
+3 23 j
+3 23 j
+2 22 j
+3 20 j
+3 21 j
+3 19 j
+3 18 j
+3 18 j
+3 17 j
+2 17 j
+3 16 j
+3 15 j
+3 15 j
+3 14 j
+3 13 j
+2 13 j
+3 13 j
+3 12 j
+3 12 j
+3 11 j
+3 11 j
+3 10 j
+2 10 j
+3 10 j
+3 9 j
+3 9 j
+3 8 j
+3 8 j
+2 8 j
+3 8 j
+3 7 j
+3 7 j
+3 7 j
+3 6 j
+3 7 j
+2 6 j
+3 5 j
+3 6 j
+3 5 j
+28 44 j
+29 29 j
+28 20 j
+29 14 j
+28 9 j
+29 6 j
+28 5 j
+29 2 j
+28 2 j
+28 2 j
+29 1 j
+28 x
+29 1 j
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1331 m
+12 z
+1 12 j
+11 z
+12 z
+12 z
+1 11 j
+11 z
+11 z
+1 11 j
+2 101 j
+3 89 j
+3 77 j
+3 69 j
+3 60 j
+3 52 j
+2 47 j
+3 40 j
+3 36 j
+3 31 j
+3 28 j
+3 24 j
+2 21 j
+3 18 j
+3 17 j
+3 14 j
+3 12 j
+3 11 j
+3 10 j
+2 9 j
+3 7 j
+3 7 j
+3 5 j
+3 5 j
+3 5 j
+2 4 j
+3 3 j
+3 3 j
+3 3 j
+3 2 j
+3 2 j
+3 2 j
+2 1 j
+3 2 j
+3 1 j
+3 1 j
+3 1 j
+3 1 j
+2 x
+3 1 j
+3 1 j
+3 x
+3 x
+3 1 j
+3 x
+2 x
+3 1 j
+3 x
+3 x
+28 1 j
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 808 m
+231 z
+1 100 j
+43 z
+18 z
+8 z
+1 4 j
+1 z
+1 z
+1 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1342 m
+1 z
+1 1 j
+1 z
+1 z
+1 z
+1 1 j
+1 z
+1 z
+1 1 j
+2 10 j
+3 10 j
+3 10 j
+3 10 j
+3 10 j
+3 9 j
+2 10 j
+3 9 j
+3 10 j
+3 9 j
+3 9 j
+3 9 j
+2 9 j
+3 9 j
+3 9 j
+3 8 j
+3 9 j
+3 8 j
+3 9 j
+2 8 j
+3 8 j
+3 8 j
+3 8 j
+3 8 j
+3 8 j
+2 8 j
+3 7 j
+3 8 j
+3 7 j
+3 8 j
+3 7 j
+3 7 j
+2 7 j
+3 7 j
+3 7 j
+3 7 j
+3 7 j
+3 7 j
+2 7 j
+3 6 j
+3 7 j
+3 6 j
+3 7 j
+3 6 j
+3 6 j
+2 7 j
+3 6 j
+3 6 j
+3 6 j
+28 57 j
+29 50 j
+28 46 j
+29 40 j
+28 37 j
+29 32 j
+28 30 j
+29 26 j
+28 23 j
+28 21 j
+29 19 j
+28 17 j
+29 15 j
+28 14 j
+29 12 j
+28 11 j
+29 10 j
+28 8 j
+29 8 j
+28 7 j
+E
+B
+396 1317 m
+26 z
+1 25 j
+24 z
+24 z
+23 z
+1 22 j
+22 z
+21 z
+1 20 j
+2 176 j
+3 132 j
+3 100 j
+3 74 j
+3 56 j
+3 43 j
+2 31 j
+3 24 j
+3 18 j
+3 14 j
+3 10 j
+3 7 j
+2 6 j
+3 4 j
+3 4 j
+3 2 j
+3 2 j
+3 1 j
+3 1 j
+2 1 j
+3 1 j
+3 x
+3 x
+3 1 j
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1326 m
+17 z
+1 17 j
+16 z
+16 z
+16 z
+1 15 j
+16 z
+15 z
+1 14 j
+2 133 j
+3 110 j
+3 91 j
+3 76 j
+3 63 j
+3 53 j
+2 43 j
+3 36 j
+3 30 j
+3 25 j
+3 21 j
+3 17 j
+2 14 j
+3 12 j
+3 10 j
+3 8 j
+3 7 j
+3 6 j
+3 5 j
+2 3 j
+3 4 j
+3 2 j
+3 3 j
+3 1 j
+3 2 j
+2 1 j
+3 1 j
+3 1 j
+3 1 j
+3 1 j
+3 x
+3 x
+2 1 j
+3 x
+3 x
+3 1 j
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 420 m
+18 z
+1 x
+1 x
+1 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1342 m
+1 z
+1 1 j
+2 z
+1 z
+1 z
+1 1 j
+2 z
+1 z
+1 1 j
+2 13 j
+3 12 j
+3 12 j
+3 12 j
+3 12 j
+3 11 j
+2 12 j
+3 11 j
+3 11 j
+3 11 j
+3 11 j
+3 11 j
+2 10 j
+3 11 j
+3 10 j
+3 10 j
+3 10 j
+3 10 j
+3 10 j
+2 9 j
+3 10 j
+3 9 j
+3 9 j
+3 9 j
+3 9 j
+2 9 j
+3 9 j
+3 9 j
+3 8 j
+3 9 j
+3 8 j
+3 8 j
+2 8 j
+3 8 j
+3 8 j
+3 8 j
+3 7 j
+3 8 j
+2 7 j
+3 8 j
+3 7 j
+3 7 j
+3 7 j
+3 7 j
+3 7 j
+2 7 j
+3 6 j
+3 7 j
+3 6 j
+28 61 j
+29 53 j
+28 46 j
+29 41 j
+28 35 j
+29 31 j
+28 27 j
+29 23 j
+28 21 j
+28 18 j
+29 16 j
+28 14 j
+29 12 j
+28 10 j
+29 9 j
+28 8 j
+29 8 j
+28 6 j
+29 5 j
+28 5 j
+E
+B
+396 1334 m
+8 z
+1 9 j
+9 z
+8 z
+9 z
+1 8 j
+8 z
+9 z
+1 8 j
+2 77 j
+3 71 j
+3 64 j
+3 59 j
+3 53 j
+3 48 j
+2 44 j
+3 40 j
+3 36 j
+3 33 j
+3 30 j
+3 27 j
+2 25 j
+3 23 j
+3 20 j
+3 19 j
+3 17 j
+3 15 j
+3 14 j
+2 13 j
+3 12 j
+3 10 j
+3 10 j
+3 9 j
+3 8 j
+2 7 j
+3 6 j
+3 6 j
+3 6 j
+3 5 j
+3 4 j
+3 4 j
+2 4 j
+3 4 j
+3 3 j
+3 2 j
+3 3 j
+3 2 j
+2 2 j
+3 2 j
+3 2 j
+3 2 j
+3 1 j
+3 1 j
+3 2 j
+2 1 j
+3 1 j
+3 1 j
+3 x
+28 5 j
+29 2 j
+28 1 j
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1198 m
+123 z
+1 104 j
+88 z
+74 z
+63 z
+1 53 j
+45 z
+38 z
+1 32 j
+2 144 j
+3 26 j
+3 5 j
+3 1 j
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1130 m
+166 z
+1 127 j
+99 z
+76 z
+59 z
+1 46 j
+35 z
+28 z
+1 21 j
+2 66 j
+3 5 j
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1079 m
+191 z
+1 136 j
+99 z
+71 z
+50 z
+1 37 j
+26 z
+19 z
+1 14 j
+2 33 j
+3 1 j
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1037 m
+207 z
+1 139 j
+95 z
+63 z
+43 z
+1 29 j
+19 z
+13 z
+1 9 j
+2 18 j
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1340 m
+3 z
+1 4 j
+3 z
+3 z
+3 z
+1 4 j
+3 z
+3 z
+1 3 j
+2 32 j
+3 30 j
+3 30 j
+3 28 j
+3 27 j
+3 27 j
+2 25 j
+3 25 j
+3 24 j
+3 23 j
+3 22 j
+3 21 j
+2 21 j
+3 20 j
+3 19 j
+3 19 j
+3 18 j
+3 17 j
+3 17 j
+2 16 j
+3 15 j
+3 15 j
+3 15 j
+3 14 j
+3 13 j
+2 14 j
+3 12 j
+3 12 j
+3 12 j
+3 11 j
+3 11 j
+3 11 j
+2 10 j
+3 10 j
+3 9 j
+3 10 j
+3 8 j
+3 9 j
+2 8 j
+3 8 j
+3 8 j
+3 7 j
+3 7 j
+3 7 j
+3 7 j
+2 6 j
+3 7 j
+3 6 j
+3 5 j
+28 48 j
+29 34 j
+28 24 j
+29 16 j
+28 12 j
+29 8 j
+28 6 j
+29 4 j
+28 3 j
+28 2 j
+29 1 j
+28 1 j
+29 1 j
+28 x
+29 1 j
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 478 m
+70 z
+1 6 j
+1 x
+1 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1342 m
+1 z
+1 1 j
+2 z
+1 z
+1 z
+1 1 j
+2 z
+1 z
+1 1 j
+2 12 j
+3 12 j
+3 12 j
+3 12 j
+3 12 j
+3 11 j
+2 11 j
+3 12 j
+3 11 j
+3 11 j
+3 10 j
+3 11 j
+2 10 j
+3 11 j
+3 10 j
+3 10 j
+3 10 j
+3 10 j
+3 9 j
+2 10 j
+3 9 j
+3 9 j
+3 9 j
+3 10 j
+3 8 j
+2 9 j
+3 9 j
+3 8 j
+3 9 j
+3 8 j
+3 8 j
+3 9 j
+2 8 j
+3 8 j
+3 7 j
+3 8 j
+3 8 j
+3 7 j
+2 8 j
+3 7 j
+3 7 j
+3 7 j
+3 7 j
+3 7 j
+3 7 j
+2 7 j
+3 6 j
+3 7 j
+3 6 j
+28 61 j
+29 52 j
+28 47 j
+29 40 j
+28 36 j
+29 31 j
+28 27 j
+29 24 j
+28 21 j
+28 18 j
+29 16 j
+28 14 j
+29 12 j
+28 11 j
+29 9 j
+28 8 j
+29 8 j
+28 6 j
+29 6 j
+28 4 j
+E
+B
+396 1332 m
+11 z
+1 11 j
+11 z
+11 z
+11 z
+1 11 j
+10 z
+10 z
+1 11 j
+2 95 j
+3 85 j
+3 75 j
+3 66 j
+3 59 j
+3 52 j
+2 46 j
+3 40 j
+3 37 j
+3 31 j
+3 29 j
+3 25 j
+2 22 j
+3 20 j
+3 17 j
+3 15 j
+3 14 j
+3 12 j
+3 11 j
+2 9 j
+3 9 j
+3 7 j
+3 7 j
+3 6 j
+3 5 j
+2 4 j
+3 4 j
+3 4 j
+3 3 j
+3 3 j
+3 2 j
+3 3 j
+2 1 j
+3 2 j
+3 2 j
+3 1 j
+3 1 j
+3 1 j
+2 1 j
+3 1 j
+3 1 j
+3 x
+3 1 j
+3 1 j
+3 x
+2 x
+3 1 j
+3 x
+3 x
+28 2 j
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1093 m
+184 z
+1 135 j
+99 z
+72 z
+54 z
+1 39 j
+29 z
+21 z
+1 16 j
+2 41 j
+3 1 j
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 712 m
+208 z
+1 69 j
+22 z
+8 z
+2 z
+1 1 j
+1 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 971 m
+226 z
+1 136 j
+82 z
+50 z
+30 z
+1 18 j
+11 z
+6 z
+1 4 j
+2 6 j
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1341 m
+3 z
+1 3 j
+3 z
+3 z
+2 z
+1 3 j
+3 z
+3 z
+1 3 j
+2 27 j
+3 26 j
+3 25 j
+3 25 j
+3 24 j
+3 23 j
+2 23 j
+3 22 j
+3 21 j
+3 21 j
+3 20 j
+3 19 j
+2 19 j
+3 18 j
+3 18 j
+3 17 j
+3 17 j
+3 16 j
+3 16 j
+2 15 j
+3 15 j
+3 15 j
+3 14 j
+3 13 j
+3 13 j
+2 13 j
+3 12 j
+3 12 j
+3 12 j
+3 11 j
+3 11 j
+3 11 j
+2 10 j
+3 10 j
+3 10 j
+3 10 j
+3 9 j
+3 9 j
+2 8 j
+3 9 j
+3 8 j
+3 8 j
+3 7 j
+3 8 j
+3 7 j
+2 7 j
+3 7 j
+3 6 j
+3 7 j
+28 54 j
+29 41 j
+28 29 j
+29 22 j
+28 17 j
+29 12 j
+28 9 j
+29 7 j
+28 4 j
+28 4 j
+29 3 j
+28 2 j
+29 1 j
+28 1 j
+29 1 j
+28 1 j
+29 x
+28 1 j
+29 x
+28 x
+E
+B
+396 1307 m
+34 z
+1 34 j
+32 z
+31 z
+29 z
+1 29 j
+27 z
+27 z
+1 25 j
+2 206 j
+3 139 j
+3 95 j
+3 64 j
+3 43 j
+3 29 j
+2 20 j
+3 13 j
+3 9 j
+3 7 j
+3 4 j
+3 3 j
+2 2 j
+3 1 j
+3 1 j
+3 x
+3 1 j
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 964 m
+227 z
+1 135 j
+81 z
+48 z
+29 z
+1 17 j
+10 z
+6 z
+1 4 j
+2 5 j
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1341 m
+3 z
+1 2 j
+3 z
+3 z
+2 z
+1 3 j
+2 z
+3 z
+1 2 j
+2 25 j
+3 25 j
+3 23 j
+3 24 j
+3 22 j
+3 22 j
+2 21 j
+3 21 j
+3 20 j
+3 19 j
+3 19 j
+3 19 j
+2 18 j
+3 17 j
+3 17 j
+3 17 j
+3 16 j
+3 15 j
+3 15 j
+2 15 j
+3 15 j
+3 14 j
+3 13 j
+3 13 j
+3 13 j
+2 13 j
+3 12 j
+3 12 j
+3 11 j
+3 12 j
+3 11 j
+3 10 j
+2 10 j
+3 11 j
+3 9 j
+3 10 j
+3 9 j
+3 9 j
+2 9 j
+3 8 j
+3 8 j
+3 9 j
+3 7 j
+3 8 j
+3 7 j
+2 8 j
+3 7 j
+3 6 j
+3 7 j
+28 57 j
+29 43 j
+28 33 j
+29 25 j
+28 19 j
+29 14 j
+28 11 j
+29 8 j
+28 6 j
+28 5 j
+29 3 j
+28 3 j
+29 2 j
+28 2 j
+29 1 j
+28 1 j
+29 x
+28 1 j
+29 x
+28 1 j
+E
+B
+396 1094 m
+184 z
+1 135 j
+99 z
+73 z
+53 z
+1 40 j
+28 z
+22 z
+1 15 j
+2 42 j
+3 1 j
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+B
+396 1325 m
+19 z
+1 18 j
+18 z
+17 z
+17 z
+1 17 j
+16 z
+16 z
+1 16 j
+2 141 j
+3 115 j
+3 94 j
+3 77 j
+3 62 j
+3 52 j
+2 42 j
+3 34 j
+3 28 j
+3 23 j
+3 18 j
+3 15 j
+2 13 j
+3 10 j
+3 8 j
+3 7 j
+3 6 j
+3 4 j
+3 4 j
+2 3 j
+3 2 j
+3 2 j
+3 2 j
+3 1 j
+3 2 j
+2 x
+3 1 j
+3 1 j
+3 x
+3 1 j
+3 x
+3 x
+2 1 j
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+3 x
+3 x
+3 x
+2 x
+3 x
+3 x
+3 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+29 x
+28 x
+E
+0.5 1 0 1 Sg
+B
+1588 1300 m
+3 41 j
+4 40 j
+3 37 j
+4 36 j
+3 34 j
+4 33 j
+3 31 j
+4 30 j
+3 28 j
+36 221 j
+36 138 j
+35 86 j
+36 54 j
+35 33 j
+36 21 j
+35 14 j
+36 8 j
+35 5 j
+36 3 j
+36 2 j
+35 1 j
+36 1 j
+35 1 j
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+1 Sd
+(Distance \(km\)) 1939 156 0.5 T
+90 Sr
+90 Sh
+(Correlation) 1345 872 0.5 T
+0 Sr
+0 Sh
+1584 364 m
+15 z
+1762 364 m
+15 z
+1939 364 m
+15 z
+2117 364 m
+15 z
+2295 364 m
+15 z
+E
+1584 364 m
+711 x
+E
+(0) 1584 260 0.5 T
+(5) 1762 260 0.5 T
+(10) 1939 260 0.5 T
+(15) 2117 260 0.5 T
+(20) 2295 260 0.5 T
+90 Sr
+90 Sh
+1556 402 m
+16 w
+1556 590 m
+16 w
+1556 778 m
+16 w
+1556 967 m
+16 w
+1556 1155 m
+16 w
+1556 1343 m
+16 w
+E
+1556 402 m
+941 y
+E
+(0.0) 1450 402 0.5 T
+(0.4) 1450 778 0.5 T
+(0.8) 1450 1155 0.5 T
+0 Sr
+0 1 0 1 So
+0 1 0 1 Sg
+0 Sh
+0 Sd
+768 1017 1555 364 c
+0.309343 0.955808 0.245 0.93 So
+0.5 1 0 1 Sg
+B
+1588 1341 m
+3 2 j
+4 2 j
+3 2 j
+4 2 j
+3 2 j
+4 2 j
+3 2 j
+4 2 j
+3 2 j
+36 20 j
+36 19 j
+35 19 j
+36 18 j
+35 18 j
+36 18 j
+35 17 j
+36 17 j
+35 17 j
+36 16 j
+36 16 j
+35 16 j
+36 15 j
+35 15 j
+36 14 j
+35 15 j
+36 14 j
+35 13 j
+36 14 j
+36 13 j
+35 13 j
+36 12 j
+35 12 j
+36 12 j
+35 12 j
+36 12 j
+35 11 j
+36 11 j
+36 11 j
+35 10 j
+36 11 j
+35 10 j
+36 9 j
+35 10 j
+36 10 j
+35 9 j
+36 9 j
+36 9 j
+35 8 j
+36 9 j
+35 8 j
+36 8 j
+35 8 j
+36 8 j
+35 8 j
+36 7 j
+36 7 j
+35 8 j
+36 7 j
+355 62 j
+356 50 j
+355 40 j
+356 32 j
+356 26 j
+355 22 j
+356 16 j
+355 14 j
+356 11 j
+355 9 j
+356 7 j
+355 6 j
+356 4 j
+356 4 j
+355 3 j
+356 3 j
+355 1 j
+356 2 j
+355 1 j
+356 1 j
+E
+B
+1588 1315 m
+3 28 j
+4 27 j
+3 26 j
+4 25 j
+3 25 j
+4 24 j
+3 23 j
+4 22 j
+3 22 j
+36 184 j
+36 134 j
+35 100 j
+36 72 j
+35 54 j
+36 39 j
+35 29 j
+36 21 j
+35 16 j
+36 11 j
+36 8 j
+35 6 j
+36 5 j
+35 3 j
+36 3 j
+35 2 j
+36 1 j
+35 1 j
+36 1 j
+36 x
+35 x
+36 1 j
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 949 m
+3 230 j
+4 133 j
+3 77 j
+4 45 j
+3 26 j
+4 15 j
+3 9 j
+4 5 j
+3 3 j
+36 4 j
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1130 m
+3 166 j
+4 127 j
+3 99 j
+4 76 j
+3 59 j
+4 46 j
+3 35 j
+4 28 j
+3 21 j
+36 66 j
+36 5 j
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1338 m
+3 5 j
+4 5 j
+3 5 j
+4 5 j
+3 5 j
+4 5 j
+3 5 j
+4 5 j
+3 5 j
+36 48 j
+36 45 j
+35 43 j
+36 41 j
+35 38 j
+36 36 j
+35 35 j
+36 32 j
+35 31 j
+36 29 j
+36 28 j
+35 26 j
+36 24 j
+35 24 j
+36 22 j
+35 21 j
+36 19 j
+35 19 j
+36 18 j
+36 17 j
+35 16 j
+36 15 j
+35 14 j
+36 13 j
+35 13 j
+36 12 j
+35 11 j
+36 11 j
+36 10 j
+35 10 j
+36 9 j
+35 9 j
+36 8 j
+35 8 j
+36 7 j
+35 7 j
+36 7 j
+36 6 j
+35 6 j
+36 5 j
+35 6 j
+36 5 j
+35 4 j
+36 5 j
+35 4 j
+36 4 j
+36 4 j
+35 3 j
+36 4 j
+355 25 j
+356 15 j
+355 8 j
+356 5 j
+356 3 j
+355 1 j
+356 1 j
+355 1 j
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1342 m
+3 2 j
+4 2 j
+3 1 j
+4 2 j
+3 2 j
+4 2 j
+3 1 j
+4 2 j
+3 2 j
+36 16 j
+36 17 j
+35 16 j
+36 16 j
+35 15 j
+36 16 j
+35 15 j
+36 14 j
+35 15 j
+36 14 j
+36 14 j
+35 13 j
+36 14 j
+35 13 j
+36 13 j
+35 13 j
+36 12 j
+35 13 j
+36 12 j
+36 11 j
+35 12 j
+36 11 j
+35 12 j
+36 11 j
+35 10 j
+36 11 j
+35 10 j
+36 11 j
+36 10 j
+35 9 j
+36 10 j
+35 10 j
+36 9 j
+35 9 j
+36 9 j
+35 9 j
+36 9 j
+36 8 j
+35 8 j
+36 9 j
+35 8 j
+36 8 j
+35 7 j
+36 8 j
+35 8 j
+36 7 j
+36 7 j
+35 7 j
+36 7 j
+355 63 j
+356 53 j
+355 44 j
+356 36 j
+356 31 j
+355 25 j
+356 21 j
+355 18 j
+356 14 j
+355 12 j
+356 11 j
+355 8 j
+356 7 j
+356 6 j
+355 5 j
+356 4 j
+355 3 j
+356 3 j
+355 3 j
+356 2 j
+E
+B
+1588 1272 m
+3 66 j
+4 60 j
+3 57 j
+4 52 j
+3 48 j
+4 44 j
+3 41 j
+4 38 j
+3 35 j
+36 234 j
+36 106 j
+35 49 j
+36 22 j
+35 10 j
+36 5 j
+35 2 j
+36 1 j
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1342 m
+3 2 j
+4 1 j
+3 1 j
+4 2 j
+3 1 j
+4 2 j
+3 1 j
+4 2 j
+3 1 j
+36 14 j
+36 14 j
+35 14 j
+36 13 j
+35 13 j
+36 13 j
+35 13 j
+36 13 j
+35 12 j
+36 13 j
+36 12 j
+35 12 j
+36 11 j
+35 12 j
+36 11 j
+35 11 j
+36 11 j
+35 11 j
+36 11 j
+36 10 j
+35 11 j
+36 10 j
+35 10 j
+36 10 j
+35 10 j
+36 9 j
+35 10 j
+36 9 j
+36 9 j
+35 9 j
+36 9 j
+35 9 j
+36 9 j
+35 8 j
+36 9 j
+35 8 j
+36 8 j
+36 8 j
+35 8 j
+36 8 j
+35 7 j
+36 8 j
+35 7 j
+36 7 j
+35 8 j
+36 7 j
+36 7 j
+35 6 j
+36 7 j
+355 62 j
+356 54 j
+355 46 j
+356 39 j
+356 34 j
+355 28 j
+356 25 j
+355 22 j
+356 18 j
+355 16 j
+356 13 j
+355 12 j
+356 10 j
+356 8 j
+355 7 j
+356 7 j
+355 5 j
+356 5 j
+355 4 j
+356 3 j
+E
+B
+1588 1222 m
+3 106 j
+4 93 j
+3 80 j
+4 70 j
+3 61 j
+4 53 j
+3 46 j
+4 41 j
+3 35 j
+36 176 j
+36 45 j
+35 11 j
+36 3 j
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1342 m
+3 2 j
+4 2 j
+3 2 j
+4 2 j
+3 2 j
+4 1 j
+3 2 j
+4 2 j
+3 2 j
+36 18 j
+36 17 j
+35 17 j
+36 17 j
+35 16 j
+36 17 j
+35 15 j
+36 16 j
+35 15 j
+36 15 j
+36 15 j
+35 14 j
+36 14 j
+35 14 j
+36 14 j
+35 13 j
+36 13 j
+35 13 j
+36 12 j
+36 13 j
+35 12 j
+36 11 j
+35 12 j
+36 11 j
+35 12 j
+36 10 j
+35 11 j
+36 11 j
+36 10 j
+35 10 j
+36 10 j
+35 10 j
+36 9 j
+35 10 j
+36 9 j
+35 9 j
+36 9 j
+36 8 j
+35 9 j
+36 8 j
+35 8 j
+36 8 j
+35 8 j
+36 8 j
+35 8 j
+36 7 j
+36 7 j
+35 7 j
+36 7 j
+355 63 j
+356 52 j
+355 43 j
+356 35 j
+356 29 j
+355 24 j
+356 19 j
+355 16 j
+356 14 j
+355 11 j
+356 9 j
+355 7 j
+356 6 j
+356 5 j
+355 4 j
+356 4 j
+355 2 j
+356 3 j
+355 2 j
+356 1 j
+E
+B
+1588 1234 m
+3 96 j
+4 86 j
+3 75 j
+4 67 j
+3 59 j
+4 52 j
+3 46 j
+4 41 j
+3 36 j
+36 194 j
+36 57 j
+35 17 j
+36 5 j
+35 1 j
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1343 m
+3 1 j
+4 1 j
+3 1 j
+4 x
+3 1 j
+4 1 j
+3 1 j
+4 x
+3 1 j
+36 8 j
+36 7 j
+35 8 j
+36 7 j
+35 7 j
+36 8 j
+35 7 j
+36 7 j
+35 7 j
+36 7 j
+36 7 j
+35 7 j
+36 7 j
+35 7 j
+36 6 j
+35 7 j
+36 7 j
+35 6 j
+36 7 j
+36 6 j
+35 7 j
+36 6 j
+35 6 j
+36 7 j
+35 6 j
+36 6 j
+35 6 j
+36 6 j
+36 6 j
+35 6 j
+36 6 j
+35 6 j
+36 6 j
+35 6 j
+36 5 j
+35 6 j
+36 6 j
+36 5 j
+35 6 j
+36 5 j
+35 6 j
+36 5 j
+35 6 j
+36 5 j
+35 5 j
+36 6 j
+36 5 j
+35 5 j
+36 5 j
+355 49 j
+356 45 j
+355 42 j
+356 38 j
+356 35 j
+355 33 j
+356 30 j
+355 28 j
+356 25 j
+355 24 j
+356 22 j
+355 20 j
+356 18 j
+356 17 j
+355 16 j
+356 14 j
+355 14 j
+356 12 j
+355 11 j
+356 11 j
+E
+B
+1588 1310 m
+3 32 j
+4 31 j
+3 29 j
+4 29 j
+3 28 j
+4 27 j
+3 25 j
+4 25 j
+3 24 j
+36 199 j
+36 138 j
+35 97 j
+36 68 j
+35 47 j
+36 33 j
+35 23 j
+36 16 j
+35 11 j
+36 8 j
+36 6 j
+35 4 j
+36 2 j
+35 2 j
+36 1 j
+35 1 j
+36 1 j
+35 x
+36 1 j
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1326 m
+3 17 j
+4 17 j
+3 16 j
+4 16 j
+3 16 j
+4 15 j
+3 15 j
+4 15 j
+3 15 j
+36 132 j
+36 110 j
+35 92 j
+36 76 j
+35 63 j
+36 52 j
+35 44 j
+36 36 j
+35 30 j
+36 25 j
+36 21 j
+35 17 j
+36 14 j
+35 12 j
+36 10 j
+35 8 j
+36 7 j
+35 6 j
+36 4 j
+36 4 j
+35 4 j
+36 2 j
+35 3 j
+36 1 j
+35 2 j
+36 1 j
+35 1 j
+36 1 j
+36 1 j
+35 x
+36 1 j
+35 x
+36 1 j
+35 x
+36 x
+35 1 j
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1321 m
+3 22 j
+4 21 j
+3 21 j
+4 20 j
+3 20 j
+4 19 j
+3 19 j
+4 18 j
+3 18 j
+36 158 j
+36 124 j
+35 98 j
+36 77 j
+35 60 j
+36 48 j
+35 37 j
+36 30 j
+35 23 j
+36 19 j
+36 14 j
+35 11 j
+36 9 j
+35 7 j
+36 6 j
+35 4 j
+36 4 j
+35 2 j
+36 3 j
+36 1 j
+35 2 j
+36 1 j
+35 x
+36 1 j
+35 1 j
+36 x
+35 x
+36 1 j
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 432 m
+3 30 j
+4 x
+3 x
+4 x
+3 x
+4 x
+3 x
+4 x
+3 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 413 m
+3 11 j
+4 x
+3 x
+4 x
+3 x
+4 x
+3 x
+4 x
+3 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 948 m
+3 229 j
+4 134 j
+3 77 j
+4 45 j
+3 26 j
+4 15 j
+3 8 j
+4 5 j
+3 3 j
+36 4 j
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 466 m
+3 60 j
+4 4 j
+3 x
+4 x
+3 x
+4 x
+3 x
+4 x
+3 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1332 m
+3 11 j
+4 10 j
+3 11 j
+4 11 j
+3 10 j
+4 10 j
+3 11 j
+4 10 j
+3 10 j
+36 93 j
+36 83 j
+35 73 j
+36 66 j
+35 58 j
+36 52 j
+35 45 j
+36 41 j
+35 36 j
+36 33 j
+36 28 j
+35 26 j
+36 22 j
+35 20 j
+36 18 j
+35 16 j
+36 14 j
+35 13 j
+36 11 j
+36 10 j
+35 8 j
+36 8 j
+35 7 j
+36 6 j
+35 6 j
+36 5 j
+35 4 j
+36 4 j
+36 3 j
+35 3 j
+36 3 j
+35 2 j
+36 3 j
+35 1 j
+36 2 j
+35 2 j
+36 1 j
+36 1 j
+35 1 j
+36 1 j
+35 1 j
+36 1 j
+35 x
+36 1 j
+35 x
+36 1 j
+36 x
+35 1 j
+36 x
+355 2 j
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 740 m
+3 217 j
+4 78 j
+3 28 j
+4 10 j
+3 3 j
+4 2 j
+3 x
+4 x
+3 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1332 m
+3 11 j
+4 11 j
+3 10 j
+4 11 j
+3 10 j
+4 11 j
+3 10 j
+4 10 j
+3 10 j
+36 94 j
+36 83 j
+35 74 j
+36 66 j
+35 58 j
+36 52 j
+35 46 j
+36 41 j
+35 36 j
+36 32 j
+36 28 j
+35 26 j
+36 22 j
+35 20 j
+36 18 j
+35 16 j
+36 14 j
+35 12 j
+36 11 j
+36 10 j
+35 9 j
+36 7 j
+35 7 j
+36 6 j
+35 6 j
+36 5 j
+35 4 j
+36 4 j
+36 3 j
+35 3 j
+36 3 j
+35 2 j
+36 2 j
+35 2 j
+36 1 j
+35 2 j
+36 1 j
+36 1 j
+35 1 j
+36 1 j
+35 1 j
+36 1 j
+35 x
+36 1 j
+35 1 j
+36 x
+36 x
+35 1 j
+36 x
+355 2 j
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1340 m
+3 3 j
+4 4 j
+3 3 j
+4 4 j
+3 3 j
+4 3 j
+3 4 j
+4 3 j
+3 3 j
+36 33 j
+36 31 j
+35 30 j
+36 29 j
+35 28 j
+36 27 j
+35 26 j
+36 25 j
+35 25 j
+36 23 j
+36 22 j
+35 22 j
+36 21 j
+35 20 j
+36 20 j
+35 19 j
+36 18 j
+35 17 j
+36 17 j
+36 16 j
+35 16 j
+36 15 j
+35 15 j
+36 14 j
+35 13 j
+36 13 j
+35 13 j
+36 12 j
+36 12 j
+35 11 j
+36 11 j
+35 11 j
+36 10 j
+35 9 j
+36 10 j
+35 9 j
+36 9 j
+36 8 j
+35 8 j
+36 8 j
+35 8 j
+36 7 j
+35 7 j
+36 7 j
+35 6 j
+36 7 j
+36 6 j
+35 6 j
+36 5 j
+355 47 j
+356 32 j
+355 23 j
+356 16 j
+356 11 j
+355 7 j
+356 5 j
+355 4 j
+356 3 j
+355 1 j
+356 2 j
+355 1 j
+356 x
+356 1 j
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1342 m
+3 1 j
+4 1 j
+3 1 j
+4 1 j
+3 2 j
+4 1 j
+3 1 j
+4 1 j
+3 1 j
+36 12 j
+36 11 j
+35 11 j
+36 11 j
+35 11 j
+36 11 j
+35 11 j
+36 10 j
+35 11 j
+36 10 j
+36 10 j
+35 10 j
+36 10 j
+35 10 j
+36 10 j
+35 9 j
+36 9 j
+35 10 j
+36 9 j
+36 9 j
+35 9 j
+36 9 j
+35 9 j
+36 8 j
+35 9 j
+36 8 j
+35 9 j
+36 8 j
+36 8 j
+35 8 j
+36 8 j
+35 8 j
+36 7 j
+35 8 j
+36 7 j
+35 8 j
+36 7 j
+36 8 j
+35 7 j
+36 7 j
+35 7 j
+36 7 j
+35 6 j
+36 7 j
+35 7 j
+36 6 j
+36 7 j
+35 6 j
+36 7 j
+355 59 j
+356 52 j
+355 46 j
+356 41 j
+356 36 j
+355 32 j
+356 28 j
+355 24 j
+356 22 j
+355 20 j
+356 17 j
+355 15 j
+356 13 j
+356 12 j
+355 10 j
+356 9 j
+355 8 j
+356 8 j
+355 6 j
+356 5 j
+E
+B
+1588 1051 m
+3 201 j
+4 139 j
+3 96 j
+4 66 j
+3 46 j
+4 31 j
+3 22 j
+4 15 j
+3 10 j
+36 23 j
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1341 m
+3 2 j
+4 1 j
+3 2 j
+4 2 j
+3 2 j
+4 2 j
+3 2 j
+4 2 j
+3 2 j
+36 19 j
+36 19 j
+35 18 j
+36 18 j
+35 17 j
+36 17 j
+35 17 j
+36 17 j
+35 16 j
+36 15 j
+36 16 j
+35 15 j
+36 15 j
+35 14 j
+36 15 j
+35 13 j
+36 14 j
+35 13 j
+36 13 j
+36 13 j
+35 13 j
+36 12 j
+35 12 j
+36 12 j
+35 11 j
+36 12 j
+35 11 j
+36 11 j
+36 10 j
+35 11 j
+36 10 j
+35 10 j
+36 10 j
+35 9 j
+36 9 j
+35 10 j
+36 9 j
+36 8 j
+35 9 j
+36 8 j
+35 9 j
+36 8 j
+35 8 j
+36 7 j
+35 8 j
+36 8 j
+36 7 j
+35 7 j
+36 7 j
+355 62 j
+356 51 j
+355 41 j
+356 34 j
+356 27 j
+355 22 j
+356 18 j
+355 15 j
+356 11 j
+355 10 j
+356 8 j
+355 6 j
+356 5 j
+356 4 j
+355 4 j
+356 3 j
+355 2 j
+356 2 j
+355 1 j
+356 1 j
+E
+B
+1588 1343 m
+3 1 j
+4 1 j
+3 1 j
+4 x
+3 1 j
+4 1 j
+3 1 j
+4 x
+3 1 j
+36 8 j
+36 7 j
+35 7 j
+36 8 j
+35 7 j
+36 7 j
+35 7 j
+36 7 j
+35 7 j
+36 7 j
+36 7 j
+35 7 j
+36 6 j
+35 7 j
+36 7 j
+35 6 j
+36 7 j
+35 6 j
+36 7 j
+36 6 j
+35 7 j
+36 6 j
+35 6 j
+36 6 j
+35 7 j
+36 6 j
+35 6 j
+36 6 j
+36 6 j
+35 6 j
+36 5 j
+35 6 j
+36 6 j
+35 6 j
+36 5 j
+35 6 j
+36 6 j
+36 5 j
+35 6 j
+36 5 j
+35 5 j
+36 6 j
+35 5 j
+36 5 j
+35 6 j
+36 5 j
+36 5 j
+35 5 j
+36 5 j
+355 49 j
+356 45 j
+355 41 j
+356 38 j
+356 35 j
+355 33 j
+356 30 j
+355 28 j
+356 25 j
+355 24 j
+356 22 j
+355 20 j
+356 18 j
+356 18 j
+355 15 j
+356 15 j
+355 13 j
+356 13 j
+355 11 j
+356 11 j
+E
+B
+1588 1211 m
+3 114 j
+4 98 j
+3 84 j
+4 72 j
+3 62 j
+4 53 j
+3 46 j
+4 40 j
+3 33 j
+36 162 j
+36 35 j
+35 8 j
+36 2 j
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1301 m
+3 41 j
+4 38 j
+3 37 j
+4 36 j
+3 33 j
+4 33 j
+3 30 j
+4 30 j
+3 28 j
+36 219 j
+36 139 j
+35 87 j
+36 55 j
+35 34 j
+36 22 j
+35 14 j
+36 9 j
+35 5 j
+36 4 j
+36 2 j
+35 1 j
+36 1 j
+35 1 j
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1340 m
+3 3 j
+4 3 j
+3 3 j
+4 3 j
+3 4 j
+4 3 j
+3 3 j
+4 3 j
+3 3 j
+36 30 j
+36 30 j
+35 28 j
+36 28 j
+35 26 j
+36 26 j
+35 25 j
+36 23 j
+35 24 j
+36 22 j
+36 22 j
+35 21 j
+36 20 j
+35 19 j
+36 19 j
+35 18 j
+36 18 j
+35 17 j
+36 17 j
+36 16 j
+35 15 j
+36 15 j
+35 14 j
+36 14 j
+35 14 j
+36 13 j
+35 12 j
+36 12 j
+36 12 j
+35 12 j
+36 10 j
+35 11 j
+36 10 j
+35 10 j
+36 10 j
+35 9 j
+36 9 j
+36 9 j
+35 8 j
+36 8 j
+35 8 j
+36 8 j
+35 7 j
+36 7 j
+35 7 j
+36 6 j
+36 7 j
+35 6 j
+36 6 j
+355 50 j
+356 35 j
+355 25 j
+356 18 j
+356 13 j
+355 9 j
+356 6 j
+355 5 j
+356 3 j
+355 3 j
+356 1 j
+355 2 j
+356 x
+356 1 j
+355 x
+356 1 j
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1237 m
+3 94 j
+4 83 j
+3 74 j
+4 66 j
+3 58 j
+4 52 j
+3 46 j
+4 41 j
+3 36 j
+36 199 j
+36 60 j
+35 19 j
+36 5 j
+35 2 j
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 738 m
+3 216 j
+4 78 j
+3 27 j
+4 10 j
+3 4 j
+4 1 j
+3 x
+4 x
+3 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1232 m
+3 98 j
+4 86 j
+3 76 j
+4 67 j
+3 60 j
+4 52 j
+3 46 j
+4 41 j
+3 36 j
+36 192 j
+36 55 j
+35 15 j
+36 5 j
+35 1 j
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 414 m
+3 12 j
+4 x
+3 x
+4 x
+3 x
+4 x
+3 x
+4 x
+3 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1342 m
+3 2 j
+4 1 j
+3 2 j
+4 1 j
+3 2 j
+4 1 j
+3 2 j
+4 1 j
+3 2 j
+36 15 j
+36 15 j
+35 15 j
+36 14 j
+35 14 j
+36 14 j
+35 14 j
+36 13 j
+35 13 j
+36 13 j
+36 13 j
+35 13 j
+36 12 j
+35 12 j
+36 12 j
+35 12 j
+36 12 j
+35 11 j
+36 11 j
+36 11 j
+35 11 j
+36 11 j
+35 11 j
+36 10 j
+35 10 j
+36 10 j
+35 10 j
+36 10 j
+36 9 j
+35 9 j
+36 10 j
+35 9 j
+36 9 j
+35 8 j
+36 9 j
+35 9 j
+36 8 j
+36 8 j
+35 8 j
+36 8 j
+35 8 j
+36 8 j
+35 7 j
+36 8 j
+35 7 j
+36 7 j
+36 7 j
+35 7 j
+36 7 j
+355 63 j
+356 53 j
+355 45 j
+356 39 j
+356 32 j
+355 28 j
+356 23 j
+355 20 j
+356 17 j
+355 14 j
+356 13 j
+355 10 j
+356 9 j
+356 7 j
+355 6 j
+356 6 j
+355 4 j
+356 4 j
+355 3 j
+356 3 j
+E
+B
+1588 1159 m
+3 148 j
+4 120 j
+3 96 j
+4 77 j
+3 62 j
+4 50 j
+3 40 j
+4 32 j
+3 26 j
+36 94 j
+36 11 j
+35 1 j
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 864 m
+3 236 j
+4 115 j
+3 57 j
+4 28 j
+3 13 j
+4 7 j
+3 3 j
+4 2 j
+3 1 j
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1343 m
+3 1 j
+4 1 j
+3 1 j
+4 x
+3 1 j
+4 1 j
+3 1 j
+4 x
+3 1 j
+36 8 j
+36 7 j
+35 7 j
+36 8 j
+35 7 j
+36 7 j
+35 7 j
+36 7 j
+35 7 j
+36 7 j
+36 7 j
+35 7 j
+36 7 j
+35 7 j
+36 6 j
+35 7 j
+36 7 j
+35 6 j
+36 7 j
+36 6 j
+35 7 j
+36 6 j
+35 6 j
+36 6 j
+35 7 j
+36 6 j
+35 6 j
+36 6 j
+36 6 j
+35 6 j
+36 6 j
+35 5 j
+36 6 j
+35 6 j
+36 6 j
+35 5 j
+36 6 j
+36 5 j
+35 6 j
+36 5 j
+35 6 j
+36 5 j
+35 6 j
+36 5 j
+35 5 j
+36 5 j
+36 6 j
+35 5 j
+36 5 j
+355 49 j
+356 44 j
+355 42 j
+356 38 j
+356 35 j
+355 33 j
+356 30 j
+355 28 j
+356 25 j
+355 24 j
+356 22 j
+355 20 j
+356 18 j
+356 18 j
+355 15 j
+356 15 j
+355 13 j
+356 13 j
+355 11 j
+356 11 j
+E
+B
+1588 1337 m
+3 7 j
+4 6 j
+3 7 j
+4 6 j
+3 6 j
+4 7 j
+3 6 j
+4 6 j
+3 6 j
+36 60 j
+36 55 j
+35 52 j
+36 48 j
+35 45 j
+36 42 j
+35 39 j
+36 36 j
+35 34 j
+36 32 j
+36 29 j
+35 28 j
+36 26 j
+35 23 j
+36 23 j
+35 20 j
+36 20 j
+35 18 j
+36 17 j
+36 15 j
+35 15 j
+36 14 j
+35 12 j
+36 12 j
+35 11 j
+36 11 j
+35 9 j
+36 9 j
+36 9 j
+35 7 j
+36 8 j
+35 6 j
+36 7 j
+35 6 j
+36 5 j
+35 5 j
+36 5 j
+36 4 j
+35 4 j
+36 4 j
+35 4 j
+36 3 j
+35 3 j
+36 3 j
+35 3 j
+36 3 j
+36 2 j
+35 2 j
+36 2 j
+355 14 j
+356 8 j
+355 3 j
+356 2 j
+356 1 j
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1320 m
+3 24 j
+4 22 j
+3 22 j
+4 22 j
+3 21 j
+4 20 j
+3 20 j
+4 19 j
+3 19 j
+36 165 j
+36 127 j
+35 99 j
+36 76 j
+35 59 j
+36 46 j
+35 36 j
+36 27 j
+35 21 j
+36 17 j
+36 13 j
+35 10 j
+36 7 j
+35 6 j
+36 5 j
+35 3 j
+36 3 j
+35 2 j
+36 2 j
+36 1 j
+35 1 j
+36 1 j
+35 x
+36 1 j
+35 x
+36 1 j
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1339 m
+3 5 j
+4 4 j
+3 5 j
+4 4 j
+3 4 j
+4 5 j
+3 4 j
+4 4 j
+3 5 j
+36 42 j
+36 40 j
+35 38 j
+36 36 j
+35 35 j
+36 33 j
+35 32 j
+36 30 j
+35 28 j
+36 28 j
+36 26 j
+35 24 j
+36 24 j
+35 23 j
+36 21 j
+35 21 j
+36 19 j
+35 19 j
+36 17 j
+36 17 j
+35 16 j
+36 16 j
+35 14 j
+36 14 j
+35 14 j
+36 12 j
+35 12 j
+36 12 j
+36 11 j
+35 10 j
+36 10 j
+35 10 j
+36 9 j
+35 9 j
+36 8 j
+35 8 j
+36 7 j
+36 7 j
+35 7 j
+36 7 j
+35 6 j
+36 6 j
+35 5 j
+36 6 j
+35 5 j
+36 4 j
+36 5 j
+35 5 j
+36 4 j
+355 32 j
+356 21 j
+355 12 j
+356 8 j
+356 5 j
+355 3 j
+356 2 j
+355 1 j
+356 x
+355 1 j
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 925 m
+3 232 j
+4 130 j
+3 72 j
+4 40 j
+3 22 j
+4 12 j
+3 7 j
+4 4 j
+3 2 j
+36 2 j
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1338 m
+3 5 j
+4 5 j
+3 5 j
+4 5 j
+3 5 j
+4 5 j
+3 5 j
+4 4 j
+3 5 j
+36 47 j
+36 45 j
+35 42 j
+36 40 j
+35 38 j
+36 36 j
+35 34 j
+36 32 j
+35 31 j
+36 29 j
+36 27 j
+35 26 j
+36 25 j
+35 23 j
+36 22 j
+35 21 j
+36 20 j
+35 18 j
+36 18 j
+36 17 j
+35 16 j
+36 15 j
+35 14 j
+36 14 j
+35 12 j
+36 13 j
+35 11 j
+36 11 j
+36 10 j
+35 10 j
+36 9 j
+35 9 j
+36 8 j
+35 8 j
+36 8 j
+35 7 j
+36 6 j
+36 7 j
+35 6 j
+36 5 j
+35 6 j
+36 5 j
+35 5 j
+36 4 j
+35 5 j
+36 4 j
+36 4 j
+35 3 j
+36 4 j
+355 26 j
+356 15 j
+355 9 j
+356 5 j
+356 3 j
+355 2 j
+356 1 j
+355 1 j
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1332 m
+3 12 j
+4 12 j
+3 11 j
+4 11 j
+3 12 j
+4 11 j
+3 10 j
+4 11 j
+3 11 j
+36 99 j
+36 87 j
+35 76 j
+36 68 j
+35 59 j
+36 53 j
+35 46 j
+36 41 j
+35 35 j
+36 32 j
+36 28 j
+35 24 j
+36 22 j
+35 19 j
+36 17 j
+35 14 j
+36 13 j
+35 12 j
+36 10 j
+36 9 j
+35 8 j
+36 6 j
+35 7 j
+36 5 j
+35 5 j
+36 4 j
+35 3 j
+36 4 j
+36 2 j
+35 3 j
+36 2 j
+35 2 j
+36 2 j
+35 1 j
+36 2 j
+35 1 j
+36 1 j
+36 1 j
+35 1 j
+36 x
+35 1 j
+36 x
+35 1 j
+36 x
+35 1 j
+36 x
+36 x
+35 1 j
+36 x
+355 1 j
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1343 m
+3 1 j
+4 1 j
+3 1 j
+4 1 j
+3 x
+4 1 j
+3 1 j
+4 1 j
+3 1 j
+36 8 j
+36 8 j
+35 8 j
+36 7 j
+35 8 j
+36 8 j
+35 7 j
+36 8 j
+35 8 j
+36 7 j
+36 7 j
+35 8 j
+36 7 j
+35 7 j
+36 7 j
+35 7 j
+36 7 j
+35 7 j
+36 7 j
+36 7 j
+35 7 j
+36 6 j
+35 7 j
+36 6 j
+35 7 j
+36 6 j
+35 7 j
+36 6 j
+36 6 j
+35 7 j
+36 6 j
+35 6 j
+36 6 j
+35 6 j
+36 6 j
+35 6 j
+36 6 j
+36 6 j
+35 6 j
+36 5 j
+35 6 j
+36 6 j
+35 5 j
+36 6 j
+35 5 j
+36 6 j
+36 5 j
+35 5 j
+36 6 j
+355 50 j
+356 47 j
+355 42 j
+356 39 j
+356 36 j
+355 33 j
+356 30 j
+355 28 j
+356 25 j
+355 23 j
+356 22 j
+355 19 j
+356 18 j
+356 17 j
+355 15 j
+356 14 j
+355 12 j
+356 12 j
+355 11 j
+356 10 j
+E
+B
+1588 1341 m
+3 3 j
+4 2 j
+3 2 j
+4 3 j
+3 2 j
+4 3 j
+3 2 j
+4 2 j
+3 3 j
+36 23 j
+36 23 j
+35 23 j
+36 22 j
+35 21 j
+36 21 j
+35 20 j
+36 20 j
+35 19 j
+36 18 j
+36 19 j
+35 17 j
+36 18 j
+35 16 j
+36 17 j
+35 16 j
+36 15 j
+35 15 j
+36 15 j
+36 15 j
+35 14 j
+36 13 j
+35 14 j
+36 13 j
+35 12 j
+36 12 j
+35 12 j
+36 12 j
+36 12 j
+35 11 j
+36 10 j
+35 11 j
+36 10 j
+35 10 j
+36 10 j
+35 9 j
+36 10 j
+36 9 j
+35 8 j
+36 9 j
+35 8 j
+36 8 j
+35 8 j
+36 8 j
+35 7 j
+36 8 j
+36 7 j
+35 7 j
+36 7 j
+355 58 j
+356 46 j
+355 34 j
+356 27 j
+356 21 j
+355 16 j
+356 12 j
+355 10 j
+356 7 j
+355 6 j
+356 4 j
+355 3 j
+356 3 j
+356 2 j
+355 1 j
+356 2 j
+355 x
+356 1 j
+355 1 j
+356 x
+E
+B
+1588 1265 m
+3 71 j
+4 66 j
+3 60 j
+4 55 j
+3 51 j
+4 46 j
+3 43 j
+4 39 j
+3 36 j
+36 229 j
+36 97 j
+35 41 j
+36 17 j
+35 7 j
+36 3 j
+35 2 j
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1340 m
+3 3 j
+4 3 j
+3 3 j
+4 3 j
+3 3 j
+4 3 j
+3 3 j
+4 3 j
+3 3 j
+36 29 j
+36 29 j
+35 27 j
+36 27 j
+35 26 j
+36 25 j
+35 24 j
+36 23 j
+35 23 j
+36 22 j
+36 21 j
+35 20 j
+36 20 j
+35 19 j
+36 19 j
+35 18 j
+36 17 j
+35 17 j
+36 17 j
+36 15 j
+35 16 j
+36 14 j
+35 15 j
+36 13 j
+35 14 j
+36 13 j
+35 12 j
+36 12 j
+36 12 j
+35 12 j
+36 11 j
+35 10 j
+36 11 j
+35 9 j
+36 10 j
+35 9 j
+36 9 j
+36 9 j
+35 9 j
+36 8 j
+35 8 j
+36 7 j
+35 8 j
+36 7 j
+35 7 j
+36 7 j
+36 6 j
+35 7 j
+36 6 j
+355 51 j
+356 37 j
+355 26 j
+356 19 j
+356 14 j
+355 10 j
+356 7 j
+355 5 j
+356 4 j
+355 3 j
+356 2 j
+355 1 j
+356 1 j
+356 1 j
+355 x
+356 1 j
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1341 m
+3 2 j
+4 2 j
+3 2 j
+4 2 j
+3 2 j
+4 1 j
+3 2 j
+4 2 j
+3 2 j
+36 20 j
+36 19 j
+35 18 j
+36 18 j
+35 18 j
+36 17 j
+35 17 j
+36 17 j
+35 16 j
+36 16 j
+36 16 j
+35 15 j
+36 15 j
+35 15 j
+36 14 j
+35 14 j
+36 14 j
+35 14 j
+36 13 j
+36 13 j
+35 12 j
+36 13 j
+35 12 j
+36 12 j
+35 11 j
+36 12 j
+35 11 j
+36 11 j
+36 11 j
+35 10 j
+36 10 j
+35 10 j
+36 10 j
+35 10 j
+36 9 j
+35 9 j
+36 9 j
+36 9 j
+35 9 j
+36 8 j
+35 8 j
+36 9 j
+35 8 j
+36 7 j
+35 8 j
+36 7 j
+36 8 j
+35 7 j
+36 7 j
+355 62 j
+356 51 j
+355 40 j
+356 33 j
+356 27 j
+355 22 j
+356 17 j
+355 14 j
+356 12 j
+355 9 j
+356 8 j
+355 6 j
+356 5 j
+356 4 j
+355 3 j
+356 2 j
+355 3 j
+356 1 j
+355 2 j
+356 1 j
+E
+B
+1588 555 m
+3 128 j
+4 21 j
+3 4 j
+4 x
+3 x
+4 x
+3 x
+4 x
+3 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1008 m
+3 216 j
+4 139 j
+3 90 j
+4 57 j
+3 38 j
+4 23 j
+3 16 j
+4 10 j
+3 6 j
+36 11 j
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1338 m
+3 5 j
+4 4 j
+3 5 j
+4 5 j
+3 5 j
+4 5 j
+3 5 j
+4 5 j
+3 4 j
+36 46 j
+36 44 j
+35 42 j
+36 39 j
+35 37 j
+36 36 j
+35 33 j
+36 32 j
+35 30 j
+36 29 j
+36 27 j
+35 26 j
+36 24 j
+35 23 j
+36 22 j
+35 21 j
+36 20 j
+35 19 j
+36 17 j
+36 17 j
+35 16 j
+36 15 j
+35 15 j
+36 13 j
+35 13 j
+36 13 j
+35 11 j
+36 11 j
+36 11 j
+35 10 j
+36 9 j
+35 9 j
+36 8 j
+35 8 j
+36 8 j
+35 7 j
+36 7 j
+36 6 j
+35 7 j
+36 5 j
+35 6 j
+36 5 j
+35 5 j
+36 5 j
+35 4 j
+36 5 j
+36 4 j
+35 3 j
+36 4 j
+355 27 j
+356 16 j
+355 10 j
+356 6 j
+356 3 j
+355 2 j
+356 1 j
+355 1 j
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1215 m
+3 111 j
+4 95 j
+3 83 j
+4 72 j
+3 61 j
+4 53 j
+3 47 j
+4 39 j
+3 35 j
+36 167 j
+36 39 j
+35 9 j
+36 2 j
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 476 m
+3 69 j
+4 5 j
+3 x
+4 x
+3 x
+4 x
+3 x
+4 x
+3 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1342 m
+3 1 j
+4 1 j
+3 1 j
+4 1 j
+3 1 j
+4 1 j
+3 2 j
+4 1 j
+3 1 j
+36 11 j
+36 11 j
+35 11 j
+36 10 j
+35 11 j
+36 10 j
+35 11 j
+36 10 j
+35 10 j
+36 10 j
+36 9 j
+35 10 j
+36 10 j
+35 9 j
+36 10 j
+35 9 j
+36 9 j
+35 9 j
+36 9 j
+36 9 j
+35 8 j
+36 9 j
+35 9 j
+36 8 j
+35 8 j
+36 8 j
+35 9 j
+36 8 j
+36 7 j
+35 8 j
+36 8 j
+35 8 j
+36 7 j
+35 8 j
+36 7 j
+35 7 j
+36 7 j
+36 8 j
+35 7 j
+36 7 j
+35 6 j
+36 7 j
+35 7 j
+36 6 j
+35 7 j
+36 6 j
+36 7 j
+35 6 j
+36 6 j
+355 59 j
+356 52 j
+355 46 j
+356 40 j
+356 36 j
+355 33 j
+356 28 j
+355 25 j
+356 23 j
+355 20 j
+356 17 j
+355 16 j
+356 14 j
+356 12 j
+355 11 j
+356 10 j
+355 9 j
+356 7 j
+355 7 j
+356 6 j
+E
+B
+1588 1343 m
+3 1 j
+4 x
+3 1 j
+4 1 j
+3 x
+4 1 j
+3 1 j
+4 x
+3 1 j
+36 6 j
+36 6 j
+35 6 j
+36 6 j
+35 6 j
+36 6 j
+35 6 j
+36 5 j
+35 6 j
+36 6 j
+36 6 j
+35 5 j
+36 6 j
+35 6 j
+36 5 j
+35 6 j
+36 5 j
+35 6 j
+36 5 j
+36 6 j
+35 5 j
+36 5 j
+35 6 j
+36 5 j
+35 5 j
+36 5 j
+35 5 j
+36 5 j
+36 6 j
+35 5 j
+36 5 j
+35 5 j
+36 5 j
+35 4 j
+36 5 j
+35 5 j
+36 5 j
+36 5 j
+35 5 j
+36 4 j
+35 5 j
+36 5 j
+35 4 j
+36 5 j
+35 4 j
+36 5 j
+36 5 j
+35 4 j
+36 4 j
+355 43 j
+356 41 j
+355 38 j
+356 35 j
+356 33 j
+355 31 j
+356 29 j
+355 27 j
+356 26 j
+355 24 j
+356 22 j
+355 21 j
+356 19 j
+356 19 j
+355 17 j
+356 16 j
+355 15 j
+356 14 j
+355 14 j
+356 12 j
+E
+B
+1588 1229 m
+3 101 j
+4 89 j
+3 77 j
+4 69 j
+3 60 j
+4 52 j
+3 46 j
+4 41 j
+3 36 j
+36 186 j
+36 51 j
+35 14 j
+36 4 j
+35 1 j
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 453 m
+3 49 j
+4 2 j
+3 x
+4 x
+3 x
+4 x
+3 x
+4 x
+3 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1332 m
+3 11 j
+4 12 j
+3 11 j
+4 11 j
+3 10 j
+4 11 j
+3 11 j
+4 10 j
+3 10 j
+36 96 j
+36 85 j
+35 75 j
+36 67 j
+35 59 j
+36 52 j
+35 46 j
+36 41 j
+35 36 j
+36 32 j
+36 28 j
+35 25 j
+36 22 j
+35 20 j
+36 17 j
+35 15 j
+36 14 j
+35 12 j
+36 10 j
+36 10 j
+35 8 j
+36 7 j
+35 7 j
+36 5 j
+35 6 j
+36 4 j
+35 4 j
+36 4 j
+36 3 j
+35 2 j
+36 3 j
+35 2 j
+36 2 j
+35 2 j
+36 1 j
+35 1 j
+36 2 j
+36 1 j
+35 x
+36 1 j
+35 1 j
+36 1 j
+35 x
+36 1 j
+35 x
+36 1 j
+36 x
+35 x
+36 x
+355 2 j
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1335 m
+3 8 j
+4 8 j
+3 8 j
+4 8 j
+3 8 j
+4 8 j
+3 8 j
+4 8 j
+3 7 j
+36 73 j
+36 67 j
+35 61 j
+36 56 j
+35 51 j
+36 47 j
+35 43 j
+36 39 j
+35 36 j
+36 33 j
+36 30 j
+35 28 j
+36 25 j
+35 23 j
+36 21 j
+35 20 j
+36 17 j
+35 17 j
+36 15 j
+36 13 j
+35 13 j
+36 11 j
+35 10 j
+36 10 j
+35 9 j
+36 8 j
+35 7 j
+36 7 j
+36 6 j
+35 6 j
+36 5 j
+35 4 j
+36 5 j
+35 4 j
+36 3 j
+35 4 j
+36 3 j
+36 2 j
+35 3 j
+36 2 j
+35 2 j
+36 2 j
+35 2 j
+36 2 j
+35 1 j
+36 2 j
+36 1 j
+35 1 j
+36 1 j
+355 7 j
+356 3 j
+355 1 j
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1335 m
+3 8 j
+4 8 j
+3 8 j
+4 8 j
+3 7 j
+4 8 j
+3 8 j
+4 7 j
+3 8 j
+36 72 j
+36 66 j
+35 60 j
+36 56 j
+35 50 j
+36 47 j
+35 43 j
+36 39 j
+35 36 j
+36 32 j
+36 31 j
+35 27 j
+36 25 j
+35 24 j
+36 21 j
+35 20 j
+36 17 j
+35 17 j
+36 15 j
+36 14 j
+35 12 j
+36 12 j
+35 10 j
+36 10 j
+35 9 j
+36 8 j
+35 8 j
+36 7 j
+36 6 j
+35 6 j
+36 5 j
+35 5 j
+36 4 j
+35 5 j
+36 3 j
+35 4 j
+36 3 j
+36 3 j
+35 2 j
+36 3 j
+35 2 j
+36 2 j
+35 2 j
+36 2 j
+35 1 j
+36 2 j
+36 1 j
+35 1 j
+36 1 j
+355 7 j
+356 3 j
+355 2 j
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1340 m
+3 4 j
+4 4 j
+3 3 j
+4 4 j
+3 4 j
+4 3 j
+3 4 j
+4 3 j
+3 4 j
+36 35 j
+36 33 j
+35 33 j
+36 31 j
+35 29 j
+36 29 j
+35 28 j
+36 26 j
+35 26 j
+36 24 j
+36 24 j
+35 22 j
+36 22 j
+35 21 j
+36 20 j
+35 19 j
+36 19 j
+35 18 j
+36 17 j
+36 17 j
+35 16 j
+36 15 j
+35 15 j
+36 14 j
+35 13 j
+36 13 j
+35 13 j
+36 12 j
+36 12 j
+35 11 j
+36 10 j
+35 11 j
+36 10 j
+35 9 j
+36 9 j
+35 9 j
+36 9 j
+36 8 j
+35 8 j
+36 7 j
+35 8 j
+36 7 j
+35 6 j
+36 7 j
+35 6 j
+36 6 j
+36 6 j
+35 5 j
+36 5 j
+355 43 j
+356 29 j
+355 20 j
+356 13 j
+356 9 j
+355 6 j
+356 4 j
+355 3 j
+356 2 j
+355 1 j
+356 1 j
+355 x
+356 1 j
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1338 m
+3 5 j
+4 5 j
+3 5 j
+4 5 j
+3 6 j
+4 5 j
+3 5 j
+4 5 j
+3 5 j
+36 48 j
+36 45 j
+35 44 j
+36 40 j
+35 39 j
+36 37 j
+35 34 j
+36 33 j
+35 31 j
+36 29 j
+36 28 j
+35 26 j
+36 24 j
+35 24 j
+36 22 j
+35 21 j
+36 20 j
+35 18 j
+36 18 j
+36 17 j
+35 16 j
+36 15 j
+35 14 j
+36 13 j
+35 13 j
+36 12 j
+35 11 j
+36 11 j
+36 10 j
+35 10 j
+36 9 j
+35 8 j
+36 9 j
+35 7 j
+36 8 j
+35 6 j
+36 7 j
+36 6 j
+35 6 j
+36 5 j
+35 6 j
+36 5 j
+35 4 j
+36 5 j
+35 4 j
+36 4 j
+36 3 j
+35 4 j
+36 3 j
+355 25 j
+356 14 j
+355 9 j
+356 4 j
+356 3 j
+355 1 j
+356 1 j
+355 1 j
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1342 m
+3 1 j
+4 2 j
+3 1 j
+4 1 j
+3 2 j
+4 1 j
+3 1 j
+4 2 j
+3 1 j
+36 13 j
+36 13 j
+35 13 j
+36 12 j
+35 13 j
+36 12 j
+35 12 j
+36 12 j
+35 11 j
+36 12 j
+36 11 j
+35 12 j
+36 11 j
+35 11 j
+36 10 j
+35 11 j
+36 10 j
+35 11 j
+36 10 j
+36 10 j
+35 10 j
+36 9 j
+35 10 j
+36 9 j
+35 10 j
+36 9 j
+35 9 j
+36 9 j
+36 9 j
+35 8 j
+36 9 j
+35 8 j
+36 9 j
+35 8 j
+36 8 j
+35 8 j
+36 8 j
+36 8 j
+35 7 j
+36 8 j
+35 7 j
+36 8 j
+35 7 j
+36 7 j
+35 7 j
+36 7 j
+36 7 j
+35 6 j
+36 7 j
+355 61 j
+356 53 j
+355 47 j
+356 40 j
+356 34 j
+355 30 j
+356 27 j
+355 22 j
+356 20 j
+355 17 j
+356 15 j
+355 13 j
+356 11 j
+356 9 j
+355 9 j
+356 7 j
+355 6 j
+356 6 j
+355 4 j
+356 5 j
+E
+B
+1588 1336 m
+3 7 j
+4 6 j
+3 7 j
+4 7 j
+3 7 j
+4 7 j
+3 6 j
+4 7 j
+3 6 j
+36 63 j
+36 59 j
+35 54 j
+36 50 j
+35 47 j
+36 43 j
+35 40 j
+36 37 j
+35 35 j
+36 32 j
+36 30 j
+35 28 j
+36 25 j
+35 24 j
+36 22 j
+35 21 j
+36 19 j
+35 17 j
+36 17 j
+36 15 j
+35 14 j
+36 13 j
+35 12 j
+36 12 j
+35 10 j
+36 10 j
+35 9 j
+36 8 j
+36 8 j
+35 7 j
+36 7 j
+35 6 j
+36 6 j
+35 5 j
+36 5 j
+35 5 j
+36 4 j
+36 4 j
+35 4 j
+36 3 j
+35 4 j
+36 2 j
+35 3 j
+36 3 j
+35 2 j
+36 2 j
+36 2 j
+35 2 j
+36 2 j
+355 12 j
+356 5 j
+355 3 j
+356 1 j
+356 1 j
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1340 m
+3 4 j
+4 3 j
+3 4 j
+4 3 j
+3 3 j
+4 4 j
+3 3 j
+4 4 j
+3 3 j
+36 33 j
+36 32 j
+35 31 j
+36 30 j
+35 28 j
+36 28 j
+35 27 j
+36 25 j
+35 25 j
+36 24 j
+36 22 j
+35 22 j
+36 22 j
+35 20 j
+36 20 j
+35 19 j
+36 18 j
+35 18 j
+36 17 j
+36 16 j
+35 16 j
+36 15 j
+35 15 j
+36 14 j
+35 13 j
+36 13 j
+35 13 j
+36 12 j
+36 12 j
+35 11 j
+36 11 j
+35 10 j
+36 10 j
+35 10 j
+36 9 j
+35 9 j
+36 9 j
+36 9 j
+35 8 j
+36 7 j
+35 8 j
+36 7 j
+35 7 j
+36 7 j
+35 6 j
+36 6 j
+36 6 j
+35 6 j
+36 6 j
+355 45 j
+356 31 j
+355 22 j
+356 15 j
+356 10 j
+355 7 j
+356 5 j
+355 3 j
+356 2 j
+355 2 j
+356 1 j
+355 1 j
+356 x
+356 1 j
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1342 m
+3 x
+4 1 j
+3 1 j
+4 1 j
+3 1 j
+4 1 j
+3 1 j
+4 1 j
+3 1 j
+36 9 j
+36 8 j
+35 9 j
+36 9 j
+35 8 j
+36 9 j
+35 8 j
+36 9 j
+35 8 j
+36 8 j
+36 8 j
+35 8 j
+36 8 j
+35 8 j
+36 8 j
+35 8 j
+36 7 j
+35 8 j
+36 7 j
+36 8 j
+35 7 j
+36 8 j
+35 7 j
+36 7 j
+35 7 j
+36 7 j
+35 7 j
+36 7 j
+36 7 j
+35 7 j
+36 6 j
+35 7 j
+36 6 j
+35 7 j
+36 6 j
+35 7 j
+36 6 j
+36 6 j
+35 7 j
+36 6 j
+35 6 j
+36 6 j
+35 6 j
+36 6 j
+35 5 j
+36 6 j
+36 6 j
+35 6 j
+36 5 j
+355 54 j
+356 48 j
+355 44 j
+356 40 j
+356 37 j
+355 33 j
+356 30 j
+355 27 j
+356 25 j
+355 22 j
+356 20 j
+355 19 j
+356 17 j
+356 15 j
+355 14 j
+356 13 j
+355 11 j
+356 10 j
+355 10 j
+356 9 j
+E
+B
+1588 1328 m
+3 16 j
+4 15 j
+3 15 j
+4 14 j
+3 15 j
+4 14 j
+3 14 j
+4 14 j
+3 13 j
+36 123 j
+36 104 j
+35 88 j
+36 75 j
+35 63 j
+36 53 j
+35 45 j
+36 38 j
+35 32 j
+36 27 j
+36 23 j
+35 19 j
+36 17 j
+35 14 j
+36 11 j
+35 10 j
+36 9 j
+35 7 j
+36 6 j
+36 5 j
+35 4 j
+36 4 j
+35 3 j
+36 2 j
+35 3 j
+36 1 j
+35 2 j
+36 1 j
+36 1 j
+35 1 j
+36 1 j
+35 1 j
+36 x
+35 1 j
+36 x
+35 1 j
+36 x
+36 x
+35 x
+36 1 j
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1151 m
+3 153 j
+4 122 j
+3 97 j
+4 77 j
+3 61 j
+4 49 j
+3 39 j
+4 31 j
+3 25 j
+36 86 j
+36 9 j
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1342 m
+3 1 j
+4 1 j
+3 1 j
+4 2 j
+3 1 j
+4 1 j
+3 1 j
+4 1 j
+3 1 j
+36 12 j
+36 11 j
+35 12 j
+36 11 j
+35 11 j
+36 11 j
+35 11 j
+36 10 j
+35 11 j
+36 10 j
+36 11 j
+35 10 j
+36 10 j
+35 10 j
+36 9 j
+35 10 j
+36 9 j
+35 10 j
+36 9 j
+36 9 j
+35 9 j
+36 9 j
+35 9 j
+36 9 j
+35 8 j
+36 9 j
+35 8 j
+36 8 j
+36 9 j
+35 8 j
+36 8 j
+35 8 j
+36 7 j
+35 8 j
+36 8 j
+35 7 j
+36 7 j
+36 8 j
+35 7 j
+36 7 j
+35 7 j
+36 7 j
+35 7 j
+36 7 j
+35 6 j
+36 7 j
+36 6 j
+35 7 j
+36 6 j
+355 60 j
+356 52 j
+355 46 j
+356 41 j
+356 36 j
+355 31 j
+356 28 j
+355 25 j
+356 22 j
+355 19 j
+356 17 j
+355 14 j
+356 14 j
+356 11 j
+355 10 j
+356 9 j
+355 8 j
+356 7 j
+355 6 j
+356 6 j
+E
+B
+1588 1339 m
+3 4 j
+4 4 j
+3 4 j
+4 4 j
+3 4 j
+4 4 j
+3 4 j
+4 4 j
+3 3 j
+36 39 j
+36 36 j
+35 35 j
+36 34 j
+35 32 j
+36 31 j
+35 29 j
+36 28 j
+35 27 j
+36 26 j
+36 25 j
+35 24 j
+36 22 j
+35 22 j
+36 21 j
+35 20 j
+36 19 j
+35 18 j
+36 18 j
+36 17 j
+35 16 j
+36 15 j
+35 15 j
+36 14 j
+35 13 j
+36 13 j
+35 13 j
+36 12 j
+36 11 j
+35 11 j
+36 10 j
+35 10 j
+36 10 j
+35 9 j
+36 9 j
+35 8 j
+36 8 j
+36 8 j
+35 7 j
+36 7 j
+35 7 j
+36 7 j
+35 6 j
+36 6 j
+35 6 j
+36 5 j
+36 5 j
+35 5 j
+36 5 j
+355 38 j
+356 25 j
+355 16 j
+356 10 j
+356 7 j
+355 4 j
+356 3 j
+355 2 j
+356 1 j
+355 1 j
+356 1 j
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1336 m
+3 7 j
+4 8 j
+3 7 j
+4 7 j
+3 7 j
+4 7 j
+3 8 j
+4 6 j
+3 7 j
+36 67 j
+36 61 j
+35 57 j
+36 52 j
+35 48 j
+36 45 j
+35 41 j
+36 38 j
+35 35 j
+36 33 j
+36 30 j
+35 28 j
+36 25 j
+35 24 j
+36 22 j
+35 20 j
+36 18 j
+35 18 j
+36 16 j
+36 14 j
+35 14 j
+36 12 j
+35 12 j
+36 11 j
+35 10 j
+36 9 j
+35 8 j
+36 8 j
+36 7 j
+35 7 j
+36 6 j
+35 6 j
+36 5 j
+35 5 j
+36 4 j
+35 4 j
+36 4 j
+36 4 j
+35 3 j
+36 3 j
+35 3 j
+36 2 j
+35 3 j
+36 2 j
+35 2 j
+36 2 j
+36 2 j
+35 1 j
+36 2 j
+355 9 j
+356 5 j
+355 2 j
+356 1 j
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1341 m
+3 2 j
+4 2 j
+3 2 j
+4 2 j
+3 2 j
+4 2 j
+3 2 j
+4 2 j
+3 2 j
+36 20 j
+36 19 j
+35 19 j
+36 18 j
+35 19 j
+36 17 j
+35 18 j
+36 17 j
+35 16 j
+36 17 j
+36 15 j
+35 16 j
+36 15 j
+35 15 j
+36 15 j
+35 14 j
+36 14 j
+35 14 j
+36 13 j
+36 13 j
+35 13 j
+36 13 j
+35 12 j
+36 12 j
+35 12 j
+36 11 j
+35 11 j
+36 11 j
+36 11 j
+35 11 j
+36 10 j
+35 10 j
+36 10 j
+35 10 j
+36 9 j
+35 9 j
+36 9 j
+36 9 j
+35 9 j
+36 8 j
+35 9 j
+36 8 j
+35 8 j
+36 8 j
+35 7 j
+36 8 j
+36 7 j
+35 7 j
+36 7 j
+355 62 j
+356 50 j
+355 40 j
+356 33 j
+356 26 j
+355 21 j
+356 17 j
+355 13 j
+356 11 j
+355 9 j
+356 7 j
+355 6 j
+356 5 j
+356 3 j
+355 3 j
+356 3 j
+355 2 j
+356 1 j
+355 1 j
+356 1 j
+E
+B
+1588 1340 m
+3 4 j
+4 4 j
+3 3 j
+4 4 j
+3 3 j
+4 4 j
+3 3 j
+4 4 j
+3 4 j
+36 34 j
+36 33 j
+35 32 j
+36 31 j
+35 29 j
+36 29 j
+35 27 j
+36 26 j
+35 26 j
+36 24 j
+36 23 j
+35 23 j
+36 22 j
+35 20 j
+36 21 j
+35 19 j
+36 18 j
+35 18 j
+36 17 j
+36 17 j
+35 16 j
+36 15 j
+35 15 j
+36 14 j
+35 13 j
+36 13 j
+35 13 j
+36 12 j
+36 12 j
+35 11 j
+36 11 j
+35 10 j
+36 10 j
+35 10 j
+36 9 j
+35 9 j
+36 8 j
+36 8 j
+35 8 j
+36 8 j
+35 7 j
+36 7 j
+35 7 j
+36 6 j
+35 7 j
+36 6 j
+36 5 j
+35 6 j
+36 5 j
+355 44 j
+356 29 j
+355 20 j
+356 14 j
+356 9 j
+355 6 j
+356 5 j
+355 2 j
+356 2 j
+355 2 j
+356 1 j
+355 x
+356 1 j
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1331 m
+3 12 j
+4 12 j
+3 11 j
+4 12 j
+3 12 j
+4 11 j
+3 11 j
+4 11 j
+3 11 j
+36 101 j
+36 89 j
+35 77 j
+36 69 j
+35 60 j
+36 52 j
+35 47 j
+36 40 j
+35 36 j
+36 31 j
+36 28 j
+35 24 j
+36 21 j
+35 18 j
+36 17 j
+35 14 j
+36 12 j
+35 11 j
+36 10 j
+36 9 j
+35 7 j
+36 7 j
+35 5 j
+36 5 j
+35 5 j
+36 4 j
+35 3 j
+36 3 j
+36 3 j
+35 2 j
+36 2 j
+35 2 j
+36 1 j
+35 2 j
+36 1 j
+35 1 j
+36 1 j
+36 1 j
+35 x
+36 1 j
+35 1 j
+36 x
+35 x
+36 1 j
+35 x
+36 x
+36 1 j
+35 x
+36 x
+355 1 j
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 808 m
+3 231 j
+4 100 j
+3 43 j
+4 18 j
+3 8 j
+4 4 j
+3 1 j
+4 1 j
+3 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1342 m
+3 1 j
+4 1 j
+3 1 j
+4 1 j
+3 1 j
+4 1 j
+3 1 j
+4 1 j
+3 1 j
+36 10 j
+36 10 j
+35 10 j
+36 10 j
+35 10 j
+36 9 j
+35 10 j
+36 9 j
+35 10 j
+36 9 j
+36 9 j
+35 9 j
+36 9 j
+35 9 j
+36 9 j
+35 8 j
+36 9 j
+35 8 j
+36 9 j
+36 8 j
+35 8 j
+36 8 j
+35 8 j
+36 8 j
+35 8 j
+36 8 j
+35 7 j
+36 8 j
+36 7 j
+35 8 j
+36 7 j
+35 7 j
+36 7 j
+35 7 j
+36 7 j
+35 7 j
+36 7 j
+36 7 j
+35 7 j
+36 6 j
+35 7 j
+36 6 j
+35 7 j
+36 6 j
+35 6 j
+36 7 j
+36 6 j
+35 6 j
+36 6 j
+355 57 j
+356 50 j
+355 46 j
+356 40 j
+356 37 j
+355 32 j
+356 30 j
+355 26 j
+356 23 j
+355 21 j
+356 19 j
+355 17 j
+356 15 j
+356 14 j
+355 12 j
+356 11 j
+355 10 j
+356 8 j
+355 8 j
+356 7 j
+E
+B
+1588 1317 m
+3 26 j
+4 25 j
+3 24 j
+4 24 j
+3 23 j
+4 22 j
+3 22 j
+4 21 j
+3 20 j
+36 176 j
+36 132 j
+35 100 j
+36 74 j
+35 56 j
+36 43 j
+35 31 j
+36 24 j
+35 18 j
+36 14 j
+36 10 j
+35 7 j
+36 6 j
+35 4 j
+36 4 j
+35 2 j
+36 2 j
+35 1 j
+36 1 j
+36 1 j
+35 1 j
+36 x
+35 x
+36 1 j
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1326 m
+3 17 j
+4 17 j
+3 16 j
+4 16 j
+3 16 j
+4 15 j
+3 16 j
+4 15 j
+3 14 j
+36 133 j
+36 110 j
+35 91 j
+36 76 j
+35 63 j
+36 53 j
+35 43 j
+36 36 j
+35 30 j
+36 25 j
+36 21 j
+35 17 j
+36 14 j
+35 12 j
+36 10 j
+35 8 j
+36 7 j
+35 6 j
+36 5 j
+36 3 j
+35 4 j
+36 2 j
+35 3 j
+36 1 j
+35 2 j
+36 1 j
+35 1 j
+36 1 j
+36 1 j
+35 1 j
+36 x
+35 x
+36 1 j
+35 x
+36 x
+35 1 j
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 420 m
+3 18 j
+4 x
+3 x
+4 x
+3 x
+4 x
+3 x
+4 x
+3 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1342 m
+3 1 j
+4 1 j
+3 2 j
+4 1 j
+3 1 j
+4 1 j
+3 2 j
+4 1 j
+3 1 j
+36 13 j
+36 12 j
+35 12 j
+36 12 j
+35 12 j
+36 11 j
+35 12 j
+36 11 j
+35 11 j
+36 11 j
+36 11 j
+35 11 j
+36 10 j
+35 11 j
+36 10 j
+35 10 j
+36 10 j
+35 10 j
+36 10 j
+36 9 j
+35 10 j
+36 9 j
+35 9 j
+36 9 j
+35 9 j
+36 9 j
+35 9 j
+36 9 j
+36 8 j
+35 9 j
+36 8 j
+35 8 j
+36 8 j
+35 8 j
+36 8 j
+35 8 j
+36 7 j
+36 8 j
+35 7 j
+36 8 j
+35 7 j
+36 7 j
+35 7 j
+36 7 j
+35 7 j
+36 7 j
+36 6 j
+35 7 j
+36 6 j
+355 61 j
+356 53 j
+355 46 j
+356 41 j
+356 35 j
+355 31 j
+356 27 j
+355 23 j
+356 21 j
+355 18 j
+356 16 j
+355 14 j
+356 12 j
+356 10 j
+355 9 j
+356 8 j
+355 8 j
+356 6 j
+355 5 j
+356 5 j
+E
+B
+1588 1334 m
+3 8 j
+4 9 j
+3 9 j
+4 8 j
+3 9 j
+4 8 j
+3 8 j
+4 9 j
+3 8 j
+36 77 j
+36 71 j
+35 64 j
+36 59 j
+35 53 j
+36 48 j
+35 44 j
+36 40 j
+35 36 j
+36 33 j
+36 30 j
+35 27 j
+36 25 j
+35 23 j
+36 20 j
+35 19 j
+36 17 j
+35 15 j
+36 14 j
+36 13 j
+35 12 j
+36 10 j
+35 10 j
+36 9 j
+35 8 j
+36 7 j
+35 6 j
+36 6 j
+36 6 j
+35 5 j
+36 4 j
+35 4 j
+36 4 j
+35 4 j
+36 3 j
+35 2 j
+36 3 j
+36 2 j
+35 2 j
+36 2 j
+35 2 j
+36 2 j
+35 1 j
+36 1 j
+35 2 j
+36 1 j
+36 1 j
+35 1 j
+36 x
+355 5 j
+356 2 j
+355 1 j
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1198 m
+3 123 j
+4 104 j
+3 88 j
+4 74 j
+3 63 j
+4 53 j
+3 45 j
+4 38 j
+3 32 j
+36 144 j
+36 26 j
+35 5 j
+36 1 j
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1130 m
+3 166 j
+4 127 j
+3 99 j
+4 76 j
+3 59 j
+4 46 j
+3 35 j
+4 28 j
+3 21 j
+36 66 j
+36 5 j
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1079 m
+3 191 j
+4 136 j
+3 99 j
+4 71 j
+3 50 j
+4 37 j
+3 26 j
+4 19 j
+3 14 j
+36 33 j
+36 1 j
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1037 m
+3 207 j
+4 139 j
+3 95 j
+4 63 j
+3 43 j
+4 29 j
+3 19 j
+4 13 j
+3 9 j
+36 18 j
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1340 m
+3 3 j
+4 4 j
+3 3 j
+4 3 j
+3 3 j
+4 4 j
+3 3 j
+4 3 j
+3 3 j
+36 32 j
+36 30 j
+35 30 j
+36 28 j
+35 27 j
+36 27 j
+35 25 j
+36 25 j
+35 24 j
+36 23 j
+36 22 j
+35 21 j
+36 21 j
+35 20 j
+36 19 j
+35 19 j
+36 18 j
+35 17 j
+36 17 j
+36 16 j
+35 15 j
+36 15 j
+35 15 j
+36 14 j
+35 13 j
+36 14 j
+35 12 j
+36 12 j
+36 12 j
+35 11 j
+36 11 j
+35 11 j
+36 10 j
+35 10 j
+36 9 j
+35 10 j
+36 8 j
+36 9 j
+35 8 j
+36 8 j
+35 8 j
+36 7 j
+35 7 j
+36 7 j
+35 7 j
+36 6 j
+36 7 j
+35 6 j
+36 5 j
+355 48 j
+356 34 j
+355 24 j
+356 16 j
+356 12 j
+355 8 j
+356 6 j
+355 4 j
+356 3 j
+355 2 j
+356 1 j
+355 1 j
+356 1 j
+356 x
+355 1 j
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 478 m
+3 70 j
+4 6 j
+3 x
+4 x
+3 x
+4 x
+3 x
+4 x
+3 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1342 m
+3 1 j
+4 1 j
+3 2 j
+4 1 j
+3 1 j
+4 1 j
+3 2 j
+4 1 j
+3 1 j
+36 12 j
+36 12 j
+35 12 j
+36 12 j
+35 12 j
+36 11 j
+35 11 j
+36 12 j
+35 11 j
+36 11 j
+36 10 j
+35 11 j
+36 10 j
+35 11 j
+36 10 j
+35 10 j
+36 10 j
+35 10 j
+36 9 j
+36 10 j
+35 9 j
+36 9 j
+35 9 j
+36 10 j
+35 8 j
+36 9 j
+35 9 j
+36 8 j
+36 9 j
+35 8 j
+36 8 j
+35 9 j
+36 8 j
+35 8 j
+36 7 j
+35 8 j
+36 8 j
+36 7 j
+35 8 j
+36 7 j
+35 7 j
+36 7 j
+35 7 j
+36 7 j
+35 7 j
+36 7 j
+36 6 j
+35 7 j
+36 6 j
+355 61 j
+356 52 j
+355 47 j
+356 40 j
+356 36 j
+355 31 j
+356 27 j
+355 24 j
+356 21 j
+355 18 j
+356 16 j
+355 14 j
+356 12 j
+356 11 j
+355 9 j
+356 8 j
+355 8 j
+356 6 j
+355 6 j
+356 4 j
+E
+B
+1588 1332 m
+3 11 j
+4 11 j
+3 11 j
+4 11 j
+3 11 j
+4 11 j
+3 10 j
+4 10 j
+3 11 j
+36 95 j
+36 85 j
+35 75 j
+36 66 j
+35 59 j
+36 52 j
+35 46 j
+36 40 j
+35 37 j
+36 31 j
+36 29 j
+35 25 j
+36 22 j
+35 20 j
+36 17 j
+35 15 j
+36 14 j
+35 12 j
+36 11 j
+36 9 j
+35 9 j
+36 7 j
+35 7 j
+36 6 j
+35 5 j
+36 4 j
+35 4 j
+36 4 j
+36 3 j
+35 3 j
+36 2 j
+35 3 j
+36 1 j
+35 2 j
+36 2 j
+35 1 j
+36 1 j
+36 1 j
+35 1 j
+36 1 j
+35 1 j
+36 x
+35 1 j
+36 1 j
+35 x
+36 x
+36 1 j
+35 x
+36 x
+355 2 j
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1093 m
+3 184 j
+4 135 j
+3 99 j
+4 72 j
+3 54 j
+4 39 j
+3 29 j
+4 21 j
+3 16 j
+36 41 j
+36 1 j
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 712 m
+3 208 j
+4 69 j
+3 22 j
+4 8 j
+3 2 j
+4 1 j
+3 x
+4 x
+3 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 971 m
+3 226 j
+4 136 j
+3 82 j
+4 50 j
+3 30 j
+4 18 j
+3 11 j
+4 6 j
+3 4 j
+36 6 j
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1341 m
+3 3 j
+4 3 j
+3 3 j
+4 3 j
+3 2 j
+4 3 j
+3 3 j
+4 3 j
+3 3 j
+36 27 j
+36 26 j
+35 25 j
+36 25 j
+35 24 j
+36 23 j
+35 23 j
+36 22 j
+35 21 j
+36 21 j
+36 20 j
+35 19 j
+36 19 j
+35 18 j
+36 18 j
+35 17 j
+36 17 j
+35 16 j
+36 16 j
+36 15 j
+35 15 j
+36 15 j
+35 14 j
+36 13 j
+35 13 j
+36 13 j
+35 12 j
+36 12 j
+36 12 j
+35 11 j
+36 11 j
+35 11 j
+36 10 j
+35 10 j
+36 10 j
+35 10 j
+36 9 j
+36 9 j
+35 8 j
+36 9 j
+35 8 j
+36 8 j
+35 7 j
+36 8 j
+35 7 j
+36 7 j
+36 7 j
+35 6 j
+36 7 j
+355 54 j
+356 41 j
+355 29 j
+356 22 j
+356 17 j
+355 12 j
+356 9 j
+355 7 j
+356 4 j
+355 4 j
+356 3 j
+355 2 j
+356 1 j
+356 1 j
+355 1 j
+356 1 j
+355 x
+356 1 j
+355 x
+356 x
+E
+B
+1588 1307 m
+3 34 j
+4 34 j
+3 32 j
+4 31 j
+3 29 j
+4 29 j
+3 27 j
+4 27 j
+3 25 j
+36 206 j
+36 139 j
+35 95 j
+36 64 j
+35 43 j
+36 29 j
+35 20 j
+36 13 j
+35 9 j
+36 7 j
+36 4 j
+35 3 j
+36 2 j
+35 1 j
+36 1 j
+35 x
+36 1 j
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 964 m
+3 227 j
+4 135 j
+3 81 j
+4 48 j
+3 29 j
+4 17 j
+3 10 j
+4 6 j
+3 4 j
+36 5 j
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1341 m
+3 3 j
+4 2 j
+3 3 j
+4 3 j
+3 2 j
+4 3 j
+3 2 j
+4 3 j
+3 2 j
+36 25 j
+36 25 j
+35 23 j
+36 24 j
+35 22 j
+36 22 j
+35 21 j
+36 21 j
+35 20 j
+36 19 j
+36 19 j
+35 19 j
+36 18 j
+35 17 j
+36 17 j
+35 17 j
+36 16 j
+35 15 j
+36 15 j
+36 15 j
+35 15 j
+36 14 j
+35 13 j
+36 13 j
+35 13 j
+36 13 j
+35 12 j
+36 12 j
+36 11 j
+35 12 j
+36 11 j
+35 10 j
+36 10 j
+35 11 j
+36 9 j
+35 10 j
+36 9 j
+36 9 j
+35 9 j
+36 8 j
+35 8 j
+36 9 j
+35 7 j
+36 8 j
+35 7 j
+36 8 j
+36 7 j
+35 6 j
+36 7 j
+355 57 j
+356 43 j
+355 33 j
+356 25 j
+356 19 j
+355 14 j
+356 11 j
+355 8 j
+356 6 j
+355 5 j
+356 3 j
+355 3 j
+356 2 j
+356 2 j
+355 1 j
+356 1 j
+355 x
+356 1 j
+355 x
+356 1 j
+E
+B
+1588 1094 m
+3 184 j
+4 135 j
+3 99 j
+4 73 j
+3 53 j
+4 40 j
+3 28 j
+4 22 j
+3 15 j
+36 42 j
+36 1 j
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+B
+1588 1325 m
+3 19 j
+4 18 j
+3 18 j
+4 17 j
+3 17 j
+4 17 j
+3 16 j
+4 16 j
+3 16 j
+36 141 j
+36 115 j
+35 94 j
+36 77 j
+35 62 j
+36 52 j
+35 42 j
+36 34 j
+35 28 j
+36 23 j
+36 18 j
+35 15 j
+36 13 j
+35 10 j
+36 8 j
+35 7 j
+36 6 j
+35 4 j
+36 4 j
+36 3 j
+35 2 j
+36 2 j
+35 2 j
+36 1 j
+35 2 j
+36 x
+35 1 j
+36 1 j
+36 x
+35 1 j
+36 x
+35 x
+36 1 j
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+35 x
+36 x
+36 x
+35 x
+36 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+356 x
+355 x
+356 x
+355 x
+356 x
+355 x
+356 x
+E
+Z
+%%Trailer
+%%Pages: 1
+%%DocumentNeededResources: font Helvetica
+W
+%%EOF
