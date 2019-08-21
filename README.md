@@ -17,6 +17,12 @@ After the coffee break we will go through a tutorial to see the specific command
 
 It would be beneficial if attendees could bring their laptop with the latest version of R installed. The list of R packages to be installed before the workshop is below:
 
-- INLA (using install.packages("INLA", repos=c(getOption("repos"), INLA="https://inla.r-inla-download.org/R/stable"), dep=TRUE))
+- INLA
+```r
+install.packages("INLA", repos=c(getOption("repos"), INLA="https://inla.r-inla-download.org/R/stable"), dep=TRUE))
+```
 
-- rgdal, sp, spdep (for the maps, using install.packages(c("rgdal","sp","spdep"))
+- rgdal, sp, spdep (for the maps)
+```r
+install.packages(c("rgdal","sp","spdep"))
+```
