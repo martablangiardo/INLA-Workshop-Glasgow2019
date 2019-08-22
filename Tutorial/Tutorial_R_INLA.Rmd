@@ -1,0 +1,452 @@
+---
+title: "R-INLA Tutorial"
+author:
+- Marta Blangiardo - Imperial College
+- Michela Cameletti - University of Bergamo
+subtitle: GEOMED 2019 Conference - August 27, 2019
+
+date: "Last update: Aug. 22, 2019"
+
+output:
+  html_document:
+    highlight: pygments
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,warning=TRUE,message=TRUE)
+options(width=100)
+#opts_chunk$set(comment = "", warning = FALSE, message = FALSE, echo = TRUE, tidy = FALSE,       size="small")
+```
+
+
+
+## <span style="color:blue">1. Data description </span>
+We consider data about the number of suicides in 33 boroughs of London (2012-2014) ([datasourcelink](https://data.london.gov.uk/dataset/suicide-mortality-rates-borough)). The file **LondonSuicides.csv** contains data about the following variables: the number of suicides (`y`), the number of expected cases of suicides (`E`) and the value of the social deprivation index (`x1`).
+
+We first import and explore the data.
+```{r}
+mydir = "/Users/michelacameletti/Dropbox/INLA - course/Glasgow 2019/Tutorial/"
+#mydir = "/Users/marta/Dropbox/Teaching/INLA/Glasgow 2019/Tutorial/"
+setwd(mydir)
+LondonSuicides = read.csv("LondonSuicides.csv",sep=";",header=T)
+
+LondonSuicides$SMR = LondonSuicides$y/LondonSuicides$E
+
+dim(LondonSuicides)
+head(LondonSuicides)
+str(LondonSuicides)
+
+range(LondonSuicides$y)
+mean(LondonSuicides$y)
+var(LondonSuicides$y)
+```
+
+We have also a shapefile (**LDNSuicides.shp**) which contains the geographical information about the 33 boroughs of London. We import the shapefile using the `readOGR` function and then explore the data table.
+
+```{r}
+library(rgdal)
+london.shp = readOGR(paste0(mydir,"London_Borough.shp"))
+head(london.shp@data)
+dim(london.shp@data)
+plot(london.shp)
+```
+
+It is possible to plot the name of each borough (`NAME`) by placing it in the centroid of each area whose coordinate can be extracted with the `coordinates` function.
+```{r}
+head(coordinates(london.shp))
+plot(london.shp)
+text(coordinates(london.shp)[,1],
+     coordinates(london.shp)[,2],
+     london.shp@data$NAME, cex=0.7)
+```
+
+Once a variabile is available in the shapefile data table it is very easy to plot it. See for example the following code for obtaining the map of the `HECTARES` variable by using the `spplot` function.
+```{r}
+library(sp)
+spplot(london.shp,"HECTARES", col.regions = heat.colors(50))
+```
+
+
+### <span style="color:blue">1.1 Adjacency matrix creation </span>
+For implementing the spatial model we will later need the adjacency matrix (see page 40-43 of the lecture slides). The function `poly2nb` creates a binary adjacency matrix, so that two regions are neighbours only if they share at least one point in common boundary (i.e., queen adjacency).
+
+```{r}
+library(spdep)
+
+london.adj = poly2nb(london.shp,queen = T)
+summary(london.adj)
+```
+
+The following code can be used to plot the neighbourhood structure.
+```{r}
+plot(london.shp)
+plot(london.adj, coordinates(london.shp),
+     pch = ".", add = TRUE, col=4)
+points(coordinates(london.shp)[,1],coordinates(london.shp)[,2],bg="red", pch=21, cex=0.75)
+```
+
+It can be seen that due the river some areas are not connected. To avoid this artefact we use the `snap` argument (boundary points less than snap distance apart are considered to indicate contiguity; see [link](https://cran.r-project.org/web/packages/spdep/vignettes/nb.pdf).
+```{r}
+london.adj = poly2nb(london.shp,snap=700, queen = T)
+summary(london.adj)
+plot(london.shp)
+plot(london.adj, coordinates(london.shp),
+     pch = ".", add = TRUE, col=4)
+points(coordinates(london.shp)[,1],coordinates(london.shp)[,2],bg="red", pch=21, cex=0.75)
+```
+
+
+The function `nb2INLA` creates a file in the specified directory with the representation of the adjacency matrix as required by INLA for its spatial models.
+```{r}
+nb2INLA(file=paste0(mydir,"london.graph"),
+        nb=london.adj)
+dir() #see the new file london.graph
+london.adj.path = paste0(mydir,"london.graph")
+```
+
+### <span style="color:blue">2 Poisson-logNormal model (with covariate only) </span>
+We implement the following Poisson regression model for the observed number of suicides in the i-th area ($y_i$):
+\[
+y_i\sim \mbox{Poisson}(\phi_i E_i) \;\;\; i=1,...,33
+\]
+where $\phi_i$ is the relative risk and $E_i$ the expected number of cases. 
+
+The linear predictor is defined on the logarithm scale and is given by
+\[
+\eta_i=\log(\phi_i)=\beta_0 +  \beta_1 x_{1i} 
+\]
+where $\beta_0$ is the intercept, $x_{1i}$ is the value of the covariate $x_1$ for the i-th area, $\beta_1$ is the covariate coefficient. 
+
+By default the intercept $\beta_0$ has a Gaussian prior with mean and precision equal to zero. The covariate coefficient $\beta_1$ has a Gaussian prior by default with zero mean and precision equal to 0.001.
+
+```{r}
+library(INLA)
+formula = y ~ 1 + x1 
+output0 = inla(formula,
+              family = "poisson",
+              data = LondonSuicides,
+              E = E)
+
+summary(output0)
+```
+
+Note that `R-INLA` provides an estimate of the effective number of parameters (a measure of model complexity) and of the number of equivalent replicates (a measure of the number of independent observations in the data).
+
+To account for overdispersion in the data we include an i.i.d. Gaussian random effect in the model.
+
+### <span style="color:blue">3 Poisson-logNormal model (with covariate + iid random effect) </span>
+We implement the following Poisson regression model (see page 26 of lecture slides) for the observed number of suicides in the i-th area ($y_i$):
+\[
+y_i\sim \mbox{Poisson}(\phi_i E_i) \;\;\; i=1,...,33
+\]
+where $\phi_i$ is the relative risk and $E_i$ the expected number of cases. 
+
+The linear predictor is defined on the logarithm scale and is given by
+\[
+\eta_i=\log(\phi_i)=\beta_0 +  \beta_1 x_{1i} + v_{i},
+\]
+where $\beta_0$ is the intercept, $x_{1i}$ is the value of the covariate $x_1$ for the i-th area, $\beta_1$ is the covariate coefficient. $v_i$ represents the random effect which is assumed to be normally distributed with mean equal to zero and precision $\tau_v$. The precision $\tau_{v}$ is an hyperparameter with default prior given by $\mbox{logGamma}\sim(1, 0.00005)$ (see `inla.models()$latent$iid$hyper`).
+
+### <span style="color:blue">3.1 Run INLA </span>
+The model we want to estimate contains two fixed effects (the coefficients $\beta_0$ and $\beta_1$) and one random effect ($v_i$), which will be specified in `R-INLA` using the `f(...)` function. To deal with the random effect INLA needs an index variable (`id`) to map the effect to the areas.
+
+```{r}
+LondonSuicides$id = seq(1:nrow(LondonSuicides))
+head(LondonSuicides)
+```
+
+To run the model in `INLA` we have to specify first of all the formula
+
+```{r}
+formula = y ~ 1 + x1 + f(id,model="iid") 
+```
+
+Then the `inla` function is run to get the output: 
+```{r}
+output1 = inla(formula,
+              family = "poisson",
+              data = LondonSuicides,
+              E = E)
+
+summary(output1)
+names(output1)
+```
+
+Note the large posterior mean of the precision of the Gaussian random effect. This could indicate that the covariate explains the overdispersion in the data well.
+
+### <span style="color:blue">3.2 Exploring the output: fixed effects and hyperparameters</span>
+The posterior summary statistics of the fixed effects are contained in the `summary.fixed` object:
+```{r}
+# Summary statistics of the fixed effects
+output1$summary.fixed
+```
+
+- For each fixed effect `R-INLA` reports a set of summary statistics from the posterior distribution.
+- The value of the Kullback-Leibler divergence (`kld`) describes the difference between the Gaussian approximation and the Simplified Laplace Approximation (SLA) to the marginal posterior densities: small values indicate that the posterior distribution is well approximated by a Normal distribution. 
+
+The same information can be retrieved for the hyperparameters:
+```{r}
+# Summary statistics of the hyperparameter
+output1$summary.hyperpar
+```
+- For each hyperparameter the summary statistics are reported to describe the posterior distribution.
+- **NB**: `R-INLA` reports results on the **precision** scale (more on this later).
+
+
+### <span style="color:blue">3.3 Manipulating the marginals: fixed effects </span>
+It is also possible to extract the posterior marginal distribution of each fixed effect parameter stored in the `marginals.fixed` object. 
+```{r}
+class(output1$marginals.fixed)
+names(output1$marginals.fixed)
+```
+
+Let assume for example that we are interested in extracting and plotting the marginal posterior distribuion of $\beta_1$:
+
+```{r}
+# Extract the marginal of beta1 (from a list so we use [[...]])
+beta1_post = output1$marginals.fixed[["x1"]]  
+class(beta1_post)
+head(beta1_post)
+
+# Another function for getting summary statistics
+inla.zmarginal(beta1_post) 
+
+# Plot the posterior marginal distribution with posterior mean
+plot(beta1_post, type="l", xlab="beta1",ylab="") 
+abline(v=output1$summary.fixed[2,"mean"])
+```
+
+It is possible to extract more information from the posterior distribution of $\beta_1$:
+```{r}
+# Quantile function
+inla.qmarginal(0.05,beta1_post) 
+# Distribution function
+inla.pmarginal(0.01,beta1_post)
+# Density function
+inla.dmarginal(0.01,beta1_post) 
+# Generate values from the distribution
+inla.rmarginal(4,beta1_post) 
+```
+
+To estimate the effect of the covariates on the risk of suicide we compute the posterior mean of the parameter on the natural scale ($\exp(\beta_1)$). This can be obtained by means of the `inla.emarginal` function: 
+```{r}
+inla.emarginal(fun=exp,marginal=output1$marginals.fixed$x1)
+# 95% credible interval
+inla.qmarginal(c(0.025,0.975),
+              inla.tmarginal(fun=exp,mar=output1$marginals.fixed$x1)) 
+```
+
+We obtain that an increase of 1 unit in the `x1` covariate is associated with an increase of around 0.7\% in the risk of suicide.
+
+### <span style="color:blue">3.4 Manipulating the marginal: hyperparameter</span>
+The posterior marginal distribution of the hyperparameters (in this case just the precision of the iid random effect) is stored in the `marginals.hyperpar` object (which is a list):
+
+```{r}
+class(output1$marginals.hyperpar)
+names(output1$marginals.hyperpar)
+```
+
+It is possible for example to plot the precision marginal posterior distribution
+```{r}
+prec.post = output1$marginals.hyperpar[[1]]
+plot(prec.post,t="l")
+```
+
+
+### <span style="color:blue"> 3.5. Change the hyperparameter prior </span>
+Instead of the default $\mbox{logGamma}\sim(1, 0.00005)$ prior for $\log\tau_{v}$, we want for example to specify a $\mbox{logGamma}\sim(1, 0.1)$. To change the prior we use the `hyper` argument in the `f` function (see `inla.models()$latent$iid$hyper`).
+
+In the following code we use also the option `control.compute` to compute the DIC value.
+```{r}
+formula = y ~ 1 + x1 + 
+  f(id,model="iid",
+    hyper=list(prec=list(prior="loggamma",param=c(1,0.1))))
+
+output2 = inla(formula,
+                family = "poisson",
+                data = LondonSuicides,
+                E = E,
+                control.compute=list(dic=TRUE)) 
+summary(output2)
+
+prec.post2 = output2$marginals.hyperpar[[1]]
+
+plot(prec.post2,type="l")
+lines(prec.post,col=2)
+legend("topright",col=1:2,lty=c(1,1),legend=c("New prior","Default prior"),box.lty=0)
+```
+
+But usually we want to make inference on more interpretable parameters, e.g. the variance or standard deviations. The function `inla.tmarginal` transforms a marginal distribution by using the desired transformation defined through `function(...){}`: 
+
+```{r}
+# Define the marginal variance 
+var.post = inla.tmarginal(fun=function(x) 1/x, mar=prec.post2)
+plot(var.post,type="l",xlab=expression(sigma^2))
+```
+
+As before, the function `inla.emarginal` computes the expected values of a given transformation.
+
+```{r}
+# Compute the posterior mean of the variance
+inla.emarginal(fun=function(x) 1/x, marg=prec.post2)
+```
+
+
+### <span style="color:blue">3.6 Explore the random effect $v$</span>
+The objects `summary.random` and `marginals.random` contain the posterior summaries and marginals of the random effect $v_i$, $i=1,...,33$.
+
+```{r}
+# The summary statistics for the random effects
+names(output2$summary.random)
+head(output2$summary.random[["id"]])
+dim(output2$summary.random[[1]]) #nrow = n. of areas
+
+# The posterior marginals for the random effects
+class(output2$marginals.random)
+names(output2$marginals.random)
+
+class(output2$marginals.random[["id"]])
+length(output2$marginals.random[["id"]])
+```
+
+Assume that we want to compute for the FIRST area the posterior **mean** of the **exponentiated** random effect:
+```{r}
+inla.emarginal(fun=exp, marg=output2$marginals.random[["id"]][[1]])
+```
+
+We now want to repeat the previous computation for all the areas in order to produce a **map** of the relative risk of suicide relative to average across London. We will use `lapply` to apply the same function `inla.emarginal` to all the elements in a list:
+```{r}
+exp.v = lapply(output2$marginals.random[["id"]],
+                         function(x) inla.emarginal(exp,x))
+head(exp.v) #it's a list
+LondonSuicides$exp.v = unlist(exp.v) #it's a vector
+```
+
+
+We prepare everything for the map, i.e. we update the shapefile data table with the information contained in the `LondonSuicides` dataframe:
+
+```{r}
+head(LondonSuicides)
+head(london.shp@data)
+london.shp@data = merge(london.shp@data,LondonSuicides, by="GSS_CODE")
+head(london.shp@data)
+
+# Mapping!
+spplot(obj=london.shp, zcol=c("SMR", "exp.v"), at=c(0.6,0.8,0.95,1.05,1.2,3),col.regions=terrain.colors(5))
+spplot(obj=london.shp, zcol="SMR", main="SMR", at=c(0.6,0.8,0.95,1.05,1.2,3),col.regions=terrain.colors(5))
+spplot(obj=london.shp, zcol="exp.v", main="exp.v", at=c(0.6,0.8,0.95,1.05,1.2,3),col.regions=terrain.colors(5))
+```
+
+The following plot aims to show that, with the hierarchical model, estimated RRs (`exp.v`) are shrinked towards the mean (less variability than SMRs). We compare the SMRs with the estimated RRs.
+```{r}
+op = par(mar = c(5,4,4,4) + 0.1)
+plot(LondonSuicides$SMR,type="n",ylab="SMR",xaxt="n",xlab="")
+for(i in 1:nrow(LondonSuicides)){
+  segments(1,LondonSuicides$SMR[i],
+           nrow(LondonSuicides),LondonSuicides$exp.v[i])
+}
+axis(side = 4)
+mtext("estimated RR", side = 4, line = 3, cex = par("cex.lab"))
+```
+
+### <span style="color:blue"> 3.7 Compute the map of excess risk</span>
+We are now interested in mapping the excess risk defined as $p(\exp(v)>1\mid \mathbf y)$ or equivalently as $p(v>0\mid \mathbf y)$. We will use `inla.pmarginal` (distribution function) inside `lapply` to compute the required probality:
+
+```{r}
+threshold = 0
+prob.v = lapply(output2$marginals.random[["id"]],
+                          function(x) 1-inla.pmarginal(threshold,x))
+range(unlist(prob.v))
+
+# Add the probability vector to the dataframe
+LondonSuicides$prob.v = unlist(prob.v)
+head(LondonSuicides)
+
+# Update the shapefile data table only with the new column
+london.shp@data = merge(london.shp@data,
+                        LondonSuicides[,c("GSS_CODE","prob.v")],
+                        by="GSS_CODE", sort=FALSE)
+head(london.shp@data)
+
+# Mapping!
+spplot(obj=london.shp, zcol="prob.v",main="", at=c(0,0.2,0.8,1),col.regions=c("green","white","red"))
+```
+
+## <span style="color:blue">4 Poisson-logNormal model with covariate and spatial structure</span>
+
+We implement the following BYM model (see slide 41 of lecture slide):
+\[
+O_i\sim \mbox{Poisson}(\phi_i E_i) \;\;\; i=1,...,33
+\]
+where $\phi_i$ is the relative risk. 
+
+The linear predictor is defined on the logarithm scale and is given by
+\[
+\eta_i=\log(\phi_i)=\beta_0  + \beta_1 x_{1i}+ v_{i} + u_i 
+\]
+where $\beta_0$ is the intercept, $x_{1i}$ is the value of the covariate $x_1$ for the i-th area, $\beta_1$ is the covariate coefficient. $v_i$ represents the random effect which is assumed to be normally distributed with mean equal to zero and precision $\tau_v$. 
+
+For the spatially structured random effect we consider the following prior distribution $\mathbf u ∼ ICAR(\mathbf W, 1/\tau_u)$ where $\mathbf W$ is the neighbourhood matrix.
+
+For both the precision hyperparameters $\tau_v$ (`prec.unstruct`) and $\tau_v$ (`prec.spatial`) we specify a logGamma(1,0.1) prior distribution (see `inla.models()$latent$bym$hyper` for the default priors).
+
+The new `R-INLA formula` will use the `bym` model (see `inla.doc("bym")`). The neighbourhood structure is passed through the `graph` argument. 
+```{r}
+formula = y ~ 1 + x1 +
+  f(id, model="bym",graph=london.adj.path,
+          hyper=list(prec.unstruct=list(prior="loggamma",param=c(1,0.1)), 
+                     prec.spatial=list(prior="loggamma",param=c(1,0.1))))
+
+output3 = inla(formula,
+                family = "poisson",
+                data = LondonSuicides,
+                E = E,
+                control.compute=list(dic=TRUE))
+```
+
+We explore the random effects posterior summaries:
+```{r}
+names(head(output3$summary.random))
+dim(output3$summary.random$id)
+head(output3$summary.random$id)
+tail(output3$summary.random$id)
+```
+
+The latter is a dataframe formed by $2n$ rows: the first $n$ rows include information on the area specific residuals $z_i=u_i+v_i$, which are the primary interest in a disease mapping study, while the remaining present information on the spatially structured residual $u_i$ only. Recall that all these parameters are on the logarithmic scale; for the sake of interpretability it would be more convenient to transform them back to the natural scale. 
+
+The computation of the posterior mean for the random effects  $z_i=v_i+u_i$ is performed using `lapply` as shown before:
+```{r}
+LondonSuicides$exp.z = unlist(lapply(output3$marginals.random$id[1:nrow(LondonSuicides)],
+                                     function(x) inla.emarginal(exp,x)))
+```
+
+We compute also the probability $p(z_i>1\mid \mathbf y)$ (or equivalently $p(u_i+v_i>0\mid \mathbf y)$ which is easier to obtain) using the built-in function `inla.pmarginal`:
+```{r}
+LondonSuicides$prob.z = unlist(lapply(output3$marginals.random$id[1:nrow(LondonSuicides)],
+                               function(x) 1-inla.pmarginal(threshold,x)))
+head(LondonSuicides)
+
+# Update the shapefile data table 
+london.shp@data = merge(london.shp@data,
+                        LondonSuicides[,c("GSS_CODE","exp.z","prob.z")],
+                        by="GSS_CODE", sort=FALSE)
+head(london.shp@data)
+
+# Mapping!
+spplot(obj=london.shp, zcol="exp.z", at=c(0.6,0.8,0.95,1.05,1.2,3),col.regions=terrain.colors(5))
+spplot(obj=london.shp, zcol="prob.z",main="",at=c(0,0.2,0.8,1),col.regions=c("green","white","red"))
+```
+
+
+## <span style="color:blue">5 Model comparison</span>
+
+Let's compare the two models (the one with $v$ only and the bym model) by DIC. 
+```{r}
+output2$dic$dic #model with covariate + iid
+output3$dic$dic #model with covariate + bym
+```
+
+
+
