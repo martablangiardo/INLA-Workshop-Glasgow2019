@@ -18,7 +18,7 @@ It would be beneficial if attendees could bring their laptop with the latest ver
 
 - INLA
 ```r
-install.packages("INLA", repos=c(getOption("repos"), INLA="https://inla.r-inla-download.org/R/stable"), dep=TRUE))
+install.packages("INLA", repos=c(getOption("repos"), INLA="https://inla.r-inla-download.org/R/stable"), dep=TRUE)
 ```
 
 - rgdal, sp, spdep (for the maps)
